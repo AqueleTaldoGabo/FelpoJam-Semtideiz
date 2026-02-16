@@ -15,6 +15,10 @@ run/main_scene="uid://lotggtps5xbm"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://Source/icon.svg"
 
+[autoload]
+
+Transicao="*uid://b86k7pdekf4of"
+
 [input]
 
 anda_esquerda={
