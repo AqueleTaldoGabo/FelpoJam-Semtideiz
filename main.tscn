@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://lotggtps5xbm"]
+
+[ext_resource type="PackedScene" uid="uid://b78keg0ignt8j" path="res://player.tscn" id="1_ig7tw"]
+
+[sub_resource type="GDScript" id="GDScript_ig7tw"]
+script/source = "extends Node
+
+func _ready():
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	
+func _input(event):
+	if event.is_action_pressed(\"ui_cancel\"):
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7dm0k"]
+size = Vector3(60, 2, 60)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ig7tw"]
+size = Vector3(60, 2, 60)
+
+[node name="Main" type="Node" unique_id=1376397151]
+script = SubResource("GDScript_ig7tw")
+
+[node name="Chão" type="StaticBody3D" parent="." unique_id=1981061746]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9999995, 0)
+
+[node name="Bloco" type="CollisionShape3D" parent="Chão" unique_id=414786639]
+shape = SubResource("BoxShape3D_7dm0k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Chão" unique_id=1146803504]
+mesh = SubResource("BoxMesh_ig7tw")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=674438269]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 15, 0)
+shadow_enabled = true
+
+[node name="Player" parent="." unique_id=1240492296 instance=ExtResource("1_ig7tw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
