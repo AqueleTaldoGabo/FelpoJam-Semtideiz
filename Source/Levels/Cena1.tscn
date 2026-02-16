@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://mq5h3p2in5jw"]
+
+[ext_resource type="Script" uid="uid://cxn41at0x3823" path="res://Source/Levels/cena_1.gd" id="1_ovw4t"]
+[ext_resource type="PackedScene" uid="uid://b78keg0ignt8j" path="res://Source/Player/player.tscn" id="1_wcs6w"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ovw4t"]
+size = Vector3(60, 2, 60)
+
+[sub_resource type="BoxMesh" id="BoxMesh_22hde"]
+size = Vector3(60, 2, 60)
+
+[node name="Cena1" type="Node" unique_id=1119634821]
+script = ExtResource("1_ovw4t")
+
+[node name="Chão" type="StaticBody3D" parent="." unique_id=561460632]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9999995, 0)
+
+[node name="Bloco" type="CollisionShape3D" parent="Chão" unique_id=631578560]
+shape = SubResource("BoxShape3D_ovw4t")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Chão" unique_id=2048760675]
+mesh = SubResource("BoxMesh_22hde")
+
+[node name="Player" parent="." unique_id=1240492296 instance=ExtResource("1_wcs6w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=518452928]
+transform = Transform3D(0.99935937, -0.035789058, -1.5643894e-09, 0, -4.371139e-08, 1, -0.035789058, -0.99935937, -4.3683386e-08, 0, 10.860373, 0)
+shadow_enabled = true
