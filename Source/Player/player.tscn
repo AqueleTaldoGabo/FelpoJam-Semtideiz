@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b78keg0ignt8j"]
 
-[ext_resource type="Script" uid="uid://bmhhi0tril483" path="res://player.gd" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://bmhhi0tril483" path="res://Source/Player/player.gd" id="1_4flbx"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_4flbx"]
 

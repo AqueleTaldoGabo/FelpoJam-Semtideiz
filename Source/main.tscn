@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://lotggtps5xbm"]
 
-[ext_resource type="PackedScene" uid="uid://b78keg0ignt8j" path="res://player.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://b78keg0ignt8j" path="res://Source/Player/player.tscn" id="1_ig7tw"]
 
 [sub_resource type="GDScript" id="GDScript_ig7tw"]
 script/source = "extends Node

@@ -11,8 +11,9 @@ config_version=5
 [application]
 
 config/name="CarimboSemDono"
+run/main_scene="uid://lotggtps5xbm"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Source/icon.svg"
 
 [input]
 
