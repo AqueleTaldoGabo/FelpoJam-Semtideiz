@@ -6,7 +6,6 @@ extends CharacterBody3D
 var velocidade_objeto = Vector3.ZERO
 
 func _input(event: InputEvent) -> void:
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		rotate_y(-event.relative.x * sensibilidade_mouse)
 		$Camera3D.rotate_x(-event.relative.y * sensibilidade_mouse)
