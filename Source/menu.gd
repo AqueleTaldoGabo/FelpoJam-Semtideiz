@@ -1,10 +1,11 @@
 extends VBoxContainer
 
-
+@onready var musica:AudioStreamPlayer = $"../Menucarimbador"
 const CENA_1 = preload("uid://mq5h3p2in5jw")
 
 func _on_botao_start_pressed() -> void:
 	Transicao.transicao()
+	ControleMusica.fade_out(musica)
 	await Transicao.fade_acabou
 	get_tree().change_scene_to_packed(CENA_1)	
 

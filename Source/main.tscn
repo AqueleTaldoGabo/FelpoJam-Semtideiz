@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://lotggtps5xbm"]
 
-[ext_resource type="Shader" uid="uid://bcfuj16arhi4e" path="res://Source/dithering.gdshader" id="1_kvypo"]
+[ext_resource type="Shader" uid="uid://bcfuj16arhi4e" path="res://Source/Global/dithering.gdshader" id="1_kvypo"]
+[ext_resource type="AudioStream" uid="uid://dmr1m3n5r0gm2" path="res://Source/Música/menucarimbador.ogg" id="1_p7x2e"]
 [ext_resource type="Script" uid="uid://dvlm5tx45km2i" path="res://Source/menu.gd" id="1_wkcc7"]
+[ext_resource type="Texture2D" uid="uid://tghqrh6m83mh" path="res://Source/Assets/Sprites/Jogar.png" id="4_8cnld"]
+[ext_resource type="Texture2D" uid="uid://chp74tucmawqs" path="res://Source/Assets/Sprites/Config.png" id="5_r8bwp"]
+[ext_resource type="Texture2D" uid="uid://ch32oikdg4b3i" path="res://Source/Assets/Sprites/Sair.png" id="6_phq82"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_wkcc7"]
 
@@ -36,6 +40,10 @@ size = Vector3(60, 2, 60)
 
 [node name="Main" type="Node" unique_id=1376397151]
 
+[node name="Menucarimbador" type="AudioStreamPlayer" parent="." unique_id=1523005245]
+stream = ExtResource("1_p7x2e")
+autoplay = true
+
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1021556705]
 transform = Transform3D(0.99935937, -0.035789058, -4.977924e-10, 0.022797398, 0.6365854, 0.7708692, -0.02758868, -0.7703753, 0.6369935, 0.4566462, 5.9785156, 4.0120487)
 shadow_enabled = true
@@ -49,6 +57,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.348099, 0)
 
 [node name="PosProcessamento" type="MeshInstance3D" parent="Camera3D" unique_id=1719007020]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23723257, 0.23640442, 0)
+extra_cull_margin = 455.11
 mesh = SubResource("QuadMesh_kvypo")
 
 [node name="Chão" type="StaticBody3D" parent="." unique_id=552117241]
@@ -61,34 +70,37 @@ shape = SubResource("BoxShape3D_kvypo")
 mesh = SubResource("BoxMesh_p7x2e")
 
 [node name="VboxBotoes" type="VBoxContainer" parent="." unique_id=1148657374]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -94.0
-offset_top = -98.5
-offset_right = 94.0
-offset_bottom = 98.5
+anchors_preset = -1
+anchor_left = 0.7248264
+anchor_top = 0.16666667
+anchor_right = 0.8439236
+anchor_bottom = 0.80617285
+offset_right = 254.79999
+offset_bottom = 769.6
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.35, 0.35)
+alignment = 1
 script = ExtResource("1_wkcc7")
+metadata/_edit_use_anchors_ = true
 
 [node name="BotaoStart" type="Button" parent="VboxBotoes" unique_id=1096133034]
 layout_mode = 2
-theme_override_font_sizes/font_size = 40
-text = "Start
-"
+theme_override_font_sizes/font_size = 10
+icon = ExtResource("4_8cnld")
+flat = true
 
 [node name="BotaoOptions" type="Button" parent="VboxBotoes" unique_id=488145552]
 layout_mode = 2
-theme_override_font_sizes/font_size = 40
-text = "Options"
+theme_override_font_sizes/font_size = 10
+icon = ExtResource("5_r8bwp")
+flat = true
 
 [node name="BotaoSair" type="Button" parent="VboxBotoes" unique_id=413538445]
 layout_mode = 2
-theme_override_font_sizes/font_size = 40
-text = "Exit"
+theme_override_font_sizes/font_size = 10
+icon = ExtResource("6_phq82")
+flat = true
 
 [connection signal="pressed" from="VboxBotoes/BotaoStart" to="VboxBotoes" method="_on_botao_start_pressed"]
 [connection signal="pressed" from="VboxBotoes/BotaoSair" to="VboxBotoes" method="_on_botao_sair_pressed"]

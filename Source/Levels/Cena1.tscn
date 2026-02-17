@@ -2,9 +2,17 @@
 
 [ext_resource type="Script" uid="uid://cxn41at0x3823" path="res://Source/Levels/cena_1.gd" id="1_ovw4t"]
 [ext_resource type="PackedScene" uid="uid://b78keg0ignt8j" path="res://Source/Player/player.tscn" id="1_wcs6w"]
+[ext_resource type="Texture2D" uid="uid://bw7f8cobp7k6l" path="res://Source/Assets/Sprites/Chao_teste_quase_interrogacao2.png" id="2_xmjli"]
+[ext_resource type="PackedScene" uid="uid://bpxubxgn7qxa8" path="res://Source/Assets/Modelos/Mesafoda.fbx" id="3_22hde"]
+[ext_resource type="PackedScene" uid="uid://vqcc34o860lb" path="res://Source/Assets/Modelos/Mesafodaepequenacomcor.fbx" id="3_jggnw"]
+[ext_resource type="PackedScene" uid="uid://dmib2t2kx0yei" path="res://Source/Assets/Modelos/Mesafodaepequena.fbx" id="4_alros"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ovw4t"]
 size = Vector3(60, 2, 60)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jggnw"]
+albedo_texture = ExtResource("2_xmjli")
+uv1_scale = Vector3(60, 60, 60)
 
 [sub_resource type="BoxMesh" id="BoxMesh_22hde"]
 size = Vector3(60, 2, 60)
@@ -19,11 +27,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9999995, 0)
 shape = SubResource("BoxShape3D_ovw4t")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Chão" unique_id=2048760675]
+material_overlay = SubResource("StandardMaterial3D_jggnw")
 mesh = SubResource("BoxMesh_22hde")
+
+[node name="Mesafodaepequenacomcor" parent="Chão" unique_id=684872391 instance=ExtResource("3_jggnw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6078033, 1.0036919, 4.3838634)
 
 [node name="Player" parent="." unique_id=1240492296 instance=ExtResource("1_wcs6w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=518452928]
-transform = Transform3D(0.99935937, -0.035789058, -1.5643894e-09, 0, -4.371139e-08, 1, -0.035789058, -0.99935937, -4.3683386e-08, 0, 10.860373, 0)
+transform = Transform3D(-0.06537455, -0.6343812, 0.77025104, -0.030634755, 0.7728145, 0.6338923, -0.99739045, 0.017843926, -0.06995656, 5.988968, 9.085171, -0.26222038)
 shadow_enabled = true
+
+[node name="Mesafoda" parent="." unique_id=1537711096 instance=ExtResource("3_22hde")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.609442, -0.23175573, 0)
+
+[node name="Mesafodaepequena" parent="." unique_id=1393830002 instance=ExtResource("4_alros")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.930544, 0.013289988, -3.4860787)
