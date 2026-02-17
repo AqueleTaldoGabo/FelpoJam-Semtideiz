@@ -1,39 +1,114 @@
 [gd_scene format=3 uid="uid://mq5h3p2in5jw"]
 
-[ext_resource type="Script" uid="uid://cxn41at0x3823" path="res://Source/Levels/cena_1.gd" id="1_ovw4t"]
-[ext_resource type="PackedScene" uid="uid://b78keg0ignt8j" path="res://Source/Player/player.tscn" id="1_wcs6w"]
-[ext_resource type="PackedScene" uid="uid://dbn8mf4ph6r5b" path="res://Source/Garrafa.fbx" id="2_22hde"]
+[ext_resource type="AudioStream" uid="uid://dmr1m3n5r0gm2" path="res://Source/Música/menucarimbador.ogg" id="1_jggnw"]
+[ext_resource type="Shader" uid="uid://bcfuj16arhi4e" path="res://Source/Global/dithering.gdshader" id="2_y6bgu"]
+[ext_resource type="Script" uid="uid://dfmwc463f2b6r" path="res://Source/menu.gd" id="3_0v2f1"]
+[ext_resource type="Texture2D" uid="uid://csjxwutnqvgj1" path="res://Source/Sprites/Jogar.png" id="4_u2bv0"]
+[ext_resource type="Texture2D" uid="uid://dv3ku8xj7c7vf" path="res://Source/Sprites/Config.png" id="5_2vfmm"]
+[ext_resource type="Texture2D" uid="uid://c6nipsyoe8yis" path="res://Source/Sprites/Sair.png" id="6_58l74"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_ovw4t"]
+[sub_resource type="SphereMesh" id="SphereMesh_wkcc7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p7x2e"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("2_y6bgu")
+shader_parameter/depth_threshold = 0.05
+shader_parameter/reverse_depth_threshold = 0.25
+shader_parameter/normal_threshold = 0.6
+shader_parameter/darken_amount = 0.3
+shader_parameter/lighten_amount = 1.5
+shader_parameter/normal_edge_bias = Vector3(1, 1, 1)
+shader_parameter/light_direction = Vector3(-0.96, -0.18, 0.2)
+shader_parameter/dither_repeat = 2.0
+shader_parameter/dither_strength = 1.0
+shader_parameter/min_dither_brightness = 0.2
+shader_parameter/cor_a = Vector4(0.09, 0, 0, 1)
+shader_parameter/cor_b = Vector4(0.5, 0.15, 0.1, 1)
+shader_parameter/bayer_mode = 8
+
+[sub_resource type="QuadMesh" id="QuadMesh_kvypo"]
+material = SubResource("ShaderMaterial_p7x2e")
+flip_faces = true
+size = Vector2(2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kvypo"]
 size = Vector3(60, 2, 60)
 
-[sub_resource type="BoxMesh" id="BoxMesh_22hde"]
+[sub_resource type="BoxMesh" id="BoxMesh_p7x2e"]
 size = Vector3(60, 2, 60)
 
-[sub_resource type="SphereMesh" id="SphereMesh_ovw4t"]
+[node name="Main" type="Node" unique_id=1376397151]
 
-[node name="Cena1" type="Node" unique_id=1119634821]
-script = ExtResource("1_ovw4t")
+[node name="Menucarimbador" type="AudioStreamPlayer" parent="." unique_id=693988481]
+stream = ExtResource("1_jggnw")
+volume_db = 6.0
+autoplay = true
+parameters/looping = true
 
-[node name="Garrafa" parent="." unique_id=1434068095 instance=ExtResource("2_22hde")]
-transform = Transform3D(0.9694609, 0, 0, 0, 1.1933569, 0, 0, 0, 0.9694609, -0.64791584, -5.8827734, 8.775331)
-
-[node name="Chão" type="StaticBody3D" parent="." unique_id=561460632]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9999995, 0)
-
-[node name="Bloco" type="CollisionShape3D" parent="Chão" unique_id=631578560]
-shape = SubResource("BoxShape3D_ovw4t")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Chão" unique_id=2048760675]
-mesh = SubResource("BoxMesh_22hde")
-
-[node name="Player" parent="." unique_id=1240492296 instance=ExtResource("1_wcs6w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=518452928]
-transform = Transform3D(0.67607087, -0.59227234, -0.43833986, 0.32971254, -0.2888449, 0.8988094, -0.6589521, -0.752185, -3.2879043e-08, -10.523141, 6.4594126, -11.9039955)
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1021556705]
+transform = Transform3D(0.99935937, -0.035789058, -4.977924e-10, 0.022797398, 0.6365854, 0.7708692, -0.02758868, -0.7703753, 0.6369935, 0.4566462, 5.9785156, 4.0120487)
 shadow_enabled = true
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2118334412]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.7910748, 1.6604736, 0)
-mesh = SubResource("SphereMesh_ovw4t")
+[node name="CorpoPersonagem" type="MeshInstance3D" parent="." unique_id=1911514808]
+transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, -0.56470275, 1.0213968, -1.1410606)
+mesh = SubResource("SphereMesh_wkcc7")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=2010149393]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.348099, 0)
+
+[node name="PosProcessamento" type="MeshInstance3D" parent="Camera3D" unique_id=1719007020]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23723257, 0.23640442, 0)
+extra_cull_margin = 303.41
+mesh = SubResource("QuadMesh_kvypo")
+
+[node name="Chão" type="StaticBody3D" parent="." unique_id=552117241]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9999995, 0)
+
+[node name="Bloco" type="CollisionShape3D" parent="Chão" unique_id=1146601060]
+shape = SubResource("BoxShape3D_kvypo")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Chão" unique_id=1302418315]
+mesh = SubResource("BoxMesh_p7x2e")
+
+[node name="VboxBotoes" type="VBoxContainer" parent="." unique_id=1148657374]
+anchors_preset = -1
+anchor_left = 0.7508681
+anchor_top = 0.12962961
+anchor_right = 0.8864864
+anchor_bottom = 0.8504921
+offset_left = 4.0
+offset_top = -27.999985
+offset_right = 243.76764
+offset_bottom = 688.8811
+grow_horizontal = 0
+scale = Vector2(0.39452612, 0.39452612)
+alignment = 1
+script = ExtResource("3_0v2f1")
+metadata/_edit_use_anchors_ = true
+
+[node name="BotaoStart" type="Button" parent="VboxBotoes" unique_id=1096133034]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "
+"
+icon = ExtResource("4_u2bv0")
+flat = true
+
+[node name="BotaoOptions" type="Button" parent="VboxBotoes" unique_id=488145552]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 5
+icon = ExtResource("5_2vfmm")
+flat = true
+
+[node name="BotaoSair" type="Button" parent="VboxBotoes" unique_id=413538445]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+icon = ExtResource("6_58l74")
+flat = true
+
+[connection signal="pressed" from="VboxBotoes/BotaoStart" to="VboxBotoes" method="_on_botao_start_pressed"]
+[connection signal="pressed" from="VboxBotoes/BotaoOptions" to="VboxBotoes" method="_on_botao_options_pressed"]
+[connection signal="pressed" from="VboxBotoes/BotaoSair" to="VboxBotoes" method="_on_botao_sair_pressed"]
