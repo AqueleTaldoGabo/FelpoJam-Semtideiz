@@ -20,6 +20,11 @@ config/icon="res://Source/icon.svg"
 Transicao="*uid://b86k7pdekf4of"
 MusicManager="*uid://chcpdatahlwxi"
 
+[display]
+
+mouse_cursor/custom_image="uid://bwkyo7xrqtem7"
+mouse_cursor/custom_image_hotspot=Vector2(50, 50)
+
 [input]
 
 anda_esquerda={

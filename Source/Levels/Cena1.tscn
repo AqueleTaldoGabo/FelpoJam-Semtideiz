@@ -46,14 +46,33 @@ volume_db = 6.0
 autoplay = true
 parameters/looping = true
 
+<<<<<<< Updated upstream
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1021556705]
 transform = Transform3D(0.99935937, -0.035789058, -4.977924e-10, 0.022797398, 0.6365854, 0.7708692, -0.02758868, -0.7703753, 0.6369935, 0.4566462, 5.9785156, 4.0120487)
 shadow_enabled = true
+=======
+[node name="Bloco" type="CollisionShape3D" parent="Chão" unique_id=631578560]
+shape = SubResource("BoxShape3D_ovw4t")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Chão" unique_id=2048760675]
+material_overlay = SubResource("StandardMaterial3D_jggnw")
+mesh = SubResource("BoxMesh_22hde")
+
+[node name="Mesafodaepequenacomcor" parent="Chão" unique_id=684872391 instance=ExtResource("3_jggnw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6078033, 1.0036919, 4.3838634)
+
+[node name="Player" parent="." unique_id=1240492296 instance=ExtResource("1_wcs6w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=518452928]
+transform = Transform3D(-0.06537455, -0.6343812, 0.77025104, -0.030634755, 0.7728145, 0.6338923, -0.99739045, 0.017843926, -0.06995656, 5.988968, 9.085171, -0.26222038)
+>>>>>>> Stashed changes
 
 [node name="CorpoPersonagem" type="MeshInstance3D" parent="." unique_id=1911514808]
 transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, -0.56470275, 1.0213968, -1.1410606)
 mesh = SubResource("SphereMesh_wkcc7")
 
+<<<<<<< Updated upstream
 [node name="Camera3D" type="Camera3D" parent="." unique_id=2010149393]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.348099, 0)
 
@@ -112,3 +131,11 @@ flat = true
 [connection signal="pressed" from="VboxBotoes/BotaoStart" to="VboxBotoes" method="_on_botao_start_pressed"]
 [connection signal="pressed" from="VboxBotoes/BotaoOptions" to="VboxBotoes" method="_on_botao_options_pressed"]
 [connection signal="pressed" from="VboxBotoes/BotaoSair" to="VboxBotoes" method="_on_botao_sair_pressed"]
+=======
+[node name="Mesafodaepequena" parent="." unique_id=1393830002 instance=ExtResource("4_alros")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.930544, 0.013289988, -3.4860787)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=37433085]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -5.3169146, 3.7353907, 4.141711)
+shadow_enabled = true
+>>>>>>> Stashed changes
