@@ -1,8 +1,32 @@
 [gd_scene format=3 uid="uid://lotggtps5xbm"]
 
-[ext_resource type="Script" uid="uid://dfmwc463f2b6r" path="res://Source/menu.gd" id="1_wkcc7"]
+[ext_resource type="Shader" uid="uid://bcfuj16arhi4e" path="res://Source/dithering.gdshader" id="1_kvypo"]
+[ext_resource type="Script" uid="uid://dvlm5tx45km2i" path="res://Source/menu.gd" id="1_wkcc7"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_wkcc7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p7x2e"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("1_kvypo")
+shader_parameter/depth_threshold = 0.05
+shader_parameter/reverse_depth_threshold = 0.25
+shader_parameter/normal_threshold = 0.6
+shader_parameter/darken_amount = 0.3
+shader_parameter/lighten_amount = 1.5
+shader_parameter/normal_edge_bias = Vector3(1, 1, 1)
+shader_parameter/light_direction = Vector3(-0.96, -0.18, 0.2)
+shader_parameter/dither_repeat = 2.0
+shader_parameter/dither_strength = 1.0
+shader_parameter/min_dither_brightness = 0.2
+shader_parameter/cor_a = Vector4(0.09, 0, 0, 1)
+shader_parameter/cor_b = Vector4(0.5, 0.15, 0.1, 1)
+shader_parameter/bayer_mode = 8
+
+[sub_resource type="QuadMesh" id="QuadMesh_kvypo"]
+material = SubResource("ShaderMaterial_p7x2e")
+flip_faces = true
+size = Vector2(2, 2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kvypo"]
 size = Vector3(60, 2, 60)
@@ -21,6 +45,10 @@ mesh = SubResource("SphereMesh_wkcc7")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=2010149393]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.348099, 0)
+
+[node name="PosProcessamento" type="MeshInstance3D" parent="Camera3D" unique_id=1719007020]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23723257, 0.23640442, 0)
+mesh = SubResource("QuadMesh_kvypo")
 
 [node name="Chão" type="StaticBody3D" parent="." unique_id=552117241]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9999995, 0)
