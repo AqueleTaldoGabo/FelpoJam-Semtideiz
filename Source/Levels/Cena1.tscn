@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cxn41at0x3823" path="res://Source/Levels/cena_1.gd" id="1_ovw4t"]
 [ext_resource type="PackedScene" uid="uid://b78keg0ignt8j" path="res://Source/Player/player.tscn" id="1_wcs6w"]
+[ext_resource type="PackedScene" uid="uid://dbn8mf4ph6r5b" path="res://Source/Garrafa.fbx" id="2_22hde"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ovw4t"]
 size = Vector3(60, 2, 60)
@@ -9,8 +10,13 @@ size = Vector3(60, 2, 60)
 [sub_resource type="BoxMesh" id="BoxMesh_22hde"]
 size = Vector3(60, 2, 60)
 
+[sub_resource type="SphereMesh" id="SphereMesh_ovw4t"]
+
 [node name="Cena1" type="Node" unique_id=1119634821]
 script = ExtResource("1_ovw4t")
+
+[node name="Garrafa" parent="." unique_id=1434068095 instance=ExtResource("2_22hde")]
+transform = Transform3D(0.9694609, 0, 0, 0, 1.1933569, 0, 0, 0, 0.9694609, -0.64791584, -5.8827734, 8.775331)
 
 [node name="Chão" type="StaticBody3D" parent="." unique_id=561460632]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9999995, 0)
@@ -25,5 +31,9 @@ mesh = SubResource("BoxMesh_22hde")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=518452928]
-transform = Transform3D(0.99935937, -0.035789058, -1.5643894e-09, 0, -4.371139e-08, 1, -0.035789058, -0.99935937, -4.3683386e-08, 0, 10.860373, 0)
+transform = Transform3D(0.67607087, -0.59227234, -0.43833986, 0.32971254, -0.2888449, 0.8988094, -0.6589521, -0.752185, -3.2879043e-08, -10.523141, 6.4594126, -11.9039955)
 shadow_enabled = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2118334412]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.7910748, 1.6604736, 0)
+mesh = SubResource("SphereMesh_ovw4t")
