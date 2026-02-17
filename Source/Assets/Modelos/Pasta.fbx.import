@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cuj2casw0y7c8"
-path="res://.godot/imported/portateste2.fbx-f3fd55f2eaacb4fb915ec27ee95367f1.scn"
+uid="uid://dpnj4c5kr3pxq"
+path="res://.godot/imported/Pasta.fbx-0b2282a67527aa776223f42c4ca71a49.scn"
 
 [deps]
 
-source_file="res://Source/Assets/Modelos/portateste2.fbx"
-dest_files=["res://.godot/imported/portateste2.fbx-f3fd55f2eaacb4fb915ec27ee95367f1.scn"]
+source_file="res://Source/Assets/Modelos/Pasta.fbx"
+dest_files=["res://.godot/imported/Pasta.fbx-0b2282a67527aa776223f42c4ca71a49.scn"]
 
 [params]
 
