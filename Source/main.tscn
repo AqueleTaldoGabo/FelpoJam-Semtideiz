@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://csjxwutnqvgj1" path="res://Source/Sprites/Jogar.png" id="3_fqc6k"]
 [ext_resource type="Texture2D" uid="uid://dv3ku8xj7c7vf" path="res://Source/Sprites/Config.png" id="4_8cnld"]
 [ext_resource type="Texture2D" uid="uid://c6nipsyoe8yis" path="res://Source/Sprites/Sair.png" id="5_r8bwp"]
+[ext_resource type="Shader" uid="uid://bcfuj16arhi4e" path="res://Source/dithering.gdshader" id="1_kvypo"]
+[ext_resource type="Script" uid="uid://dvlm5tx45km2i" path="res://Source/menu.gd" id="1_wkcc7"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_wkcc7"]
 

@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://csjxwutnqvgj1" path="res://Source/Sprites/Jogar.png" id="4_lv6p1"]
 [ext_resource type="Texture2D" uid="uid://dv3ku8xj7c7vf" path="res://Source/Sprites/Config.png" id="5_hjit1"]
 [ext_resource type="Texture2D" uid="uid://c6nipsyoe8yis" path="res://Source/Sprites/Sair.png" id="6_mjklq"]
+[ext_resource type="Script" uid="uid://bmhhi0tril483" path="res://Source/Player/player.gd" id="1_4flbx"]
+[ext_resource type="Shader" uid="uid://bcfuj16arhi4e" path="res://Source/dithering.gdshader" id="2_g4gsc"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_wkcc7"]
 
@@ -31,6 +33,31 @@ shader_parameter/bayer_mode = 8
 material = SubResource("ShaderMaterial_p7x2e")
 flip_faces = true
 size = Vector2(2, 2)
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g4gsc"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("2_g4gsc")
+shader_parameter/depth_threshold = 0.05
+shader_parameter/reverse_depth_threshold = 0.25
+shader_parameter/normal_threshold = 0.6
+shader_parameter/darken_amount = 0.3
+shader_parameter/lighten_amount = 1.5
+shader_parameter/normal_edge_bias = Vector3(1, 1, 1)
+shader_parameter/light_direction = Vector3(-0.96, -0.18, 0.2)
+shader_parameter/dither_repeat = 1.0
+shader_parameter/dither_strength = 1.0
+shader_parameter/min_dither_brightness = 0.1
+shader_parameter/cor_a = Vector4(0.2, 0.1, 0, 1)
+shader_parameter/cor_b = Vector4(0.5, 0.5, 0.1, 1)
+shader_parameter/bayer_mode = 8
+
+[sub_resource type="QuadMesh" id="QuadMesh_v1mne"]
+material = SubResource("ShaderMaterial_g4gsc")
+flip_faces = true
+size = Vector2(2, 2)
+
+[node name="Player" type="CharacterBody3D" unique_id=1240492296]
+script = ExtResource("1_4flbx")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kvypo"]
 size = Vector3(60, 2, 60)
@@ -112,3 +139,9 @@ flat = true
 [connection signal="pressed" from="VboxBotoes/BotaoStart" to="VboxBotoes" method="_on_botao_start_pressed"]
 [connection signal="pressed" from="VboxBotoes/BotaoOptions" to="VboxBotoes" method="_on_botao_options_pressed"]
 [connection signal="pressed" from="VboxBotoes/BotaoSair" to="VboxBotoes" method="_on_botao_sair_pressed"]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=663345910]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="PosProcessamento" type="MeshInstance3D" parent="Camera3D" unique_id=648073286]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23723257, 0.23640442, 0)
+mesh = SubResource("QuadMesh_v1mne")
