@@ -1,15 +1,12 @@
 [gd_scene format=3 uid="uid://lotggtps5xbm"]
 
 [ext_resource type="Shader" uid="uid://bcfuj16arhi4e" path="res://Source/Global/dithering.gdshader" id="1_kvypo"]
-[ext_resource type="AudioStream" uid="uid://dmr1m3n5r0gm2" path="res://Source/Música/menucarimbador.ogg" id="1_p7x2e"]
 [ext_resource type="Script" uid="uid://dvlm5tx45km2i" path="res://Source/menu.gd" id="1_wkcc7"]
-[ext_resource type="Texture2D" uid="uid://tghqrh6m83mh" path="res://Source/Assets/Sprites/Jogar.png" id="4_8cnld"]
-[ext_resource type="Texture2D" uid="uid://chp74tucmawqs" path="res://Source/Assets/Sprites/Config.png" id="5_r8bwp"]
-[ext_resource type="Texture2D" uid="uid://ch32oikdg4b3i" path="res://Source/Assets/Sprites/Sair.png" id="6_phq82"]
+[ext_resource type="Texture2D" uid="uid://dd1b8xgsal8rq" path="res://Source/Assets/Sprites/Menu_paper_sem_botoes_ligados.png" id="3_uglvk"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_wkcc7"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_p7x2e"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uglvk"]
 resource_local_to_scene = true
 render_priority = 0
 shader = ExtResource("1_kvypo")
@@ -28,7 +25,7 @@ shader_parameter/cor_b = Vector4(0.5, 0.15, 0.1, 1)
 shader_parameter/bayer_mode = 8
 
 [sub_resource type="QuadMesh" id="QuadMesh_kvypo"]
-material = SubResource("ShaderMaterial_p7x2e")
+material = SubResource("ShaderMaterial_uglvk")
 flip_faces = true
 size = Vector2(2, 2)
 
@@ -39,10 +36,6 @@ size = Vector3(60, 2, 60)
 size = Vector3(60, 2, 60)
 
 [node name="Main" type="Node" unique_id=1376397151]
-
-[node name="Menucarimbador" type="AudioStreamPlayer" parent="." unique_id=1523005245]
-stream = ExtResource("1_p7x2e")
-autoplay = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1021556705]
 transform = Transform3D(0.99935937, -0.035789058, -4.977924e-10, 0.022797398, 0.6365854, 0.7708692, -0.02758868, -0.7703753, 0.6369935, 0.4566462, 5.9785156, 4.0120487)
@@ -69,38 +62,70 @@ shape = SubResource("BoxShape3D_kvypo")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Chão" unique_id=1302418315]
 mesh = SubResource("BoxMesh_p7x2e")
 
-[node name="VboxBotoes" type="VBoxContainer" parent="." unique_id=1148657374]
+[node name="Control" type="Control" parent="." unique_id=1860027018]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuPaperSemBotoesLigados" type="Sprite2D" parent="Control" unique_id=1426906820]
+position = Vector2(76, 17)
+texture = ExtResource("3_uglvk")
+
+[node name="VboxBotoes" type="VBoxContainer" parent="Control/MenuPaperSemBotoesLigados" unique_id=1148657374]
 anchors_preset = -1
-anchor_left = 0.7248264
-anchor_top = 0.16666667
-anchor_right = 0.8439236
-anchor_bottom = 0.80617285
-offset_right = 254.79999
-offset_bottom = 769.6
+anchor_left = 0.0421875
+anchor_top = 0.39531252
+anchor_right = 0.28906253
+anchor_bottom = 0.71718746
+offset_left = -320.0
+offset_top = -320.0
+offset_right = -26.571396
+offset_bottom = 62.57132
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.35, 0.35)
+size_flags_stretch_ratio = 0.0
+theme_override_constants/separation = 3
 alignment = 1
 script = ExtResource("1_wkcc7")
 metadata/_edit_use_anchors_ = true
 
-[node name="BotaoStart" type="Button" parent="VboxBotoes" unique_id=1096133034]
+[node name="BotaoStart" type="Button" parent="Control/MenuPaperSemBotoesLigados/VboxBotoes" unique_id=1096133034]
+custom_minimum_size = Vector2(40, 172)
 layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/outline_size = 40
 theme_override_font_sizes/font_size = 10
-icon = ExtResource("4_8cnld")
 flat = true
 
-[node name="BotaoOptions" type="Button" parent="VboxBotoes" unique_id=488145552]
+[node name="BotaoOptions" type="Button" parent="Control/MenuPaperSemBotoesLigados/VboxBotoes" unique_id=488145552]
+custom_minimum_size = Vector2(0, 175)
 layout_mode = 2
 theme_override_font_sizes/font_size = 10
-icon = ExtResource("5_r8bwp")
 flat = true
 
-[node name="BotaoSair" type="Button" parent="VboxBotoes" unique_id=413538445]
+[node name="BotaoSair" type="Button" parent="Control/MenuPaperSemBotoesLigados/VboxBotoes" unique_id=413538445]
+custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
 theme_override_font_sizes/font_size = 10
-icon = ExtResource("6_phq82")
 flat = true
 
-[connection signal="pressed" from="VboxBotoes/BotaoStart" to="VboxBotoes" method="_on_botao_start_pressed"]
-[connection signal="pressed" from="VboxBotoes/BotaoSair" to="VboxBotoes" method="_on_botao_sair_pressed"]
+[connection signal="mouse_exited" from="Control/MenuPaperSemBotoesLigados/VboxBotoes" to="Control/MenuPaperSemBotoesLigados/VboxBotoes" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Control/MenuPaperSemBotoesLigados/VboxBotoes/BotaoStart" to="Control/MenuPaperSemBotoesLigados/VboxBotoes" method="_on_botao_start_mouse_entered"]
+[connection signal="mouse_exited" from="Control/MenuPaperSemBotoesLigados/VboxBotoes/BotaoStart" to="Control/MenuPaperSemBotoesLigados/VboxBotoes" method="_fora"]
+[connection signal="pressed" from="Control/MenuPaperSemBotoesLigados/VboxBotoes/BotaoStart" to="Control/MenuPaperSemBotoesLigados/VboxBotoes" method="_on_botao_start_pressed"]
+[connection signal="mouse_entered" from="Control/MenuPaperSemBotoesLigados/VboxBotoes/BotaoOptions" to="Control/MenuPaperSemBotoesLigados/VboxBotoes" method="_on_botao_options_mouse_entered"]
+[connection signal="mouse_exited" from="Control/MenuPaperSemBotoesLigados/VboxBotoes/BotaoOptions" to="Control/MenuPaperSemBotoesLigados/VboxBotoes" method="_fora"]
+[connection signal="pressed" from="Control/MenuPaperSemBotoesLigados/VboxBotoes/BotaoOptions" to="Control/MenuPaperSemBotoesLigados/VboxBotoes" method="_on_botao_options_pressed"]
+[connection signal="mouse_entered" from="Control/MenuPaperSemBotoesLigados/VboxBotoes/BotaoSair" to="Control/MenuPaperSemBotoesLigados/VboxBotoes" method="_on_botao_sair_mouse_entered"]
+[connection signal="mouse_exited" from="Control/MenuPaperSemBotoesLigados/VboxBotoes/BotaoSair" to="Control/MenuPaperSemBotoesLigados/VboxBotoes" method="_fora"]
+[connection signal="pressed" from="Control/MenuPaperSemBotoesLigados/VboxBotoes/BotaoSair" to="Control/MenuPaperSemBotoesLigados/VboxBotoes" method="_on_botao_sair_pressed"]
