@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b78keg0ignt8j"]
 
 [ext_resource type="Script" uid="uid://bmhhi0tril483" path="res://Source/Player/player.gd" id="1_4flbx"]
-[ext_resource type="Shader" uid="uid://bcfuj16arhi4e" path="res://Source/dithering.gdshader" id="2_g4gsc"]
+[ext_resource type="Shader" uid="uid://bcfuj16arhi4e" path="res://Source/Global/dithering.gdshader" id="2_g4gsc"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_4flbx"]
 
@@ -47,4 +47,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 
 [node name="PosProcessamento" type="MeshInstance3D" parent="Camera3D" unique_id=648073286]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23723257, 0.23640442, 0)
+extra_cull_margin = 303.41
 mesh = SubResource("QuadMesh_v1mne")
