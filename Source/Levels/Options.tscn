@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://b4afxc10lvo3d"]
+
+[ext_resource type="Shader" uid="uid://bcfuj16arhi4e" path="res://Source/Global/dithering.gdshader" id="1_02iut"]
+[ext_resource type="Texture2D" uid="uid://togklxdldx30" path="res://Source/Assets/Sprites/Menu_Opcoes.png" id="2_tvg80"]
+[ext_resource type="Script" uid="uid://b4srk8c4cxaji" path="res://Source/Levels/btnsair.gd" id="3_tvg80"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_fo22w"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fqc6k"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("1_02iut")
+shader_parameter/depth_threshold = 0.05
+shader_parameter/reverse_depth_threshold = 0.25
+shader_parameter/normal_threshold = 0.6
+shader_parameter/darken_amount = 0.3
+shader_parameter/lighten_amount = 1.5
+shader_parameter/normal_edge_bias = Vector3(1, 1, 1)
+shader_parameter/light_direction = Vector3(-0.96, -0.18, 0.2)
+shader_parameter/dither_repeat = 2.0
+shader_parameter/dither_strength = 1.0
+shader_parameter/min_dither_brightness = 0.2
+shader_parameter/cor_a = Vector4(0.09, 0, 0, 1)
+shader_parameter/cor_b = Vector4(0.5, 0.15, 0.1, 1)
+shader_parameter/bayer_mode = 8
+
+[sub_resource type="QuadMesh" id="QuadMesh_oboxs"]
+material = SubResource("ShaderMaterial_fqc6k")
+flip_faces = true
+size = Vector2(2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_42xhh"]
+size = Vector3(60, 2, 60)
+
+[sub_resource type="BoxMesh" id="BoxMesh_q8djv"]
+size = Vector3(60, 2, 60)
+
+[node name="Options" type="Node" unique_id=755067628]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=928064247]
+transform = Transform3D(0.99935937, -0.035789058, -4.977924e-10, 0.022797398, 0.6365854, 0.7708692, -0.02758868, -0.7703753, 0.6369935, 0.4566462, 5.9785156, 4.0120487)
+shadow_enabled = true
+
+[node name="CorpoPersonagem" type="MeshInstance3D" parent="." unique_id=1808537259]
+transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, -0.56470275, 1.0213968, -1.1410606)
+mesh = SubResource("SphereMesh_fo22w")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1835256525]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.348099, 0)
+
+[node name="PosProcessamento" type="MeshInstance3D" parent="Camera3D" unique_id=2116677113]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23723257, 0.23640442, 0)
+extra_cull_margin = 455.11
+mesh = SubResource("QuadMesh_oboxs")
+
+[node name="Chão" type="StaticBody3D" parent="." unique_id=883106690]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9999995, 0)
+
+[node name="Bloco" type="CollisionShape3D" parent="Chão" unique_id=113997702]
+shape = SubResource("BoxShape3D_42xhh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Chão" unique_id=1509543483]
+mesh = SubResource("BoxMesh_q8djv")
+
+[node name="Control" type="Control" parent="." unique_id=1217028969]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuOpcoes" type="Sprite2D" parent="Control" unique_id=1242423021]
+position = Vector2(76, 17)
+texture = ExtResource("2_tvg80")
+
+[node name="Button" type="Button" parent="Control/MenuOpcoes" unique_id=1249156095]
+offset_left = -294.0
+offset_top = 207.0
+offset_right = -286.0
+offset_bottom = 215.0
+scale = Vector2(19.88, 7.68)
+flat = true
+script = ExtResource("3_tvg80")
+
+[connection signal="mouse_entered" from="Control/MenuOpcoes/Button" to="Control/MenuOpcoes/Button" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Control/MenuOpcoes/Button" to="Control/MenuOpcoes/Button" method="_on_mouse_exited"]
+[connection signal="pressed" from="Control/MenuOpcoes/Button" to="Control/MenuOpcoes/Button" method="_on_pressed"]
