@@ -36,11 +36,12 @@ size = Vector3(60, 2, 60)
 
 [node name="Main" type="Node" unique_id=1376397151]
 
-[node name="Pivot" type="Node3D" parent="." unique_id=594682466]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.56470275, 1.0213968, -1.1410606)
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1021556705]
+transform = Transform3D(0.99935937, -0.035789058, -4.977924e-10, 0.022797398, 0.6365854, 0.7708692, -0.02758868, -0.7703753, 0.6369935, 0.4566462, 5.9785156, 4.0120487)
+shadow_enabled = true
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Pivot" unique_id=1911514808]
-transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0)
+[node name="CorpoPersonagem" type="MeshInstance3D" parent="." unique_id=1911514808]
+transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, -0.56470275, 1.0213968, -1.1410606)
 mesh = SubResource("SphereMesh_wkcc7")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=2010149393]
@@ -59,7 +60,7 @@ shape = SubResource("BoxShape3D_kvypo")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Chão" unique_id=1302418315]
 mesh = SubResource("BoxMesh_p7x2e")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1148657374]
+[node name="VboxBotoes" type="VBoxContainer" parent="." unique_id=1148657374]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -73,25 +74,21 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_wkcc7")
 
-[node name="BotaoStart" type="Button" parent="VBoxContainer" unique_id=1096133034]
+[node name="BotaoStart" type="Button" parent="VboxBotoes" unique_id=1096133034]
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "Start
 "
 
-[node name="BotaoOptions" type="Button" parent="VBoxContainer" unique_id=488145552]
+[node name="BotaoOptions" type="Button" parent="VboxBotoes" unique_id=488145552]
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "Options"
 
-[node name="BotaoSair" type="Button" parent="VBoxContainer" unique_id=413538445]
+[node name="BotaoSair" type="Button" parent="VboxBotoes" unique_id=413538445]
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "Exit"
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1021556705]
-transform = Transform3D(0.99935937, -0.035789058, -1.5643894e-09, 0.022797398, 0.6365854, 0.77086914, -0.02758868, -0.7703753, 0.63699347, 0.4566462, 5.9785156, 4.0120487)
-shadow_enabled = true
-
-[connection signal="pressed" from="VBoxContainer/BotaoStart" to="VBoxContainer" method="_on_botao_start_pressed"]
-[connection signal="pressed" from="VBoxContainer/BotaoSair" to="VBoxContainer" method="_on_botao_sair_pressed"]
+[connection signal="pressed" from="VboxBotoes/BotaoStart" to="VboxBotoes" method="_on_botao_start_pressed"]
+[connection signal="pressed" from="VboxBotoes/BotaoSair" to="VboxBotoes" method="_on_botao_sair_pressed"]
