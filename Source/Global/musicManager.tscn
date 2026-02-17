@@ -1,18 +1,18 @@
-[gd_scene format=3 uid="uid://mq5h3p2in5jw"]
+[gd_scene format=3 uid="uid://48jhb3r4p8pg"]
 
-[ext_resource type="AudioStream" uid="uid://dmr1m3n5r0gm2" path="res://Source/Música/menucarimbador.ogg" id="1_jggnw"]
-[ext_resource type="Shader" uid="uid://bcfuj16arhi4e" path="res://Source/Global/dithering.gdshader" id="2_y6bgu"]
-[ext_resource type="Script" uid="uid://dfmwc463f2b6r" path="res://Source/menu.gd" id="3_0v2f1"]
-[ext_resource type="Texture2D" uid="uid://csjxwutnqvgj1" path="res://Source/Sprites/Jogar.png" id="4_u2bv0"]
-[ext_resource type="Texture2D" uid="uid://dv3ku8xj7c7vf" path="res://Source/Sprites/Config.png" id="5_2vfmm"]
-[ext_resource type="Texture2D" uid="uid://c6nipsyoe8yis" path="res://Source/Sprites/Sair.png" id="6_58l74"]
+[ext_resource type="AudioStream" uid="uid://dmr1m3n5r0gm2" path="res://Source/Música/menucarimbador.ogg" id="1_3iprx"]
+[ext_resource type="Shader" uid="uid://bcfuj16arhi4e" path="res://Source/Global/dithering.gdshader" id="2_edgmt"]
+[ext_resource type="Script" uid="uid://dfmwc463f2b6r" path="res://Source/menu.gd" id="3_n11pj"]
+[ext_resource type="Texture2D" uid="uid://csjxwutnqvgj1" path="res://Source/Sprites/Jogar.png" id="4_1xylo"]
+[ext_resource type="Texture2D" uid="uid://dv3ku8xj7c7vf" path="res://Source/Sprites/Config.png" id="5_uoneo"]
+[ext_resource type="Texture2D" uid="uid://c6nipsyoe8yis" path="res://Source/Sprites/Sair.png" id="6_wjh06"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_wkcc7"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_p7x2e"]
 resource_local_to_scene = true
 render_priority = 0
-shader = ExtResource("2_y6bgu")
+shader = ExtResource("2_edgmt")
 shader_parameter/depth_threshold = 0.05
 shader_parameter/reverse_depth_threshold = 0.25
 shader_parameter/normal_threshold = 0.6
@@ -41,7 +41,7 @@ size = Vector3(60, 2, 60)
 [node name="Main" type="Node" unique_id=1376397151]
 
 [node name="Menucarimbador" type="AudioStreamPlayer" parent="." unique_id=693988481]
-stream = ExtResource("1_jggnw")
+stream = ExtResource("1_3iprx")
 volume_db = 6.0
 autoplay = true
 parameters/looping = true
@@ -84,7 +84,7 @@ offset_bottom = 688.8811
 grow_horizontal = 0
 scale = Vector2(0.39452612, 0.39452612)
 alignment = 1
-script = ExtResource("3_0v2f1")
+script = ExtResource("3_n11pj")
 metadata/_edit_use_anchors_ = true
 
 [node name="BotaoStart" type="Button" parent="VboxBotoes" unique_id=1096133034]
@@ -92,7 +92,7 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "
 "
-icon = ExtResource("4_u2bv0")
+icon = ExtResource("4_1xylo")
 flat = true
 
 [node name="BotaoOptions" type="Button" parent="VboxBotoes" unique_id=488145552]
@@ -100,13 +100,13 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 5
-icon = ExtResource("5_2vfmm")
+icon = ExtResource("5_uoneo")
 flat = true
 
 [node name="BotaoSair" type="Button" parent="VboxBotoes" unique_id=413538445]
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
-icon = ExtResource("6_58l74")
+icon = ExtResource("6_wjh06")
 flat = true
 
 [connection signal="pressed" from="VboxBotoes/BotaoStart" to="VboxBotoes" method="_on_botao_start_pressed"]

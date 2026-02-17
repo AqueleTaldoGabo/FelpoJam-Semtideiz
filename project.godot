@@ -18,6 +18,7 @@ config/icon="res://Source/icon.svg"
 [autoload]
 
 Transicao="*uid://b86k7pdekf4of"
+MusicManager="*uid://chcpdatahlwxi"
 
 [input]
 
