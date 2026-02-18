@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://b4afxc10lvo3d"]
+
+[ext_resource type="Texture2D" uid="uid://togklxdldx30" path="res://Source/Assets/Sprites/Menu_Opcoes.png" id="2_tvg80"]
+[ext_resource type="Script" uid="uid://b4srk8c4cxaji" path="res://Source/Scenes/Menus/options.gd" id="3_tvg80"]
+
+[node name="Options" type="Node" unique_id=755067628]
+script = ExtResource("3_tvg80")
+
+[node name="Control" type="Control" parent="." unique_id=1217028969]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuOpcoes" type="Sprite2D" parent="Control" unique_id=1242423021]
+position = Vector2(76, 17)
+texture = ExtResource("2_tvg80")
+
+[node name="Button" type="Button" parent="Control/MenuOpcoes" unique_id=1249156095]
+offset_left = -294.0
+offset_top = 207.0
+offset_right = -286.0
+offset_bottom = 215.0
+scale = Vector2(19.88, 7.68)
+flat = true
+
+[connection signal="mouse_entered" from="Control/MenuOpcoes/Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Control/MenuOpcoes/Button" to="." method="_on_button_mouse_exited"]
+[connection signal="pressed" from="Control/MenuOpcoes/Button" to="." method="_on_button_pressed"]

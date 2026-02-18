@@ -1,20 +1,24 @@
 extends VBoxContainer
 
 @onready var fundo:Sprite2D = $".."
-const CENA_1 = preload("uid://mq5h3p2in5jw")
+var CENA_1 = preload("uid://mq5h3p2in5jw").instantiate()
+var OPCOES = preload("uid://b4afxc10lvo3d").instantiate()
 const TEXTURAJOGAR = preload("res://Source/Assets/Sprites/Menu_paper_jogar_ligados.png")
 const TEXTURACONFI = preload("res://Source/Assets/Sprites/Menu_paper_opcoes_ligado.png")
 const TEXTURASAIR  = preload("res://Source/Assets/Sprites/Menu_paper_sair_ligado.png")
 const TEXTURAVAZIO = preload("res://Source/Assets/Sprites/Menu_paper_sem_botoes_ligados.png")
 
 func _on_botao_start_pressed() -> void:
+	var cur_scene = get_tree().get_current_scene()
 	Transicao.transicao()
 	ControleMusica.fade_out()
 	await Transicao.fade_acabou
-	get_tree().change_scene_to_packed(CENA_1)	
+	get_tree().root.add_child(CENA_1)
+	get_tree().root.remove_child(cur_scene)
 
 func _on_botao_options_pressed() -> void:
-	get_tree().change_scene_to_file("res://Source/Levels/Options.tscn")
+	var cur_scene = get_tree().get_current_scene()
+	get_tree().root.add_child(OPCOES)
 
 func _on_botao_sair_pressed() -> void:
 	get_tree().quit()
