@@ -3,17 +3,17 @@
 [ext_resource type="Script" uid="uid://cxn41at0x3823" path="res://Source/Levels/cena_1.gd" id="1_ovw4t"]
 [ext_resource type="PackedScene" uid="uid://bcnocjplm0u6g" path="res://Source/Assets/Modelos/Lamparina modelofinal.fbx" id="2_2vfmm"]
 [ext_resource type="Texture2D" uid="uid://bw7f8cobp7k6l" path="res://Source/Assets/Sprites/Chao_teste_quase_interrogacao2.png" id="2_xmjli"]
-[ext_resource type="PackedScene" uid="uid://bpxubxgn7qxa8" path="res://Source/Assets/Modelos/Mesafoda.fbx" id="3_22hde"]
 [ext_resource type="PackedScene" uid="uid://vqcc34o860lb" path="res://Source/Assets/Modelos/Mesafodaepequenacomcor.fbx" id="3_jggnw"]
 [ext_resource type="PackedScene" uid="uid://b1by761bfrmhj" path="res://Source/Assets/Modelos/portateste3333333.fbx" id="4_58l74"]
-[ext_resource type="PackedScene" uid="uid://dmib2t2kx0yei" path="res://Source/Assets/Modelos/Mesafodaepequena.fbx" id="4_alros"]
-[ext_resource type="PackedScene" uid="uid://ckobujgp1syqm" path="res://Source/Assets/Modelos/Telefonemerda.fbx" id="5_l6wx8"]
 [ext_resource type="PackedScene" uid="uid://ddffhr2ov0m3d" path="res://Source/Assets/Modelos/GarrafaFodacomtextura.fbx" id="7_u2bv0"]
 [ext_resource type="Shader" uid="uid://bcfuj16arhi4e" path="res://Source/Global/dithering.gdshader" id="8_0v2f1"]
 [ext_resource type="Script" uid="uid://clr15poiu5ixs" path="res://Source/Levels/character_body_3d.gd" id="8_2vfmm"]
 [ext_resource type="PackedScene" uid="uid://n6bmmh055upq" path="res://Source/Assets/Modelos/livrofudidocomtextura.fbx" id="9_u2bv0"]
+[ext_resource type="PackedScene" uid="uid://bmi3vxurx387l" path="res://Source/Assets/Modelos/Telefonecommalcotexturesfbx.fbx" id="10_l6wx8"]
 [ext_resource type="PackedScene" uid="uid://dpnj4c5kr3pxq" path="res://Source/Assets/Modelos/Pasta.fbx" id="10_w4s5p"]
+[ext_resource type="Texture2D" uid="uid://cvkb8qkmuqjx5" path="res://Source/Assets/Sprites/Sun.png" id="13_l6wx8"]
 [ext_resource type="PackedScene" uid="uid://dg651rlufkkpu" path="res://Source/Assets/Modelos/Livro malco2.fbx" id="13_m1wbi"]
+[ext_resource type="Texture2D" uid="uid://dolfnli2vtgsa" path="res://Source/Assets/Sprites/Predios.png" id="14_l6wx8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ovw4t"]
 size = Vector3(60, 2, 60)
@@ -37,7 +37,7 @@ shader_parameter/lighten_amount = 1.5
 shader_parameter/normal_edge_bias = Vector3(1, 1, 1)
 shader_parameter/light_direction = Vector3(-0.96, -0.18, 0.2)
 shader_parameter/dither_repeat = 2.0
-shader_parameter/dither_strength = 0.9
+shader_parameter/dither_strength = 0.8
 shader_parameter/min_dither_brightness = 0.1
 shader_parameter/cor_a = Vector4(0.2, 0.1, 0, 1)
 shader_parameter/cor_b = Vector4(0.5, 0.5, 0.1, 1)
@@ -48,6 +48,12 @@ material = SubResource("ShaderMaterial_g4gsc")
 flip_faces = true
 size = Vector2(2, 2)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m1wbi"]
+albedo_texture = ExtResource("13_l6wx8")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_l6wx8"]
+material = SubResource("StandardMaterial3D_m1wbi")
+
 [node name="Cena1" type="Node" unique_id=1119634821]
 script = ExtResource("1_ovw4t")
 
@@ -56,7 +62,7 @@ transform = Transform3D(0.2244402, 0, 0.19906433, 0, 0.3, 0, -0.19906433, 0, 0.2
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Lamparina modelofinal" unique_id=1113550427]
 transform = Transform3D(3.3333333, 0, -3.5762787e-07, 0, 3.333333, 0, 3.5762787e-07, 0, 3.3333333, 5.1269054, 1.8721404, -0.08350468)
-light_energy = 2.934
+light_energy = 4.835
 light_size = 0.178
 shadow_enabled = true
 omni_range = 1.8532065
@@ -75,23 +81,17 @@ mesh = SubResource("BoxMesh_22hde")
 [node name="portateste3333333" parent="." unique_id=1790261784 instance=ExtResource("4_58l74")]
 transform = Transform3D(-0.26999992, 0, 0.00013662875, 0, 0.27, 0, -0.00013662875, 0, -0.26999992, 0.9690323, 0.25272232, 4.3854246)
 
-[node name="Telefonemerda" parent="." unique_id=1096212302 instance=ExtResource("5_l6wx8")]
-transform = Transform3D(0.02542987, 0, 0.065217495, 0, 0.07, 0, -0.065217495, 0, 0.02542987, -4.495814, 1.1887608, 5.359864)
-
 [node name="Mesafodaepequenacomcor" parent="." unique_id=684872391 instance=ExtResource("3_jggnw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6078033, 0.0036923885, 4.3838634)
-
-[node name="Mesafoda" parent="." unique_id=1537711096 instance=ExtResource("3_22hde")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.609442, -0.23175573, 0)
-
-[node name="Mesafodaepequena" parent="." unique_id=1393830002 instance=ExtResource("4_alros")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.930544, 0.013289988, -3.4860787)
 
 [node name="GarrafaFodacomtextura" parent="." unique_id=1532728239 instance=ExtResource("7_u2bv0")]
 transform = Transform3D(0.22613178, 0, -0.44594222, 0, 0.5, 0, 0.44594222, 0, 0.22613178, -4.2717547, 1.168, 3.6713896)
 
 [node name="livrofudidocomtextura" parent="." unique_id=581058762 instance=ExtResource("9_u2bv0")]
 transform = Transform3D(0.016449094, 0, -0.047216807, 0, 0.05, 0, 0.047216807, 0, 0.016449094, -4.3534203, 1.2152369, 6.173071)
+
+[node name="Telefonecommalcotexturesfbx" parent="." unique_id=534405150 instance=ExtResource("10_l6wx8")]
+transform = Transform3D(0.053530443, 0, 0.059451587, 0, 0.08, 0, -0.059451587, 0, 0.053530443, -4.62587, 1.1786046, 5.1598363)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=198572222]
 transform = Transform3D(0.95281, 1.3269355e-08, -0.3035675, 0.3035675, -4.1648644e-08, 0.95281, 0, -1, -4.371139e-08, 0.76431274, 3.1603515, 4.3851957)
@@ -112,12 +112,30 @@ transform = Transform3D(0.0013885458, -0.3520868, 0.9359663, 0.0005223349, 0.935
 script = ExtResource("8_2vfmm")
 
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D" unique_id=1329880028]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.028611183, 0, 4.2438507e-05)
+transform = Transform3D(1, -5.551115e-17, 0, 5.8207328e-11, 1, -4.3176712e-13, 0, 2.980189e-08, 1, -0.028611183, 0, 4.2438507e-05)
 
 [node name="PosProcessamento" type="MeshInstance3D" parent="CharacterBody3D/Camera3D" unique_id=312709546]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23723257, 0.23640442, 0)
+transform = Transform3D(1, -3.2445158e-11, 0, 5.8207453e-11, 1, -2.5906027e-13, 0, 1.19209254e-07, 1, 0.24151182, 0.23194122, 0.0030276775)
 extra_cull_margin = 303.41
 mesh = SubResource("QuadMesh_u2bv0")
 
 [node name="Livro malco2" parent="." unique_id=1777705271 instance=ExtResource("13_m1wbi")]
 transform = Transform3D(-0.037324354, -0.027344778, 0.018951371, -0.0011315085, -0.027421383, -0.04179458, 0.033250734, -0.03162799, 0.019850895, -4.616606, 1.387685, 3.7090795)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1112958604]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -3.062861, 2.4073012, 0.843724)
+mesh = SubResource("PlaneMesh_l6wx8")
+
+[node name="Sprite3D" type="Sprite3D" parent="MeshInstance3D" unique_id=397683452]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0.07616353, 0.2962314, 0.31154454)
+cast_shadow = 0
+gi_mode = 2
+alpha_cut = 3
+texture = ExtResource("14_l6wx8")
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=1304021077]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.948413, 1.9756947, 4.2598405)
+spot_range = 6.274
+spot_attenuation = -0.69
+spot_angle = 26.5
+spot_angle_attenuation = 0.1806876
