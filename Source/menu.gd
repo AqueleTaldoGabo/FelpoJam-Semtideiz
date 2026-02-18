@@ -7,14 +7,17 @@ const TEXTURAJOGAR = preload("res://Source/Assets/Sprites/Menu_paper_jogar_ligad
 const TEXTURACONFI = preload("res://Source/Assets/Sprites/Menu_paper_opcoes_ligado.png")
 const TEXTURASAIR  = preload("res://Source/Assets/Sprites/Menu_paper_sair_ligado.png")
 const TEXTURAVAZIO = preload("res://Source/Assets/Sprites/Menu_paper_sem_botoes_ligados.png")
+var MUSICA2 = preload("res://Source/Música/menucarimbador.ogg")
 
 func _on_botao_start_pressed() -> void:
 	var cur_scene = get_tree().get_current_scene()
 	Transicao.transicao()
 	ControleMusica.fade_out()
 	await Transicao.fade_acabou
+	ControleMusica.trocar_musica(MUSICA2)
 	get_tree().root.add_child(CENA_1)
 	get_tree().root.remove_child(cur_scene)
+	
 
 func _on_botao_options_pressed() -> void:
 	var cur_scene = get_tree().get_current_scene()

@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://ipxelk0c00b8"]
+
+[ext_resource type="Script" uid="uid://0p5tjle6a8dd" path="res://Source/Player/raio_interagente.gd" id="1_sw5dw"]
+
+[node name="RaioInteragente" type="RayCast3D" unique_id=1526962639]
+target_position = Vector3(0, 0, -5)
+script = ExtResource("1_sw5dw")

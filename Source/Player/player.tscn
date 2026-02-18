@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bmhhi0tril483" path="res://Source/Player/player.gd" id="1_4flbx"]
 [ext_resource type="Shader" uid="uid://bcfuj16arhi4e" path="res://Source/Global/dithering.gdshader" id="2_g4gsc"]
+[ext_resource type="PackedScene" uid="uid://ipxelk0c00b8" path="res://Source/Player/RaioInteragente.tscn" id="2_v1mne"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_4flbx"]
 
@@ -41,10 +42,16 @@ mesh = SubResource("SphereMesh_4flbx")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=211487685]
 shape = SubResource("CapsuleShape3D_4flbx")
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=663345910]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7184843, 0)
+[node name="Cabeça" type="Node3D" parent="." unique_id=1891707713]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.718, 0)
 
-[node name="PosProcessamento" type="MeshInstance3D" parent="Camera3D" unique_id=648073286]
+[node name="Camera3D" type="Camera3D" parent="Cabeça" unique_id=663345910]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00048428774, 0)
+
+[node name="PosProcessamento" type="MeshInstance3D" parent="Cabeça/Camera3D" unique_id=648073286]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23723257, 0.23640442, 0)
+visible = false
 extra_cull_margin = 303.41
 mesh = SubResource("QuadMesh_v1mne")
+
+[node name="RaioInteragente" parent="Cabeça" unique_id=1526962639 instance=ExtResource("2_v1mne")]
