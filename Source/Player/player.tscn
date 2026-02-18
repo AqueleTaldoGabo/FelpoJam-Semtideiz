@@ -50,7 +50,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00048428774, 0)
 
 [node name="PosProcessamento" type="MeshInstance3D" parent="Cabeça/Camera3D" unique_id=648073286]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23723257, 0.23640442, 0)
-visible = false
 extra_cull_margin = 303.41
 mesh = SubResource("QuadMesh_v1mne")
 
