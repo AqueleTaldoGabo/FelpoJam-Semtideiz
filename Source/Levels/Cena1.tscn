@@ -7,11 +7,13 @@
 [ext_resource type="PackedScene" uid="uid://vqcc34o860lb" path="res://Source/Assets/Modelos/Mesafodaepequenacomcor.fbx" id="3_jggnw"]
 [ext_resource type="PackedScene" uid="uid://b1by761bfrmhj" path="res://Source/Assets/Modelos/portateste3333333.fbx" id="4_58l74"]
 [ext_resource type="PackedScene" uid="uid://dmib2t2kx0yei" path="res://Source/Assets/Modelos/Mesafodaepequena.fbx" id="4_alros"]
+[ext_resource type="PackedScene" uid="uid://ckobujgp1syqm" path="res://Source/Assets/Modelos/Telefonemerda.fbx" id="5_l6wx8"]
 [ext_resource type="PackedScene" uid="uid://ddffhr2ov0m3d" path="res://Source/Assets/Modelos/GarrafaFodacomtextura.fbx" id="7_u2bv0"]
 [ext_resource type="Shader" uid="uid://bcfuj16arhi4e" path="res://Source/Global/dithering.gdshader" id="8_0v2f1"]
 [ext_resource type="Script" uid="uid://clr15poiu5ixs" path="res://Source/Levels/character_body_3d.gd" id="8_2vfmm"]
 [ext_resource type="PackedScene" uid="uid://n6bmmh055upq" path="res://Source/Assets/Modelos/livrofudidocomtextura.fbx" id="9_u2bv0"]
 [ext_resource type="PackedScene" uid="uid://dpnj4c5kr3pxq" path="res://Source/Assets/Modelos/Pasta.fbx" id="10_w4s5p"]
+[ext_resource type="PackedScene" uid="uid://dg651rlufkkpu" path="res://Source/Assets/Modelos/Livro malco2.fbx" id="13_m1wbi"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ovw4t"]
 size = Vector3(60, 2, 60)
@@ -30,12 +32,12 @@ shader = ExtResource("8_0v2f1")
 shader_parameter/depth_threshold = 0.05
 shader_parameter/reverse_depth_threshold = 0.25
 shader_parameter/normal_threshold = 0.6
-shader_parameter/darken_amount = 0.3
+shader_parameter/darken_amount = 0.30000001425
 shader_parameter/lighten_amount = 1.5
 shader_parameter/normal_edge_bias = Vector3(1, 1, 1)
 shader_parameter/light_direction = Vector3(-0.96, -0.18, 0.2)
 shader_parameter/dither_repeat = 2.0
-shader_parameter/dither_strength = 1.0
+shader_parameter/dither_strength = 0.9
 shader_parameter/min_dither_brightness = 0.1
 shader_parameter/cor_a = Vector4(0.2, 0.1, 0, 1)
 shader_parameter/cor_b = Vector4(0.5, 0.5, 0.1, 1)
@@ -54,8 +56,10 @@ transform = Transform3D(0.2244402, 0, 0.19906433, 0, 0.3, 0, -0.19906433, 0, 0.2
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Lamparina modelofinal" unique_id=1113550427]
 transform = Transform3D(3.3333333, 0, -3.5762787e-07, 0, 3.333333, 0, 3.5762787e-07, 0, 3.3333333, 5.1269054, 1.8721404, -0.08350468)
-light_energy = 1.35
+light_energy = 2.934
+light_size = 0.178
 shadow_enabled = true
+omni_range = 1.8532065
 
 [node name="Chão" type="StaticBody3D" parent="." unique_id=561460632]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9999995, 0)
@@ -71,6 +75,9 @@ mesh = SubResource("BoxMesh_22hde")
 [node name="portateste3333333" parent="." unique_id=1790261784 instance=ExtResource("4_58l74")]
 transform = Transform3D(-0.26999992, 0, 0.00013662875, 0, 0.27, 0, -0.00013662875, 0, -0.26999992, 0.9690323, 0.25272232, 4.3854246)
 
+[node name="Telefonemerda" parent="." unique_id=1096212302 instance=ExtResource("5_l6wx8")]
+transform = Transform3D(0.02542987, 0, 0.065217495, 0, 0.07, 0, -0.065217495, 0, 0.02542987, -4.495814, 1.1887608, 5.359864)
+
 [node name="Mesafodaepequenacomcor" parent="." unique_id=684872391 instance=ExtResource("3_jggnw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6078033, 0.0036923885, 4.3838634)
 
@@ -81,10 +88,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.609442, -0.23175573, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.930544, 0.013289988, -3.4860787)
 
 [node name="GarrafaFodacomtextura" parent="." unique_id=1532728239 instance=ExtResource("7_u2bv0")]
-transform = Transform3D(0.47939667, 0, -0.5100773, 0, 0.7, 0, 0.5100773, 0, 0.47939667, -4.6203923, 1.168, 3.7926147)
+transform = Transform3D(0.22613178, 0, -0.44594222, 0, 0.5, 0, 0.44594222, 0, 0.22613178, -4.2717547, 1.168, 3.6713896)
 
 [node name="livrofudidocomtextura" parent="." unique_id=581058762 instance=ExtResource("9_u2bv0")]
-transform = Transform3D(0.016449094, 0, -0.047216807, 0, 0.05, 0, 0.047216807, 0, 0.016449094, -4.3534203, 1.2152369, 5.0013494)
+transform = Transform3D(0.016449094, 0, -0.047216807, 0, 0.05, 0, 0.047216807, 0, 0.016449094, -4.3534203, 1.2152369, 6.173071)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=198572222]
 transform = Transform3D(0.95281, 1.3269355e-08, -0.3035675, 0.3035675, -4.1648644e-08, 0.95281, 0, -1, -4.371139e-08, 0.76431274, 3.1603515, 4.3851957)
@@ -93,9 +100,9 @@ light_size = 1.0
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=744765711]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.535515, 0.091707826, 4.3679953)
-light_energy = 0.207
+light_energy = 1.791
 light_indirect_energy = 16.0
-light_size = 1.0
+omni_range = 1.7212143
 
 [node name="Pasta" parent="." unique_id=1852265413 instance=ExtResource("10_w4s5p")]
 transform = Transform3D(0.09999999, 7.450581e-09, -2.401066e-09, -2.6077032e-08, 0.1, -9.1677066e-10, 2.3428584e-09, 8.949428e-10, 0.10000002, -4.463678, 1.1508474, 4.405875)
@@ -111,3 +118,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.028611183, 0, 4.2438507e-0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23723257, 0.23640442, 0)
 extra_cull_margin = 303.41
 mesh = SubResource("QuadMesh_u2bv0")
+
+[node name="Livro malco2" parent="." unique_id=1777705271 instance=ExtResource("13_m1wbi")]
+transform = Transform3D(-0.037324354, -0.027344778, 0.018951371, -0.0011315085, -0.027421383, -0.04179458, 0.033250734, -0.03162799, 0.019850895, -4.616606, 1.387685, 3.7090795)
