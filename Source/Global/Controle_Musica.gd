@@ -1,6 +1,8 @@
 extends Node
 
-@export var transition_duration: float = 1.0
+@export var transition_duration: float = 2.0
+var volume = $".".volume_db
+
 
 func fade_out():
 	var tween = create_tween()
@@ -17,4 +19,4 @@ func fade_out():
 
 func _on_fade_finished(stream_player: AudioStreamPlayer):
 	stream_player.stop()
-	stream_player.volume_db = 0
+	stream_player.volume_db = volume
