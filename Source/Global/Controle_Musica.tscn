@@ -1,10 +1,9 @@
 [gd_scene format=3 uid="uid://bwf6gpnjfd33d"]
 
-[ext_resource type="AudioStream" uid="uid://dmr1m3n5r0gm2" path="res://Source/Música/menucarimbador.ogg" id="1_vn0jh"]
+[ext_resource type="AudioStream" uid="uid://bywflxkcemam2" path="res://Source/Música/temadocari.ogg" id="1_vn0jh"]
 [ext_resource type="Script" uid="uid://boxcqxym18bnq" path="res://Source/Global/Controle_Musica.gd" id="2_udtnx"]
 
 [node name="ControleMusica" type="AudioStreamPlayer" unique_id=25973414]
 stream = ExtResource("1_vn0jh")
-volume_db = -3.0
 autoplay = true
 script = ExtResource("2_udtnx")
