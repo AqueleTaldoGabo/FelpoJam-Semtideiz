@@ -4,11 +4,9 @@ extends CharacterBody3D
 @export var sensibilidade_mouse = 0.002
 @export var se_move = true
 
-var velocidade_objeto = Vector3.ZERO
+@onready var OPCOES = preload("uid://b4afxc10lvo3d").instantiate()
 
-func _ready():
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	
+var velocidade_objeto = Vector3.ZERO
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
@@ -17,8 +15,8 @@ func _input(event: InputEvent) -> void:
 		$"Cabeça/Camera3D".rotation.x = clampf($"Cabeça/Camera3D".rotation.x, -deg_to_rad(70), deg_to_rad(70))
 	if event.is_action_pressed("ui_cancel"):
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+		OPCOES.mouse = Input.MOUSE_MODE_CAPTURED
+		get_tree().root.add_child(OPCOES)
 		
 
 func _physics_process(delta: float) -> void:

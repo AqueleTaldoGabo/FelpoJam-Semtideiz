@@ -6,4 +6,5 @@
 [node name="ControleMusica" type="AudioStreamPlayer" unique_id=25973414]
 stream = ExtResource("1_vn0jh")
 autoplay = true
+bus = &"Musica"
 script = ExtResource("2_udtnx")

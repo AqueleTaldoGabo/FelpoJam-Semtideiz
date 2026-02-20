@@ -2,6 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://togklxdldx30" path="res://Source/Assets/Sprites/Menu_Opcoes.png" id="2_tvg80"]
 [ext_resource type="Script" uid="uid://b4srk8c4cxaji" path="res://Source/Scenes/Menus/options.gd" id="3_tvg80"]
+[ext_resource type="Texture2D" uid="uid://cfqpk3kvf2rqt" path="res://Source/Assets/Sprites/botcaozinho.png" id="3_ylxf0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vaenm"]
 
 [node name="Options" type="Node" unique_id=755067628]
 script = ExtResource("3_tvg80")
@@ -32,6 +35,63 @@ offset_bottom = 215.0
 scale = Vector2(19.88, 7.68)
 flat = true
 
+[node name="Vol_Principal" type="HSlider" parent="Control/MenuOpcoes" unique_id=1396065929]
+anchors_preset = -1
+anchor_left = 0.5078125
+anchor_top = 0.3296875
+anchor_right = 0.7421875
+anchor_bottom = 0.359375
+offset_left = -320.0
+offset_top = -320.0
+offset_right = -320.0
+offset_bottom = -320.0
+theme_override_icons/grabber = ExtResource("3_ylxf0")
+theme_override_icons/grabber_highlight = ExtResource("3_ylxf0")
+theme_override_styles/slider = SubResource("StyleBoxEmpty_vaenm")
+max_value = 1.0
+step = 0.05
+value = 1.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Vol_Musica" type="HSlider" parent="Control/MenuOpcoes" unique_id=1496214453]
+anchors_preset = -1
+anchor_left = 0.5078125
+anchor_top = 0.48125
+anchor_right = 0.7421875
+anchor_bottom = 0.5109375
+offset_left = -320.0
+offset_top = -320.0
+offset_right = -320.0
+offset_bottom = -320.0
+theme_override_icons/grabber = ExtResource("3_ylxf0")
+theme_override_icons/grabber_highlight = ExtResource("3_ylxf0")
+theme_override_styles/slider = SubResource("StyleBoxEmpty_vaenm")
+max_value = 1.0
+step = 0.05
+value = 1.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Vol_SFX" type="HSlider" parent="Control/MenuOpcoes" unique_id=1101452319]
+anchors_preset = -1
+anchor_left = 0.5078125
+anchor_top = 0.6234375
+anchor_right = 0.7421875
+anchor_bottom = 0.653125
+offset_left = -320.0
+offset_top = -320.0
+offset_right = -320.0
+offset_bottom = -320.0
+theme_override_icons/grabber = ExtResource("3_ylxf0")
+theme_override_icons/grabber_highlight = ExtResource("3_ylxf0")
+theme_override_styles/slider = SubResource("StyleBoxEmpty_vaenm")
+max_value = 1.0
+step = 0.05
+value = 1.0
+metadata/_edit_use_anchors_ = true
+
 [connection signal="mouse_entered" from="Control/MenuOpcoes/Button" to="." method="_on_button_mouse_entered"]
 [connection signal="mouse_exited" from="Control/MenuOpcoes/Button" to="." method="_on_button_mouse_exited"]
 [connection signal="pressed" from="Control/MenuOpcoes/Button" to="." method="_on_button_pressed"]
+[connection signal="value_changed" from="Control/MenuOpcoes/Vol_Principal" to="." method="_on_h_slider_value_changed"]
+[connection signal="value_changed" from="Control/MenuOpcoes/Vol_Musica" to="." method="_on_vol_musica_value_changed"]
+[connection signal="value_changed" from="Control/MenuOpcoes/Vol_SFX" to="." method="_on_vol_sfx_value_changed"]

@@ -2,24 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3ia7a7lcwquh"
-path.s3tc="res://.godot/imported/livrofudidocomtextura_0.png-5ec1e5607d8abbe85dfecb728280d718.s3tc.ctex"
+uid="uid://jtchjgtt742t"
+path="res://.godot/imported/Botaosinho_3.png-54c1beaa3251457ca4187b3787876984.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
-}
-generator_parameters={
-"md5": "f5193460be1fc3fc5c95105b1e2700ea"
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://Source/Assets/Modelos/Livro_bolo/livrofudidocomtextura_0.png"
-dest_files=["res://.godot/imported/livrofudidocomtextura_0.png-5ec1e5607d8abbe85dfecb728280d718.s3tc.ctex"]
+source_file="res://Source/Assets/Sprites/Botaosinho_3.png"
+dest_files=["res://.godot/imported/Botaosinho_3.png-54c1beaa3251457ca4187b3787876984.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -27,7 +23,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -41,4 +37,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1
