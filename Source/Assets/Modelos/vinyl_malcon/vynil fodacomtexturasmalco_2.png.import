@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dak17qckmejk1"
-path.s3tc="res://.godot/imported/livrofudidocomtextura_1.png-0c3b61533599d148afd832fb16fc0e91.s3tc.ctex"
+uid="uid://drluk3hu01sg6"
+path.s3tc="res://.godot/imported/vynil fodacomtexturasmalco_2.png-09d2b41201b033a7e50b8868c40f263c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "1e192778c7b11798c7e2eff634c968e1"
+"md5": "46da6012f4bb04bffe6f568e318979a0"
 }
 
 [deps]
 
-source_file="res://Source/Assets/Modelos/Livro_bolo/livrofudidocomtextura_1.png"
-dest_files=["res://.godot/imported/livrofudidocomtextura_1.png-0c3b61533599d148afd832fb16fc0e91.s3tc.ctex"]
+source_file="res://Source/Assets/Modelos/vinyl_malcon/vynil fodacomtexturasmalco_2.png"
+dest_files=["res://.godot/imported/vynil fodacomtexturasmalco_2.png-09d2b41201b033a7e50b8868c40f263c.s3tc.ctex"]
 
 [params]
 

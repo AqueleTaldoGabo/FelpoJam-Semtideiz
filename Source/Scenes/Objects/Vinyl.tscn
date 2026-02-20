@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://cgfko6kr2mhuc"]
+
+[ext_resource type="Script" uid="uid://cjqmbi23ao7l0" path="res://Source/Scenes/Objects/vinyl.gd" id="1_5ohy6"]
+[ext_resource type="Texture2D" uid="uid://bw7f8cobp7k6l" path="res://Source/Assets/Sprites/Chao_teste_quase_interrogacao2.png" id="2_5ohy6"]
+[ext_resource type="PackedScene" uid="uid://c4njwgno0o5it" path="res://Source/Assets/Modelos/vinyl_malcon/vynil fodacomtexturasmalco.fbx" id="2_l0fod"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_docrn"]
+albedo_texture = ExtResource("2_5ohy6")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_docrn"]
+material = SubResource("StandardMaterial3D_docrn")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5ohy6"]
+size = Vector3(0.53601074, 0.6767578, 0.69140625)
+
+[node name="Vinyl" type="StaticBody3D" unique_id=1120069274]
+script = ExtResource("1_5ohy6")
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="." unique_id=289617231]
+transform = Transform3D(0.9931564, -0.1089219, -0.04214745, -2.220446e-16, -0.36087593, 0.93261385, -0.11679207, -0.9262314, -0.35840625, -0.120217085, 2.6710162, -1.0795362)
+light_energy = 1.158
+light_size = 1.0
+shadow_enabled = true
+spot_range = 3.827
+spot_attenuation = -1.19
+spot_angle = 22.94
+spot_angle_attenuation = 0.1806876
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1236509081]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.011801243, 0)
+mesh = SubResource("CylinderMesh_docrn")
+
+[node name="vynil fodacomtexturasmalco" parent="." unique_id=191827503 instance=ExtResource("2_l0fod")]
+transform = Transform3D(-0.14860547, 0, 0.371371, 0, 0.4, 0, -0.371371, 0, -0.14860547, 0.054799378, 1.0233977, 0.02136612)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1358817520]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11065674, 1.408346, -0.19824219)
+shape = SubResource("BoxShape3D_5ohy6")
+
+[connection signal="interagido" from="." to="." method="_on_interagido"]

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://curejhaq0wiig"]
+
+[ext_resource type="Script" uid="uid://dlcgfbeqx1c33" path="res://Source/Scenes/Objects/pasta.gd" id="1_urx0x"]
+[ext_resource type="PackedScene" uid="uid://dpnj4c5kr3pxq" path="res://Source/Assets/Modelos/Pasta/Pasta.fbx" id="2_io8j2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_urx0x"]
+size = Vector3(0.7055664, 0.059753418, 0.43286133)
+
+[node name="Pasta" type="StaticBody3D" unique_id=1623291131]
+script = ExtResource("1_urx0x")
+
+[node name="Pasta" parent="." unique_id=156026942 instance=ExtResource("2_io8j2")]
+transform = Transform3D(0.09999999, 7.450581e-09, -2.401066e-09, -2.6077032e-08, 0.1, -9.1677066e-10, 2.3428584e-09, 8.949428e-10, 0.10000002, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1459628278]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06762695, 0.025115967, -0.017456055)
+shape = SubResource("BoxShape3D_urx0x")
+
+[connection signal="interagido" from="." to="." method="_on_interagido"]
