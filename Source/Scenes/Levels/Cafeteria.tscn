@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://c050oo5ix4vvt"]
+
+[ext_resource type="PackedScene" uid="uid://b78keg0ignt8j" path="res://Source/Player/player.tscn" id="1_n7cls"]
+[ext_resource type="Texture2D" uid="uid://bw7f8cobp7k6l" path="res://Source/Assets/Sprites/Chao_teste_quase_interrogacao2.png" id="2_b77ag"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2elm2"]
+size = Vector3(60, 2, 60)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qgrc7"]
+albedo_texture = ExtResource("2_b77ag")
+uv1_scale = Vector3(60, 60, 60)
+
+[sub_resource type="BoxMesh" id="BoxMesh_bn0h7"]
+size = Vector3(60, 2, 60)
+
+[node name="Cafeteria" type="Node" unique_id=36272449]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1881450520]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Player" parent="." unique_id=1240492296 instance=ExtResource("1_n7cls")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0077297688, 0.9880394, -0.03906679)
+
+[node name="Chão" type="StaticBody3D" parent="." unique_id=623002619]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9999995, 0)
+
+[node name="Bloco" type="CollisionShape3D" parent="Chão" unique_id=1727864330]
+shape = SubResource("BoxShape3D_2elm2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Chão" unique_id=1482501918]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.014565945, -0.029417992, -0.07714462)
+material_overlay = SubResource("StandardMaterial3D_qgrc7")
+mesh = SubResource("BoxMesh_bn0h7")

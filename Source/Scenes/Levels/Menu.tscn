@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://dd1b8xgsal8rq" path="res://Source/Assets/Sprites/Menu_paper_sem_botoes_ligados.png" id="2_4qgqy"]
 [ext_resource type="Script" uid="uid://dvlm5tx45km2i" path="res://Source/menu.gd" id="3_i10ex"]
 
-
 [sub_resource type="SphereMesh" id="SphereMesh_nbjkt"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_uglvk"]
@@ -82,6 +81,7 @@ position = Vector2(76, 17)
 texture = ExtResource("2_4qgqy")
 
 [node name="VboxBotoes" type="VBoxContainer" parent="Control/MenuPaperSemBotoesLigados" unique_id=201056274]
+custom_minimum_size = Vector2(10, 0)
 anchors_preset = -1
 anchor_left = 0.0421875
 anchor_top = 0.39531252
@@ -91,31 +91,26 @@ offset_left = -320.0
 offset_top = -320.0
 offset_right = -26.571396
 offset_bottom = 62.57132
-grow_horizontal = 2
-grow_vertical = 2
 scale = Vector2(0.35, 0.35)
-size_flags_stretch_ratio = 0.0
-theme_override_constants/separation = 3
-alignment = 1
+theme_override_constants/separation = 24
 script = ExtResource("3_i10ex")
 metadata/_edit_use_anchors_ = true
 
 [node name="BotaoStart" type="Button" parent="Control/MenuPaperSemBotoesLigados/VboxBotoes" unique_id=1190088582]
-custom_minimum_size = Vector2(40, 172)
+custom_minimum_size = Vector2(157, 180)
 layout_mode = 2
-size_flags_vertical = 3
 theme_override_constants/outline_size = 40
 theme_override_font_sizes/font_size = 10
 flat = true
 
 [node name="BotaoOptions" type="Button" parent="Control/MenuPaperSemBotoesLigados/VboxBotoes" unique_id=1618177612]
-custom_minimum_size = Vector2(0, 175)
+custom_minimum_size = Vector2(157, 180)
 layout_mode = 2
 theme_override_font_sizes/font_size = 10
 flat = true
 
 [node name="BotaoSair" type="Button" parent="Control/MenuPaperSemBotoesLigados/VboxBotoes" unique_id=1768535427]
-custom_minimum_size = Vector2(0, 200)
+custom_minimum_size = Vector2(157, 180)
 layout_mode = 2
 theme_override_font_sizes/font_size = 10
 flat = true
