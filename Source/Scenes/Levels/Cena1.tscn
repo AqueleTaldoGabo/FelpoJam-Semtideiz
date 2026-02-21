@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://mq5h3p2in5jw"]
 
+[ext_resource type="Script" uid="uid://lyng6hwpykyi" path="res://Source/Scenes/Levels/cena_1.gd" id="1_ouqje"]
 [ext_resource type="PackedScene" uid="uid://bcnocjplm0u6g" path="res://Source/Assets/Modelos/Lamparina/Lamparina modelofinal.fbx" id="2_2vfmm"]
 [ext_resource type="Texture2D" uid="uid://bw7f8cobp7k6l" path="res://Source/Assets/Sprites/Chao_teste_quase_interrogacao2.png" id="2_xmjli"]
 [ext_resource type="PackedScene" uid="uid://vqcc34o860lb" path="res://Source/Assets/Modelos/Mesa/Mesafodaepequenacomcor.fbx" id="3_jggnw"]
@@ -25,12 +26,6 @@ uv1_scale = Vector3(60, 60, 60)
 [sub_resource type="BoxMesh" id="BoxMesh_22hde"]
 size = Vector3(60, 2, 60)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qvc64"]
-albedo_texture = ExtResource("2_xmjli")
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_qvc64"]
-material = SubResource("StandardMaterial3D_qvc64")
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_eqeni"]
 render_priority = 0
 shader = ExtResource("5_eqeni")
@@ -47,16 +42,14 @@ albedo_texture = ExtResource("13_l6wx8")
 [sub_resource type="PlaneMesh" id="PlaneMesh_l6wx8"]
 material = SubResource("StandardMaterial3D_m1wbi")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ouqje"]
-render_priority = 0
-shader = ExtResource("5_eqeni")
-shader_parameter/outline_color = Color(0, 0, 0, 1)
-shader_parameter/outline_width = 10.0
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qvc64"]
+albedo_texture = ExtResource("2_xmjli")
 
-[sub_resource type="BoxMesh" id="BoxMesh_bgm48"]
-material = SubResource("ShaderMaterial_ouqje")
+[sub_resource type="CylinderMesh" id="CylinderMesh_qvc64"]
+material = SubResource("StandardMaterial3D_qvc64")
 
 [node name="Cena1" type="Node" unique_id=1119634821]
+script = ExtResource("1_ouqje")
 
 [node name="Lamparina modelofinal" parent="." unique_id=1184403439 instance=ExtResource("2_2vfmm")]
 transform = Transform3D(0.2244402, 0, 0.19906433, 0, 0.3, 0, -0.19906433, 0, 0.2244402, -5.8038044, 1.1785486, 6.035648)
@@ -79,10 +72,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.014565945, -0.029417992, -0
 material_overlay = SubResource("StandardMaterial3D_jggnw")
 mesh = SubResource("BoxMesh_22hde")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Chão/MeshInstance3D" unique_id=1201382455]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.513799, 1.0664495, 1.5834304)
-mesh = SubResource("CylinderMesh_qvc64")
-
 [node name="Mesafodaepequenacomcor" parent="." unique_id=1597368954 instance=ExtResource("3_jggnw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6078033, 0.0036923885, 4.3838634)
 
@@ -100,7 +89,7 @@ transform = Transform3D(0.053530443, 0, 0.059451587, 0, 0.08, 0, -0.059451587, 0
 transform = Transform3D(-0.037324354, -0.027344778, 0.018951371, -0.0011315085, -0.027421383, -0.04179458, 0.033250734, -0.03162799, 0.019850895, -4.616606, 1.387685, 3.7090795)
 
 [node name="Player" parent="." unique_id=1240492296 instance=ExtResource("11_m1wbi")]
-transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -3.8019853, 0.9119629, 4.366242)
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -3.8001873, 0.912, 4.384)
 se_move = false
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Player" unique_id=744765711]
@@ -127,7 +116,7 @@ spot_angle = 26.5
 spot_angle_attenuation = 0.1806876
 
 [node name="Porta" parent="." unique_id=704416160 instance=ExtResource("12_qvc64")]
-transform = Transform3D(-0.26999992, 0, 0.00013662875, 0, 0.27, 0, -0.00013662875, 0, -0.26999992, 0.9, 0, 4.4)
+transform = Transform3D(-0.26999992, 0, 0.00013662875, 0, 0.27, 0, -0.00013662875, 0, -0.26999992, 0.9, 0, 4.384)
 
 [node name="Vinyl" parent="." unique_id=1120069274 instance=ExtResource("12_juwpi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.144808, 0.079818845, 8.210838)
@@ -138,5 +127,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.464, 1.151, 4.406)
 [node name="faqueteirapronta" parent="." unique_id=156867163 instance=ExtResource("13_qvc64")]
 transform = Transform3D(-0.1286591, 0, -0.48316336, 0, 0.5, 0, 0.48316336, 0, -0.1286591, -2.4256678, 1.0357966, 1.2011566)
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=934349744]
-mesh = SubResource("BoxMesh_bgm48")
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="faqueteirapronta" unique_id=1201382455]
+transform = Transform3D(-0.5146364, 0, 1.9326534, 0, 2, 0, -1.9326534, 0, -0.5146364, 0.62756824, -1.9975293, -0.014854431)
+mesh = SubResource("CylinderMesh_qvc64")
+
+[connection signal="MudarCenar" from="Porta" to="." method="_on_porta_mudar_cenar"]

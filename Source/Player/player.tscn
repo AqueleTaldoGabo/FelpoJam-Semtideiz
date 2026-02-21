@@ -55,3 +55,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00048428774, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23723257, 0.23640442, 0)
 extra_cull_margin = 303.41
 mesh = SubResource("QuadMesh_v1mne")
+
+[node name="crosshair" type="ColorRect" parent="Cabeça/Camera3D" unique_id=1866048991]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1.75
+offset_top = -1.75
+offset_right = 1.75
+offset_bottom = 1.75
+grow_horizontal = 2
+grow_vertical = 2

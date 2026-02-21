@@ -1,8 +1,11 @@
 extends CharacterBody3D
 
 @export var velocidade = 5
-@export var sensibilidade_mouse = 0.002
+@export var sensibilidade_mouse = 0.0013
 @export var se_move = true
+@export var size_raio = -5
+@onready var target_rotation = Vector2(1.57,0) 
+var ease_curve: float = 0.1
 
 @onready var OPCOES = preload("uid://b4afxc10lvo3d").instantiate()
 
@@ -10,16 +13,21 @@ var velocidade_objeto = Vector3.ZERO
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
-		rotate_y(-event.relative.x * sensibilidade_mouse)
-		$"Cabeça/Camera3D".rotate_x(-event.relative.y * sensibilidade_mouse)
-		$"Cabeça/Camera3D".rotation.x = clampf($"Cabeça/Camera3D".rotation.x, -deg_to_rad(70), deg_to_rad(70))
+		target_rotation -= event.relative * sensibilidade_mouse
+		target_rotation.y = clampf(target_rotation.y, PI/-2, PI/2)
 	if event.is_action_pressed("ui_cancel"):
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 		OPCOES.mouse = Input.MOUSE_MODE_CAPTURED
 		get_tree().root.add_child(OPCOES)
+		get_tree().paused = true
 		
 
 func _physics_process(delta: float) -> void:
+	
+	rotation.y = lerp_angle(rotation.y, target_rotation.x, ease(delta, ease_curve))
+	$"Cabeça/Camera3D".rotation.x = lerp_angle($"Cabeça/Camera3D".rotation.x, target_rotation.y, ease(delta, ease_curve))
+	
+	
 	var input = Input.get_vector("anda_esquerda", "anda_direita", "anda_frente", "anda_tras")
 	var direcao = transform.basis * Vector3(input.x, 0, input.y)
 	

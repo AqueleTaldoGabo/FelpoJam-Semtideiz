@@ -1,5 +1,8 @@
 extends interagivel
 
+signal MudarCenar
+
+@onready var Luz = $portaMALCONOVA2/SpotLight3D
 var MUSICA1 = preload("res://Source/Música/temadocari.ogg")
 
 func _on_interagido(body: Variant) -> void:
@@ -7,11 +10,10 @@ func _on_interagido(body: Variant) -> void:
 	ControleMusica.fade_out()
 	await Transicao.fade_acabou
 	ControleMusica.trocar_musica(MUSICA1)
-	get_tree().change_scene_to_file("res://Source/Scenes/Levels/Menu.tscn")
-	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	MudarCenar.emit()
 	
 func _process(delta: float) -> void:
-	if !sendo_olhado:
-		$portaMALCONOVA2/SpotLight3D.show()
-	else:
-		$portaMALCONOVA2/SpotLight3D.hide()
+	if !sendo_olhado and Luz.light_energy > 2.7:
+		$AnimationPlayer.play_backwards()
+	elif sendo_olhado and Luz.light_energy == 0:
+		$AnimationPlayer.play("Luz")

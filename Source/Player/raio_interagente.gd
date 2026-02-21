@@ -2,6 +2,9 @@ extends RayCast3D
 
 @onready var lastColission
 
+func _ready() -> void:
+	$".".target_position.z = $"../../..".size_raio
+
 func _input(event: InputEvent) -> void:
 	var colidindo = get_collider()
 	if colidindo is interagivel:
