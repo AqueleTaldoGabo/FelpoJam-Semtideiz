@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b78keg0ignt8j"]
 
 [ext_resource type="Script" uid="uid://bmhhi0tril483" path="res://Source/Player/player.gd" id="1_4flbx"]
-[ext_resource type="Shader" uid="uid://bcfuj16arhi4e" path="res://Source/Global/dithering.gdshader" id="2_g4gsc"]
+[ext_resource type="Shader" uid="uid://bcfuj16arhi4e" path="res://shaders/dithering.gdshader" id="2_g4gsc"]
 [ext_resource type="PackedScene" uid="uid://ipxelk0c00b8" path="res://Source/Player/RaioInteragente.tscn" id="2_v1mne"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_4flbx"]
@@ -10,7 +10,7 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_g4gsc"]
 resource_local_to_scene = true
-render_priority = 0
+render_priority = 4
 shader = ExtResource("2_g4gsc")
 shader_parameter/depth_threshold = 0.05
 shader_parameter/reverse_depth_threshold = 0.25
