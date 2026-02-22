@@ -57,6 +57,7 @@ _data = {
 }
 
 [node name="Transicao" type="CanvasLayer" unique_id=1845283881]
+process_mode = 3
 script = ExtResource("1_1h7dn")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1607608557]

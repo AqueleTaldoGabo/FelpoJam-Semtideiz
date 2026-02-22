@@ -4,10 +4,14 @@ extends CharacterBody3D
 @export var sensibilidade_mouse = 0.0013
 @export var se_move = true
 @export var size_raio = -5
+@export var folha = false
 @onready var target_rotation = Vector2(1.57,0) 
+var menu_aberto = false
+var folha_aberta = false
 var ease_curve: float = 0.1
 
-@onready var OPCOES = preload("uid://b4afxc10lvo3d").instantiate()
+@onready var PAUSE = preload("uid://bxum0b78ybr3a").instantiate()
+@onready var PAGINA = preload("uid://c1laawrklqnhp").instantiate()
 
 var velocidade_objeto = Vector3.ZERO
 
@@ -16,11 +20,22 @@ func _input(event: InputEvent) -> void:
 		target_rotation -= event.relative * sensibilidade_mouse
 		target_rotation.y = clampf(target_rotation.y, PI/-2, PI/2)
 	if event.is_action_pressed("ui_cancel"):
+		if menu_aberto == false and folha_aberta == false:
+			menu_aberto = true
+			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+			PAUSE.mouse = Input.MOUSE_MODE_CAPTURED
+			get_tree().root.add_child(PAUSE)
+			get_tree().paused = true
+		else:
+			folha_aberta = false
+	if event.is_action_pressed("abrir_pagina") and folha:
+		folha_aberta = true
+		get_tree().root.add_child(PAGINA)
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-		OPCOES.mouse = Input.MOUSE_MODE_CAPTURED
-		get_tree().root.add_child(OPCOES)
-		get_tree().paused = true
-		
+		PAUSE.mouse = Input.MOUSE_MODE_CAPTURED
+
+func _process(delta: float) -> void:
+	menu_aberto = false
 
 func _physics_process(delta: float) -> void:
 	

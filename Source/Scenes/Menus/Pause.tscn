@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://bxum0b78ybr3a"]
+
+[ext_resource type="Script" uid="uid://1wp40inf2a5o" path="res://Source/Scenes/Menus/pause.gd" id="1_2qc5d"]
+[ext_resource type="Texture2D" uid="uid://80fvsl041fq3" path="res://Source/Assets/Sprites/Menu_pausado1.png" id="1_hjd0n"]
+
+[node name="Pause" type="Node" unique_id=1948867365]
+process_mode = 3
+script = ExtResource("1_2qc5d")
+
+[node name="Control" type="Control" parent="." unique_id=31715905]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuPaperSemBotoesLigados" type="Sprite2D" parent="Control" unique_id=988867]
+position = Vector2(76, 17)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_hjd0n")
+
+[node name="VboxBotoes" type="VBoxContainer" parent="Control/MenuPaperSemBotoesLigados" unique_id=201056274]
+custom_minimum_size = Vector2(10, 0)
+anchors_preset = -1
+anchor_left = 0.042187463
+anchor_top = 0.3984375
+anchor_right = 0.28784692
+anchor_bottom = 0.71177596
+offset_left = -1600.0
+offset_top = -1600.0
+offset_right = -2195.3816
+offset_bottom = -2014.6831
+scale = Vector2(4.1216164, 1.7052432)
+theme_override_constants/separation = 24
+metadata/_edit_use_anchors_ = true
+
+[node name="BotaoContinuar" type="Button" parent="Control/MenuPaperSemBotoesLigados/VboxBotoes" unique_id=1190088582]
+custom_minimum_size = Vector2(157, 180)
+layout_mode = 2
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/font_size = 10
+flat = true
+
+[node name="BotaoOptions" type="Button" parent="Control/MenuPaperSemBotoesLigados/VboxBotoes" unique_id=1618177612]
+custom_minimum_size = Vector2(157, 180)
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+flat = true
+
+[node name="BotaoSair" type="Button" parent="Control/MenuPaperSemBotoesLigados/VboxBotoes" unique_id=1768535427]
+custom_minimum_size = Vector2(157, 180)
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+flat = true
+
+[connection signal="mouse_entered" from="Control/MenuPaperSemBotoesLigados/VboxBotoes/BotaoContinuar" to="." method="_on_botao_continuar_mouse_entered"]
+[connection signal="mouse_exited" from="Control/MenuPaperSemBotoesLigados/VboxBotoes/BotaoContinuar" to="." method="_fora"]
+[connection signal="pressed" from="Control/MenuPaperSemBotoesLigados/VboxBotoes/BotaoContinuar" to="." method="_on_botao_continuar_pressed"]
+[connection signal="mouse_entered" from="Control/MenuPaperSemBotoesLigados/VboxBotoes/BotaoOptions" to="." method="_on_botao_options_mouse_entered"]
+[connection signal="mouse_exited" from="Control/MenuPaperSemBotoesLigados/VboxBotoes/BotaoOptions" to="." method="_fora"]
+[connection signal="pressed" from="Control/MenuPaperSemBotoesLigados/VboxBotoes/BotaoOptions" to="." method="_on_botao_options_pressed"]
+[connection signal="mouse_entered" from="Control/MenuPaperSemBotoesLigados/VboxBotoes/BotaoSair" to="." method="_on_botao_sair_mouse_entered"]
+[connection signal="mouse_exited" from="Control/MenuPaperSemBotoesLigados/VboxBotoes/BotaoSair" to="." method="_fora"]
+[connection signal="pressed" from="Control/MenuPaperSemBotoesLigados/VboxBotoes/BotaoSair" to="." method="_on_botao_sair_pressed"]
