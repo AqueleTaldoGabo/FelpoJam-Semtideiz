@@ -1,9 +1,12 @@
 extends Node
 
 @onready var fundo:Sprite2D = $Control/MenuOpcoes
-var mouse = Input.MOUSE_MODE_VISIBLE
+
 const SAIR = preload("res://Source/Assets/Sprites/Menu_Opcoes_sair_ligado.png")
 const NORMAL = preload("res://Source/Assets/Sprites/Menu_Opcoes.png")
+
+func fecha():
+	get_tree().root.remove_child($".")
 
 func _ready() -> void:
 	$Control/MenuOpcoes/Vol_Principal.value = AudioServer.get_bus_volume_linear(AudioServer.get_bus_index("Master"))
@@ -11,11 +14,8 @@ func _ready() -> void:
 	$Control/MenuOpcoes/Vol_SFX.value = AudioServer.get_bus_volume_linear(AudioServer.get_bus_index("SFX"))
 
 func _on_button_pressed() -> void:
-	get_tree().paused = false
-	Input.mouse_mode = mouse
-	get_tree().root.remove_child($".")
-	
-	
+	fecha()
+
 func _on_button_mouse_entered() -> void:
 	fundo.set_texture(SAIR)
 	

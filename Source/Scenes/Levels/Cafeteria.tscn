@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://c050oo5ix4vvt"]
 
 [ext_resource type="PackedScene" uid="uid://b78keg0ignt8j" path="res://Source/Player/player.tscn" id="1_n7cls"]
-[ext_resource type="Texture2D" uid="uid://bw7f8cobp7k6l" path="res://Source/Assets/Sprites/Chao_teste_quase_interrogacao2.png" id="2_b77ag"]
+[ext_resource type="Texture2D" uid="uid://s083hlepuqee" path="res://Source/Assets/Sprites/xadres.png" id="2_n7cls"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2elm2"]
 size = Vector3(60, 2, 60)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qgrc7"]
-albedo_texture = ExtResource("2_b77ag")
-uv1_scale = Vector3(60, 60, 60)
+albedo_texture = ExtResource("2_n7cls")
+uv1_scale = Vector3(60, 40, 60)
 
 [sub_resource type="BoxMesh" id="BoxMesh_bn0h7"]
 size = Vector3(60, 2, 60)
@@ -21,6 +21,7 @@ shadow_enabled = true
 
 [node name="Player" parent="." unique_id=1240492296 instance=ExtResource("1_n7cls")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0077297688, 0.9880394, -0.03906679)
+folha = true
 
 [node name="Chão" type="StaticBody3D" parent="." unique_id=623002619]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9999995, 0)

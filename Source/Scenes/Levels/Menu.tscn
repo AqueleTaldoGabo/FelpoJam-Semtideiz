@@ -2,7 +2,7 @@
 
 [ext_resource type="Shader" uid="uid://bcfuj16arhi4e" path="res://shaders/dithering.gdshader" id="1_2o3uc"]
 [ext_resource type="Texture2D" uid="uid://dd1b8xgsal8rq" path="res://Source/Assets/Sprites/Menu_paper_sem_botoes_ligados.png" id="2_4qgqy"]
-[ext_resource type="Script" uid="uid://dvlm5tx45km2i" path="res://Source/menu.gd" id="3_i10ex"]
+[ext_resource type="Script" uid="uid://dvlm5tx45km2i" path="res://Source/Scenes/Levels/menu.gd" id="3_i10ex"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_nbjkt"]
 

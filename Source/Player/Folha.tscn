@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://c1laawrklqnhp"]
+
+[ext_resource type="Script" uid="uid://bxf2qv8h7ubqs" path="res://Source/Player/folha.gd" id="1_cpge7"]
+[ext_resource type="Texture2D" uid="uid://dol77agt6t5qd" path="res://Source/Assets/Sprites/dossier_inteiro.png" id="1_v4ayg"]
+
+[node name="Folha" type="Node" unique_id=1976519266]
+script = ExtResource("1_cpge7")
+
+[node name="Control" type="Control" parent="." unique_id=700661111]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DossierInteiro" type="Sprite2D" parent="Control" unique_id=704610167]
+position = Vector2(-32, 17)
+texture = ExtResource("1_v4ayg")
