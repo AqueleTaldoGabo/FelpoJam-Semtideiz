@@ -24,12 +24,24 @@ grow_vertical = 2
 position = Vector2(-32, 17)
 texture = ExtResource("1_v4ayg")
 
-[node name="Button" type="Button" parent="Control" unique_id=955669915]
-layout_mode = 0
-anchor_left = 4.525
-anchor_top = -4.8
-anchor_right = 10.475
-anchor_bottom = -2.4
+[node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=1554795035]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 5.3
+anchor_top = -5.2
+anchor_right = 10.65
+anchor_bottom = -2.95
+theme_override_constants/separation = 50
 metadata/_edit_use_anchors_ = true
 
-[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
+[node name="BTNesquerda" type="Button" parent="Control/HBoxContainer" unique_id=955669915]
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="BTNdireita" type="Button" parent="Control/HBoxContainer" unique_id=1960454894]
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+
+[connection signal="pressed" from="Control/HBoxContainer/BTNesquerda" to="." method="_on_bt_nesquerda_pressed"]
+[connection signal="pressed" from="Control/HBoxContainer/BTNdireita" to="." method="_on_bt_ndireita_pressed"]

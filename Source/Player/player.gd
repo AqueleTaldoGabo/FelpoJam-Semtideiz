@@ -5,6 +5,7 @@ extends CharacterBody3D
 @export var se_move = true
 @export var size_raio = -5
 @export var folha = false
+@export var label = ""
 @onready var target_rotation = Vector2(1.57,0) 
 var menu_aberto = false
 var folha_aberta = false
@@ -14,6 +15,11 @@ var ease_curve: float = 0.1
 @onready var PAGINA = preload("uid://c1laawrklqnhp").instantiate()
 
 var velocidade_objeto = Vector3.ZERO
+
+func _ready() -> void:
+	
+	var main = get_tree().current_scene
+	PAGINA.connect("mudar_algo", Callable(main, "_on_mudar_algo"))
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
@@ -34,8 +40,7 @@ func _input(event: InputEvent) -> void:
 		folha_aberta = true
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 		get_tree().root.add_child(PAGINA)
-		var main = get_tree().current_scene
-		PAGINA.connect("mudar_algo", Callable(main, "_on_mudar_algo"))
+		
 
 
 func _process(delta: float) -> void:

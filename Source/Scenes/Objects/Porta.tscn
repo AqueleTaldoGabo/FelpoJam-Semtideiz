@@ -65,5 +65,3 @@ shape = SubResource("BoxShape3D_yqv12")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=19436047]
 root_node = NodePath("../portaMALCONOVA2")
 libraries/ = SubResource("AnimationLibrary_fjmkn")
-
-[connection signal="interagido" from="." to="." method="_on_interagido"]

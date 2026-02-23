@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://bw7f8cobp7k6l" path="res://Source/Assets/Sprites/Chao_teste_quase_interrogacao2.png" id="2_xmjli"]
 [ext_resource type="PackedScene" uid="uid://vqcc34o860lb" path="res://Source/Assets/Modelos/Mesa/Mesafodaepequenacomcor.fbx" id="3_jggnw"]
 [ext_resource type="Shader" uid="uid://tyh8tvtdacng" path="res://shaders/Outline.gdshader" id="5_eqeni"]
+[ext_resource type="PackedScene" uid="uid://bm5lcief16w1j" path="res://Source/Scenes/Objects/Telefone.tscn" id="7_ouqje"]
 [ext_resource type="PackedScene" uid="uid://ddffhr2ov0m3d" path="res://Source/Assets/Modelos/Garrafa/GarrafaFodacomtextura.fbx" id="7_u2bv0"]
-[ext_resource type="PackedScene" uid="uid://bmi3vxurx387l" path="res://Source/Assets/Modelos/Telefone/Telefonecommalcotexturesfbx.fbx" id="10_l6wx8"]
 [ext_resource type="PackedScene" uid="uid://b78keg0ignt8j" path="res://Source/Player/player.tscn" id="11_m1wbi"]
 [ext_resource type="PackedScene" uid="uid://curejhaq0wiig" path="res://Source/Scenes/Objects/Pasta.tscn" id="12_eqeni"]
 [ext_resource type="PackedScene" uid="uid://cgfko6kr2mhuc" path="res://Source/Scenes/Objects/Vinyl.tscn" id="12_juwpi"]
@@ -82,8 +82,8 @@ transform = Transform3D(0.22613178, 0, -0.44594222, 0, 0.5, 0, 0.44594222, 0, 0.
 transform = Transform3D(0.19852981, 0, -0.9800952, 0, 1, 0, 0.9800952, 0, 0.19852981, 0.20307302, 0.5020435, -0.0013952255)
 mesh = SubResource("BoxMesh_ouqje")
 
-[node name="Telefonecommalcotexturesfbx" parent="." unique_id=1575768079 instance=ExtResource("10_l6wx8")]
-transform = Transform3D(0.053530443, 0, 0.059451587, 0, 0.08, 0, -0.059451587, 0, 0.053530443, -4.62587, 1.1786046, 5.1598363)
+[node name="Telefone" parent="." unique_id=915141437 instance=ExtResource("7_ouqje")]
+transform = Transform3D(0.66913056, 0, 0.74314487, 0, 1, 0, -0.74314487, 0, 0.66913056, -4.626, 1.179, 5.16)
 
 [node name="Livro malco2" parent="." unique_id=893685750 instance=ExtResource("13_m1wbi")]
 transform = Transform3D(-0.037324354, -0.027344778, 0.018951371, -0.0011315085, -0.027421383, -0.04179458, 0.033250734, -0.03162799, 0.019850895, -4.616606, 1.387685, 3.7090795)
@@ -131,4 +131,5 @@ transform = Transform3D(-0.1286591, 0, -0.48316336, 0, 0.5, 0, 0.48316336, 0, -0
 transform = Transform3D(-0.5146364, 0, 1.9326534, 0, 2, 0, -1.9326534, 0, -0.5146364, 0.62756824, -1.9975293, -0.014854431)
 mesh = SubResource("CylinderMesh_qvc64")
 
-[connection signal="MudarCenar" from="Porta" to="." method="_on_porta_mudar_cenar"]
+[connection signal="interagido" from="Telefone" to="." method="_on_telefone_interagido"]
+[connection signal="interagido" from="Porta" to="." method="_on_porta_interagido"]

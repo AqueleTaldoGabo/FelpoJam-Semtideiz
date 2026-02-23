@@ -101,5 +101,3 @@ mesh = SubResource("ArrayMesh_ca2ac")
 [node name="Plane" type="MeshInstance3D" parent="Pasta" unique_id=877997072]
 transform = Transform3D(244.35916, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, -0.25489098, 0)
 mesh = SubResource("ArrayMesh_d4yv5")
-
-[connection signal="interagido" from="." to="." method="_on_interagido"]

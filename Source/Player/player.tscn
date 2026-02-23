@@ -31,6 +31,13 @@ material = SubResource("ShaderMaterial_g4gsc")
 flip_faces = true
 size = Vector2(2, 2)
 
+[sub_resource type="SystemFont" id="SystemFont_v1mne"]
+font_names = PackedStringArray("Liberation Serif")
+
+[sub_resource type="LabelSettings" id="LabelSettings_880o0"]
+font = SubResource("SystemFont_v1mne")
+font_size = 30
+
 [node name="Player" type="CharacterBody3D" unique_id=1240492296]
 script = ExtResource("1_4flbx")
 
@@ -56,7 +63,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23723257, 0.23640442, 0)
 extra_cull_margin = 303.41
 mesh = SubResource("QuadMesh_v1mne")
 
-[node name="crosshair" type="ColorRect" parent="Cabeça/Camera3D" unique_id=1866048991]
+[node name="CanvasLayer" type="CanvasLayer" parent="Cabeça/Camera3D" unique_id=1683826348]
+
+[node name="crosshair" type="ColorRect" parent="Cabeça/Camera3D/CanvasLayer" unique_id=1866048991]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -68,3 +77,19 @@ offset_right = 1.75
 offset_bottom = 1.75
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Label" type="Label" parent="Cabeça/Camera3D/CanvasLayer" unique_id=2072032459]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -136.0
+offset_right = 20.0
+offset_bottom = -113.0
+grow_horizontal = 2
+grow_vertical = 0
+label_settings = SubResource("LabelSettings_880o0")
+uppercase = true
+language = "pt_BR"
