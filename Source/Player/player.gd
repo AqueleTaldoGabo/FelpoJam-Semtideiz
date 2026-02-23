@@ -28,15 +28,20 @@ func _input(event: InputEvent) -> void:
 			get_tree().paused = true
 		else:
 			folha_aberta = false
+
+
 	if event.is_action_pressed("abrir_pagina") and folha:
 		folha_aberta = true
-		get_tree().root.add_child(PAGINA)
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-		PAUSE.mouse = Input.MOUSE_MODE_CAPTURED
+		get_tree().root.add_child(PAGINA)
+		var main = get_tree().current_scene
+		PAGINA.connect("mudar_algo", Callable(main, "_on_mudar_algo"))
+
 
 func _process(delta: float) -> void:
 	menu_aberto = false
 
+		
 func _physics_process(delta: float) -> void:
 	
 	rotation.y = lerp_angle(rotation.y, target_rotation.x, ease(delta, ease_curve))

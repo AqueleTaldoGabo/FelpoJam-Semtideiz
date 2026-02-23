@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://c050oo5ix4vvt"]
 
+[ext_resource type="Script" uid="uid://dlrji6mwjabty" path="res://Source/Scenes/Levels/cafeteria.gd" id="1_bn0h7"]
 [ext_resource type="PackedScene" uid="uid://b78keg0ignt8j" path="res://Source/Player/player.tscn" id="1_n7cls"]
 [ext_resource type="Texture2D" uid="uid://s083hlepuqee" path="res://Source/Assets/Sprites/xadres.png" id="2_n7cls"]
 [ext_resource type="PackedScene" uid="uid://do0pirwq7qcc8" path="res://Source/Assets/Modelos/Cafeteria/TesteComJanelasNovas2.fbx" id="4_2elm2"]
 [ext_resource type="PackedScene" uid="uid://draij6dpugcym" path="res://Source/Scenes/Objects/Porta.tscn" id="5_qgrc7"]
+[ext_resource type="PackedScene" uid="uid://cgfko6kr2mhuc" path="res://Source/Scenes/Objects/Vinyl.tscn" id="6_eqx27"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2elm2"]
 size = Vector3(60, 2, 60)
@@ -16,16 +18,13 @@ uv1_scale = Vector3(60, 40, 60)
 size = Vector3(60, 2, 60)
 
 [node name="Cafeteria" type="Node" unique_id=36272449]
+script = ExtResource("1_bn0h7")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1881450520]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
 shadow_enabled = true
 
 [node name="Player" parent="." unique_id=1240492296 instance=ExtResource("1_n7cls")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0077297688, 0.3860966, -0.03906679)
-folha = true
-
-[node name="Player" parent="Player" unique_id=778632868 instance=ExtResource("1_n7cls")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0077297688, 0.3860966, -0.03906679)
 folha = true
 
@@ -53,3 +52,7 @@ omni_attenuation = 0.63
 
 [node name="TesteComJanelasNovas2" parent="." unique_id=1739106845 instance=ExtResource("4_2elm2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.117489, -0.41721177, -0.53290033)
+
+[node name="Vinyl" parent="." unique_id=1120069274 instance=ExtResource("6_eqx27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.87519, 0.32128644, 7.1888504)
+visible = false
