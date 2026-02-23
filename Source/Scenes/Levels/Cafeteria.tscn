@@ -2,6 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://b78keg0ignt8j" path="res://Source/Player/player.tscn" id="1_n7cls"]
 [ext_resource type="Texture2D" uid="uid://s083hlepuqee" path="res://Source/Assets/Sprites/xadres.png" id="2_n7cls"]
+[ext_resource type="PackedScene" uid="uid://do0pirwq7qcc8" path="res://Source/Assets/Modelos/Cafeteria/TesteComJanelasNovas2.fbx" id="4_2elm2"]
+[ext_resource type="PackedScene" uid="uid://draij6dpugcym" path="res://Source/Scenes/Objects/Porta.tscn" id="5_qgrc7"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2elm2"]
 size = Vector3(60, 2, 60)
@@ -20,7 +22,11 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 shadow_enabled = true
 
 [node name="Player" parent="." unique_id=1240492296 instance=ExtResource("1_n7cls")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0077297688, 0.9880394, -0.03906679)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0077297688, 0.3860966, -0.03906679)
+folha = true
+
+[node name="Player" parent="Player" unique_id=778632868 instance=ExtResource("1_n7cls")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0077297688, 0.3860966, -0.03906679)
 folha = true
 
 [node name="Chão" type="StaticBody3D" parent="." unique_id=623002619]
@@ -33,3 +39,17 @@ shape = SubResource("BoxShape3D_2elm2")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.014565945, -0.029417992, -0.07714462)
 material_overlay = SubResource("StandardMaterial3D_qgrc7")
 mesh = SubResource("BoxMesh_bn0h7")
+
+[node name="Porta" parent="." unique_id=839741734 instance=ExtResource("5_qgrc7")]
+transform = Transform3D(-0.26999992, 0, 0.00013662875, 0, 0.27, 0, -0.00013662875, 0, -0.26999992, 0.38806158, 0, -0.25598705)
+
+[node name="Porta2" parent="." unique_id=907805773 instance=ExtResource("5_qgrc7")]
+transform = Transform3D(-0.26999992, 0, 0.00013662875, 0, 0.27, 0, -0.00013662875, 0, -0.26999992, 0.40461934, 0.00642401, 0.924907)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Porta2" unique_id=943269242]
+transform = Transform3D(3.703704, 0, 0, 0, 3.7037036, 0, 0, 0, 3.703704, 15.019203, 10.709261, -0.007600546)
+omni_range = 4096.0
+omni_attenuation = 0.63
+
+[node name="TesteComJanelasNovas2" parent="." unique_id=1739106845 instance=ExtResource("4_2elm2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.117489, -0.41721177, -0.53290033)
