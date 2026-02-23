@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://do0pirwq7qcc8"
-path="res://.godot/imported/TesteComJanelasNovas2.fbx-fac2668419b8e1ad9331ad9f9e7c0859.scn"
+uid="uid://bewh40gkrv1gd"
+path="res://.godot/imported/ProjetoProntoFINALMENTE.fbx-f30be6d5386981efa7d3589b2c886d5e.scn"
 
 [deps]
 
-source_file="res://Source/Assets/Modelos/Cafeteria/TesteComJanelasNovas2.fbx"
-dest_files=["res://.godot/imported/TesteComJanelasNovas2.fbx-fac2668419b8e1ad9331ad9f9e7c0859.scn"]
+source_file="res://Source/Assets/Modelos/Cafeteria/ProjetoProntoFINALMENTE.fbx"
+dest_files=["res://.godot/imported/ProjetoProntoFINALMENTE.fbx-f30be6d5386981efa7d3589b2c886d5e.scn"]
 
 [params]
 

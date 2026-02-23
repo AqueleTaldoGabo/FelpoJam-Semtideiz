@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://dlrji6mwjabty" path="res://Source/Scenes/Levels/cafeteria.gd" id="1_bn0h7"]
 [ext_resource type="PackedScene" uid="uid://b78keg0ignt8j" path="res://Source/Player/player.tscn" id="1_n7cls"]
 [ext_resource type="Texture2D" uid="uid://s083hlepuqee" path="res://Source/Assets/Sprites/xadres.png" id="2_n7cls"]
-[ext_resource type="PackedScene" uid="uid://do0pirwq7qcc8" path="res://Source/Assets/Modelos/Cafeteria/TesteComJanelasNovas2.fbx" id="4_2elm2"]
 [ext_resource type="PackedScene" uid="uid://draij6dpugcym" path="res://Source/Scenes/Objects/Porta.tscn" id="5_qgrc7"]
+[ext_resource type="PackedScene" uid="uid://bewh40gkrv1gd" path="res://Source/Assets/Modelos/Cafeteria/ProjetoProntoFINALMENTE.fbx" id="6_bn0h7"]
 [ext_resource type="PackedScene" uid="uid://cgfko6kr2mhuc" path="res://Source/Scenes/Objects/Vinyl.tscn" id="6_eqx27"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2elm2"]
@@ -21,7 +21,8 @@ size = Vector3(60, 2, 60)
 script = ExtResource("1_bn0h7")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1881450520]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+transform = Transform3D(0.60650635, 0.78289306, 0.1386666, -0.15087019, -0.057913646, 0.9868557, 0.78063315, -0.6194549, 0.08299023, -32.498688, 3.658956, 0)
+light_energy = 1.159
 shadow_enabled = true
 
 [node name="Player" parent="." unique_id=1240492296 instance=ExtResource("1_n7cls")]
@@ -35,7 +36,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9999995, 0)
 shape = SubResource("BoxShape3D_2elm2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Chão" unique_id=1482501918]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.014565945, -0.029417992, -0.07714462)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.72061, -0.029417992, -0.07714462)
 material_overlay = SubResource("StandardMaterial3D_qgrc7")
 mesh = SubResource("BoxMesh_bn0h7")
 
@@ -45,14 +46,27 @@ transform = Transform3D(-0.26999992, 0, 0.00013662875, 0, 0.27, 0, -0.0001366287
 [node name="Porta2" parent="." unique_id=907805773 instance=ExtResource("5_qgrc7")]
 transform = Transform3D(-0.26999992, 0, 0.00013662875, 0, 0.27, 0, -0.00013662875, 0, -0.26999992, 0.40461934, 0.00642401, 0.924907)
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Porta2" unique_id=943269242]
-transform = Transform3D(3.703704, 0, 0, 0, 3.7037036, 0, 0, 0, 3.703704, 15.019203, 10.709261, -0.007600546)
-omni_range = 4096.0
-omni_attenuation = 0.63
-
-[node name="TesteComJanelasNovas2" parent="." unique_id=1739106845 instance=ExtResource("4_2elm2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.117489, -0.41721177, -0.53290033)
-
 [node name="Vinyl" parent="." unique_id=1120069274 instance=ExtResource("6_eqx27")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.87519, 0.32128644, 7.1888504)
 visible = false
+
+[node name="ProjetoProntoFINALMENTE" parent="." unique_id=936021647 instance=ExtResource("6_bn0h7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.142504, -0.67715645, -0.342224)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1710473499]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.247624, 3.7475555, -0.42536736)
+omni_range = 4096.0
+omni_attenuation = 0.259
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="." unique_id=672180429]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.243143, 3.3303132, 7.7763577)
+light_energy = 8.129
+shadow_enabled = true
+omni_range = 5.11
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=2015504551]
+transform = Transform3D(0.13132562, 0.9548701, 0.26641455, -0.057840966, -0.26090372, 0.9636305, 0.9896505, -0.14195904, 0.02096727, -22.685064, 4.1477575, -2.663)
+light_energy = 16.0
+shadow_enabled = true
+spot_range = 8.195
+spot_angle = 52.25
