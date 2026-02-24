@@ -1,0 +1,239 @@
+[gd_scene format=3 uid="uid://big88fbxcx054"]
+
+[ext_resource type="PackedScene" uid="uid://dc3c3rihwou71" path="res://Source/Assets/Modelos/Cafeteria/MesaGrande/Mesa Grandeprontacomtxt.fbx" id="1_05o70"]
+[ext_resource type="PackedScene" uid="uid://cmpemrr6ixhwt" path="res://Source/Assets/Modelos/Cafeteria/Cadeira/caderavermlha.fbx" id="2_o340j"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_05o70"]
+size = Vector3(2.2988281, 5.6690674, 1.918396)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o340j"]
+size = Vector3(6.1834106, 5.9375, 9.821289)
+
+[node name="MesaCadeira" type="StaticBody3D" unique_id=668662289]
+
+[node name="MesaCadeira" type="StaticBody3D" parent="." unique_id=1627522720]
+
+[node name="Mesa Grandeprontacomtxt" parent="MesaCadeira" unique_id=395849924 instance=ExtResource("1_05o70")]
+transform = Transform3D(-8.086607e-09, 0, 0.185, 0, 0.185, 0, -0.185, 0, -8.086607e-09, -1.1544216, 0.02168159, -4.9821362)
+
+[node name="caderavermlha" parent="MesaCadeira/Mesa Grandeprontacomtxt" unique_id=470191462 instance=ExtResource("2_o340j")]
+transform = Transform3D(1.3783784, 0, 0, 0, 1.3783784, 0, 0, 0, 1.3783784, -5.2154207, -0.022595309, -1.8425579)
+
+[node name="caderavermlha2" parent="MesaCadeira/Mesa Grandeprontacomtxt" unique_id=982908197 instance=ExtResource("2_o340j")]
+transform = Transform3D(1.3783784, 0, 0, 0, 1.3783784, 0, 0, 0, 1.3783784, -5.2154207, -0.022595309, 2.543087)
+
+[node name="caderavermlha3" parent="MesaCadeira/Mesa Grandeprontacomtxt" unique_id=2080876709 instance=ExtResource("2_o340j")]
+transform = Transform3D(-1.3783784, 0, 1.2050168e-07, 0, 1.3783784, 0, -1.2050168e-07, 0, -1.3783784, 4.9576564, -0.022595309, -2.313343)
+
+[node name="caderavermlha4" parent="MesaCadeira/Mesa Grandeprontacomtxt" unique_id=989611524 instance=ExtResource("2_o340j")]
+transform = Transform3D(-1.3783784, 0, 1.2050168e-07, 0, 1.3783784, 0, -1.2050168e-07, 0, -1.3783784, 4.9576564, -0.022595309, 2.0723)
+
+[node name="MesaCadeira" type="StaticBody3D" parent="MesaCadeira" unique_id=1787302026]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.6363711)
+
+[node name="Mesa Grandeprontacomtxt" parent="MesaCadeira/MesaCadeira" unique_id=1251117837 instance=ExtResource("1_05o70")]
+transform = Transform3D(-8.086607e-09, 0, 0.185, 0, 0.185, 0, -0.185, 0, -8.086607e-09, -1.1544216, 0.02168159, -4.9821362)
+
+[node name="caderavermlha" parent="MesaCadeira/MesaCadeira/Mesa Grandeprontacomtxt" unique_id=1122612989 instance=ExtResource("2_o340j")]
+transform = Transform3D(1.3783784, 0, 0, 0, 1.3783784, 0, 0, 0, 1.3783784, -5.2154207, -0.022595309, -1.8425579)
+
+[node name="caderavermlha2" parent="MesaCadeira/MesaCadeira/Mesa Grandeprontacomtxt" unique_id=1147818001 instance=ExtResource("2_o340j")]
+transform = Transform3D(1.3783784, 0, 0, 0, 1.3783784, 0, 0, 0, 1.3783784, -5.2154207, -0.022595309, 2.543087)
+
+[node name="caderavermlha3" parent="MesaCadeira/MesaCadeira/Mesa Grandeprontacomtxt" unique_id=211483725 instance=ExtResource("2_o340j")]
+transform = Transform3D(-1.3783784, 0, 1.2050168e-07, 0, 1.3783784, 0, -1.2050168e-07, 0, -1.3783784, 4.9576564, -0.022595309, -2.313343)
+
+[node name="caderavermlha4" parent="MesaCadeira/MesaCadeira/Mesa Grandeprontacomtxt" unique_id=1839695720 instance=ExtResource("2_o340j")]
+transform = Transform3D(-1.3783784, 0, 1.2050168e-07, 0, 1.3783784, 0, -1.2050168e-07, 0, -1.3783784, 4.9576564, -0.022595309, 2.0723)
+
+[node name="MesaCadeira" type="StaticBody3D" parent="MesaCadeira/MesaCadeira" unique_id=450550051]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.490193, 0, 0.7679248)
+
+[node name="Mesa Grandeprontacomtxt" parent="MesaCadeira/MesaCadeira/MesaCadeira" unique_id=91209052 instance=ExtResource("1_05o70")]
+transform = Transform3D(-8.086607e-09, 0, 0.185, 0, 0.185, 0, -0.185, 0, -8.086607e-09, -1.1544216, 0.02168159, -4.259149)
+
+[node name="caderavermlha" parent="MesaCadeira/MesaCadeira/MesaCadeira/Mesa Grandeprontacomtxt" unique_id=2025394087 instance=ExtResource("2_o340j")]
+transform = Transform3D(1.3783784, 0, 0, 0, 1.3783784, 0, 0, 0, 1.3783784, -5.2154207, -0.022595309, -1.8425579)
+
+[node name="caderavermlha2" parent="MesaCadeira/MesaCadeira/MesaCadeira/Mesa Grandeprontacomtxt" unique_id=1689202823 instance=ExtResource("2_o340j")]
+transform = Transform3D(1.3783784, 0, 0, 0, 1.3783784, 0, 0, 0, 1.3783784, -5.2154207, -0.022595309, 2.543087)
+
+[node name="caderavermlha3" parent="MesaCadeira/MesaCadeira/MesaCadeira/Mesa Grandeprontacomtxt" unique_id=1903432708 instance=ExtResource("2_o340j")]
+transform = Transform3D(-1.3783784, 0, 1.2050168e-07, 0, 1.3783784, 0, -1.2050168e-07, 0, -1.3783784, 4.9576564, -0.022595309, -2.313343)
+
+[node name="caderavermlha4" parent="MesaCadeira/MesaCadeira/MesaCadeira/Mesa Grandeprontacomtxt" unique_id=1752901383 instance=ExtResource("2_o340j")]
+transform = Transform3D(-1.3783784, 0, 1.2050168e-07, 0, 1.3783784, 0, -1.2050168e-07, 0, -1.3783784, 4.9576564, -0.022595309, 2.0723)
+
+[node name="MesaCadeira" type="StaticBody3D" parent="MesaCadeira/MesaCadeira/MesaCadeira" unique_id=2145946896]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3841858e-07, 0, 3.634851)
+
+[node name="Mesa Grandeprontacomtxt" parent="MesaCadeira/MesaCadeira/MesaCadeira/MesaCadeira" unique_id=1748207536 instance=ExtResource("1_05o70")]
+transform = Transform3D(-8.086607e-09, 0, 0.185, 0, 0.185, 0, -0.185, 0, -8.086607e-09, -1.1544216, 0.02168159, -4.9821362)
+
+[node name="caderavermlha" parent="MesaCadeira/MesaCadeira/MesaCadeira/MesaCadeira/Mesa Grandeprontacomtxt" unique_id=884691270 instance=ExtResource("2_o340j")]
+transform = Transform3D(1.3783784, 0, 0, 0, 1.3783784, 0, 0, 0, 1.3783784, -5.2154207, -0.022595309, -1.8425579)
+
+[node name="caderavermlha2" parent="MesaCadeira/MesaCadeira/MesaCadeira/MesaCadeira/Mesa Grandeprontacomtxt" unique_id=536957048 instance=ExtResource("2_o340j")]
+transform = Transform3D(1.3783784, 0, 0, 0, 1.3783784, 0, 0, 0, 1.3783784, -5.2154207, -0.022595309, 2.543087)
+
+[node name="caderavermlha3" parent="MesaCadeira/MesaCadeira/MesaCadeira/MesaCadeira/Mesa Grandeprontacomtxt" unique_id=931307655 instance=ExtResource("2_o340j")]
+transform = Transform3D(-1.3783784, 0, 1.2050168e-07, 0, 1.3783784, 0, -1.2050168e-07, 0, -1.3783784, 4.9576564, -0.022595309, -2.313343)
+
+[node name="caderavermlha4" parent="MesaCadeira/MesaCadeira/MesaCadeira/MesaCadeira/Mesa Grandeprontacomtxt" unique_id=2147443003 instance=ExtResource("2_o340j")]
+transform = Transform3D(-1.3783784, 0, 1.2050168e-07, 0, 1.3783784, 0, -1.2050168e-07, 0, -1.3783784, 4.9576564, -0.022595309, 2.0723)
+
+[node name="MesaCadeira2" type="StaticBody3D" parent="MesaCadeira/MesaCadeira/MesaCadeira" unique_id=1520126329]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.893015, 0, 0.7210033)
+
+[node name="Mesa Grandeprontacomtxt" parent="MesaCadeira/MesaCadeira/MesaCadeira/MesaCadeira2" unique_id=1141523778 instance=ExtResource("1_05o70")]
+transform = Transform3D(-8.086607e-09, 0, 0.185, 0, 0.185, 0, -0.185, 0, -8.086607e-09, -1.4579818, 0.02168159, -4.982136)
+
+[node name="caderavermlha" parent="MesaCadeira/MesaCadeira/MesaCadeira/MesaCadeira2/Mesa Grandeprontacomtxt" unique_id=2131890172 instance=ExtResource("2_o340j")]
+transform = Transform3D(1.3783784, 0, 0, 0, 1.3783784, 0, 0, 0, 1.3783784, -5.2154207, -0.022595309, -1.8425579)
+
+[node name="caderavermlha2" parent="MesaCadeira/MesaCadeira/MesaCadeira/MesaCadeira2/Mesa Grandeprontacomtxt" unique_id=115829536 instance=ExtResource("2_o340j")]
+transform = Transform3D(1.3783784, 0, 0, 0, 1.3783784, 0, 0, 0, 1.3783784, -5.2154207, -0.022595309, 2.543087)
+
+[node name="caderavermlha3" parent="MesaCadeira/MesaCadeira/MesaCadeira/MesaCadeira2/Mesa Grandeprontacomtxt" unique_id=1536415974 instance=ExtResource("2_o340j")]
+transform = Transform3D(-1.3783784, 0, 1.2050168e-07, 0, 1.3783784, 0, -1.2050168e-07, 0, -1.3783784, 4.9576564, -0.022595309, -2.313343)
+
+[node name="caderavermlha4" parent="MesaCadeira/MesaCadeira/MesaCadeira/MesaCadeira2/Mesa Grandeprontacomtxt" unique_id=1345653001 instance=ExtResource("2_o340j")]
+transform = Transform3D(-1.3783784, 0, 1.2050168e-07, 0, 1.3783784, 0, -1.2050168e-07, 0, -1.3783784, 4.9576564, -0.022595309, 2.0723)
+
+[node name="MesaCadeira" type="StaticBody3D" parent="MesaCadeira/MesaCadeira/MesaCadeira/MesaCadeira2" unique_id=206504522]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3352915, 0, 2.932119)
+
+[node name="Mesa Grandeprontacomtxt" parent="MesaCadeira/MesaCadeira/MesaCadeira/MesaCadeira2/MesaCadeira" unique_id=851397636 instance=ExtResource("1_05o70")]
+transform = Transform3D(-8.086607e-09, 0, 0.185, 0, 0.185, 0, -0.185, 0, -8.086607e-09, -1.1544216, 0.02168159, -4.9821362)
+
+[node name="caderavermlha" parent="MesaCadeira/MesaCadeira/MesaCadeira/MesaCadeira2/MesaCadeira/Mesa Grandeprontacomtxt" unique_id=79429194 instance=ExtResource("2_o340j")]
+transform = Transform3D(1.3783784, 0, 0, 0, 1.3783784, 0, 0, 0, 1.3783784, -5.2154207, -0.022595309, -1.8425579)
+
+[node name="caderavermlha2" parent="MesaCadeira/MesaCadeira/MesaCadeira/MesaCadeira2/MesaCadeira/Mesa Grandeprontacomtxt" unique_id=17973295 instance=ExtResource("2_o340j")]
+transform = Transform3D(1.3783784, 0, 0, 0, 1.3783784, 0, 0, 0, 1.3783784, -5.2154207, -0.022595309, 2.543087)
+
+[node name="caderavermlha3" parent="MesaCadeira/MesaCadeira/MesaCadeira/MesaCadeira2/MesaCadeira/Mesa Grandeprontacomtxt" unique_id=874130668 instance=ExtResource("2_o340j")]
+transform = Transform3D(-1.3783784, 0, 1.2050168e-07, 0, 1.3783784, 0, -1.2050168e-07, 0, -1.3783784, 4.9576564, -0.022595309, -2.313343)
+
+[node name="caderavermlha4" parent="MesaCadeira/MesaCadeira/MesaCadeira/MesaCadeira2/MesaCadeira/Mesa Grandeprontacomtxt" unique_id=416121802 instance=ExtResource("2_o340j")]
+transform = Transform3D(-1.3783784, 0, 1.2050168e-07, 0, 1.3783784, 0, -1.2050168e-07, 0, -1.3783784, 4.9576564, -0.022595309, 2.0723)
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=172487289]
+transform = Transform3D(-1.1146405e-08, 0, 0.255, 0, 0.255, 0, -0.255, 0, -1.1146405e-08, -1.5240175, 0.61280805, -4.182884)
+shape = SubResource("BoxShape3D_05o70")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="." unique_id=399205927]
+transform = Transform3D(-1.1146405e-08, 0, 0.255, 0, 0.255, 0, -0.255, 0, -1.1146405e-08, -0.7126731, 0.61280805, -4.182884)
+shape = SubResource("BoxShape3D_05o70")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="." unique_id=1822813675]
+transform = Transform3D(-1.11464065e-08, 0, -0.255, 0, 0.255, 0, 0.255, 0, -1.11464065e-08, -1.5536674, 0.61280805, -5.7337017)
+shape = SubResource("BoxShape3D_05o70")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=588483304]
+transform = Transform3D(-8.086607e-09, 0, 0.185, 0, 0.185, 0, -0.185, 0, -8.086607e-09, -1.1437174, 0.47840032, -4.979353)
+shape = SubResource("BoxShape3D_o340j")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=619228150]
+transform = Transform3D(-1.11464065e-08, 0, -0.255, 0, 0.255, 0, 0.255, 0, -1.11464065e-08, -0.7423234, 0.61280805, -5.7337017)
+shape = SubResource("BoxShape3D_05o70")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="." unique_id=1671783086]
+transform = Transform3D(-1.1146405e-08, 0, 0.255, 0, 0.255, 0, -0.255, 0, -1.1146405e-08, -1.5240175, 0.61280805, -1.5465128)
+shape = SubResource("BoxShape3D_05o70")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="." unique_id=872890701]
+transform = Transform3D(-1.1146405e-08, 0, 0.255, 0, 0.255, 0, -0.255, 0, -1.1146405e-08, -0.7126731, 0.61280805, -1.5465128)
+shape = SubResource("BoxShape3D_05o70")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="." unique_id=1074192340]
+transform = Transform3D(-1.11464065e-08, 0, -0.255, 0, 0.255, 0, 0.255, 0, -1.11464065e-08, -1.5536674, 0.61280805, -3.097331)
+shape = SubResource("BoxShape3D_05o70")
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="." unique_id=222098648]
+transform = Transform3D(-1.11464065e-08, 0, -0.255, 0, 0.255, 0, 0.255, 0, -1.11464065e-08, -0.7423234, 0.61280805, -3.097331)
+shape = SubResource("BoxShape3D_05o70")
+
+[node name="CollisionShape3D10" type="CollisionShape3D" parent="." unique_id=430327568]
+transform = Transform3D(-8.086607e-09, 0, 0.185, 0, 0.185, 0, -0.185, 0, -8.086607e-09, -1.1437174, 0.47840032, -2.3429818)
+shape = SubResource("BoxShape3D_o340j")
+
+[node name="CollisionShape3D11" type="CollisionShape3D" parent="." unique_id=1788649040]
+transform = Transform3D(-0.255, 0, -2.229281e-08, 0, 0.255, 0, 2.229281e-08, 0, -0.255, -7.95009, 0.61280805, 4.9283137)
+shape = SubResource("BoxShape3D_05o70")
+
+[node name="CollisionShape3D12" type="CollisionShape3D" parent="." unique_id=1984477173]
+transform = Transform3D(-0.255, 0, -2.229281e-08, 0, 0.255, 0, 2.229281e-08, 0, -0.255, -7.95009, 0.61280805, 4.116969)
+shape = SubResource("BoxShape3D_05o70")
+
+[node name="CollisionShape3D13" type="CollisionShape3D" parent="." unique_id=1929759265]
+transform = Transform3D(0.255, 0, -1.7763568e-15, 0, 0.255, 0, 1.7763568e-15, 0, 0.255, -9.500908, 0.61280805, 4.9579635)
+shape = SubResource("BoxShape3D_05o70")
+
+[node name="CollisionShape3D14" type="CollisionShape3D" parent="." unique_id=326021792]
+transform = Transform3D(0.255, 0, -1.7763568e-15, 0, 0.255, 0, 1.7763568e-15, 0, 0.255, -9.500908, 0.61280805, 4.14662)
+shape = SubResource("BoxShape3D_05o70")
+
+[node name="CollisionShape3D15" type="CollisionShape3D" parent="." unique_id=2129101551]
+transform = Transform3D(-0.185, 0, -1.6173214e-08, 0, 0.185, 0, 1.6173214e-08, 0, -0.185, -8.746558, 0.47840032, 4.5480137)
+shape = SubResource("BoxShape3D_o340j")
+
+[node name="CollisionShape3D16" type="CollisionShape3D" parent="." unique_id=1743450291]
+transform = Transform3D(-0.255, 0, -2.229281e-08, 0, 0.255, 0, 2.229281e-08, 0, -0.255, -5.038226, 0.61280805, 4.9283137)
+shape = SubResource("BoxShape3D_05o70")
+
+[node name="CollisionShape3D17" type="CollisionShape3D" parent="." unique_id=1795779973]
+transform = Transform3D(-0.255, 0, -2.229281e-08, 0, 0.255, 0, 2.229281e-08, 0, -0.255, -5.038226, 0.61280805, 4.116969)
+shape = SubResource("BoxShape3D_05o70")
+
+[node name="CollisionShape3D18" type="CollisionShape3D" parent="." unique_id=127205204]
+transform = Transform3D(0.255, 0, -1.7763568e-15, 0, 0.255, 0, 1.7763568e-15, 0, 0.255, -6.5890436, 0.61280805, 4.9579635)
+shape = SubResource("BoxShape3D_05o70")
+
+[node name="CollisionShape3D19" type="CollisionShape3D" parent="." unique_id=1034620736]
+transform = Transform3D(0.255, 0, -1.7763568e-15, 0, 0.255, 0, 1.7763568e-15, 0, 0.255, -6.589044, 0.61280805, 4.14662)
+shape = SubResource("BoxShape3D_05o70")
+
+[node name="CollisionShape3D20" type="CollisionShape3D" parent="." unique_id=1244284869]
+transform = Transform3D(-0.185, 0, -1.6173214e-08, 0, 0.185, 0, 1.6173214e-08, 0, -0.185, -5.834695, 0.47840032, 4.5480137)
+shape = SubResource("BoxShape3D_o340j")
+
+[node name="CollisionShape3D21" type="CollisionShape3D" parent="." unique_id=900253309]
+transform = Transform3D(-0.255, 0, -2.229281e-08, 0, 0.255, 0, 2.229281e-08, 0, -0.255, -7.9520736, 0.61280805, 2.338859)
+shape = SubResource("BoxShape3D_05o70")
+
+[node name="CollisionShape3D22" type="CollisionShape3D" parent="." unique_id=1492847235]
+transform = Transform3D(-0.255, 0, -2.229281e-08, 0, 0.255, 0, 2.229281e-08, 0, -0.255, -7.9520736, 0.61280805, 1.5275147)
+shape = SubResource("BoxShape3D_05o70")
+
+[node name="CollisionShape3D23" type="CollisionShape3D" parent="." unique_id=467396206]
+transform = Transform3D(0.255, 0, -1.7763568e-15, 0, 0.255, 0, 1.7763568e-15, 0, 0.255, -9.502892, 0.61280805, 2.3685088)
+shape = SubResource("BoxShape3D_05o70")
+
+[node name="CollisionShape3D24" type="CollisionShape3D" parent="." unique_id=1510758206]
+transform = Transform3D(0.255, 0, -1.7763568e-15, 0, 0.255, 0, 1.7763568e-15, 0, 0.255, -9.502892, 0.61280805, 1.557165)
+shape = SubResource("BoxShape3D_05o70")
+
+[node name="CollisionShape3D25" type="CollisionShape3D" parent="." unique_id=857384697]
+transform = Transform3D(-0.185, 0, -1.6173214e-08, 0, 0.185, 0, 1.6173214e-08, 0, -0.185, -8.748542, 0.47840032, 1.9585589)
+shape = SubResource("BoxShape3D_o340j")
+
+[node name="CollisionShape3D26" type="CollisionShape3D" parent="." unique_id=1755551037]
+transform = Transform3D(-0.255, 0, -2.229281e-08, 0, 0.255, 0, 2.229281e-08, 0, -0.255, -5.019955, 0.61280805, 2.3705902)
+shape = SubResource("BoxShape3D_05o70")
+
+[node name="CollisionShape3D27" type="CollisionShape3D" parent="." unique_id=1600761070]
+transform = Transform3D(-0.255, 0, -2.229281e-08, 0, 0.255, 0, 2.229281e-08, 0, -0.255, -5.019955, 0.61280805, 1.5592458)
+shape = SubResource("BoxShape3D_05o70")
+
+[node name="CollisionShape3D28" type="CollisionShape3D" parent="." unique_id=1562456318]
+transform = Transform3D(0.255, 0, -1.7763568e-15, 0, 0.255, 0, 1.7763568e-15, 0, 0.255, -6.5707726, 0.61280805, 2.40024)
+shape = SubResource("BoxShape3D_05o70")
+
+[node name="CollisionShape3D29" type="CollisionShape3D" parent="." unique_id=1371935894]
+transform = Transform3D(0.255, 0, -1.7763568e-15, 0, 0.255, 0, 1.7763568e-15, 0, 0.255, -6.570773, 0.61280805, 1.5888962)
+shape = SubResource("BoxShape3D_05o70")
+
+[node name="CollisionShape3D30" type="CollisionShape3D" parent="." unique_id=396029494]
+transform = Transform3D(-0.185, 0, -1.6173214e-08, 0, 0.185, 0, 1.6173214e-08, 0, -0.185, -5.816424, 0.47840032, 1.99029)
+shape = SubResource("BoxShape3D_o340j")

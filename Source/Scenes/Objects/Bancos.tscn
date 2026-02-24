@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://c7k3cb5nx7xjh"]
+
+[ext_resource type="PackedScene" uid="uid://cp738p1q20xqs" path="res://Source/Assets/Modelos/Cafeteria/Cadeira.fbx" id="1_epyso"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_hqgyu"]
+height = 6.1245117
+radius = 1.4389648
+
+[node name="Bancos" type="StaticBody3D" unique_id=1800805876]
+
+[node name="Cadeira" parent="." unique_id=944860130 instance=ExtResource("1_epyso")]
+transform = Transform3D(-0.22999999, 0, 8.431808e-05, 0, 0.23, 0, -8.431808e-05, 0, -0.22999999, -11.6869545, 0.113676935, 5.577462)
+
+[node name="Cadeira2" parent="." unique_id=1154536864 instance=ExtResource("1_epyso")]
+transform = Transform3D(-0.2132613, 0, -0.08613716, 0, 0.23, 0, 0.08613716, 0, -0.2132613, -12.085674, 0.113676935, 3.7030916)
+
+[node name="Cadeira3" parent="." unique_id=1912483532 instance=ExtResource("1_epyso")]
+transform = Transform3D(-0.17228642, 0, -0.15237252, 0, 0.23, 0, 0.15237252, 0, -0.17228642, -12.97665, 0.113676935, 2.0826542)
+
+[node name="Cadeira4" parent="." unique_id=616296065 instance=ExtResource("1_epyso")]
+transform = Transform3D(-0.09813988, 0, -0.208011, 0, 0.23, 0, 0.208011, 0, -0.09813988, -14.287331, 0.113676935, 0.9040314)
+
+[node name="Cadeira5" parent="." unique_id=264671028 instance=ExtResource("1_epyso")]
+transform = Transform3D(0.006767042, 0, -0.22990045, 0, 0.23, 0, 0.22990045, 0, 0.006767042, -16.72844, 0.113676935, 0.19899428)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1416896625]
+transform = Transform3D(-0.2299999, 0, 8.431808e-05, 0, 0.23, 0, -8.431808e-05, 0, -0.2299999, -11.6869545, 0.58799577, 5.577462)
+shape = SubResource("CylinderShape3D_hqgyu")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=635242972]
+transform = Transform3D(-0.21326122, 0, -0.08613712, 0, 0.23, 0, 0.08613712, 0, -0.21326122, -12.085674, 0.58799577, 3.7030916)
+shape = SubResource("CylinderShape3D_hqgyu")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=1366820105]
+transform = Transform3D(-0.17228635, 0, -0.15237246, 0, 0.23, 0, 0.15237246, 0, -0.17228635, -12.97665, 0.58799577, 2.0826542)
+shape = SubResource("CylinderShape3D_hqgyu")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="." unique_id=789652364]
+transform = Transform3D(-0.098139845, 0, -0.20801091, 0, 0.23, 0, 0.20801091, 0, -0.098139845, -14.287331, 0.58799577, 0.9040314)
+shape = SubResource("CylinderShape3D_hqgyu")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="." unique_id=1488988948]
+transform = Transform3D(0.006767039, 0, -0.22990036, 0, 0.23, 0, 0.22990036, 0, 0.006767039, -16.72844, 0.58799577, 0.19899428)
+shape = SubResource("CylinderShape3D_hqgyu")

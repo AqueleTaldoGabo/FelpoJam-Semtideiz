@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://cryn2etbqk201"]
+
+[ext_resource type="PackedScene" uid="uid://b6q76jfbhi1l1" path="res://Source/Assets/Modelos/Cafeteria/Armario/Armarin de tetoquasepronto.fbx" id="1_cc2i2"]
+[ext_resource type="PackedScene" uid="uid://d2btxgyq4gkx0" path="res://Source/Assets/Modelos/Cafeteria/Coifa/Coifapoggerstxt.fbx" id="2_fn15l"]
+[ext_resource type="PackedScene" uid="uid://dcxkuc0428kiu" path="res://Source/Assets/Modelos/Cafeteria/eladeira/Geladeirapoluis.fbx" id="3_4mhc6"]
+[ext_resource type="PackedScene" uid="uid://43f4c7axr7h3" path="res://Source/Assets/Modelos/Cafeteria/Fogao/fogaogeladeirapronto.fbx" id="4_p6mip"]
+[ext_resource type="PackedScene" uid="uid://bktgl41ch21x7" path="res://Source/Assets/Modelos/Cafeteria/ArmarioDeCha/armariodechaoprontotxt.fbx" id="5_g0ec2"]
+[ext_resource type="PackedScene" uid="uid://b61380lmot3rn" path="res://Source/Assets/Modelos/Cafeteria/Condimentos/Condimentosprontos.fbx" id="6_jr5r1"]
+[ext_resource type="PackedScene" uid="uid://b5qt7hff14cfl" path="res://Source/Assets/Modelos/Cafeteria/Papel/papel derolo.fbx" id="7_53uey"]
+[ext_resource type="PackedScene" uid="uid://dvlill41qj1ck" path="res://Source/Assets/Modelos/Cafeteria/Quadro/quadropronto.fbx" id="8_36r27"]
+[ext_resource type="PackedScene" uid="uid://seiq2mbnprlm" path="res://Source/Assets/Modelos/Cafeteria/Cafeteira/faqueteirapronta.fbx" id="9_fn15l"]
+[ext_resource type="PackedScene" uid="uid://b1jwur8oohb0s" path="res://Source/Assets/Modelos/Cafeteria/CaixaDeMadeira/Caixa de maderapronta.fbx" id="10_4mhc6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cc2i2"]
+size = Vector3(1.7172852, 3.4658203, 6.152588)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p6mip"]
+size = Vector3(1, 2.2635498, 1.3959961)
+
+[node name="CozinhaBalcao" type="StaticBody3D" unique_id=2017204322]
+
+[node name="Armarin de tetoquasepronto" parent="." unique_id=1068016911 instance=ExtResource("1_cc2i2")]
+transform = Transform3D(0.31, 0, 0, 0, 0.31, 0, 0, 0, 0.23, -17.787, 2.6266575, 6.0896053)
+
+[node name="Coifapoggerstxt" parent="." unique_id=1063296065 instance=ExtResource("2_fn15l")]
+transform = Transform3D(-7.212379e-09, 0, 0.165, 0, 0.165, 0, -0.165, 0, -7.212379e-09, -17.50207, 2.6860182, 8.795606)
+
+[node name="Armarin de tetoquasepronto2" parent="." unique_id=1344803793 instance=ExtResource("1_cc2i2")]
+transform = Transform3D(0.31, 0, 0, 0, 0.31, 0, 0, 0, 0.23, -17.787, 2.6266575, 7.4675894)
+
+[node name="Geladeirapoluis" parent="." unique_id=333336786 instance=ExtResource("3_4mhc6")]
+transform = Transform3D(0.565, 0, 0, 0, 0.565, 0, 0, 0, 0.565, -18.66787, 0.03724134, 10.190847)
+
+[node name="fogaogeladeirapronto" parent="." unique_id=1320991316 instance=ExtResource("4_p6mip")]
+transform = Transform3D(0.19000003, 0, 0, 0, 0.19000003, 0, 0, 0, 0.19000003, -17.518488, 0.0074284077, 8.777807)
+
+[node name="armariodechaoprontotxt" parent="." unique_id=1374723738 instance=ExtResource("5_g0ec2")]
+transform = Transform3D(0.49, 0, 0, 0, 0.49, 0, 0, 0, 0.49, -17.730764, 4.7683716e-07, 7.4160457)
+
+[node name="armariodechaoprontotxt2" parent="." unique_id=201752219 instance=ExtResource("5_g0ec2")]
+transform = Transform3D(0.49, 0, 0, 0, 0.49, 0, 0, 0, 0.49, -17.730764, 4.7683716e-07, 6.067708)
+
+[node name="Condimentosprontos" parent="." unique_id=1061647755 instance=ExtResource("6_jr5r1")]
+transform = Transform3D(0.013206512, 0, -0.13435249, 0, 0.135, 0, 0.13435249, 0, 0.013206512, -12.616535, 1.1600006, 4.659711)
+
+[node name="papel derolo" parent="." unique_id=1904693730 instance=ExtResource("7_53uey")]
+transform = Transform3D(0.175, 0, 0, 0, 0.175, 0, 0, 0, 0.175, -12.646369, 1.204888, 5.682028)
+
+[node name="papel derolo2" parent="." unique_id=1784752546 instance=ExtResource("7_53uey")]
+transform = Transform3D(0.090845376, 0, 0.14957312, 0, 0.175, 0, -0.14957312, 0, 0.090845376, -16.23473, 1.2048879, 1.2448659)
+
+[node name="Condimentosprontos2" parent="." unique_id=381441796 instance=ExtResource("6_jr5r1")]
+transform = Transform3D(0.109238066, 0, -0.07932243, 0, 0.135, 0, 0.07932243, 0, 0.109238066, -14.245918, 1.1600008, 2.0848336)
+
+[node name="quadropronto" parent="." unique_id=1587593348 instance=ExtResource("8_36r27")]
+transform = Transform3D(0.235, 0, 0, 0, 0.235, 0, 0, 0, 0.235, -18.05112, 1.410471, 2.5228078)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1611291252]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.659527, 1.2329102, 8.437223)
+shape = SubResource("BoxShape3D_cc2i2")
+
+[node name="faqueteirapronta" parent="." unique_id=1122483558 instance=ExtResource("9_fn15l")]
+transform = Transform3D(0.66499984, 0, -3.7252903e-09, 0, 0.665, 0, 3.7252903e-09, 0, 0.66499984, -18.160196, 1.5452533, 7.263283)
+
+[node name="Caixas" type="StaticBody3D" parent="." unique_id=1683175049]
+
+[node name="Caixa de maderapronta" parent="Caixas" unique_id=1176629531 instance=ExtResource("10_4mhc6")]
+transform = Transform3D(0.245, 0, 0, 0, 0.245, 0, 0, 0, 0.245, -14.0224495, 7.233135e-07, 10.569407)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Caixas" unique_id=1804016217]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.937665, 0.6317748, 10.551146)
+shape = SubResource("BoxShape3D_p6mip")
