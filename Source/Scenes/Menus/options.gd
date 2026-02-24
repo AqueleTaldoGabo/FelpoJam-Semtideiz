@@ -6,7 +6,7 @@ const SAIR = preload("res://Source/Assets/Sprites/Menu_Opcoes_sair_ligado.png")
 const NORMAL = preload("res://Source/Assets/Sprites/Menu_Opcoes.png")
 
 func fecha():
-	get_tree().root.remove_child($".")
+	$".".queue_free()
 	
 
 func _ready() -> void:

@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://bm5lcief16w1j"]
 
-[ext_resource type="Script" uid="uid://bnym1jcapvg3e" path="res://Source/Scenes/Objects/telefone.gd" id="1_gs8ex"]
+[ext_resource type="Script" uid="uid://enq1xecijthj" path="res://Source/Global/interagivel.gd" id="1_gs8ex"]
 [ext_resource type="PackedScene" uid="uid://bmi3vxurx387l" path="res://Source/Assets/Modelos/Telefone/Telefonecommalcotexturesfbx.fbx" id="2_de4qi"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fy70i"]
-size = Vector3(0.43933105, 0.2791748, 0.4658203)
+size = Vector3(0.21955872, 0.17660522, 0.3807373)
 
 [node name="Telefone" type="StaticBody3D" unique_id=576596658]
 script = ExtResource("1_gs8ex")
@@ -13,5 +13,5 @@ script = ExtResource("1_gs8ex")
 transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1388621845]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.28033447, 0.07171631, 0.00048828125)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.361763, 0.07749939, 0.0018920898)
 shape = SubResource("BoxShape3D_fy70i")

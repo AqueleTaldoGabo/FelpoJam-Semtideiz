@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://2d8dc7ahya7r" path="res://Source/Scenes/Objects/Mesinhas.tscn" id="9_7g1yj"]
 [ext_resource type="PackedScene" uid="uid://cryn2etbqk201" path="res://Source/Scenes/Objects/CozinhaBalcao.tscn" id="10_7g1yj"]
 [ext_resource type="PackedScene" uid="uid://lasa5232oxy1" path="res://Source/Assets/Modelos/Cafeteria/Jukekebox.fbx" id="11_m0rgq"]
+[ext_resource type="Script" uid="uid://cjqmbi23ao7l0" path="res://Source/Scenes/Objects/vinyl.gd" id="11_vsa5v"]
+[ext_resource type="PackedScene" uid="uid://bta1w601g11fj" path="res://Source/Assets/Modelos/Cafeteria/LuzTeto/Luzdetetopronta.fbx" id="12_dsnx7"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2elm2"]
 size = Vector3(60, 2, 60)
@@ -30,13 +32,13 @@ script = ExtResource("1_bn0h7")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1881450520]
 transform = Transform3D(0.60650635, 0.78289306, 0.1386666, -0.15087019, -0.057913646, 0.9868557, 0.78063315, -0.6194549, 0.08299023, -32.498688, 3.658956, 0)
+visible = false
 light_energy = 1.159
 shadow_enabled = true
 
 [node name="Player" parent="." unique_id=1240492296 instance=ExtResource("1_n7cls")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0077297688, 0.3860966, -0.03906679)
-visible = false
-folha = true
+corB = Vector4(15, 0.5, 0.1, 1)
 
 [node name="Chão" type="StaticBody3D" parent="." unique_id=623002619]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9999995, 0)
@@ -53,10 +55,29 @@ mesh = SubResource("BoxMesh_bn0h7")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.87519, 0.32128644, 7.1888504)
 visible = false
 
-[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1710473499]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.247624, 3.7475555, -0.42536736)
-omni_range = 4096.0
-omni_attenuation = 0.259
+[node name="Luzdetetopronta" parent="." unique_id=1663034780 instance=ExtResource("12_dsnx7")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -15.122114, 1.8396496, 6.6608133)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Luzdetetopronta" unique_id=1710473499]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.008190155, 6.3153477, 0.007812023)
+light_energy = 0.475
+light_size = 0.287
+light_specular = 0.0
+shadow_enabled = true
+omni_range = 7.705
+omni_attenuation = 0.457
+
+[node name="Luzdetetopronta2" parent="." unique_id=952720583 instance=ExtResource("12_dsnx7")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -8.57254, 1.8396496, 1.7487419)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Luzdetetopronta2" unique_id=1170194412]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.008190155, 6.3153477, 0.007812023)
+light_energy = 1.475
+light_size = 0.317
+light_specular = 0.0
+shadow_enabled = true
+omni_range = 12.697
+omni_attenuation = 0.061
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="." unique_id=672180429]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.243143, 3.3303132, 7.7763577)
@@ -91,9 +112,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.035, 0, -0.112)
 
 [node name="Jukebox" type="StaticBody3D" parent="." unique_id=2057347238]
 transform = Transform3D(0.017676521, 0, -0.49968743, 0, 0.5, 0, 0.49968743, 0, 0.017676521, -3.0285885, 0.9604193, -6.0773964)
+script = ExtResource("11_vsa5v")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Jukebox" unique_id=1616331621]
 shape = SubResource("BoxShape3D_m0rgq")
 
 [node name="Jukekebox" parent="Jukebox" unique_id=1294604251 instance=ExtResource("11_m0rgq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.50064754, -1.9208374, 0.022611618)
+
+[connection signal="interagido" from="Jukebox" to="Jukebox" method="_on_interagido"]

@@ -1,8 +1,8 @@
 extends Node
 
-var MUSICA1 = preload("res://Source/Música/temadocari.ogg")
-
 @onready var ANIMATED_LABEL = $"Player/Cabeça/Camera3D/CanvasLayer/Label"
+
+var interagido = false
 
 var frases = 	["Alô alôoou, ...", 
 				"então funcionário…", 
@@ -18,6 +18,8 @@ var texto = true
 func animar_texto(textos):
 	for frase in textos:
 		for letra in frase:
+			if interagido:
+				break
 			while get_tree().paused:
 				await get_tree().process_frame
 			if get_tree().paused == false:
@@ -32,6 +34,7 @@ func animar_texto(textos):
 
 func _on_telefone_interagido(body: Variant) -> void:
 	if texto:
+		$Telefone.set_collision_layer_value(1, false)
 		texto = !texto
 		await animar_texto(frases)
 		ANIMATED_LABEL.text = ""
@@ -41,13 +44,11 @@ func _on_telefone_interagido(body: Variant) -> void:
 
 
 func _on_porta_interagido(body: Variant) -> void:
-	Transicao.transicao()
-	ControleMusica.fade_out()
-	await Transicao.fade_acabou
-	get_tree().change_scene_to_file("res://Source/Scenes/Levels/Cafeteria.tscn")
-	ControleMusica.trocar_musica(MUSICA1)
+	MudarScena.mudarCafeteria()
 
 
 func _on_pasta_interagido(body: Variant) -> void:
-	ANIMATED_LABEL.hide()
+	interagido = true
+	ANIMATED_LABEL.text = ""
 	$Pasta.hide()
+	$Pasta.set_collision_layer_value(1, false)

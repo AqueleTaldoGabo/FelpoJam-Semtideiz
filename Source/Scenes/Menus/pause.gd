@@ -5,8 +5,7 @@ extends Node
 
 
 var mouse = Input.MOUSE_MODE_VISIBLE
-var OPCOES = preload("uid://b4afxc10lvo3d").instantiate()
-var MUSICA1 = preload("res://Source/Música/temadocari.ogg")
+var MUSICA1 = preload("res://Source/Assets/Música/temadocari.ogg")
 const TEXTURAVAZIO = preload("res://Source/Assets/Sprites/Menu_pausado1.png")
 const TEXTURACONTI = preload("res://Source/Assets/Sprites/Menu_pausado4.png")
 const TEXTURAOPCOE = preload("res://Source/Assets/Sprites/Menu_pausado3.png")
@@ -16,8 +15,9 @@ var options_aberto = false
 func fecha():
 	get_tree().paused = false
 	Input.mouse_mode = mouse
-	get_node("/root/Cena1/Player/Cabeça/Camera3D/CanvasLayer/Label").show()
-	get_tree().root.remove_child($".")
+	if get_node("/root/Cena1/Player/Cabeça/Camera3D/CanvasLayer/Label") != null:
+		get_node("/root/Cena1/Player/Cabeça/Camera3D/CanvasLayer/Label").show()
+	$".".queue_free()
 
 
 func _input(event: InputEvent) -> void:
@@ -32,17 +32,13 @@ func _on_botao_continuar_pressed() -> void:
 	
 
 func _on_botao_options_pressed() -> void:
-	get_tree().root.add_child(OPCOES)
+	var OPCOES = preload("uid://b4afxc10lvo3d").instantiate()
 	options_aberto = true
+	get_tree().root.add_child(OPCOES)
 
 func _on_botao_sair_pressed() -> void:
-	Transicao.transicao()
-	ControleMusica.fade_out()
-	await Transicao.fade_acabou
-	ControleMusica.trocar_musica(MUSICA1)
-	get_tree().change_scene_to_file("res://Source/Scenes/Levels/Menu.tscn")
-	get_tree().paused = false
-	get_tree().root.remove_child($".")
+	MudarScena.mudarMenu()
+	$".".queue_free()
 	
 func _fora() -> void:
 	fundo.set_texture(TEXTURAVAZIO)

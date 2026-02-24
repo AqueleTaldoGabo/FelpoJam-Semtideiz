@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://draij6dpugcym" path="res://Source/Scenes/Objects/Porta.tscn" id="12_qvc64"]
 [ext_resource type="Texture2D" uid="uid://cvkb8qkmuqjx5" path="res://Source/Assets/Sprites/Sun.png" id="13_l6wx8"]
 [ext_resource type="PackedScene" uid="uid://dg651rlufkkpu" path="res://Source/Assets/Modelos/Livro_malcon/Livro malco2.fbx" id="13_m1wbi"]
-[ext_resource type="PackedScene" uid="uid://seiq2mbnprlm" path="res://Source/Assets/Modelos/Cafeteira/faqueteirapronta.fbx" id="13_qvc64"]
+[ext_resource type="PackedScene" uid="uid://seiq2mbnprlm" path="res://Source/Assets/Modelos/Cafeteria/Cafeteira/faqueteirapronta.fbx" id="13_qvc64"]
 [ext_resource type="Texture2D" uid="uid://dolfnli2vtgsa" path="res://Source/Assets/Sprites/Predios.png" id="14_l6wx8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ovw4t"]

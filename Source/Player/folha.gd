@@ -2,13 +2,10 @@ extends Node
 
 signal mudar_algo(valor)
 
-@export var fechou = false
-
 func fecha():
-	get_tree().root.remove_child($".")
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	
-	fechou = true
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	$".".queue_free()
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE

@@ -5,21 +5,21 @@ extends CharacterBody3D
 @export var se_move = true
 @export var size_raio = -5
 @export var folha = false
-@export var label = ""
+@export var corA: Vector4 = Vector4(0.2, 0.1, 0.0, 1.0)
+@export var corB: Vector4 = Vector4(0.5, 0.5, 0.1, 1.0)
 @onready var target_rotation = Vector2(1.57,0) 
+@onready var camera = $"Cabeça/Camera3D"
+@onready var shader = $"Cabeça/Camera3D/PosProcessamento"
+@onready var materialshader = shader.get_active_material(0)
 var menu_aberto = false
 var folha_aberta = false
 var ease_curve: float = 0.1
-
-@onready var PAUSE = preload("uid://bxum0b78ybr3a").instantiate()
-@onready var PAGINA = preload("uid://c1laawrklqnhp").instantiate()
-
 var velocidade_objeto = Vector3.ZERO
 
 func _ready() -> void:
+	materialshader.set_shader_parameter("cor_a", corA)
+	materialshader.set_shader_parameter("cor_b", corB)
 	
-	var main = get_tree().current_scene
-	PAGINA.connect("mudar_algo", Callable(main, "_on_mudar_algo"))
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
@@ -27,32 +27,35 @@ func _input(event: InputEvent) -> void:
 		target_rotation.y = clampf(target_rotation.y, PI/-2, PI/2)
 	if event.is_action_pressed("ui_cancel"):
 		if menu_aberto == false and folha_aberta == false:
+			var PAUSE = preload("uid://bxum0b78ybr3a").instantiate()
 			menu_aberto = true
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 			PAUSE.mouse = Input.MOUSE_MODE_CAPTURED
 			$"Cabeça/Camera3D/CanvasLayer/Label".hide()
 			get_tree().root.add_child(PAUSE)
 			get_tree().paused = true
+			
 		else:
 			folha_aberta = false
-
-
-	if event.is_action_pressed("abrir_pagina") and folha:
-		folha_aberta = true
-		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-		get_tree().root.add_child(PAGINA)
+			menu_aberto = false
+		
 		
 
-
-func _process(delta: float) -> void:
-	menu_aberto = false
+	if event.is_action_pressed("abrir_pagina") and folha:
+		var main = get_tree().current_scene
+		var PAGINA = preload("uid://c1laawrklqnhp").instantiate()
+		folha_aberta = true
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		PAGINA.connect("mudar_algo", Callable(main, "_on_mudar_algo"))
+		get_tree().root.add_child(PAGINA)
+		
+	
 
 		
 func _physics_process(delta: float) -> void:
-	
-	rotation.y = lerp_angle(rotation.y, target_rotation.x, ease(delta, ease_curve))
-	$"Cabeça/Camera3D".rotation.x = lerp_angle($"Cabeça/Camera3D".rotation.x, target_rotation.y, ease(delta, ease_curve))
-	
+	var easeusado = ease(delta, ease_curve)
+	rotation.y = lerp_angle(rotation.y, target_rotation.x, easeusado)
+	camera.rotation.x = lerp_angle(camera.rotation.x, target_rotation.y, easeusado)
 	
 	var input = Input.get_vector("anda_esquerda", "anda_direita", "anda_frente", "anda_tras")
 	var direcao = transform.basis * Vector3(input.x, 0, input.y)

@@ -1,9 +1,9 @@
 [gd_scene format=4 uid="uid://curejhaq0wiig"]
 
-[ext_resource type="Script" uid="uid://dlcgfbeqx1c33" path="res://Source/Scenes/Objects/pasta.gd" id="1_urx0x"]
+[ext_resource type="Script" uid="uid://enq1xecijthj" path="res://Source/Global/interagivel.gd" id="1_ca2ac"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_urx0x"]
-size = Vector3(0.7055664, 0.059753418, 0.43286133)
+size = Vector3(0.6097412, 0.02028656, 0.3694458)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w1o8v"]
 resource_name = "Material"
@@ -85,10 +85,10 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_h3a3t")
 
 [node name="Pasta" type="StaticBody3D" unique_id=1623291131]
-script = ExtResource("1_urx0x")
+script = ExtResource("1_ca2ac")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1459628278]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06762695, 0.025115967, -0.017456055)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.045837402, 0.023586273, -0.022491455)
 shape = SubResource("BoxShape3D_urx0x")
 
 [node name="Pasta" type="Node3D" parent="." unique_id=902772863]

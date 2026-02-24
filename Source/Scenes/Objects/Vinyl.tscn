@@ -38,3 +38,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11065674, 1.408346, -0.198
 shape = SubResource("BoxShape3D_5ohy6")
 
 [connection signal="interagido" from="." to="." method="_on_interagido"]
+[connection signal="olhado" from="." to="." method="_on_olhado"]
