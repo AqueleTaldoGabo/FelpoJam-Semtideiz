@@ -49,6 +49,7 @@ albedo_texture = ExtResource("2_xmjli")
 material = SubResource("StandardMaterial3D_qvc64")
 
 [node name="Cena1" type="Node" unique_id=1119634821]
+process_mode = 1
 script = ExtResource("1_ouqje")
 
 [node name="Lamparina modelofinal" parent="." unique_id=1184403439 instance=ExtResource("2_2vfmm")]
@@ -83,6 +84,7 @@ transform = Transform3D(0.19852981, 0, -0.9800952, 0, 1, 0, 0.9800952, 0, 0.1985
 mesh = SubResource("BoxMesh_ouqje")
 
 [node name="Telefone" parent="." unique_id=915141437 instance=ExtResource("7_ouqje")]
+process_mode = 1
 transform = Transform3D(0.66913056, 0, 0.74314487, 0, 1, 0, -0.74314487, 0, 0.66913056, -4.626, 1.179, 5.16)
 
 [node name="Livro malco2" parent="." unique_id=893685750 instance=ExtResource("13_m1wbi")]
@@ -108,8 +110,8 @@ gi_mode = 2
 alpha_cut = 3
 texture = ExtResource("14_l6wx8")
 
-[node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=1304021077]
-transform = Transform3D(0.99553233, 0, -0.094421074, 0, 1, 0, 0.094421074, 0, 0.99553233, -2.948413, 1.9756947, 4.2598405)
+[node name="SpotLight3D2" type="SpotLight3D" parent="MeshInstance3D" unique_id=1304021077]
+transform = Transform3D(0.99553233, 0, -0.094421074, 0.094421074, -4.371139e-08, 0.99553233, -4.1272763e-09, -1, -4.35161e-08, 0.11444807, 3.4161167, 0.4316063)
 spot_range = 6.274
 spot_attenuation = -0.69
 spot_angle = 26.5
@@ -133,3 +135,4 @@ mesh = SubResource("CylinderMesh_qvc64")
 
 [connection signal="interagido" from="Telefone" to="." method="_on_telefone_interagido"]
 [connection signal="interagido" from="Porta" to="." method="_on_porta_interagido"]
+[connection signal="interagido" from="Pasta" to="." method="_on_pasta_interagido"]

@@ -30,6 +30,7 @@ func _input(event: InputEvent) -> void:
 			menu_aberto = true
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 			PAUSE.mouse = Input.MOUSE_MODE_CAPTURED
+			$"Cabeça/Camera3D/CanvasLayer/Label".hide()
 			get_tree().root.add_child(PAUSE)
 			get_tree().paused = true
 		else:

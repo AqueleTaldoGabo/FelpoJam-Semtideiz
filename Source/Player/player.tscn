@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bmhhi0tril483" path="res://Source/Player/player.gd" id="1_4flbx"]
 [ext_resource type="Shader" uid="uid://bcfuj16arhi4e" path="res://shaders/dithering.gdshader" id="2_g4gsc"]
 [ext_resource type="PackedScene" uid="uid://ipxelk0c00b8" path="res://Source/Player/RaioInteragente.tscn" id="2_v1mne"]
+[ext_resource type="FontFile" uid="uid://c0b1xlphy8isa" path="res://Source/fonts/OldNewspaperTypes.ttf" id="4_0tdpy"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_4flbx"]
 
@@ -31,12 +32,9 @@ material = SubResource("ShaderMaterial_g4gsc")
 flip_faces = true
 size = Vector2(2, 2)
 
-[sub_resource type="SystemFont" id="SystemFont_v1mne"]
-font_names = PackedStringArray("Liberation Serif")
-
 [sub_resource type="LabelSettings" id="LabelSettings_880o0"]
-font = SubResource("SystemFont_v1mne")
-font_size = 30
+font = ExtResource("4_0tdpy")
+font_size = 40
 
 [node name="Player" type="CharacterBody3D" unique_id=1240492296]
 script = ExtResource("1_4flbx")

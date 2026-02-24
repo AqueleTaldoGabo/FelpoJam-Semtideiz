@@ -16,6 +16,7 @@ var options_aberto = false
 func fecha():
 	get_tree().paused = false
 	Input.mouse_mode = mouse
+	get_node("/root/Cena1/Player/Cabeça/Camera3D/CanvasLayer/Label").show()
 	get_tree().root.remove_child($".")
 
 

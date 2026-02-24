@@ -15,13 +15,17 @@ var current_text: String = ""
 var texto = true
 
 
-func animar_texto():
-	for frase in frases:
+func animar_texto(textos):
+	for frase in textos:
 		for letra in frase:
-			current_text += letra
-			ANIMATED_LABEL.text = current_text
-			print(ANIMATED_LABEL)
-			await get_tree().create_timer(0.05).timeout
+			while get_tree().paused:
+				await get_tree().process_frame
+			if get_tree().paused == false:
+				current_text += letra
+				ANIMATED_LABEL.text = current_text
+				await get_tree().create_timer(0.05).timeout
+		while get_tree().paused:
+			await get_tree().process_frame
 		await get_tree().create_timer(0.9).timeout
 		current_text = ""
 
@@ -29,8 +33,11 @@ func animar_texto():
 func _on_telefone_interagido(body: Variant) -> void:
 	if texto:
 		texto = !texto
-		await animar_texto()
+		await animar_texto(frases)
 		ANIMATED_LABEL.text = ""
+		await get_tree().create_timer(0.4).timeout
+		await animar_texto(["Analise a pasta"])
+		
 
 
 func _on_porta_interagido(body: Variant) -> void:
@@ -39,3 +46,8 @@ func _on_porta_interagido(body: Variant) -> void:
 	await Transicao.fade_acabou
 	get_tree().change_scene_to_file("res://Source/Scenes/Levels/Cafeteria.tscn")
 	ControleMusica.trocar_musica(MUSICA1)
+
+
+func _on_pasta_interagido(body: Variant) -> void:
+	ANIMATED_LABEL.hide()
+	$Pasta.hide()

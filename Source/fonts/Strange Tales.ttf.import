@@ -1,0 +1,36 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://dxrpw1fggn2yy"
+path="res://.godot/imported/Strange Tales.ttf-40f7c463c1263c6638e118acab9c10fc.fontdata"
+
+[deps]
+
+source_file="res://Source/fonts/Strange Tales.ttf"
+dest_files=["res://.godot/imported/Strange Tales.ttf-40f7c463c1263c6638e118acab9c10fc.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+disable_embedded_bitmaps=true
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+modulate_color_glyphs=false
+hinting=1
+subpixel_positioning=4
+keep_rounding_remainders=true
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}
