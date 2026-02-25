@@ -64,12 +64,12 @@ script = ExtResource("1_bn0h7")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1881450520]
 transform = Transform3D(-0.9510693, 0.22259215, 0.21428946, 0.22180593, 0.00903028, 0.975049, 0.21510316, 0.97486985, -0.05796068, -39.48395, 6.3953276, 0)
+visible = false
 light_energy = 2.993
 shadow_enabled = true
 
 [node name="Player" parent="." unique_id=1240492296 instance=ExtResource("1_n7cls")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0077297688, 0.3860966, -0.03906679)
-visible = false
 corA = Vector4(0.3, 0.05, 0.05, 1)
 corB = Vector4(0.8, 0.2, 0.2, 1)
 
@@ -125,10 +125,8 @@ transform = Transform3D(0.22, 0, 0, 0, 0.22, 0, 0, 0, 0.22, -5.176113, 1.6580169
 
 [node name="OmniLight3D" type="OmniLight3D" parent="PUTAMERDALUZCOMTEXTURAAAAAAAAAAAAAAAAAA2" unique_id=1245997986]
 transform = Transform3D(4.5454545, 0, 0, 0, 4.5454545, 0, 0, 0, 4.5454545, 0.0019874573, 5.318213, 0.049979687)
-visible = false
 light_energy = 0.752
-light_indirect_energy = 5.465
-light_size = 0.317
+light_size = 0.138
 light_specular = 0.0
 shadow_enabled = true
 omni_range = 7.109
@@ -139,12 +137,10 @@ transform = Transform3D(0.22, 0, 0, 0, 0.22, 0, 0, 0, 0.22, -5.323024, 1.6580169
 
 [node name="OmniLight3D" type="OmniLight3D" parent="PUTAMERDALUZCOMTEXTURAAAAAAAAAAAAAAAAAA3" unique_id=1241906070]
 transform = Transform3D(4.5454545, 0, 0, 0, 4.5454545, 0, 0, 0, 4.5454545, 0.0019874573, 5.318213, 0.049979687)
-visible = false
 light_energy = 0.752
 light_indirect_energy = 5.465
 light_size = 0.317
 light_specular = 0.0
-shadow_enabled = true
 omni_range = 7.109
 omni_attenuation = 0.021
 
@@ -153,7 +149,6 @@ transform = Transform3D(0.22, 0, 0, 0, 0.22, 0, 0, 0, 0.22, -14.612318, 1.658016
 
 [node name="OmniLight3D" type="OmniLight3D" parent="PUTAMERDALUZCOMTEXTURAAAAAAAAAAAAAAAAAA4" unique_id=1733082735]
 transform = Transform3D(4.5454545, 0, 0, 0, 4.5454545, 0, 0, 0, 4.5454545, 0.0019836426, 5.9088607, 0.049980164)
-visible = false
 light_energy = 0.774
 light_indirect_energy = 5.465
 light_size = 0.317
@@ -167,7 +162,6 @@ transform = Transform3D(0.22, 0, 0, 0, 0.22, 0, 0, 0, 0.22, -14.8957405, 1.65801
 
 [node name="OmniLight3D" type="OmniLight3D" parent="PUTAMERDALUZCOMTEXTURAAAAAAAAAAAAAAAAAA5" unique_id=1276609113]
 transform = Transform3D(4.5454545, 0, 0, 0, 4.5454545, 0, 0, 0, 4.5454545, 0.0019874573, 5.318213, 0.049979687)
-visible = false
 light_energy = 0.752
 light_indirect_energy = 5.465
 light_size = 0.317
@@ -181,9 +175,7 @@ transform = Transform3D(0.22, 0, 0, 0, 0.22, 0, 0, 0, 0.22, -22.246, 1.62, 7.777
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="PUTAMERDALUZCOMTEXTURAAAAAAAAAAAAAAAAAA" unique_id=672180429]
 transform = Transform3D(4.5454545, 0, 0, 0, 4.5454545, 0, 0, 0, 4.5454545, 0.0129852295, 6.6402106, -0.0029182434)
-visible = false
 light_energy = 1.688
-shadow_enabled = true
 omni_range = 340.788
 
 [node name="Cacambadelico2" type="StaticBody3D" parent="." unique_id=1792689184]

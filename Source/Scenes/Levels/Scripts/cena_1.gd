@@ -31,7 +31,7 @@ func animar_texto(textos):
 		current_text = ""
 
 
-func _on_telefone_interagido(body: Variant) -> void:
+func _on_telefone_interagido(_body: Variant) -> void:
 	if texto:
 		$Telefone.set_collision_layer_value(1, false)
 		texto = !texto
@@ -42,11 +42,11 @@ func _on_telefone_interagido(body: Variant) -> void:
 		
 
 
-func _on_porta_interagido(body: Variant) -> void:
+func _on_porta_interagido(_body: Variant) -> void:
 	MudarScena.mudarCafeteria()
 
 
-func _on_pasta_interagido(body: Variant) -> void:
+func _on_pasta_interagido(_body: Variant) -> void:
 	interagido = true
 	ANIMATED_LABEL.text = ""
 	$Pasta/Pasta.hide()
