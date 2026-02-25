@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cgfko6kr2mhuc"]
 
-[ext_resource type="Script" uid="uid://cjqmbi23ao7l0" path="res://Source/Scenes/Objects/vinyl.gd" id="1_5ohy6"]
+[ext_resource type="Script" uid="uid://cjqmbi23ao7l0" path="res://Source/Scenes/Objects/Scripts/vinyl.gd" id="1_5ohy6"]
 [ext_resource type="Texture2D" uid="uid://bw7f8cobp7k6l" path="res://Source/Assets/Sprites/Chao_teste_quase_interrogacao2.png" id="2_5ohy6"]
 [ext_resource type="PackedScene" uid="uid://c4njwgno0o5it" path="res://Source/Assets/Modelos/vinyl_malcon/vynil fodacomtexturasmalco.fbx" id="2_l0fod"]
 

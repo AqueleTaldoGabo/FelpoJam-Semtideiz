@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://d1uopfi5lwwsl"
-path="res://.godot/imported/Fifties Movies.ttf-b630425b91a3c6f09787216ce812882e.fontdata"
+uid="uid://c0qcj651nk5fp"
+path="res://.godot/imported/Les Mysteres de Paris.ttf-9a209e40b7c7e361d9b814e080181262.fontdata"
 
 [deps]
 
-source_file="res://Source/fonts/Fifties Movies.ttf"
-dest_files=["res://.godot/imported/Fifties Movies.ttf-b630425b91a3c6f09787216ce812882e.fontdata"]
+source_file="res://Source/Assets/fonts/Les Mysteres de Paris.ttf"
+dest_files=["res://.godot/imported/Les Mysteres de Paris.ttf-9a209e40b7c7e361d9b814e080181262.fontdata"]
 
 [params]
 

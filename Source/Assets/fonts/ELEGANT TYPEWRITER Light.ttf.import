@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bhi35hm6q31jv"
-path="res://.godot/imported/ELEGANT TYPEWRITER Regular.ttf-33ea195f8e5c9eba8fdd219a323aa73c.fontdata"
+uid="uid://dkcvy7ugcv0s3"
+path="res://.godot/imported/ELEGANT TYPEWRITER Light.ttf-13ba77596229888ae36bf3f352e83d3a.fontdata"
 
 [deps]
 
-source_file="res://Source/fonts/ELEGANT TYPEWRITER Regular.ttf"
-dest_files=["res://.godot/imported/ELEGANT TYPEWRITER Regular.ttf-33ea195f8e5c9eba8fdd219a323aa73c.fontdata"]
+source_file="res://Source/Assets/fonts/ELEGANT TYPEWRITER Light.ttf"
+dest_files=["res://.godot/imported/ELEGANT TYPEWRITER Light.ttf-13ba77596229888ae36bf3f352e83d3a.fontdata"]
 
 [params]
 

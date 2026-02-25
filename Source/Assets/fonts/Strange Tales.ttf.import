@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://r2uelr6kxelh"
-path="res://.godot/imported/ELEGANT TYPEWRITER Italic.ttf-a1c21de00688dd45228289a1341f2101.fontdata"
+uid="uid://dxrpw1fggn2yy"
+path="res://.godot/imported/Strange Tales.ttf-efe32a3369af2e8c0893ce4029e852a3.fontdata"
 
 [deps]
 
-source_file="res://Source/fonts/ELEGANT TYPEWRITER Italic.ttf"
-dest_files=["res://.godot/imported/ELEGANT TYPEWRITER Italic.ttf-a1c21de00688dd45228289a1341f2101.fontdata"]
+source_file="res://Source/Assets/fonts/Strange Tales.ttf"
+dest_files=["res://.godot/imported/Strange Tales.ttf-efe32a3369af2e8c0893ce4029e852a3.fontdata"]
 
 [params]
 

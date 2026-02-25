@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://ch7kfhg11b1ko"
-path="res://.godot/imported/ELEGANT TYPEWRITER Bold.ttf-279916a746c22a131e80ef09f2c3b6ec.fontdata"
+uid="uid://c0b1xlphy8isa"
+path="res://.godot/imported/OldNewspaperTypes.ttf-8472a4fb542dc95e831eb0f92f195a4d.fontdata"
 
 [deps]
 
-source_file="res://Source/fonts/ELEGANT TYPEWRITER Bold.ttf"
-dest_files=["res://.godot/imported/ELEGANT TYPEWRITER Bold.ttf-279916a746c22a131e80ef09f2c3b6ec.fontdata"]
+source_file="res://Source/Assets/fonts/OldNewspaperTypes.ttf"
+dest_files=["res://.godot/imported/OldNewspaperTypes.ttf-8472a4fb542dc95e831eb0f92f195a4d.fontdata"]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b4afxc10lvo3d"]
 
 [ext_resource type="Texture2D" uid="uid://togklxdldx30" path="res://Source/Assets/Sprites/Menu_Opcoes.png" id="2_tvg80"]
-[ext_resource type="Script" uid="uid://b4srk8c4cxaji" path="res://Source/Scenes/Menus/options.gd" id="3_tvg80"]
+[ext_resource type="Script" uid="uid://b4srk8c4cxaji" path="res://Source/Scenes/Menus/Scripts/options.gd" id="3_tvg80"]
 [ext_resource type="Texture2D" uid="uid://cfqpk3kvf2rqt" path="res://Source/Assets/Sprites/botcaozinho.png" id="3_ylxf0"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vaenm"]
