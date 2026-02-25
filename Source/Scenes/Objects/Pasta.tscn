@@ -1,6 +1,8 @@
 [gd_scene format=4 uid="uid://curejhaq0wiig"]
 
 [ext_resource type="Script" uid="uid://enq1xecijthj" path="res://Source/Global/interagivel.gd" id="1_ca2ac"]
+[ext_resource type="Script" uid="uid://bsnvuv8pvgjke" path="res://Source/Scenes/Objects/pagina_1.gd" id="2_io8j2"]
+[ext_resource type="Texture2D" uid="uid://cxsfnkaygtrvo" path="res://Source/Assets/Imagens/MOLDE_DA_CARTA_TUTORIAL.png" id="3_d4yv5"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_urx0x"]
 size = Vector3(0.6097412, 0.02028656, 0.3694458)
@@ -101,3 +103,60 @@ mesh = SubResource("ArrayMesh_ca2ac")
 [node name="Plane" type="MeshInstance3D" parent="Pasta" unique_id=877997072]
 transform = Transform3D(244.35916, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, -0.25489098, 0)
 mesh = SubResource("ArrayMesh_d4yv5")
+
+[node name="Pagina1" type="Control" parent="." unique_id=164604600]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_io8j2")
+
+[node name="MoldeDaCartaTutorial" type="Sprite2D" parent="Pagina1" unique_id=1350413524]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_d4yv5")
+
+[node name="NextPage" type="Button" parent="Pagina1" unique_id=395998308]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 4.975
+anchor_top = 9.125
+anchor_right = 7.55
+anchor_bottom = 10.3
+grow_horizontal = 0
+grow_vertical = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="PreviousPage" type="Button" parent="Pagina1" unique_id=1900263752]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -7.825
+anchor_top = 9.1
+anchor_right = -5.275
+anchor_bottom = 10.325
+grow_horizontal = 0
+grow_vertical = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Exit" type="Button" parent="Pagina1" unique_id=1327687709]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 5.65
+anchor_top = -9.975
+anchor_right = 7.875
+anchor_bottom = -8.925
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Pagina1/NextPage" to="Pagina1" method="_on_next_page_pressed"]
+[connection signal="pressed" from="Pagina1/PreviousPage" to="Pagina1" method="_on_previous_page_pressed"]
+[connection signal="pressed" from="Pagina1/Exit" to="Pagina1" method="_on_exit_pressed"]

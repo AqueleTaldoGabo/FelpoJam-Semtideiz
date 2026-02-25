@@ -9,6 +9,10 @@ const TEXTURASAIR  = preload("res://Source/Assets/Sprites/Menu_paper_sair_ligado
 const TEXTURAVAZIO = preload("res://Source/Assets/Sprites/Menu_paper_sem_botoes_ligados.png")
 
 
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("interagir"):
+		ControleSfx.toca_Carimbo1()
+
 func _on_botao_start_pressed() -> void:
 	MudarScena.mudarCena1()
 

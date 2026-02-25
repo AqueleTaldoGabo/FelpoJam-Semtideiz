@@ -15,6 +15,9 @@ var current_text: String = ""
 var texto = true
 
 
+func _ready() -> void:
+	print(get_tree().current_scene)
+
 func animar_texto(textos):
 	for frase in textos:
 		for letra in frase:
@@ -50,5 +53,7 @@ func _on_porta_interagido(body: Variant) -> void:
 func _on_pasta_interagido(body: Variant) -> void:
 	interagido = true
 	ANIMATED_LABEL.text = ""
-	$Pasta.hide()
+	$Pasta/Pasta.hide()
+	$Pasta/Pagina1.show()
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	$Pasta.set_collision_layer_value(1, false)
