@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccoyf3saonyxo"
-path.s3tc="res://.godot/imported/caderavermlha_1.png-f7ea3cb11b4c0dbce1de8d2405442619.s3tc.ctex"
+uid="uid://bkxy6nag3lrpg"
+path.s3tc="res://.godot/imported/Mesa Grandedeverdade_0.png-66d064f48642382b28fc5eb0765969d7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Source/Assets/Modelos/Cafeteria/Cadeira/caderavermlha_1.png"
-dest_files=["res://.godot/imported/caderavermlha_1.png-f7ea3cb11b4c0dbce1de8d2405442619.s3tc.ctex"]
+source_file="res://Source/Assets/Modelos/Cafeteria/MesaGrande/Mesa Grandedeverdade_0.png"
+dest_files=["res://.godot/imported/Mesa Grandedeverdade_0.png-66d064f48642382b28fc5eb0765969d7.s3tc.ctex"]
 
 [params]
 

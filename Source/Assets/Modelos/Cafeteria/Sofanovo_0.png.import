@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8ebc43u6jtq6"
-path.s3tc="res://.godot/imported/caderavermlha_0.png-a08614822e5ffd81e456dea0713d95a6.s3tc.ctex"
+uid="uid://cpc0caglcjjdn"
+path.s3tc="res://.godot/imported/Sofanovo_0.png-ea586b8fd97094784065558d08f6fd70.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "158dfe9f91a52365f6935f28bd6d082b"
+"md5": "6c94538833040079788d1dd659cebda1"
 }
 
 [deps]
 
-source_file="res://Source/Assets/Modelos/Cafeteria/Cadeira/caderavermlha_0.png"
-dest_files=["res://.godot/imported/caderavermlha_0.png-a08614822e5ffd81e456dea0713d95a6.s3tc.ctex"]
+source_file="res://Source/Assets/Modelos/Cafeteria/Sofanovo_0.png"
+dest_files=["res://.godot/imported/Sofanovo_0.png-ea586b8fd97094784065558d08f6fd70.s3tc.ctex"]
 
 [params]
 

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnbnafojhxpic"
-path.s3tc="res://.godot/imported/Mesa Grandeprontacomtxt_0.png-a5887ece581a7bacac402e6a1f8f877e.s3tc.ctex"
+uid="uid://cjseeaure6ay6"
+path.s3tc="res://.godot/imported/Sofanovo_1.png-5ed5fbe07457fc4ba5a1b68f813e0ee6.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Source/Assets/Modelos/Cafeteria/MesaGrande/Mesa Grandeprontacomtxt_0.png"
-dest_files=["res://.godot/imported/Mesa Grandeprontacomtxt_0.png-a5887ece581a7bacac402e6a1f8f877e.s3tc.ctex"]
+source_file="res://Source/Assets/Modelos/Cafeteria/Sofanovo_1.png"
+dest_files=["res://.godot/imported/Sofanovo_1.png-5ed5fbe07457fc4ba5a1b68f813e0ee6.s3tc.ctex"]
 
 [params]
 

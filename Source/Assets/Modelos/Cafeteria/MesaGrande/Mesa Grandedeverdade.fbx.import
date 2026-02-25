@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dc3c3rihwou71"
-path="res://.godot/imported/Mesa Grandeprontacomtxt.fbx-b3ebc48fc69b83936ed98626292713fc.scn"
+uid="uid://bf27ladxbkya6"
+path="res://.godot/imported/Mesa Grandedeverdade.fbx-bb605de2ad1aaddb01f4e8bbf130d228.scn"
 
 [deps]
 
-source_file="res://Source/Assets/Modelos/Cafeteria/MesaGrande/Mesa Grandeprontacomtxt.fbx"
-dest_files=["res://.godot/imported/Mesa Grandeprontacomtxt.fbx-b3ebc48fc69b83936ed98626292713fc.scn"]
+source_file="res://Source/Assets/Modelos/Cafeteria/MesaGrande/Mesa Grandedeverdade.fbx"
+dest_files=["res://.godot/imported/Mesa Grandedeverdade.fbx-bb605de2ad1aaddb01f4e8bbf130d228.scn"]
 
 [params]
 

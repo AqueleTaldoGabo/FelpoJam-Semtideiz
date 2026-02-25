@@ -1,57 +1,41 @@
 [gd_scene format=3 uid="uid://wc2lo6jg0v53"]
 
-[ext_resource type="PackedScene" uid="uid://dbar2c5sosllj" path="res://Source/Assets/Modelos/Cafeteria/Sofa.fbx" id="1_2rk8k"]
-[ext_resource type="PackedScene" uid="uid://dc3c3rihwou71" path="res://Source/Assets/Modelos/Cafeteria/MesaGrande/Mesa Grandeprontacomtxt.fbx" id="2_klgo5"]
+[ext_resource type="PackedScene" uid="uid://cj1k63mq245uc" path="res://Source/Assets/Modelos/Cafeteria/MesaGrande/Mesa Grandeprontacomtxt.fbx" id="2_klgo5"]
+[ext_resource type="ArrayMesh" uid="uid://bpa6mf5waputg" path="res://Source/Assets/Modelos/sofa.tres" id="3_m54mb"]
+[ext_resource type="Script" uid="uid://87l2bt8l1x31" path="res://Source/Scenes/Objects/Cenas/Sofa_muitos.gd" id="4_be2pw"]
+
+[sub_resource type="MultiMesh" id="MultiMesh_21jws"]
+transform_format = 1
+instance_count = 6
+mesh = ExtResource("3_m54mb")
+buffer = PackedFloat32Array(2.1e-44, 2.1e-44, 2.4e-44, 2.2e-44, 2.2e-44, 2.5e-44, 2.4e-44, 2.4e-44, 2.7e-44, 2.5e-44, 2.5e-44, 2.8e-44, 2.7e-44, 2.7e-44, 3e-44, 2.8e-44, 2.8e-44, 3.1e-44, 3e-44, 3e-44, 3.2e-44, 3.1e-44, 3.1e-44, 3.4e-44, 3.2e-44, 3.2e-44, 3.5e-44, 3.4e-44, 3.4e-44, 3.6e-44, 3.5e-44, 3.5e-44, 3.8e-44, 3.6e-44, 3.6e-44, 3.9e-44, 3.8e-44, 3.8e-44, 4e-44, 3.9e-44, 3.9e-44, 4.2e-44, 4e-44, 4e-44, 4.3e-44, 4.2e-44, 4.2e-44, 4.5e-44, 4.3e-44, 4.3e-44, 4.6e-44, 4.5e-44, 4.5e-44, 4.8e-44, 4.6e-44, 4.6e-44, 4.9e-44, 4.8e-44, 4.8e-44, 5e-44, 4.9e-44, 4.9e-44, 5.2e-44, 5e-44, 5e-44, 5.3e-44, 5.2e-44, 5.2e-44, 5.5e-44, 5.3e-44, 5.3e-44, 0)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_748mr"]
 size = Vector3(14.593193, 4.7634277, 7.421524)
 
 [node name="MesaSofa" type="StaticBody3D" unique_id=106702180]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1747463200]
-transform = Transform3D(-0.22985192, 0, -0.011480431, 0, 0.23, 0, 0.008251561, 0, -0.31979394, -0.43723452, 0.063459486, 9.93861)
+[node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="." unique_id=1640381535]
+multimesh = SubResource("MultiMesh_21jws")
+script = ExtResource("4_be2pw")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1129028913]
-transform = Transform3D(-0.999378, 0, 0.049914923, 0, 1.0000002, 0, -0.025786316, 0, -0.9993561, 6.944852, 3.3622346, 0.3865261)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1129028913]
+transform = Transform3D(0.230005, 0, -1.862645e-09, 0, 0.23000006, 0, -1.2107193e-07, 0, 0.3199999, -2.0379596, 0.83677363, 9.872306)
 shape = SubResource("BoxShape3D_748mr")
 
-[node name="Sofa" parent="StaticBody3D" unique_id=1827278468 instance=ExtResource("1_2rk8k")]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="Mesa Grandeprontacomtxt" parent="." unique_id=395849924 instance=ExtResource("2_klgo5")]
+transform = Transform3D(0.18500005, 0, -1.3969839e-09, 0, 0.185, 0, -1.8626451e-09, 0, 0.18500002, -1.9410652, 0.021681827, 9.787879)
 
-[node name="Mesa Grandeprontacomtxt" parent="StaticBody3D" unique_id=395849924 instance=ExtResource("2_klgo5")]
-transform = Transform3D(-0.80383027, 0, 0.028857077, 0, 0.8043478, 0, -0.02074102, 0, -0.57775295, 6.5106735, -0.181642, 0.6393318)
-
-[node name="Sofa2" parent="StaticBody3D" unique_id=249378493 instance=ExtResource("1_2rk8k")]
-transform = Transform3D(-0.99935687, 0, 0.049914937, 0, 1.0000001, 0, -0.025786135, 0, -0.99935627, 12.680031, 0.06889683, 0.32717323)
-
-[node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=87100690]
-transform = Transform3D(-0.22985192, 0, -0.011480431, 0, 0.23, 0, 0.008251561, 0, -0.31979394, -4.417267, 0.063459486, 9.93861)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2" unique_id=558017103]
-transform = Transform3D(-0.999378, 0, 0.049914923, 0, 1.0000002, 0, -0.025786316, 0, -0.9993561, 6.944852, 3.3622346, 0.3865261)
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=558017103]
+transform = Transform3D(0.230005, 0, -1.8626451e-09, 0, 0.23000006, 0, -1.2107193e-07, 0, 0.3199999, -6.017992, 0.8367735, 9.872307)
 shape = SubResource("BoxShape3D_748mr")
 
-[node name="Sofa" parent="StaticBody3D2" unique_id=1150056608 instance=ExtResource("1_2rk8k")]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="Mesa Grandeprontacomtxt2" parent="." unique_id=1877291306 instance=ExtResource("2_klgo5")]
+transform = Transform3D(0.18500005, 0, -1.3969839e-09, 0, 0.185, 0, -1.8626451e-09, 0, 0.18500002, -5.9210978, 0.021681827, 9.787879)
 
-[node name="Mesa Grandeprontacomtxt" parent="StaticBody3D2" unique_id=1877291306 instance=ExtResource("2_klgo5")]
-transform = Transform3D(-0.80383027, 0, 0.028857077, 0, 0.8043478, 0, -0.02074102, 0, -0.57775295, 6.5106735, -0.181642, 0.6393318)
+[node name="Mesa Grandeprontacomtxt3" parent="." unique_id=670157503 instance=ExtResource("2_klgo5")]
+transform = Transform3D(0.18500005, 0, -1.3969839e-09, 0, 0.185, 0, -1.8626451e-09, 0, 0.18500002, -9.919274, 0.021681827, 9.787879)
 
-[node name="Sofa2" parent="StaticBody3D2" unique_id=14697721 instance=ExtResource("1_2rk8k")]
-transform = Transform3D(-0.99935687, 0, 0.049914937, 0, 1.0000001, 0, -0.025786135, 0, -0.99935627, 12.680031, 0.06889683, 0.32717323)
-
-[node name="StaticBody3D3" type="StaticBody3D" parent="." unique_id=196190516]
-transform = Transform3D(-0.22985192, 0, -0.011480431, 0, 0.23, 0, 0.008251561, 0, -0.31979394, -8.415443, 0.063459486, 9.93861)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3" unique_id=1617562768]
-transform = Transform3D(-0.999378, 0, 0.049914923, 0, 1.0000002, 0, -0.025786316, 0, -0.9993561, 6.944852, 3.3622346, 0.3865261)
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=1617562768]
+transform = Transform3D(0.230005, 0, -1.8626451e-09, 0, 0.23000006, 0, -1.2107193e-07, 0, 0.3199999, -10.016169, 0.8367735, 9.872307)
 shape = SubResource("BoxShape3D_748mr")
-
-[node name="Sofa" parent="StaticBody3D3" unique_id=487823699 instance=ExtResource("1_2rk8k")]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-
-[node name="Mesa Grandeprontacomtxt" parent="StaticBody3D3" unique_id=670157503 instance=ExtResource("2_klgo5")]
-transform = Transform3D(-0.80383027, 0, 0.028857077, 0, 0.8043478, 0, -0.02074102, 0, -0.57775295, 6.5106735, -0.181642, 0.6393318)
-
-[node name="Sofa2" parent="StaticBody3D3" unique_id=1227354144 instance=ExtResource("1_2rk8k")]
-transform = Transform3D(-0.99935687, 0, 0.049914937, 0, 1.0000001, 0, -0.025786135, 0, -0.99935627, 12.680031, 0.06889683, 0.32717323)

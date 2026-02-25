@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dbar2c5sosllj"
-path="res://.godot/imported/Sofa.fbx-303b3231dcf566f362aa58fb0cddd6ff.scn"
+uid="uid://dhcvyw71ks8m1"
+path="res://.godot/imported/Sofanovo.fbx-00b967ff11c33c488f4d6322d8acdffe.scn"
 
 [deps]
 
-source_file="res://Source/Assets/Modelos/Cafeteria/Sofa.fbx"
-dest_files=["res://.godot/imported/Sofa.fbx-303b3231dcf566f362aa58fb0cddd6ff.scn"]
+source_file="res://Source/Assets/Modelos/Cafeteria/Sofanovo.fbx"
+dest_files=["res://.godot/imported/Sofanovo.fbx-00b967ff11c33c488f4d6322d8acdffe.scn"]
 
 [params]
 

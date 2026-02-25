@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ge76pbvu15jy"
-path.s3tc="res://.godot/imported/Sofa_0.png-9193d0f6b82ee121482f9faa3a8f4a05.s3tc.ctex"
+uid="uid://cr7d2q65itx8f"
+path.s3tc="res://.godot/imported/Cadeiraindividualpequenaevermelhacomtxt_1.png-8ab410144b07abf998796c15f9d2a2f4.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "e66db631a299d2709b4057905451c2b0"
+"md5": "158dfe9f91a52365f6935f28bd6d082b"
 }
 
 [deps]
 
-source_file="res://Source/Assets/Modelos/Cafeteria/Sofa_0.png"
-dest_files=["res://.godot/imported/Sofa_0.png-9193d0f6b82ee121482f9faa3a8f4a05.s3tc.ctex"]
+source_file="res://Source/Assets/Modelos/Cafeteria/Cadeira/Cadeiraindividualpequenaevermelhacomtxt_1.png"
+dest_files=["res://.godot/imported/Cadeiraindividualpequenaevermelhacomtxt_1.png-8ab410144b07abf998796c15f9d2a2f4.s3tc.ctex"]
 
 [params]
 
