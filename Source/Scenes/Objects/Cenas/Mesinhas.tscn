@@ -1,33 +1,28 @@
 [gd_scene format=3 uid="uid://2d8dc7ahya7r"]
 
 [ext_resource type="PackedScene" uid="uid://uojo2f1p4t3j" path="res://Source/Assets/Modelos/Cafeteria/mesaCafe/mesacafeCOMTXT.fbx" id="2_0uxq7"]
-[ext_resource type="PackedScene" uid="uid://cmpemrr6ixhwt" path="res://Source/Assets/Modelos/Cafeteria/Cadeira/caderavermlha.fbx" id="2_yytto"]
+[ext_resource type="ArrayMesh" uid="uid://hst4ncqxfayb" path="res://Source/Assets/Modelos/Cafeteria/Cadeira/cadeira.tres" id="2_2ix0i"]
+[ext_resource type="Script" uid="uid://chmv0bfepx28d" path="res://Source/Scenes/Objects/Cenas/multi_mesh_instance_3d.gd" id="2_j8ock"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0uxq7"]
 size = Vector3(15.706665, 9.841797, 7.1785126)
+
+[sub_resource type="MultiMesh" id="MultiMesh_t7u4h"]
+transform_format = 1
+instance_count = 4
+mesh = ExtResource("2_2ix0i")
+buffer = PackedFloat32Array(0.5, 3.9999998, 0.10787, 0.10787, 0.10787, 1, 0.012, 0.16129032, 0.7664218, 2.660608, 0.10787, 0.10787, 0.10787, 1, 0.014131375, 0.11808413, 1.525126, 1.5251265, 0.10787, 0.10787, 0.10787, 1, 0.020201009, 0.08145569, 2.6606073, 0.7664218, 0.10787, 0.10787, 0.10787, 1, 0.02928486, 0.056981348, 4, 0.5, 0.10787, 0.10787, 0.10787, 1, 0.04, 0.048387095, 119, 0.5, 0.10787, 0.10787, 0.10787, 1, 0.96, 0.048387095)
 
 [node name="Mesinhas" type="StaticBody3D" unique_id=1740398192]
 
 [node name="MesinhaCadeira" type="StaticBody3D" parent="." unique_id=1375840853]
 transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, -19.602259, 0.19870189, -5.5013394)
 
-[node name="caderavermlha3" parent="MesinhaCadeira" unique_id=470191462 instance=ExtResource("2_yytto")]
-transform = Transform3D(2.04, 0, 0, 0, 2.04, 0, 0, 0, 2.04, -7.771469, -1.4496034, 0.11771011)
-
-[node name="caderavermlha4" parent="MesinhaCadeira" unique_id=587603284 instance=ExtResource("2_yytto")]
-transform = Transform3D(-2.04, 0, 1.7834246e-07, 0, 2.04, 0, -1.7834246e-07, 0, -2.04, 6.9606934, -1.4496034, -0.41602325)
-
 [node name="mesacafeCOMTXT" parent="MesinhaCadeira" unique_id=712986376 instance=ExtResource("2_0uxq7")]
 transform = Transform3D(1.04, 0, 0, 0, 1.04, 0, 0, 0, 1.04, -0.27326965, -1.5896142, -0.05020523)
 
 [node name="MesinhaCadeira2" type="StaticBody3D" parent="." unique_id=243900958]
 transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, -17.044254, 0.19870189, -5.5013394)
-
-[node name="caderavermlha3" parent="MesinhaCadeira2" unique_id=1458980671 instance=ExtResource("2_yytto")]
-transform = Transform3D(2.04, 0, 0, 0, 2.04, 0, 0, 0, 2.04, -7.771469, -1.4496034, 0.11771011)
-
-[node name="caderavermlha4" parent="MesinhaCadeira2" unique_id=565126222 instance=ExtResource("2_yytto")]
-transform = Transform3D(-2.04, 0, 1.7834246e-07, 0, 2.04, 0, -1.7834246e-07, 0, -2.04, 6.9606934, -1.4496034, -0.41602325)
 
 [node name="mesacafeCOMTXT" parent="MesinhaCadeira2" unique_id=1644931564 instance=ExtResource("2_0uxq7")]
 transform = Transform3D(1.04, 0, 0, 0, 1.04, 0, 0, 0, 1.04, -0.27326965, -1.5896142, -0.05020523)
@@ -39,3 +34,7 @@ shape = SubResource("BoxShape3D_0uxq7")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=2076984830]
 transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, -17.10159, 0.75131416, -5.511211)
 shape = SubResource("BoxShape3D_0uxq7")
+
+[node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="." unique_id=1665601742]
+multimesh = SubResource("MultiMesh_t7u4h")
+script = ExtResource("2_j8ock")

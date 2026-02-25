@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://wc2lo6jg0v53"]
 
-[ext_resource type="PackedScene" uid="uid://cj1k63mq245uc" path="res://Source/Assets/Modelos/Cafeteria/MesaGrande/Mesa Grandeprontacomtxt.fbx" id="2_klgo5"]
 [ext_resource type="ArrayMesh" uid="uid://bpa6mf5waputg" path="res://Source/Assets/Modelos/sofa.tres" id="3_m54mb"]
+[ext_resource type="ArrayMesh" uid="uid://cknwic5fjklqg" path="res://Source/Assets/Modelos/Mesa/MesaGrande.tres" id="4_21jws"]
 [ext_resource type="Script" uid="uid://87l2bt8l1x31" path="res://Source/Scenes/Objects/Cenas/Sofa_muitos.gd" id="4_be2pw"]
+[ext_resource type="Script" uid="uid://dl7675v4tet88" path="res://Source/Scenes/Objects/Cenas/multi_mesh_instance_3d_2.gd" id="5_0bb50"]
 
 [sub_resource type="MultiMesh" id="MultiMesh_21jws"]
 transform_format = 1
@@ -12,6 +13,12 @@ buffer = PackedFloat32Array(2.1e-44, 2.1e-44, 2.4e-44, 2.2e-44, 2.2e-44, 2.5e-44
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_748mr"]
 size = Vector3(14.593193, 4.7634277, 7.421524)
+
+[sub_resource type="MultiMesh" id="MultiMesh_5fnkw"]
+transform_format = 1
+instance_count = 3
+mesh = ExtResource("4_21jws")
+buffer = PackedFloat32Array(123.5, 3.9999998, 0.10787, 0.10787, 0.10787, 1, 0.012, 0.16129032, 123.76642, 2.660608, 0.10787, 0.10787, 0.10787, 1, 0.014131348, 0.11808413, 124.52512, 1.5251265, 0.10787, 0.10787, 0.10787, 1, 0.020200988, 0.08145569, 125.66061, 0.7664218, 0.10787, 0.10787, 0.10787, 1, 0.029284852, 0.056981348, 127, 0.5, 0.10787, 0.10787)
 
 [node name="MesaSofa" type="StaticBody3D" unique_id=106702180]
 
@@ -23,19 +30,14 @@ script = ExtResource("4_be2pw")
 transform = Transform3D(0.230005, 0, -1.862645e-09, 0, 0.23000006, 0, -1.2107193e-07, 0, 0.3199999, -2.0379596, 0.83677363, 9.872306)
 shape = SubResource("BoxShape3D_748mr")
 
-[node name="Mesa Grandeprontacomtxt" parent="." unique_id=395849924 instance=ExtResource("2_klgo5")]
-transform = Transform3D(0.18500005, 0, -1.3969839e-09, 0, 0.185, 0, -1.8626451e-09, 0, 0.18500002, -1.9410652, 0.021681827, 9.787879)
-
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=558017103]
 transform = Transform3D(0.230005, 0, -1.8626451e-09, 0, 0.23000006, 0, -1.2107193e-07, 0, 0.3199999, -6.017992, 0.8367735, 9.872307)
 shape = SubResource("BoxShape3D_748mr")
 
-[node name="Mesa Grandeprontacomtxt2" parent="." unique_id=1877291306 instance=ExtResource("2_klgo5")]
-transform = Transform3D(0.18500005, 0, -1.3969839e-09, 0, 0.185, 0, -1.8626451e-09, 0, 0.18500002, -5.9210978, 0.021681827, 9.787879)
-
-[node name="Mesa Grandeprontacomtxt3" parent="." unique_id=670157503 instance=ExtResource("2_klgo5")]
-transform = Transform3D(0.18500005, 0, -1.3969839e-09, 0, 0.185, 0, -1.8626451e-09, 0, 0.18500002, -9.919274, 0.021681827, 9.787879)
-
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=1617562768]
 transform = Transform3D(0.230005, 0, -1.8626451e-09, 0, 0.23000006, 0, -1.2107193e-07, 0, 0.3199999, -10.016169, 0.8367735, 9.872307)
 shape = SubResource("BoxShape3D_748mr")
+
+[node name="MultiMeshInstance3D2" type="MultiMeshInstance3D" parent="." unique_id=1636914980]
+multimesh = SubResource("MultiMesh_5fnkw")
+script = ExtResource("5_0bb50")
