@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://yiw40qemqb4b"
-path="res://.godot/imported/poster prontodeverdade.fbx-c1298c0a0d1d2f6d0953f894e00a7790.scn"
+uid="uid://cqlag71lctooy"
+path="res://.godot/imported/PROSTER.fbx-4b7bca20130b20c795130b1957f01dc1.scn"
 
 [deps]
 
-source_file="res://Source/Assets/Modelos/Cafeteria/Poster/poster prontodeverdade.fbx"
-dest_files=["res://.godot/imported/poster prontodeverdade.fbx-c1298c0a0d1d2f6d0953f894e00a7790.scn"]
+source_file="res://Source/Assets/Modelos/Cafeteria/Poster/PROSTER.fbx"
+dest_files=["res://.godot/imported/PROSTER.fbx-4b7bca20130b20c795130b1957f01dc1.scn"]
 
 [params]
 
