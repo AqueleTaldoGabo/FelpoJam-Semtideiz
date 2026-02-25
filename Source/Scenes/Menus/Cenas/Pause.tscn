@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bxum0b78ybr3a"]
 
-[ext_resource type="Script" uid="uid://1wp40inf2a5o" path="res://Source/Scenes/Menus/pause.gd" id="1_2qc5d"]
+[ext_resource type="Script" uid="uid://1wp40inf2a5o" path="res://Source/Scenes/Menus/Scripts/pause.gd" id="1_2qc5d"]
 [ext_resource type="Texture2D" uid="uid://80fvsl041fq3" path="res://Source/Assets/Sprites/Menu_pausado1.png" id="1_hjd0n"]
 
 [node name="Pause" type="Node" unique_id=1948867365]

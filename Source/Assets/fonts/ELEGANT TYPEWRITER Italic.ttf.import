@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://c0qcj651nk5fp"
-path="res://.godot/imported/Les Mysteres de Paris.ttf-b603fbb11b3552ba30a75d7b4375fa38.fontdata"
+uid="uid://r2uelr6kxelh"
+path="res://.godot/imported/ELEGANT TYPEWRITER Italic.ttf-2cb8aaba3c0bd38a0fc1166451c688d5.fontdata"
 
 [deps]
 
-source_file="res://Source/fonts/Les Mysteres de Paris.ttf"
-dest_files=["res://.godot/imported/Les Mysteres de Paris.ttf-b603fbb11b3552ba30a75d7b4375fa38.fontdata"]
+source_file="res://Source/Assets/fonts/ELEGANT TYPEWRITER Italic.ttf"
+dest_files=["res://.godot/imported/ELEGANT TYPEWRITER Italic.ttf-2cb8aaba3c0bd38a0fc1166451c688d5.fontdata"]
 
 [params]
 

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c1laawrklqnhp"]
 
-[ext_resource type="Script" uid="uid://bxf2qv8h7ubqs" path="res://Source/Player/folha.gd" id="1_cpge7"]
+[ext_resource type="Script" uid="uid://bxf2qv8h7ubqs" path="res://Source/Player/Scripts/folha.gd" id="1_cpge7"]
 [ext_resource type="Texture2D" uid="uid://dol77agt6t5qd" path="res://Source/Assets/Sprites/dossier_inteiro.png" id="1_v4ayg"]
 
 [node name="Folha" type="Node" unique_id=1976519266]

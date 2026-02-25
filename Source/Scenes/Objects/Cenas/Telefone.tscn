@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bm5lcief16w1j"]
 
-[ext_resource type="Script" uid="uid://enq1xecijthj" path="res://Source/Global/interagivel.gd" id="1_gs8ex"]
+[ext_resource type="Script" uid="uid://enq1xecijthj" path="res://Source/Global/Scripts/interagivel.gd" id="1_gs8ex"]
 [ext_resource type="PackedScene" uid="uid://bmi3vxurx387l" path="res://Source/Assets/Modelos/Telefone/Telefonecommalcotexturesfbx.fbx" id="2_de4qi"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fy70i"]

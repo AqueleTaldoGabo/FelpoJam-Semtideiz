@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://dxrpw1fggn2yy"
-path="res://.godot/imported/Strange Tales.ttf-40f7c463c1263c6638e118acab9c10fc.fontdata"
+uid="uid://d1uopfi5lwwsl"
+path="res://.godot/imported/Fifties Movies.ttf-ea824c37e73fb2b6591408e7ba942a85.fontdata"
 
 [deps]
 
-source_file="res://Source/fonts/Strange Tales.ttf"
-dest_files=["res://.godot/imported/Strange Tales.ttf-40f7c463c1263c6638e118acab9c10fc.fontdata"]
+source_file="res://Source/Assets/fonts/Fifties Movies.ttf"
+dest_files=["res://.godot/imported/Fifties Movies.ttf-ea824c37e73fb2b6591408e7ba942a85.fontdata"]
 
 [params]
 

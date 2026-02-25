@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://curejhaq0wiig"]
 
-[ext_resource type="Script" uid="uid://enq1xecijthj" path="res://Source/Global/interagivel.gd" id="1_ca2ac"]
-[ext_resource type="Script" uid="uid://bsnvuv8pvgjke" path="res://Source/Scenes/Objects/pagina_1.gd" id="2_io8j2"]
+[ext_resource type="Script" uid="uid://enq1xecijthj" path="res://Source/Global/Scripts/interagivel.gd" id="1_ca2ac"]
+[ext_resource type="Script" uid="uid://bsnvuv8pvgjke" path="res://Source/Scenes/Objects/Scripts/pagina_1.gd" id="2_io8j2"]
 [ext_resource type="Texture2D" uid="uid://cxsfnkaygtrvo" path="res://Source/Assets/Imagens/MOLDE_DA_CARTA_TUTORIAL.png" id="3_d4yv5"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_urx0x"]

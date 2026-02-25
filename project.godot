@@ -28,6 +28,19 @@ Pause="*uid://bxum0b78ybr3a"
 mouse_cursor/custom_image="uid://bwkyo7xrqtem7"
 mouse_cursor/custom_image_hotspot=Vector2(50, 50)
 
+[file_customization]
+
+folder_colors={
+"res://Source/Assets/": "pink",
+"res://Source/Global/": "green",
+"res://Source/Player/": "red",
+"res://Source/Scenes/": "purple",
+"res://Source/Scenes/Levels/": "yellow",
+"res://Source/Scenes/Menus/": "teal",
+"res://Source/Scenes/Objects/": "orange",
+"res://Source/Scenes/Objects/Scripts/": "orange"
+}
+
 [input]
 
 ui_cancel={

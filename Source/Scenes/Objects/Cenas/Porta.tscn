@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://draij6dpugcym"]
 
-[ext_resource type="Script" uid="uid://cngv3bfrsrqyb" path="res://Source/Scenes/Objects/porta.gd" id="1_5jm5v"]
+[ext_resource type="Script" uid="uid://cngv3bfrsrqyb" path="res://Source/Scenes/Objects/Scripts/porta.gd" id="1_5jm5v"]
 [ext_resource type="PackedScene" uid="uid://gurjrtcknqcb" path="res://Source/Assets/Modelos/porta_Malcon/portaMALCONOVA2.fbx" id="2_yqv12"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yqv12"]
