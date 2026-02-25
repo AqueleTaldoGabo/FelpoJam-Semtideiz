@@ -20,6 +20,8 @@ config/icon="res://Source/icon.svg"
 Transicao="*uid://b86k7pdekf4of"
 ControleMusica="*uid://bwf6gpnjfd33d"
 MudarScena="*uid://csitds2v08tq6"
+ControleSfx="*uid://d2k4pgodihfbt"
+Pause="*uid://bxum0b78ybr3a"
 
 [display]
 

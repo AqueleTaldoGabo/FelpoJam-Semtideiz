@@ -12,7 +12,6 @@ extends CharacterBody3D
 @onready var shader = $"Cabeça/Camera3D/PosProcessamento"
 @onready var materialshader = shader.get_active_material(0)
 var menu_aberto = false
-var folha_aberta = false
 var ease_curve: float = 0.1
 var velocidade_objeto = Vector3.ZERO
 
@@ -25,26 +24,10 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		target_rotation -= event.relative * sensibilidade_mouse
 		target_rotation.y = clampf(target_rotation.y, PI/-2, PI/2)
-	if event.is_action_pressed("ui_cancel"):
-		if menu_aberto == false and folha_aberta == false:
-			var PAUSE = preload("uid://bxum0b78ybr3a").instantiate()
-			menu_aberto = true
-			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-			PAUSE.mouse = Input.MOUSE_MODE_CAPTURED
-			$"Cabeça/Camera3D/CanvasLayer/Label".hide()
-			get_tree().root.add_child(PAUSE)
-			get_tree().paused = true
-			
-		else:
-			folha_aberta = false
-			menu_aberto = false
-		
-		
 
-	if event.is_action_pressed("abrir_pagina") and folha:
+	if event.is_action_pressed("abrir_pagina") and folha and !get_tree().root.has_node("Folha"):
 		var main = get_tree().current_scene
 		var PAGINA = preload("uid://c1laawrklqnhp").instantiate()
-		folha_aberta = true
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 		PAGINA.connect("mudar_algo", Callable(main, "_on_mudar_algo"))
 		get_tree().root.add_child(PAGINA)

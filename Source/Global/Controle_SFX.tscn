@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://d2k4pgodihfbt"]
+
+[ext_resource type="Script" uid="uid://cppdcs7da7d6u" path="res://Source/Global/Controle_SFX.gd" id="1_h357s"]
+
+[node name="ControleSfx" type="AudioStreamPlayer" unique_id=868485169]
+process_mode = 3
+volume_db = 10.0
+bus = &"SFX"
+script = ExtResource("1_h357s")
