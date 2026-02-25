@@ -93,6 +93,7 @@ transform = Transform3D(-0.037324354, -0.027344778, 0.018951371, -0.0011315085, 
 [node name="Player" parent="." unique_id=1240492296 instance=ExtResource("11_m1wbi")]
 transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -3.8001873, 0.912, 4.384)
 se_move = false
+folha = false
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Player" unique_id=744765711]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, -0.77063835, 0)

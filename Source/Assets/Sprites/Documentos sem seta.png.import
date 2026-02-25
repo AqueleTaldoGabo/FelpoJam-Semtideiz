@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwkyo7xrqtem7"
-path="res://.godot/imported/Cursor_beta3.png-66decdc65d6639245f60f435d60e628a.ctex"
+uid="uid://jw1vtjwsl4vi"
+path="res://.godot/imported/Documentos sem seta.png-fb9d156bb3f0e3f52f14a1938e5b5e2c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Source/Assets/Sprites/Cursor_beta3.png"
-dest_files=["res://.godot/imported/Cursor_beta3.png-66decdc65d6639245f60f435d60e628a.ctex"]
+source_file="res://Source/Assets/Sprites/Documentos sem seta.png"
+dest_files=["res://.godot/imported/Documentos sem seta.png-fb9d156bb3f0e3f52f14a1938e5b5e2c.ctex"]
 
 [params]
 

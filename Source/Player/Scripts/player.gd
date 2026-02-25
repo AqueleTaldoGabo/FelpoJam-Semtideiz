@@ -30,6 +30,7 @@ func _input(event: InputEvent) -> void:
 		var PAGINA = preload("uid://c1laawrklqnhp").instantiate()
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 		PAGINA.connect("mudar_algo", Callable(main, "_on_mudar_algo"))
+		$"Cabeça/Camera3D/CanvasLayer/crosshair".hide()
 		get_tree().root.add_child(PAGINA)
 		
 	

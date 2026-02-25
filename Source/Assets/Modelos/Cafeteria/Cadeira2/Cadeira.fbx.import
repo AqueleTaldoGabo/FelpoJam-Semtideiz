@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cp738p1q20xqs"
-path="res://.godot/imported/Cadeira.fbx-39d7ec7afb0741ddd56a52e922fe954c.scn"
+path="res://.godot/imported/Cadeira.fbx-3b8b08a1808dddbfcfdddf7b28d9421c.scn"
 
 [deps]
 
-source_file="res://Source/Assets/Modelos/Cafeteria/Cadeira.fbx"
-dest_files=["res://.godot/imported/Cadeira.fbx-39d7ec7afb0741ddd56a52e922fe954c.scn"]
+source_file="res://Source/Assets/Modelos/Cafeteria/Cadeira2/Cadeira.fbx"
+dest_files=["res://.godot/imported/Cadeira.fbx-3b8b08a1808dddbfcfdddf7b28d9421c.scn"]
 
 [params]
 
@@ -17,7 +17,7 @@ nodes/root_type=""
 nodes/root_name=""
 nodes/root_script=null
 nodes/apply_root_scale=true
-nodes/root_scale=1.0
+nodes/root_scale=0.23
 nodes/import_as_skeleton_bones=false
 nodes/use_name_suffixes=true
 nodes/use_node_type_suffixes=true

@@ -22,5 +22,8 @@ func _on_previous_page_pressed() -> void:
 		
 
 func _on_exit_pressed() -> void:
-	$".".queue_free()
+	var crosshair = get_node("/root/Cena1/Player/Cabeça/Camera3D/CanvasLayer/crosshair")
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	crosshair.show()
+	$".".queue_free()
+	

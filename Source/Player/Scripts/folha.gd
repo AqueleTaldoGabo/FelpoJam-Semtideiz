@@ -3,7 +3,9 @@ extends Node
 signal mudar_algo(valor)
 
 func fecha():
+	var crosshair = get_node("/root/Cafeteria/Player/Cabeça/Camera3D/CanvasLayer/crosshair")
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	crosshair.show()
 	$".".queue_free()
 
 func _ready() -> void:

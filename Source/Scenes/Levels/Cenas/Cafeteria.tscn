@@ -2,13 +2,10 @@
 
 [ext_resource type="Script" uid="uid://dlrji6mwjabty" path="res://Source/Scenes/Levels/Scripts/cafeteria.gd" id="1_bn0h7"]
 [ext_resource type="PackedScene" uid="uid://b78keg0ignt8j" path="res://Source/Player/Cenas/player.tscn" id="1_n7cls"]
-[ext_resource type="Texture2D" uid="uid://s083hlepuqee" path="res://Source/Assets/Sprites/xadres.png" id="2_n7cls"]
-[ext_resource type="PackedScene" uid="uid://wc2lo6jg0v53" path="res://Source/Scenes/Objects/Cenas/MesaSofa.tscn" id="6_bn0h7"]
-[ext_resource type="PackedScene" uid="uid://cgfko6kr2mhuc" path="res://Source/Scenes/Objects/Cenas/Vinyl.tscn" id="6_eqx27"]
 [ext_resource type="PackedScene" uid="uid://csx273m50o2b6" path="res://Source/Assets/Modelos/Cafeteria/Predios/predios.fbx" id="4_qjg7v"]
 [ext_resource type="PackedScene" uid="uid://cqlag71lctooy" path="res://Source/Assets/Modelos/Cafeteria/Poster/PROSTER.fbx" id="5_k84r6"]
-[ext_resource type="PackedScene" uid="uid://wc2lo6jg0v53" path="res://Source/Scenes/Objects/MesaSofa.tscn" id="6_bn0h7"]
-[ext_resource type="PackedScene" uid="uid://cgfko6kr2mhuc" path="res://Source/Scenes/Objects/Vinyl.tscn" id="6_eqx27"]
+[ext_resource type="PackedScene" uid="uid://wc2lo6jg0v53" path="res://Source/Scenes/Objects/Cenas/MesaSofa.tscn" id="6_bn0h7"]
+[ext_resource type="PackedScene" uid="uid://cgfko6kr2mhuc" path="res://Source/Scenes/Objects/Cenas/Vinyl.tscn" id="6_eqx27"]
 [ext_resource type="PackedScene" uid="uid://dkpfek2nlbm7p" path="res://Source/Assets/Modelos/Cafeteria/Projetoprontotemqueestarprontoeunaoguentomais.fbx" id="6_st4mt"]
 [ext_resource type="PackedScene" uid="uid://big88fbxcx054" path="res://Source/Scenes/Objects/Cenas/MesaCadeira.tscn" id="8_st4mt"]
 [ext_resource type="PackedScene" uid="uid://c7k3cb5nx7xjh" path="res://Source/Scenes/Objects/Cenas/Bancos.tscn" id="9_6floa"]
@@ -21,14 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://flwwlxxnnpd4" path="res://Source/Assets/Modelos/Cafeteria/caneca/CANECA.fbx" id="15_edawq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2elm2"]
-size = Vector3(60, 2, 60)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qgrc7"]
-albedo_texture = ExtResource("2_n7cls")
-uv1_scale = Vector3(60, 40, 60)
-
-[sub_resource type="BoxMesh" id="BoxMesh_bn0h7"]
-size = Vector3(60, 2, 60)
+size = Vector3(35.73854, 2, 19.659576)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_m0rgq"]
 size = Vector3(2.0012817, 4.8221436, 2.7562866)
@@ -87,12 +77,8 @@ corB = Vector4(0.8, 0.2, 0.2, 1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9999995, 0)
 
 [node name="Bloco" type="CollisionShape3D" parent="Chão" unique_id=1727864330]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.44854, 0, 2.391739)
 shape = SubResource("BoxShape3D_2elm2")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Chão" unique_id=1482501918]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.928741, -0.13887691, -16.608711)
-material_overlay = SubResource("StandardMaterial3D_qgrc7")
-mesh = SubResource("BoxMesh_bn0h7")
 
 [node name="Vinyl" parent="." unique_id=1120069274 instance=ExtResource("6_eqx27")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.87519, 0.32128644, 7.1888504)
@@ -100,6 +86,7 @@ visible = false
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=2015504551]
 transform = Transform3D(0.13132562, 0.9548701, 0.26641455, -0.057840966, -0.26090372, 0.9636305, 0.9896505, -0.14195904, 0.02096727, -22.685064, 4.1477575, -2.663)
+visible = false
 light_energy = 16.0
 shadow_enabled = true
 spot_range = 8.195
@@ -138,6 +125,7 @@ transform = Transform3D(0.22, 0, 0, 0, 0.22, 0, 0, 0, 0.22, -5.176113, 1.6580169
 
 [node name="OmniLight3D" type="OmniLight3D" parent="PUTAMERDALUZCOMTEXTURAAAAAAAAAAAAAAAAAA2" unique_id=1245997986]
 transform = Transform3D(4.5454545, 0, 0, 0, 4.5454545, 0, 0, 0, 4.5454545, 0.0019874573, 5.318213, 0.049979687)
+visible = false
 light_energy = 0.752
 light_indirect_energy = 5.465
 light_size = 0.317
@@ -151,6 +139,7 @@ transform = Transform3D(0.22, 0, 0, 0, 0.22, 0, 0, 0, 0.22, -5.323024, 1.6580169
 
 [node name="OmniLight3D" type="OmniLight3D" parent="PUTAMERDALUZCOMTEXTURAAAAAAAAAAAAAAAAAA3" unique_id=1241906070]
 transform = Transform3D(4.5454545, 0, 0, 0, 4.5454545, 0, 0, 0, 4.5454545, 0.0019874573, 5.318213, 0.049979687)
+visible = false
 light_energy = 0.752
 light_indirect_energy = 5.465
 light_size = 0.317
@@ -164,6 +153,7 @@ transform = Transform3D(0.22, 0, 0, 0, 0.22, 0, 0, 0, 0.22, -14.612318, 1.658016
 
 [node name="OmniLight3D" type="OmniLight3D" parent="PUTAMERDALUZCOMTEXTURAAAAAAAAAAAAAAAAAA4" unique_id=1733082735]
 transform = Transform3D(4.5454545, 0, 0, 0, 4.5454545, 0, 0, 0, 4.5454545, 0.0019836426, 5.9088607, 0.049980164)
+visible = false
 light_energy = 0.774
 light_indirect_energy = 5.465
 light_size = 0.317
@@ -177,6 +167,7 @@ transform = Transform3D(0.22, 0, 0, 0, 0.22, 0, 0, 0, 0.22, -14.8957405, 1.65801
 
 [node name="OmniLight3D" type="OmniLight3D" parent="PUTAMERDALUZCOMTEXTURAAAAAAAAAAAAAAAAAA5" unique_id=1276609113]
 transform = Transform3D(4.5454545, 0, 0, 0, 4.5454545, 0, 0, 0, 4.5454545, 0.0019874573, 5.318213, 0.049979687)
+visible = false
 light_energy = 0.752
 light_indirect_energy = 5.465
 light_size = 0.317
@@ -190,6 +181,7 @@ transform = Transform3D(0.22, 0, 0, 0, 0.22, 0, 0, 0, 0.22, -22.246, 1.62, 7.777
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="PUTAMERDALUZCOMTEXTURAAAAAAAAAAAAAAAAAA" unique_id=672180429]
 transform = Transform3D(4.5454545, 0, 0, 0, 4.5454545, 0, 0, 0, 4.5454545, 0.0129852295, 6.6402106, -0.0029182434)
+visible = false
 light_energy = 1.688
 shadow_enabled = true
 omni_range = 340.788
@@ -237,61 +229,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.967268, -2.3841858e-07, 5
 
 [node name="PROSTER" parent="." unique_id=1193727588 instance=ExtResource("5_k84r6")]
 transform = Transform3D(-6.7752652e-09, 0, -0.155, 0, 0.155, 0, 0.155, 0, -6.7752652e-09, -10.804028, 1.6239266, -6.445853)
-
-[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1294783912]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.8437395, 0.601917, 10.800577)
-light_energy = 0.18
-omni_range = 1.11
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="." unique_id=2045370210]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.642536, 0.601917, -2.0240319)
-light_energy = 0.325
-omni_range = 2.635
-
-[node name="OmniLight3D4" type="OmniLight3D" parent="." unique_id=306033753]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.697037, 0.601917, 5.857439)
-light_energy = 0.325
-omni_range = 2.635
-
-[node name="OmniLight3D5" type="OmniLight3D" parent="." unique_id=1997176002]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.467697, 2.0657277, 9.1809)
-light_energy = 1.35
-omni_range = 6.79
-
-[node name="OmniLight3D6" type="OmniLight3D" parent="." unique_id=512224389]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.100006, 2.0657277, 8.805266)
-light_energy = 1.35
-omni_range = 6.79
-
-[node name="OmniLight3D7" type="OmniLight3D" parent="." unique_id=2036673673]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.100006, 2.0657277, 3.8147526)
-light_energy = 1.35
-omni_range = 6.79
-
-[node name="OmniLight3D8" type="OmniLight3D" parent="." unique_id=1738735915]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.100006, 2.0657277, 3.8147526)
-light_energy = 1.35
-omni_range = 6.79
-
-[node name="OmniLight3D9" type="OmniLight3D" parent="." unique_id=39975207]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.421995, 2.0657277, -5.0085297)
-light_energy = 1.35
-omni_range = 6.79
-
-[node name="OmniLight3D10" type="OmniLight3D" parent="." unique_id=726969402]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.381914, 2.0657277, -5.0085297)
-light_energy = 1.35
-omni_range = 6.79
-
-[node name="OmniLight3D11" type="OmniLight3D" parent="." unique_id=1338432916]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.17163, 2.0657277, -5.0085297)
-light_energy = 1.35
-omni_range = 6.79
-
-[node name="OmniLight3D12" type="OmniLight3D" parent="." unique_id=948272694]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.17163, 2.0657277, -0.99933815)
-light_energy = 1.35
-omni_range = 6.79
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=362925479]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1280508, 0, 0)

@@ -121,6 +121,7 @@ grow_vertical = 2
 script = ExtResource("2_io8j2")
 
 [node name="MoldeDaCartaTutorial" type="Sprite2D" parent="Pagina1" unique_id=1350413524]
+position = Vector2(25, 0)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("3_d4yv5")
 

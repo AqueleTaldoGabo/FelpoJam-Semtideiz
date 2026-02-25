@@ -12,7 +12,8 @@ const TEXTURASAIR = preload("res://Source/Assets/Sprites/Menu_pausado2.png")
 var menu_aberto = false
 
 func fecha(mouse):
-	
+	var crosshair = get_node("/root/" + get_tree().current_scene.name + "/Player/Cabeça/Camera3D/CanvasLayer/crosshair")
+	crosshair.show()
 	get_tree().paused = false
 	menu_aberto = false
 	Input.mouse_mode = mouse
@@ -24,6 +25,8 @@ func _input(event: InputEvent) -> void:
 		if !has_node("/root/Main") and !$".".has_node("Options") and !get_tree().root.has_node("Folha"):
 			if menu_aberto == false :
 				menu_aberto = true
+				var crosshair = get_node("/root/" + get_tree().current_scene.name + "/Player/Cabeça/Camera3D/CanvasLayer/crosshair")
+				crosshair.hide()
 				Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 				$Control.show()
 				get_tree().paused = true

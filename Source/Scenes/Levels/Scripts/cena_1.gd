@@ -14,10 +14,6 @@ var frases = 	["Alô alôoou, ...",
 var current_text: String = ""
 var texto = true
 
-
-func _ready() -> void:
-	print(get_tree().current_scene)
-
 func animar_texto(textos):
 	for frase in textos:
 		for letra in frase:
@@ -55,5 +51,7 @@ func _on_pasta_interagido(body: Variant) -> void:
 	ANIMATED_LABEL.text = ""
 	$Pasta/Pasta.hide()
 	$Pasta/Pagina1.show()
+	var crosshair = get_node("/root/Cena1/Player/Cabeça/Camera3D/CanvasLayer/crosshair")
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	crosshair.hide()
 	$Pasta.set_collision_layer_value(1, false)

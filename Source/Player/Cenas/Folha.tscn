@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c1laawrklqnhp"]
 
 [ext_resource type="Script" uid="uid://bxf2qv8h7ubqs" path="res://Source/Player/Scripts/folha.gd" id="1_cpge7"]
-[ext_resource type="Texture2D" uid="uid://dol77agt6t5qd" path="res://Source/Assets/Sprites/dossier_inteiro.png" id="1_v4ayg"]
+[ext_resource type="Texture2D" uid="uid://jw1vtjwsl4vi" path="res://Source/Assets/Sprites/Documentos sem seta.png" id="2_uhn5o"]
 
 [node name="Folha" type="Node" unique_id=1976519266]
 script = ExtResource("1_cpge7")
@@ -21,8 +21,9 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="DossierInteiro" type="Sprite2D" parent="Control" unique_id=704610167]
-position = Vector2(-32, 17)
-texture = ExtResource("1_v4ayg")
+position = Vector2(130, 20)
+scale = Vector2(0.18, 0.18)
+texture = ExtResource("2_uhn5o")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=1554795035]
 layout_mode = 1
