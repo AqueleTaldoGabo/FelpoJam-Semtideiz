@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bxf2qv8h7ubqs" path="res://Source/Player/Scripts/folha.gd" id="1_cpge7"]
 [ext_resource type="Texture2D" uid="uid://jw1vtjwsl4vi" path="res://Source/Assets/Sprites/Documentos sem seta.png" id="2_uhn5o"]
+[ext_resource type="Texture2D" uid="uid://d0l6kd3d6dm25" path="res://Source/Assets/Imagens/DOCUMENTOSCARIMBO1.png" id="3_o6amw"]
+[ext_resource type="Texture2D" uid="uid://gjqa848lcxot" path="res://Source/Assets/Sprites/seta.png" id="4_rqkf0"]
 
 [node name="Folha" type="Node" unique_id=1976519266]
 script = ExtResource("1_cpge7")
@@ -21,28 +23,51 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="DossierInteiro" type="Sprite2D" parent="Control" unique_id=704610167]
-position = Vector2(130, 20)
-scale = Vector2(0.18, 0.18)
+position = Vector2(140, 20)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_uhn5o")
+
+[node name="Documentoscarimbo1" type="Sprite2D" parent="Control" unique_id=2107316726]
+position = Vector2(242, 13.999939)
+scale = Vector2(0.38, 0.4129213)
+texture = ExtResource("3_o6amw")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=1554795035]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 5.3
-anchor_top = -5.2
-anchor_right = 10.65
-anchor_bottom = -2.95
+anchor_left = 1.025
+anchor_top = -2.025
+anchor_right = 6.775
+anchor_bottom = 0.225
 theme_override_constants/separation = 50
 metadata/_edit_use_anchors_ = true
 
-[node name="BTNesquerda" type="Button" parent="Control/HBoxContainer" unique_id=955669915]
-custom_minimum_size = Vector2(90, 0)
+[node name="BTNesquerda" type="TextureButton" parent="Control/HBoxContainer" unique_id=768695431]
 layout_mode = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="BTNdireita" type="Button" parent="Control/HBoxContainer" unique_id=1960454894]
-custom_minimum_size = Vector2(90, 0)
+[node name="BTNdireita" type="TextureButton" parent="Control/HBoxContainer" unique_id=1631393959]
 layout_mode = 2
+
+[node name="Voltar" type="Button" parent="Control" unique_id=1666421061]
+layout_mode = 0
+anchor_left = -9.825
+anchor_top = 6.2
+anchor_right = -7.525
+anchor_bottom = 7.3
+metadata/_edit_use_anchors_ = true
+
+[node name="Avançar" type="Button" parent="Control" unique_id=145828643]
+layout_mode = 0
+offset_left = 446.0
+offset_top = 282.0
+offset_right = 522.0
+offset_bottom = 318.0
+rotation = 3.1415927
+icon = ExtResource("4_rqkf0")
+flat = true
 
 [connection signal="pressed" from="Control/HBoxContainer/BTNesquerda" to="." method="_on_bt_nesquerda_pressed"]
 [connection signal="pressed" from="Control/HBoxContainer/BTNdireita" to="." method="_on_bt_ndireita_pressed"]
+[connection signal="pressed" from="Control/Voltar" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Control/Avançar" to="." method="_on_avançar_pressed"]

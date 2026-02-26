@@ -16,5 +16,5 @@ func _ready() -> void:
 			lado = true
 		var final = deixa_horizontal
 		final = final.scaled(Vector3(4, 25, 24))
-		print(i)
+
 		multimesh.set_instance_transform(i, Transform3D(final, vetores[i]))

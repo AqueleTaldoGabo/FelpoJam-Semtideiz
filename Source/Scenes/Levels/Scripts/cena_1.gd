@@ -11,8 +11,21 @@ var frases = 	["Alô alôoou, ...",
 				"não é muito diferente do que você já tava acostumado,",
 				"mas protocolo é protocolo, sabe como é né."]
 
+
+const porta = preload("res://Source/Assets/Sons/portaabrindo.ogg")
+
+var timer : Timer 
+
 var current_text: String = ""
 var texto = true
+
+func _ready() -> void:
+	$Porta.set_collision_layer_value(1, false)
+	$Telefone.set_collision_layer_value(1, false)
+	$Pasta.set_collision_layer_value(1, false)
+	await get_tree().create_timer(12).timeout
+
+	$Telefone.set_collision_layer_value(1, true)
 
 func animar_texto(textos):
 	for frase in textos:
@@ -33,6 +46,8 @@ func animar_texto(textos):
 
 func _on_telefone_interagido(_body: Variant) -> void:
 	if texto:
+		$Pasta.set_collision_layer_value(1, true)
+		$TelefoneSom.pare()
 		$Telefone.set_collision_layer_value(1, false)
 		texto = !texto
 		await animar_texto(frases)
@@ -43,11 +58,16 @@ func _on_telefone_interagido(_body: Variant) -> void:
 
 
 func _on_porta_interagido(_body: Variant) -> void:
+	ControleSfx.toca_SFX(porta)
 	MudarScena.mudarCafeteria()
 
+func _on_porta():
+	$SomPorta.play()
 
 func _on_pasta_interagido(_body: Variant) -> void:
+	var main = get_tree().current_scene
 	interagido = true
+	ControleSfx.toca_Papel()
 	ANIMATED_LABEL.text = ""
 	$Pasta/Pasta.hide()
 	$Pasta/Pagina1.show()
@@ -55,3 +75,7 @@ func _on_pasta_interagido(_body: Variant) -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	crosshair.hide()
 	$Pasta.set_collision_layer_value(1, false)
+	await get_tree().create_timer(0.5).timeout
+	$Pasta/Pagina1.connect("Porta", Callable(main, "_on_porta"))
+	$Porta.set_collision_layer_value(1, true)
+	

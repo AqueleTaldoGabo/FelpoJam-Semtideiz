@@ -5,8 +5,10 @@ extends interagivel
 func _on_interagido(_body: Variant) -> void:
 	if ligado == true:
 		ControleMusica.pausa_musica()
+		ControleSfx.toca_Botao()
 		ligado = false
 	else:
+		ControleSfx.toca_Botao()
 		ControleMusica.play_musica()
 		ligado = true
 

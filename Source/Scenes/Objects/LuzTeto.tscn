@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://beur7b0vtyx4l"]
+
+[ext_resource type="PackedScene" uid="uid://brnhmaegpvdim" path="res://Source/Assets/Modelos/Cafeteria/LuzTeto/PUTAMERDALUZCOMTEXTURAAAAAAAAAAAAAAAAAA.fbx" id="1_810r3"]
+
+[node name="LuzTeto" type="StaticBody3D" unique_id=1041854180]
+
+[node name="PUTAMERDALUZCOMTEXTURAAAAAAAAAAAAAAAAAA" parent="." unique_id=924932163 instance=ExtResource("1_810r3")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=919407067]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 1.5093007, 0)
+light_size = 0.1
+light_cull_mask = 4293918721
+shadow_enabled = true
+distance_fade_enabled = true
+spot_range = 6.658
+spot_attenuation = -0.38
+spot_angle = 89.9
+spot_angle_attenuation = 0.45062524

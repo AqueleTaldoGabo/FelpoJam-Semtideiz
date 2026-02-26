@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b8hmp218nsnl3"]
+
+[ext_resource type="PackedScene" uid="uid://wc2lo6jg0v53" path="res://Source/Scenes/Objects/Cenas/MesaSofa.tscn" id="1_xfjwa"]
+[ext_resource type="PackedScene" uid="uid://2d8dc7ahya7r" path="res://Source/Scenes/Objects/Cenas/Mesinhas.tscn" id="2_4eodd"]
+[ext_resource type="PackedScene" uid="uid://big88fbxcx054" path="res://Source/Scenes/Objects/Cenas/MesaCadeira.tscn" id="3_0hxma"]
+[ext_resource type="PackedScene" uid="uid://c7k3cb5nx7xjh" path="res://Source/Scenes/Objects/Cenas/Bancos.tscn" id="4_gchdx"]
+[ext_resource type="PackedScene" uid="uid://cryn2etbqk201" path="res://Source/Scenes/Objects/Cenas/CozinhaBalcao.tscn" id="5_rmfha"]
+
+[node name="Moveis" type="Node3D" unique_id=1082863023]
+
+[node name="MesaSofa" parent="." unique_id=106702180 instance=ExtResource("1_xfjwa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.049, 0, -0.109)
+
+[node name="Mesinhas" parent="." unique_id=1740398192 instance=ExtResource("2_4eodd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.657, 0, -0.142)
+
+[node name="MesaCadeira" parent="." unique_id=668662289 instance=ExtResource("3_0hxma")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.20888972, 4.7683716e-07, -0.106178164)
+
+[node name="Bancos" parent="." unique_id=1800805876 instance=ExtResource("4_gchdx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.025, 0, -0.138)
+
+[node name="CozinhaBalcao" parent="." unique_id=2017204322 instance=ExtResource("5_rmfha")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.035, 0, -0.112)

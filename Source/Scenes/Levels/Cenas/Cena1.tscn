@@ -13,8 +13,9 @@
 [ext_resource type="PackedScene" uid="uid://draij6dpugcym" path="res://Source/Scenes/Objects/Cenas/Porta.tscn" id="12_qvc64"]
 [ext_resource type="Texture2D" uid="uid://cvkb8qkmuqjx5" path="res://Source/Assets/Sprites/Sun.png" id="13_l6wx8"]
 [ext_resource type="PackedScene" uid="uid://dg651rlufkkpu" path="res://Source/Assets/Modelos/Livro_malcon/Livro malco2.fbx" id="13_m1wbi"]
-[ext_resource type="PackedScene" uid="uid://seiq2mbnprlm" path="res://Source/Assets/Modelos/Cafeteria/Cafeteira/faqueteirapronta.fbx" id="13_qvc64"]
 [ext_resource type="Texture2D" uid="uid://dolfnli2vtgsa" path="res://Source/Assets/Sprites/Predios.png" id="14_l6wx8"]
+[ext_resource type="Script" uid="uid://birr1w5y7owhp" path="res://Source/Scenes/Levels/Cenas/Telefone.gd" id="16_pc6nv"]
+[ext_resource type="AudioStream" uid="uid://blxsdx80fd6ke" path="res://Source/Assets/Sons/portafodadestrancando.ogg" id="16_vc1b1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ovw4t"]
 size = Vector3(60, 2, 60)
@@ -41,12 +42,6 @@ albedo_texture = ExtResource("13_l6wx8")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_l6wx8"]
 material = SubResource("StandardMaterial3D_m1wbi")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qvc64"]
-albedo_texture = ExtResource("2_xmjli")
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_qvc64"]
-material = SubResource("StandardMaterial3D_qvc64")
 
 [node name="Cena1" type="Node" unique_id=1119634821]
 process_mode = 1
@@ -127,12 +122,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.144808, 0.079818845, 8.210
 [node name="Pasta" parent="." unique_id=1623291131 instance=ExtResource("12_eqeni")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.464, 1.151, 4.406)
 
-[node name="faqueteirapronta" parent="." unique_id=156867163 instance=ExtResource("13_qvc64")]
-transform = Transform3D(-0.1286591, 0, -0.48316336, 0, 0.5, 0, 0.48316336, 0, -0.1286591, -2.4256678, 1.0357966, 1.2011566)
+[node name="SomPorta" type="AudioStreamPlayer3D" parent="." unique_id=1358792521]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1.2396995, 4.471121)
+stream = ExtResource("16_vc1b1")
+volume_db = 80.0
+unit_size = 100.0
+bus = &"SFX"
+emission_angle_enabled = true
+emission_angle_degrees = 35.5
+emission_angle_filter_attenuation_db = 0.0
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="faqueteirapronta" unique_id=1201382455]
-transform = Transform3D(-0.5146364, 0, 1.9326534, 0, 2, 0, -1.9326534, 0, -0.5146364, 0.62756824, -1.9975293, -0.014854431)
-mesh = SubResource("CylinderMesh_qvc64")
+[node name="TelefoneSom" type="AudioStreamPlayer" parent="." unique_id=119877849]
+script = ExtResource("16_pc6nv")
 
 [connection signal="interagido" from="Telefone" to="." method="_on_telefone_interagido"]
 [connection signal="interagido" from="Porta" to="." method="_on_porta_interagido"]

@@ -14,6 +14,19 @@ radius = 0.359375
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_g4gsc"]
 render_priority = 0
 shader = ExtResource("2_g4gsc")
+shader_parameter/depth_threshold = 0.05
+shader_parameter/reverse_depth_threshold = 0.25
+shader_parameter/normal_threshold = 0.6
+shader_parameter/darken_amount = 0.3
+shader_parameter/lighten_amount = 1.5
+shader_parameter/normal_edge_bias = Vector3(1, 1, 1)
+shader_parameter/light_direction = Vector3(-0.96, -0.18, 0.2)
+shader_parameter/dither_repeat = 1.0
+shader_parameter/dither_strength = 1.0
+shader_parameter/min_dither_brightness = 0.1
+shader_parameter/cor_a = Vector4(0.2, 0, 0, 1)
+shader_parameter/cor_b = Vector4(0.8, 0.4, 0.2, 1)
+shader_parameter/bayer_mode = 4
 
 [sub_resource type="QuadMesh" id="QuadMesh_v1mne"]
 material = SubResource("ShaderMaterial_g4gsc")
@@ -26,7 +39,7 @@ font_size = 30
 
 [sub_resource type="LabelSettings" id="LabelSettings_880o0"]
 font = ExtResource("4_0tdpy")
-font_size = 40
+font_size = 30
 
 [node name="Player" type="CharacterBody3D" unique_id=1240492296]
 script = ExtResource("1_4flbx")

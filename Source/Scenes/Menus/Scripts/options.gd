@@ -38,4 +38,5 @@ func _on_vol_musica_value_changed(value: float) -> void:
 
 
 func _on_vol_sfx_value_changed(value: float) -> void:
+	ControleSfx.toca_Carimbo1()
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), linear_to_db(value))

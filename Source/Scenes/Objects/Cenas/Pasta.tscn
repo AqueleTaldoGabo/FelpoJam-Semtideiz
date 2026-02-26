@@ -121,17 +121,17 @@ grow_vertical = 2
 script = ExtResource("2_io8j2")
 
 [node name="MoldeDaCartaTutorial" type="Sprite2D" parent="Pagina1" unique_id=1350413524]
-position = Vector2(25, 0)
-scale = Vector2(0.6, 0.6)
+position = Vector2(21, 20)
+scale = Vector2(0.43, 0.43)
 texture = ExtResource("3_d4yv5")
 
 [node name="NextPage" type="Button" parent="Pagina1" unique_id=395998308]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 4.975
-anchor_top = 9.125
-anchor_right = 7.55
-anchor_bottom = 10.3
+anchor_left = 4.175
+anchor_top = 7.25
+anchor_right = 6.1
+anchor_bottom = 7.9
 grow_horizontal = 0
 grow_vertical = 0
 metadata/_edit_use_anchors_ = true
@@ -140,10 +140,10 @@ metadata/_edit_use_anchors_ = true
 visible = false
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -7.825
-anchor_top = 9.1
-anchor_right = -5.275
-anchor_bottom = 10.325
+anchor_left = -4.675
+anchor_top = 7.325
+anchor_right = -2.85
+anchor_bottom = 7.9
 grow_horizontal = 0
 grow_vertical = 0
 metadata/_edit_use_anchors_ = true
@@ -152,10 +152,10 @@ metadata/_edit_use_anchors_ = true
 visible = false
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 5.65
-anchor_top = -9.975
-anchor_right = 7.875
-anchor_bottom = -8.925
+anchor_left = 4.6
+anchor_top = -6.9
+anchor_right = 6.225
+anchor_bottom = -6.3
 metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Pagina1/NextPage" to="Pagina1" method="_on_next_page_pressed"]
