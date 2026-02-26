@@ -13,9 +13,18 @@ ground_horizon_color = Color(0, 0, 0, 1)
 sky_material = SubResource("ProceduralSkyMaterial_mpv67")
 
 [sub_resource type="Environment" id="Environment_eh46y"]
-background_mode = 2
+background_mode = 1
+background_energy_multiplier = 0.0
 sky = SubResource("Sky_t2fxh")
+ambient_light_energy = 0.0
 tonemap_mode = 2
+tonemap_exposure = 0.6
+fog_enabled = true
+fog_light_color = Color(0.6078325, 0.20868835, 0.19426334, 1)
+fog_light_energy = 0.0
+fog_sun_scatter = 0.3
+fog_density = 0.005
+volumetric_fog_density = 0.01
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2elm2"]
 size = Vector3(44.445564, 2, 19.659576)
@@ -25,11 +34,6 @@ script = ExtResource("1_bn0h7")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=846073649]
 environment = SubResource("Environment_eh46y")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2070692454]
-transform = Transform3D(-0.8660254, -0.43301278, 0.24999999, -0.42772287, 0.90053046, 0.078089386, -0.2589463, -0.039303303, -0.96509176, 0, 0, 0)
-visible = false
-shadow_enabled = true
 
 [node name="Player" parent="." unique_id=1240492296 instance=ExtResource("1_n7cls")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.3244615, 0.3860966, -0.03906679)

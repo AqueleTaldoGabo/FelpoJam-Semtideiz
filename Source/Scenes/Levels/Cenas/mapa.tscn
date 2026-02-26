@@ -2115,9 +2115,11 @@ shadow_mesh = SubResource("ArrayMesh_o0for")
 size = Vector3(1, 2.2635498, 1.3959961)
 
 [node name="Mapa" type="Node3D" unique_id=905479263]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5588593, 0, 0)
 
 [node name="Vinyl" type="StaticBody3D" parent="." unique_id=1120069274]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.87519, 0.32128644, 7.1888504)
+visible = false
 script = ExtResource("5_t1v0i")
 
 [node name="SpotLight3D3" type="SpotLight3D" parent="Vinyl" unique_id=289617231]
@@ -2376,14 +2378,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.967268, -2.3841858e-07, 5
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 mesh = SubResource("ArrayMesh_6dx0e")
 
-[node name="SpotLight3D2" type="SpotLight3D" parent="." unique_id=754858723]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -30.104067, 5.2145844, 1.5597632)
-light_energy = 3.851
-light_volumetric_fog_energy = 0.0
-spot_range = 6.951
-spot_attenuation = -0.89
-spot_angle_attenuation = 0.054409362
-
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1548666515]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1280508, 0, 0)
 
@@ -2540,6 +2534,18 @@ mesh = SubResource("ArrayMesh_hjypg")
 [node name="LuzTeto" parent="." unique_id=1041854180 instance=ExtResource("36_hlcfg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.379862, 1.8453882, 6.9624166)
 
+[node name="LuzTeto2" parent="." unique_id=728781127 instance=ExtResource("36_hlcfg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.783697, 1.8453882, 6.9624166)
+
+[node name="LuzTeto3" parent="." unique_id=566123772 instance=ExtResource("36_hlcfg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.783697, 1.8453882, -1.6201648)
+
+[node name="LuzTeto4" parent="." unique_id=1110513553 instance=ExtResource("36_hlcfg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.433596, 1.8453882, -2.154684)
+
+[node name="LuzTeto5" parent="." unique_id=567150126 instance=ExtResource("36_hlcfg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.092882, 1.8453882, 7.7252235)
+
 [node name="Caixas" type="StaticBody3D" parent="." unique_id=536415251]
 
 [node name="Caixa de maderapronta" parent="Caixas" unique_id=1122891257 instance=ExtResource("37_jg1rs")]
@@ -2548,6 +2554,22 @@ transform = Transform3D(0.245, 0, 0, 0, 0.245, 0, 0, 0, 0.245, -14.0224495, 7.23
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Caixas" unique_id=1605303872]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.937665, 0.6317748, 10.551146)
 shape = SubResource("BoxShape3D_qj5hb")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1792705116]
+transform = Transform3D(-0.9629797, -0.15736905, -0.21887252, -0.26957193, 0.55901206, 0.78411525, -0.0010429919, 0.8140888, -0.5807395, 0, 6.5400796, 0)
+light_energy = 0.725
+shadow_enabled = true
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1867255053]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.403613, 1.4201953, 3.2712312)
+light_energy = 0.135
+omni_range = 10.045
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=368793755]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.892736, 7.3905096, -0.051657677)
+light_energy = 13.84
+shadow_enabled = true
+omni_range = 16.226
 
 [connection signal="interagido" from="Vinyl" to="Vinyl" method="_on_interagido"]
 [connection signal="olhado" from="Vinyl" to="Vinyl" method="_on_olhado"]
