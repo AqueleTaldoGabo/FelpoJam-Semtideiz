@@ -20,6 +20,7 @@ var current_text: String = ""
 var texto = true
 
 func _ready() -> void:
+	
 	$Porta.set_collision_layer_value(1, false)
 	$Telefone.set_collision_layer_value(1, false)
 	$Pasta.set_collision_layer_value(1, false)
@@ -29,6 +30,8 @@ func _ready() -> void:
 
 func animar_texto(textos):
 	for frase in textos:
+		if interagido:
+				break
 		for letra in frase:
 			if interagido:
 				break
@@ -63,6 +66,8 @@ func _on_porta_interagido(_body: Variant) -> void:
 
 func _on_porta():
 	$SomPorta.play()
+	interagido = false
+	await animar_texto(["Saia do escritório"])
 
 func _on_pasta_interagido(_body: Variant) -> void:
 	var main = get_tree().current_scene

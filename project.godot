@@ -28,7 +28,7 @@ Pause="*uid://bxum0b78ybr3a"
 window/size/mode=3
 window/stretch/mode="canvas_items"
 mouse_cursor/custom_image="uid://bxo0rrtg3dcbv"
-mouse_cursor/custom_image_hotspot=Vector2(50, 50)
+mouse_cursor/custom_image_hotspot=Vector2(68, 68)
 
 [file_customization]
 

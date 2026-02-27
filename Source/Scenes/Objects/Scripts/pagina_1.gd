@@ -33,3 +33,4 @@ func _on_exit_pressed() -> void:
 	emit_signal("Porta")
 	$".".queue_free()
 	
+	
