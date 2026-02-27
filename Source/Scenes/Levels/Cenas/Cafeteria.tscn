@@ -78,7 +78,6 @@ environment = SubResource("Environment_eh46y")
 
 [node name="Player" parent="." unique_id=1240492296 instance=ExtResource("1_n7cls")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.854795, 0.3860966, 0.31632805)
-visible = false
 corA = Vector4(0.3, 0.05, 0.05, 1)
 corB = Vector4(0.8, 0.2, 0.2, 1)
 

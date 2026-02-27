@@ -25,9 +25,6 @@ var postit2 = preload("res://Source/Scenes/Objects/Cenas/PostIt2.tscn")
 var terminal = preload("res://Source/Scenes/Objects/Cenas/Terminal.tscn")
 var corpo = preload("res://Source/Assets/Modelos/Cafeteria/corpo/Corpo.fbx")
 
-
-
-
 func animar_texto(textos):
 	for frase in textos:
 		if abrido == true:
@@ -99,11 +96,18 @@ func _on_mudar_algo(valor, valor2):
 	elif valor == 10:
 		carimbada(4)
 		if !has_node("/root/Cafeteria/Descarte"):
+			var porta = get_node("/root/Cafeteria/mapa/portaMALCONOVA3")
+			porta.hide()
+			porta.set_collision_layer_value(1, false)
 			get_tree().current_scene.add_child(descarte.instantiate())
+			
 	elif valor == -10:
 		carimbada(4)
 		if has_node("/root/Cafeteria/Descarte"):
 			var noode = get_node("/root/Cafeteria/Descarte")
+			var porta = get_node("/root/Cafeteria/mapa/portaMALCONOVA3")
+			porta.show()
+			porta.set_collision_layer_value(1, true)
 			noode.queue_free()
 	elif valor == 11:
 		carimbada(5)
@@ -142,7 +146,7 @@ func _on_mudar_algo(valor, valor2):
 				cont_vermelho[2] = true
 		if !has_node("/root/Cafeteria/Terminal"):
 			get_tree().current_scene.add_child(terminal.instantiate())
-			#ControleSfx.toca_SFX(conversa)
+
 	elif valor == -14:
 		carimbada(8)
 		if cont_vermelho[2] == true:
@@ -155,7 +159,6 @@ func _on_mudar_algo(valor, valor2):
 		secret = true
 		if !has_node("/root/Cafeteria/Corpo"):
 			get_tree().current_scene.add_child(corpo.instantiate())
-			print("Spanw")
 				
 	if checker() == true and fim == false:
 		fim = true
