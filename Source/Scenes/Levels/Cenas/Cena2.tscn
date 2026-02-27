@@ -1,0 +1,140 @@
+[gd_scene format=3 uid="uid://b8isks1vh63o0"]
+
+[ext_resource type="Script" uid="uid://ce1fxak7cxwk1" path="res://Source/Scenes/Levels/Cenas/cena_2.gd" id="1_ep1jq"]
+[ext_resource type="PackedScene" uid="uid://bcnocjplm0u6g" path="res://Source/Assets/Modelos/Lamparina/Lamparina modelofinal.fbx" id="2_d3asw"]
+[ext_resource type="Texture2D" uid="uid://bw7f8cobp7k6l" path="res://Source/Assets/Sprites/Chao_teste_quase_interrogacao2.png" id="3_b5ocu"]
+[ext_resource type="PackedScene" uid="uid://vqcc34o860lb" path="res://Source/Assets/Modelos/Mesa/Mesafodaepequenacomcor.fbx" id="4_4mujf"]
+[ext_resource type="PackedScene" uid="uid://ddffhr2ov0m3d" path="res://Source/Assets/Modelos/Garrafa/GarrafaFodacomtextura.fbx" id="5_npgm0"]
+[ext_resource type="Shader" uid="uid://tyh8tvtdacng" path="res://shaders/Outline.gdshader" id="6_7xbfn"]
+[ext_resource type="PackedScene" uid="uid://bm5lcief16w1j" path="res://Source/Scenes/Objects/Cenas/Telefone.tscn" id="7_cny3r"]
+[ext_resource type="PackedScene" uid="uid://dg651rlufkkpu" path="res://Source/Assets/Modelos/Livro_malcon/Livro malco2.fbx" id="8_4hyel"]
+[ext_resource type="PackedScene" uid="uid://b78keg0ignt8j" path="res://Source/Player/Cenas/player.tscn" id="9_ygs6g"]
+[ext_resource type="Texture2D" uid="uid://cvkb8qkmuqjx5" path="res://Source/Assets/Sprites/Sun.png" id="10_d1fjf"]
+[ext_resource type="Texture2D" uid="uid://dolfnli2vtgsa" path="res://Source/Assets/Sprites/Predios.png" id="11_a7nge"]
+[ext_resource type="PackedScene" uid="uid://draij6dpugcym" path="res://Source/Scenes/Objects/Cenas/Porta.tscn" id="12_n5to5"]
+[ext_resource type="PackedScene" uid="uid://kj2ynqcom45k" path="res://Source/Scenes/Objects/Cenas/Pasta2.tscn" id="13_d3asw"]
+[ext_resource type="PackedScene" uid="uid://cgfko6kr2mhuc" path="res://Source/Scenes/Objects/Cenas/Vinyl.tscn" id="13_ho533"]
+[ext_resource type="AudioStream" uid="uid://blxsdx80fd6ke" path="res://Source/Assets/Sons/portafodadestrancando.ogg" id="15_3kr70"]
+[ext_resource type="Script" uid="uid://birr1w5y7owhp" path="res://Source/Scenes/Levels/Cenas/Telefone.gd" id="16_5leyg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ovw4t"]
+size = Vector3(60, 2, 60)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jggnw"]
+albedo_texture = ExtResource("3_b5ocu")
+uv1_scale = Vector3(60, 60, 60)
+
+[sub_resource type="BoxMesh" id="BoxMesh_22hde"]
+size = Vector3(60, 2, 60)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_eqeni"]
+render_priority = 0
+shader = ExtResource("6_7xbfn")
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+shader_parameter/outline_width = 2.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_ouqje"]
+material = SubResource("ShaderMaterial_eqeni")
+flip_faces = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m1wbi"]
+albedo_texture = ExtResource("10_d1fjf")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_l6wx8"]
+material = SubResource("StandardMaterial3D_m1wbi")
+
+[node name="Cena2" type="Node" unique_id=1119634821]
+process_mode = 1
+script = ExtResource("1_ep1jq")
+
+[node name="Lamparina modelofinal" parent="." unique_id=1184403439 instance=ExtResource("2_d3asw")]
+transform = Transform3D(0.2244402, 0, 0.19906433, 0, 0.3, 0, -0.19906433, 0, 0.2244402, -5.8038044, 1.1785486, 6.035648)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lamparina modelofinal" unique_id=1113550427]
+transform = Transform3D(3.3333333, 0, -3.5762787e-07, 0, 3.333333, 0, 3.5762787e-07, 0, 3.3333333, 5.1269054, 1.8721404, -0.08350468)
+light_energy = 1.636
+light_size = 0.178
+shadow_enabled = true
+omni_range = 2.372
+
+[node name="Chão" type="StaticBody3D" parent="." unique_id=561460632]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9999995, 0)
+
+[node name="Bloco" type="CollisionShape3D" parent="Chão" unique_id=631578560]
+shape = SubResource("BoxShape3D_ovw4t")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Chão" unique_id=2048760675]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.014565945, -0.029417992, -0.07714462)
+material_overlay = SubResource("StandardMaterial3D_jggnw")
+mesh = SubResource("BoxMesh_22hde")
+
+[node name="Mesafodaepequenacomcor" parent="." unique_id=1597368954 instance=ExtResource("4_4mujf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6078033, 0.0036923885, 4.3838634)
+
+[node name="GarrafaFodacomtextura" parent="." unique_id=1124586928 instance=ExtResource("5_npgm0")]
+transform = Transform3D(0.22613178, 0, -0.44594222, 0, 0.5, 0, 0.44594222, 0, 0.22613178, -4.2717547, 1.168, 3.6713896)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="GarrafaFodacomtextura" unique_id=169419488]
+transform = Transform3D(0.19852981, 0, -0.9800952, 0, 1, 0, 0.9800952, 0, 0.19852981, 0.20307302, 0.5020435, -0.0013952255)
+mesh = SubResource("BoxMesh_ouqje")
+
+[node name="Telefone" parent="." unique_id=915141437 instance=ExtResource("7_cny3r")]
+process_mode = 1
+transform = Transform3D(0.66913056, 0, 0.74314487, 0, 1, 0, -0.74314487, 0, 0.66913056, -4.626, 1.179, 5.16)
+
+[node name="Livro malco2" parent="." unique_id=893685750 instance=ExtResource("8_4hyel")]
+transform = Transform3D(-0.037324354, -0.027344778, 0.018951371, -0.0011315085, -0.027421383, -0.04179458, 0.033250734, -0.03162799, 0.019850895, -4.616606, 1.387685, 3.7090795)
+
+[node name="Player" parent="." unique_id=1240492296 instance=ExtResource("9_ygs6g")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -3.8001873, 0.912, 4.384)
+se_move = false
+folha = false
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Player" unique_id=744765711]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, -0.77063835, 0)
+light_energy = 1.315
+omni_range = 1.585
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1112958604]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -3.062861, 2.4073012, 0.843724)
+mesh = SubResource("PlaneMesh_l6wx8")
+
+[node name="Sprite3D" type="Sprite3D" parent="MeshInstance3D" unique_id=397683452]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0.07616353, 0.2962314, 0.31154454)
+cast_shadow = 0
+gi_mode = 2
+alpha_cut = 3
+texture = ExtResource("11_a7nge")
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="MeshInstance3D" unique_id=1304021077]
+transform = Transform3D(0.99553233, 0, -0.094421074, 0.094421074, -4.371139e-08, 0.99553233, -4.1272763e-09, -1, -4.35161e-08, 0.11444807, 3.4161167, 0.4316063)
+spot_range = 6.274
+spot_attenuation = -0.69
+spot_angle = 26.5
+spot_angle_attenuation = 0.1806876
+
+[node name="Porta" parent="." unique_id=704416160 instance=ExtResource("12_n5to5")]
+transform = Transform3D(-0.26999992, 0, 0.00013662875, 0, 0.27, 0, -0.00013662875, 0, -0.26999992, 0.9, 0, 4.384)
+
+[node name="Pasta" parent="." unique_id=1623291131 instance=ExtResource("13_d3asw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.464, 1.151, 4.406)
+
+[node name="Vinyl" parent="." unique_id=1120069274 instance=ExtResource("13_ho533")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.144808, 0.079818845, 8.210838)
+
+[node name="SomPorta" type="AudioStreamPlayer3D" parent="." unique_id=1358792521]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1.2396995, 4.471121)
+stream = ExtResource("15_3kr70")
+volume_db = 80.0
+unit_size = 100.0
+bus = &"SFX"
+emission_angle_enabled = true
+emission_angle_degrees = 35.5
+emission_angle_filter_attenuation_db = 0.0
+
+[node name="TelefoneSom" type="AudioStreamPlayer" parent="." unique_id=119877849]
+script = ExtResource("16_5leyg")
+
+[connection signal="interagido" from="Telefone" to="." method="_on_telefone_interagido"]
+[connection signal="interagido" from="Porta" to="." method="_on_porta_interagido"]
+[connection signal="interagido" from="Pasta" to="." method="_on_pasta_interagido"]

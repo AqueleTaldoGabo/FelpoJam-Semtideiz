@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://uojo2f1p4t3j" path="res://Source/Assets/Modelos/Cafeteria/mesaCafe/mesacafeCOMTXT.fbx" id="2_0uxq7"]
 [ext_resource type="ArrayMesh" uid="uid://hst4ncqxfayb" path="res://Source/Assets/Modelos/Cafeteria/Cadeira/cadeira.tres" id="2_2ix0i"]
-[ext_resource type="Script" uid="uid://chmv0bfepx28d" path="res://Source/Scenes/Objects/Cenas/multi_mesh_instance_3d.gd" id="2_j8ock"]
+[ext_resource type="Script" uid="uid://chmv0bfepx28d" path="res://Source/Scenes/Objects/Scripts/multi_mesh_instance_3d.gd" id="2_j8ock"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0uxq7"]
 size = Vector3(15.706665, 9.841797, 7.1785126)

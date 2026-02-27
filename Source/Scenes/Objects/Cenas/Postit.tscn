@@ -1,6 +1,5 @@
 [gd_scene format=4 uid="uid://dvt0nduqro6x3"]
 
-[ext_resource type="PackedScene" uid="uid://drbjw2rf004em" path="res://Source/Scenes/Levels/Cenas/mapa.tscn" id="1_2np1p"]
 [ext_resource type="PackedScene" uid="uid://cja3uw73wfkwl" path="res://Source/Assets/Modelos/Cafeteria/PostIT/pouistiiti1.fbx" id="2_6euia"]
 [ext_resource type="PackedScene" uid="uid://i8jqfce3weny" path="res://Source/Assets/Modelos/Cafeteria/PostIT/pouistiiti2.fbx" id="3_7d1b4"]
 [ext_resource type="Texture2D" uid="uid://bnqjwriqidmhl" path="res://Source/Assets/Modelos/Cafeteria/Poster/PROSTER_0.png" id="4_6euia"]
@@ -52,9 +51,6 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_7d1b4")
 
 [node name="Postit" type="StaticBody3D" unique_id=860167678]
-
-[node name="Mapa" parent="." unique_id=905479263 instance=ExtResource("1_2np1p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.559, 0, 0)
 
 [node name="pouistiiti1" parent="." unique_id=1808878107 instance=ExtResource("2_6euia")]
 transform = Transform3D(0.0070121516, -0.07551707, 0.025455862, 0.07965733, 0.007396596, 0, -0.0023535842, 0.025346827, 0.07584193, -8.654384, 1.2952485, 2.620573)

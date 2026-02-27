@@ -26,11 +26,14 @@ func _on_previous_page_pressed() -> void:
 		
 
 func _on_exit_pressed() -> void:
-	var crosshair = get_node("/root/Cena1/Player/Cabeça/Camera3D/CanvasLayer/crosshair")
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	crosshair.show()
-	ControleSfx.toca_Papel()
-	emit_signal("Porta")
-	$".".queue_free()
+	if has_node("/root/Cena2"):
+		MudarScena.mudarMenu()
+	else:
+		var crosshair = get_node("/root/Cena1/Player/Cabeça/Camera3D/CanvasLayer/crosshair")
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+		crosshair.show()
+		ControleSfx.toca_Papel()
+		emit_signal("Porta")
+		$".".queue_free()
 	
 	

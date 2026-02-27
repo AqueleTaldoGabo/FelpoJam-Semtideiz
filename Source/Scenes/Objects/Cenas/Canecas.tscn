@@ -890,6 +890,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ioaax")
 
 [node name="Canecas" type="Node3D" unique_id=1514194909]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.356, 0, 0)
 
 [node name="CANECA" type="StaticBody3D" parent="." unique_id=1591776888]
 transform = Transform3D(-0.058971807, 0, 0.08076092, 0, 0.1, 0, -0.08076092, 0, -0.058971807, -17.794333, 1.2388076, 6.482808)

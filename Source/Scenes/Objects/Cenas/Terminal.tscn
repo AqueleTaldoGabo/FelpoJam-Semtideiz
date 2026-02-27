@@ -1,15 +1,11 @@
 [gd_scene format=3 uid="uid://iehuobbl6r6l"]
 
-[ext_resource type="PackedScene" uid="uid://drbjw2rf004em" path="res://Source/Scenes/Levels/Cenas/mapa.tscn" id="1_xashf"]
 [ext_resource type="PackedScene" uid="uid://bvn7yplt51tek" path="res://Source/Assets/Modelos/Cafeteria/PC/PC antigo comtxt2.fbx" id="2_1xtda"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xashf"]
 size = Vector3(23.372284, 19.56836, 14.721619)
 
 [node name="Terminal" type="StaticBody3D" unique_id=1348974992]
-
-[node name="Mapa" parent="." unique_id=905479263 instance=ExtResource("1_xashf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.559, 0, 0)
 
 [node name="PC antigo comtxt3" parent="." unique_id=1721207117 instance=ExtResource("2_1xtda")]
 transform = Transform3D(-0.034075398, 0, 0.007991687, 0, 0.035, 0, -0.007991687, 0, -0.034075398, -8.2818985, 1.2264922, 8.763819)

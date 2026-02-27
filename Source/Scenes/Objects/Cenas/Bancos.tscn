@@ -2,8 +2,8 @@
 
 [ext_resource type="ArrayMesh" uid="uid://c1sm7vxexsi6h" path="res://Source/Assets/Modelos/Cafeteria/Cadeira2/Puxador.tres" id="1_kj7qv"]
 [ext_resource type="Texture2D" uid="uid://y7bn2e5cgl0q" path="res://Source/Assets/Modelos/Cafeteria/Cadeira_0.png" id="1_s8qsa"]
-[ext_resource type="Script" uid="uid://ieyh74t76q1e" path="res://Source/Scenes/Objects/Cenas/Cadeira_Muitas.gd" id="3_qoqyj"]
-[ext_resource type="Script" uid="uid://dc6ermqkjk660" path="res://Source/Scenes/Objects/Cenas/Puxador_Muitos.gd" id="5_q5p7x"]
+[ext_resource type="Script" uid="uid://ieyh74t76q1e" path="res://Source/Scenes/Objects/Scripts/Cadeira_Muitas.gd" id="3_qoqyj"]
+[ext_resource type="Script" uid="uid://dc6ermqkjk660" path="res://Source/Scenes/Objects/Scripts/Puxador_Muitos.gd" id="5_q5p7x"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_hqgyu"]
 height = 6.1245117

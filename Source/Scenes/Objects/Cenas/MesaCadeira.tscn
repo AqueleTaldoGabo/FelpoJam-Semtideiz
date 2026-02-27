@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://big88fbxcx054"]
 
 [ext_resource type="ArrayMesh" uid="uid://hst4ncqxfayb" path="res://Source/Assets/Modelos/Cafeteria/Cadeira/cadeira.tres" id="1_3dkaw"]
-[ext_resource type="Script" uid="uid://bpq3p4sedmhuo" path="res://Source/Scenes/Objects/Cenas/Muita_Cadeira.gd" id="2_blxb4"]
-[ext_resource type="Script" uid="uid://dsvftmt2rnayj" path="res://Source/Scenes/Objects/Cenas/Muitas_Mesa.gd" id="3_blxb4"]
+[ext_resource type="Script" uid="uid://bpq3p4sedmhuo" path="res://Source/Scenes/Objects/Scripts/Muita_Cadeira.gd" id="2_blxb4"]
+[ext_resource type="Script" uid="uid://dsvftmt2rnayj" path="res://Source/Scenes/Objects/Scripts/Muitas_Mesa.gd" id="3_blxb4"]
 [ext_resource type="ArrayMesh" uid="uid://cknwic5fjklqg" path="res://Source/Assets/Modelos/Mesa/MesaGrande.tres" id="4_wj5h0"]
 
 [sub_resource type="MultiMesh" id="MultiMesh_wj5h0"]

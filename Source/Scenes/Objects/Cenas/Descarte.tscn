@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://dhs8qdxufmmy6"]
 
-[ext_resource type="PackedScene" uid="uid://drbjw2rf004em" path="res://Source/Scenes/Levels/Cenas/mapa.tscn" id="1_32qna"]
 [ext_resource type="PackedScene" uid="uid://dp01qbh786mvq" path="res://Source/Assets/Modelos/Cafeteria/Caçamba/Cacambadelico.fbx" id="2_te5vl"]
 [ext_resource type="PackedScene" uid="uid://qy2gbwg1fmqw" path="res://Source/Assets/Modelos/Cafeteria/Comanda/comanda.fbx" id="3_te5vl"]
 
@@ -12,26 +11,23 @@ size = Vector3(4.5856934, 0.6352539, 3.261963)
 
 [node name="Descarte" type="StaticBody3D" unique_id=503848595]
 
-[node name="Mapa" parent="." unique_id=905479263 instance=ExtResource("1_32qna")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.559, 0, 0)
+[node name="Cacambadelico5" type="StaticBody3D" parent="." unique_id=906609211]
+transform = Transform3D(0.99950653, 0, 0.03141076, 0, 1, 0, -0.03141076, 0, 0.99950653, -27.789999, 0, 4.824)
 
-[node name="Cacambadelico4" type="StaticBody3D" parent="Mapa" unique_id=1987561636]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.410614, 2.3841858e-07, -3.3884826)
-
-[node name="Cacambadelico" parent="Mapa/Cacambadelico4" unique_id=697257589 instance=ExtResource("2_te5vl")]
+[node name="Cacambadelico" parent="Cacambadelico5" unique_id=217346192 instance=ExtResource("2_te5vl")]
 transform = Transform3D(0.59971076, 0, -0.01862665, 0, 0.59999996, 0, 0.01862665, 0, 0.59971076, -1.8412132, -0.32395095, -0.45693707)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Mapa/Cacambadelico4" unique_id=546265785]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cacambadelico5" unique_id=778854078]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39590836, 0.9035034, 1.4320941)
 shape = SubResource("BoxShape3D_f1pbj")
 
-[node name="Cacambadelico5" type="StaticBody3D" parent="Mapa" unique_id=906609211]
-transform = Transform3D(0.99950653, 0, 0.03141076, 0, 1, 0, -0.03141076, 0, 0.99950653, -32.349, 0, 4.824)
+[node name="Cacambadelico4" type="StaticBody3D" parent="." unique_id=1987561636]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.851614, 2.3841858e-07, -3.3884826)
 
-[node name="Cacambadelico" parent="Mapa/Cacambadelico5" unique_id=217346192 instance=ExtResource("2_te5vl")]
+[node name="Cacambadelico" parent="Cacambadelico4" unique_id=697257589 instance=ExtResource("2_te5vl")]
 transform = Transform3D(0.59971076, 0, -0.01862665, 0, 0.59999996, 0, 0.01862665, 0, 0.59971076, -1.8412132, -0.32395095, -0.45693707)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Mapa/Cacambadelico5" unique_id=778854078]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cacambadelico4" unique_id=546265785]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39590836, 0.9035034, 1.4320941)
 shape = SubResource("BoxShape3D_f1pbj")
 

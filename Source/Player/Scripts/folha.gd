@@ -21,9 +21,9 @@ var _adjacency_matrix = [
 	{ "esq1": botaodesligado[0], "dir1": botaodesligado[1], "esq2": botaodesligado[0], "dir2": botaodesligado[1], "esq3": botaodesligado[0], "dir3": botaodesligado[1]}
 ]
 
-var btn1 = 0
-var btn2 = 0
-var btn3 = 0
+var btn1 = [null, null, null]
+var btn2 = [null, null, null]
+var btn3 = [null, null, null]
 
 var marcado = false
 
@@ -38,12 +38,13 @@ func fecha():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	ControleSfx.toca_Papel()
 	crosshair.show()
-	if btn1 != 0:
-		emit_signal("mudar_algo", btn1, _adjacency_matrix)
-	if btn2 != 0:
-		emit_signal("mudar_algo", btn2, _adjacency_matrix)
-	if btn3 != 0:
-		emit_signal("mudar_algo", btn3, _adjacency_matrix)
+	for i in range(3):
+		if btn1[i] != null:
+			emit_signal("mudar_algo", btn1[i], _adjacency_matrix)
+		if btn2[i] != null:
+			emit_signal("mudar_algo", btn2[i], _adjacency_matrix)
+		if btn3[i] != null:
+			emit_signal("mudar_algo", btn3[i], _adjacency_matrix)
 	emit_signal("mudar_algo", folha, _adjacency_matrix)
 	$".".queue_free()
 
@@ -116,7 +117,7 @@ func _on_bt_nesquerda_1_pressed() -> void:
 	if !marcado or folha != 2:
 		$Control/HboxCont1/BTNesquerda1.texture_normal = botaoligado[0]
 		$Control/HboxCont1/BTNdireita1.texture_normal = botaodesligado[1]
-		btn1 = ((folha)*3)*(-1)
+		btn1[folha-2] = ((folha)*3)*(-1)
 
 
 func _on_bt_ndireita_1_pressed() -> void:
@@ -124,34 +125,35 @@ func _on_bt_ndireita_1_pressed() -> void:
 	$Control/HboxCont1/BTNdireita1.texture_normal = botaoligado[1]
 	if folha == 2:
 		marcado = true
-	btn1 = (folha*3)
+	btn1[folha-2] = (folha*3)
 
 func _on_bt_nesquerda_2_pressed() -> void:
 	$Control/HboxCont2/BTNesquerda1.texture_normal = botaoligado[0]
 	$Control/HboxCont2/BTNdireita1.texture_normal = botaodesligado[1]
-	btn2 = (folha*3 + 1)*(-1)
+	btn2[folha-2] = (folha*3 + 1)*(-1)
 	print(btn2)
 
 func _on_bt_ndireita_2_pressed() -> void:
 	$Control/HboxCont2/BTNesquerda1.texture_normal = botaodesligado[0]
 	$Control/HboxCont2/BTNdireita1.texture_normal = botaoligado[1]
-	btn2 = (folha*3 + 1)
+	btn2[folha-2] = (folha*3 + 1)
 	print(btn2)
 
 func _on_bt_nesquerda_3_pressed() -> void:
 	$Control/HboxCont3/BTNesquerda1.texture_normal = botaoligado[0]
 	$Control/HboxCont3/BTNdireita1.texture_normal = botaodesligado[1]
-	btn3 = (folha*3 + 2)*(-1)
+	btn3[folha-2] = (folha*3 + 2)*(-1)
 	print(btn3)
 
 func _on_bt_ndireita_3_pressed() -> void:
 	$Control/HboxCont3/BTNesquerda1.texture_normal = botaodesligado[0]
 	$Control/HboxCont3/BTNdireita1.texture_normal = botaoligado[1]
-	btn3 = (folha*3 + 2)
+	btn3[folha-2] = (folha*3 + 2)
 	print(btn3)
 
 
 func _on_secret_pressed() -> void:
 	if folha == 1:
 		emit_signal("mudar_algo", 88, _adjacency_matrix)
+		print("foi")
 		

@@ -2,8 +2,8 @@
 
 [ext_resource type="ArrayMesh" uid="uid://bpa6mf5waputg" path="res://Source/Assets/Modelos/sofa.tres" id="3_m54mb"]
 [ext_resource type="ArrayMesh" uid="uid://cknwic5fjklqg" path="res://Source/Assets/Modelos/Mesa/MesaGrande.tres" id="4_21jws"]
-[ext_resource type="Script" uid="uid://87l2bt8l1x31" path="res://Source/Scenes/Objects/Cenas/Sofa_muitos.gd" id="4_be2pw"]
-[ext_resource type="Script" uid="uid://dl7675v4tet88" path="res://Source/Scenes/Objects/Cenas/multi_mesh_instance_3d_2.gd" id="5_0bb50"]
+[ext_resource type="Script" uid="uid://87l2bt8l1x31" path="res://Source/Scenes/Objects/Scripts/Sofa_muitos.gd" id="4_be2pw"]
+[ext_resource type="Script" uid="uid://dl7675v4tet88" path="res://Source/Scenes/Objects/Scripts/multi_mesh_instance_3d_2.gd" id="5_0bb50"]
 
 [sub_resource type="MultiMesh" id="MultiMesh_21jws"]
 transform_format = 1

@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://cqsmj6o2j32v7"]
 
-[ext_resource type="PackedScene" uid="uid://drbjw2rf004em" path="res://Source/Scenes/Levels/Cenas/mapa.tscn" id="1_o4c3q"]
 [ext_resource type="PackedScene" uid="uid://xscmvrnjddyo" path="res://Source/Assets/Modelos/Cafeteria/PostIT/pouistiiti3.fbx" id="2_qg8sp"]
 [ext_resource type="PackedScene" uid="uid://cbwjw5n5paf03" path="res://Source/Assets/Modelos/Cafeteria/PostIT/pouistiiti4.fbx" id="3_pyaex"]
 
@@ -11,9 +10,6 @@ size = Vector3(0.7803955, 2.149475, 2.1325684)
 size = Vector3(0.80859375, 2.2324219, 2.1462402)
 
 [node name="PostIt2" type="StaticBody3D" unique_id=1675138029]
-
-[node name="Mapa" parent="." unique_id=905479263 instance=ExtResource("1_o4c3q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.559, 0, 0)
 
 [node name="pouistiiti3" parent="." unique_id=1825397384 instance=ExtResource("2_qg8sp")]
 transform = Transform3D(0.135, 0, 0, 0, 0.10126967, 0.089271806, 0, -0.089271806, 0.10126967, -28.756248, 2.3114152, 3.368122)
