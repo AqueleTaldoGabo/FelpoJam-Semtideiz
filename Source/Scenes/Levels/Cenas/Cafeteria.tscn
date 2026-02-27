@@ -24,7 +24,7 @@ fog_light_color = Color(0.6078325, 0.20868835, 0.19426334, 1)
 fog_light_energy = 0.0
 fog_sun_scatter = 0.3
 fog_density = 0.005
-volumetric_fog_density = 0.01
+volumetric_fog_density = 0.0512
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2elm2"]
 size = Vector3(44.445564, 2, 19.659576)
@@ -36,7 +36,7 @@ script = ExtResource("1_bn0h7")
 environment = SubResource("Environment_eh46y")
 
 [node name="Player" parent="." unique_id=1240492296 instance=ExtResource("1_n7cls")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.3244615, 0.3860966, -0.03906679)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.249521, 0.3860966, -0.03906679)
 corA = Vector4(0.3, 0.05, 0.05, 1)
 corB = Vector4(0.8, 0.2, 0.2, 1)
 

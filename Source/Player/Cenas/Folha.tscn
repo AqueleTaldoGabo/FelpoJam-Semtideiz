@@ -3,7 +3,11 @@
 [ext_resource type="Script" uid="uid://bxf2qv8h7ubqs" path="res://Source/Player/Scripts/folha.gd" id="1_cpge7"]
 [ext_resource type="Texture2D" uid="uid://jw1vtjwsl4vi" path="res://Source/Assets/Sprites/Documentos sem seta.png" id="2_uhn5o"]
 [ext_resource type="Texture2D" uid="uid://d0l6kd3d6dm25" path="res://Source/Assets/Imagens/DOCUMENTOSCARIMBO1.png" id="3_o6amw"]
+[ext_resource type="Texture2D" uid="uid://b325afd5hx13p" path="res://Source/Assets/Sprites/Não apagado.png" id="4_eisks"]
 [ext_resource type="Texture2D" uid="uid://gjqa848lcxot" path="res://Source/Assets/Sprites/seta.png" id="4_rqkf0"]
+[ext_resource type="Texture2D" uid="uid://dp23k0x72038w" path="res://Source/Assets/Sprites/Nãoligado.png" id="5_qrvcg"]
+[ext_resource type="Texture2D" uid="uid://by0dgsq0ek52t" path="res://Source/Assets/Sprites/Sim apagado.png" id="6_au6fu"]
+[ext_resource type="Texture2D" uid="uid://bs18vm451ioo1" path="res://Source/Assets/Sprites/Sim ligado.png" id="7_344dx"]
 
 [node name="Folha" type="Node" unique_id=1976519266]
 script = ExtResource("1_cpge7")
@@ -32,22 +36,68 @@ position = Vector2(242, 13.999939)
 scale = Vector2(0.38, 0.4129213)
 texture = ExtResource("3_o6amw")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=1554795035]
+[node name="HboxCont1" type="HBoxContainer" parent="Control" unique_id=1554795035]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 1.025
-anchor_top = -2.025
-anchor_right = 6.775
-anchor_bottom = 0.225
-theme_override_constants/separation = 50
+anchor_left = 5.575
+anchor_top = -1.35
+anchor_right = 11.325
+anchor_bottom = 0.9
+theme_override_constants/separation = 45
 metadata/_edit_use_anchors_ = true
 
-[node name="BTNesquerda" type="TextureButton" parent="Control/HBoxContainer" unique_id=768695431]
+[node name="BTNesquerda1" type="TextureButton" parent="Control/HboxCont1" unique_id=768695431]
 layout_mode = 2
+texture_normal = ExtResource("4_eisks")
+texture_hover = ExtResource("5_qrvcg")
 metadata/_edit_use_anchors_ = true
 
-[node name="BTNdireita" type="TextureButton" parent="Control/HBoxContainer" unique_id=1631393959]
+[node name="BTNdireita1" type="TextureButton" parent="Control/HboxCont1" unique_id=1631393959]
 layout_mode = 2
+texture_normal = ExtResource("6_au6fu")
+texture_hover = ExtResource("7_344dx")
+
+[node name="HboxCont2" type="HBoxContainer" parent="Control" unique_id=88746328]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 5.575
+anchor_top = 1.45
+anchor_right = 11.325
+anchor_bottom = 3.7
+theme_override_constants/separation = 45
+metadata/_edit_use_anchors_ = true
+
+[node name="BTNesquerda1" type="TextureButton" parent="Control/HboxCont2" unique_id=2117010143]
+layout_mode = 2
+texture_normal = ExtResource("4_eisks")
+texture_hover = ExtResource("5_qrvcg")
+metadata/_edit_use_anchors_ = true
+
+[node name="BTNdireita1" type="TextureButton" parent="Control/HboxCont2" unique_id=494982881]
+layout_mode = 2
+texture_normal = ExtResource("6_au6fu")
+texture_hover = ExtResource("7_344dx")
+
+[node name="HboxCont3" type="HBoxContainer" parent="Control" unique_id=483316576]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 5.575
+anchor_top = 4.225
+anchor_right = 11.325
+anchor_bottom = 6.475
+theme_override_constants/separation = 45
+metadata/_edit_use_anchors_ = true
+
+[node name="BTNesquerda1" type="TextureButton" parent="Control/HboxCont3" unique_id=1768835948]
+layout_mode = 2
+texture_normal = ExtResource("4_eisks")
+texture_hover = ExtResource("5_qrvcg")
+metadata/_edit_use_anchors_ = true
+
+[node name="BTNdireita1" type="TextureButton" parent="Control/HboxCont3" unique_id=1777314268]
+layout_mode = 2
+texture_normal = ExtResource("6_au6fu")
+texture_hover = ExtResource("7_344dx")
 
 [node name="Voltar" type="Button" parent="Control" unique_id=1666421061]
 layout_mode = 0
@@ -67,7 +117,11 @@ rotation = 3.1415927
 icon = ExtResource("4_rqkf0")
 flat = true
 
-[connection signal="pressed" from="Control/HBoxContainer/BTNesquerda" to="." method="_on_bt_nesquerda_pressed"]
-[connection signal="pressed" from="Control/HBoxContainer/BTNdireita" to="." method="_on_bt_ndireita_pressed"]
+[connection signal="pressed" from="Control/HboxCont1/BTNesquerda1" to="." method="_on_bt_nesquerda_1_pressed"]
+[connection signal="pressed" from="Control/HboxCont1/BTNdireita1" to="." method="_on_bt_ndireita_1_pressed"]
+[connection signal="pressed" from="Control/HboxCont2/BTNesquerda1" to="." method="_on_bt_nesquerda_2_pressed"]
+[connection signal="pressed" from="Control/HboxCont2/BTNdireita1" to="." method="_on_bt_ndireita_2_pressed"]
+[connection signal="pressed" from="Control/HboxCont3/BTNesquerda1" to="." method="_on_bt_nesquerda_3_pressed"]
+[connection signal="pressed" from="Control/HboxCont3/BTNdireita1" to="." method="_on_bt_ndireita_3_pressed"]
 [connection signal="pressed" from="Control/Voltar" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Control/Avançar" to="." method="_on_avançar_pressed"]

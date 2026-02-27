@@ -2224,6 +2224,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11065674, 1.408346, -0.198
 shape = SubResource("BoxShape3D_5ohy6")
 
 [node name="Moveis" type="StaticBody3D" parent="." unique_id=1672688666]
+visible = false
 
 [node name="MesaSofa" parent="Moveis" unique_id=106702180 instance=ExtResource("9_jffxy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.049, 0, -0.109)
@@ -2556,7 +2557,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.937665, 0.6317748, 10.551
 shape = SubResource("BoxShape3D_qj5hb")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1792705116]
-transform = Transform3D(-0.9629797, -0.15736905, -0.21887252, -0.26957193, 0.55901206, 0.78411525, -0.0010429919, 0.8140888, -0.5807395, 0, 6.5400796, 0)
+transform = Transform3D(-0.32061934, -0.49763626, 0.8059537, -0.14303818, 0.866552, 0.4781503, -0.93634576, 0.038022112, -0.34901437, 0, 6.5400796, 0)
 light_energy = 0.725
 shadow_enabled = true
 

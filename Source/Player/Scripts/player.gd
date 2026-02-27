@@ -50,7 +50,6 @@ func _process(delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	var input = Input.get_vector("anda_esquerda", "anda_direita", "anda_frente", "anda_tras")
 	var direcao = transform.basis * Vector3(input.x, 0, input.y)
-	print(name, " - ", get_instance_id())
 	if direcao != Vector3.ZERO:
 		direcao = direcao.normalized()
 	if se_move:
