@@ -30,6 +30,7 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("abrir_pagina") and folha and !get_tree().root.has_node("Folha"):
 		var main = get_tree().current_scene
 		var PAGINA = preload("uid://c1laawrklqnhp").instantiate()
+		$"Cabeça/Camera3D/CanvasLayer/Label".text = ""
 		print(folhas)
 		PAGINA.folha = folhas
 		if _adjacency_matrix_player != null:

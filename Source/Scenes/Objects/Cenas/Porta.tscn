@@ -1,57 +1,21 @@
 [gd_scene format=3 uid="uid://draij6dpugcym"]
 
-[ext_resource type="Script" uid="uid://cngv3bfrsrqyb" path="res://Source/Scenes/Objects/Scripts/porta.gd" id="1_5jm5v"]
+[ext_resource type="Script" uid="uid://enq1xecijthj" path="res://Source/Global/Scripts/interagivel.gd" id="1_wnuhu"]
 [ext_resource type="PackedScene" uid="uid://gurjrtcknqcb" path="res://Source/Assets/Modelos/porta_Malcon/portaMALCONOVA2.fbx" id="2_yqv12"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yqv12"]
 size = Vector3(0.28564453, 9.123169, 4.586853)
 
-[sub_resource type="Animation" id="Animation_yqv12"]
-resource_name = "Luz"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("SpotLight3D:light_energy")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 9.758]
-}
-
-[sub_resource type="Animation" id="Animation_5jm5v"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("SpotLight3D:light_energy")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_fjmkn"]
-_data = {
-&"Luz": SubResource("Animation_yqv12"),
-&"RESET": SubResource("Animation_5jm5v")
-}
-
 [node name="Porta" type="StaticBody3D" unique_id=839741734]
 transform = Transform3D(-0.26999992, 0, 0.00013662875, 0, 0.27, 0, -0.00013662875, 0, -0.26999992, 0, 0, 0)
 disable_mode = 1
-script = ExtResource("1_5jm5v")
+script = ExtResource("1_wnuhu")
 
 [node name="portaMALCONOVA2" parent="." unique_id=1788745261 instance=ExtResource("2_yqv12")]
 
 [node name="SpotLight3D" type="SpotLight3D" parent="portaMALCONOVA2" unique_id=1976731790]
 transform = Transform3D(-3.668037, 1.836929e-05, 0.51276743, 0.5127674, 0.0002594324, 3.6680365, -1.7725397e-05, 3.703704, -0.0002594772, 0.7582209, 16.619402, 0.00046730042)
-light_energy = 0.0
+light_energy = 13.039
 light_size = 1.0
 shadow_enabled = true
 spot_range = 5.429
@@ -61,9 +25,5 @@ spot_angle = 16.5
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=178232796]
 transform = Transform3D(0.9999994, 0, 1.4726538e-08, 0, 1, 0, -1.4726538e-08, 0, 0.9999994, 0.02172971, 4.061585, 0.045865953)
 shape = SubResource("BoxShape3D_yqv12")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=19436047]
-root_node = NodePath("../portaMALCONOVA2")
-libraries/ = SubResource("AnimationLibrary_fjmkn")
 
 [connection signal="olhado" from="." to="." method="_on_olhado"]

@@ -149,3 +149,9 @@ func _on_bt_ndireita_3_pressed() -> void:
 	$Control/HboxCont3/BTNdireita1.texture_normal = botaoligado[1]
 	btn3 = (folha*3 + 2)
 	print(btn3)
+
+
+func _on_secret_pressed() -> void:
+	if folha == 1:
+		emit_signal("mudar_algo", 88, _adjacency_matrix)
+		

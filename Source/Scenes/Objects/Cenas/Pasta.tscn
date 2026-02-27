@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://enq1xecijthj" path="res://Source/Global/Scripts/interagivel.gd" id="1_ca2ac"]
 [ext_resource type="Script" uid="uid://bsnvuv8pvgjke" path="res://Source/Scenes/Objects/Scripts/pagina_1.gd" id="2_io8j2"]
 [ext_resource type="Texture2D" uid="uid://cxsfnkaygtrvo" path="res://Source/Assets/Imagens/MOLDE_DA_CARTA_TUTORIAL.png" id="3_d4yv5"]
+[ext_resource type="Texture2D" uid="uid://gjqa848lcxot" path="res://Source/Assets/Sprites/seta.png" id="4_pp4c2"]
+[ext_resource type="Texture2D" uid="uid://b325afd5hx13p" path="res://Source/Assets/Sprites/Não apagado.png" id="5_ta1xh"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_urx0x"]
 size = Vector3(0.6097412, 0.02028656, 0.3694458)
@@ -125,37 +127,52 @@ position = Vector2(21, 20)
 scale = Vector2(0.43, 0.43)
 texture = ExtResource("3_d4yv5")
 
-[node name="NextPage" type="Button" parent="Pagina1" unique_id=395998308]
+[node name="NextPage" type="TextureButton" parent="Pagina1" unique_id=1599028386]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 4.175
-anchor_top = 7.25
-anchor_right = 6.1
-anchor_bottom = 7.9
+anchor_left = 4.775
+anchor_top = 7.35
+anchor_right = 6.7
+anchor_bottom = 8.05
 grow_horizontal = 0
 grow_vertical = 0
+scale = Vector2(0.7, 0.7)
+texture_normal = ExtResource("4_pp4c2")
+flip_h = true
 metadata/_edit_use_anchors_ = true
 
-[node name="PreviousPage" type="Button" parent="Pagina1" unique_id=1900263752]
+[node name="PreviousPage" type="TextureButton" parent="Pagina1" unique_id=743936324]
 visible = false
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -4.675
-anchor_top = 7.325
-anchor_right = -2.85
-anchor_bottom = 7.9
+anchor_left = -4.8749986
+anchor_top = 7.3
+anchor_right = -3.0499985
+anchor_bottom = 8.0
+offset_left = -3.0517578e-05
+offset_top = 2.0
+offset_right = -3.0517578e-05
+offset_bottom = 2.0
 grow_horizontal = 0
 grow_vertical = 0
+scale = Vector2(0.7, 0.7)
+texture_normal = ExtResource("4_pp4c2")
 metadata/_edit_use_anchors_ = true
 
-[node name="Exit" type="Button" parent="Pagina1" unique_id=1327687709]
+[node name="Exit" type="TextureButton" parent="Pagina1" unique_id=2031799464]
 visible = false
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 4.6
-anchor_top = -6.9
-anchor_right = 6.225
-anchor_bottom = -6.3
+anchor_left = 5.4
+anchor_top = -6.975
+anchor_right = 7.025
+anchor_bottom = -5.775
+offset_left = 9.0
+offset_top = -1.0
+offset_right = -6.0
+offset_bottom = -1.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("5_ta1xh")
 metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Pagina1/NextPage" to="Pagina1" method="_on_next_page_pressed"]

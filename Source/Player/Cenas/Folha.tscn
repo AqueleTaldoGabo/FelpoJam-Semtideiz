@@ -36,6 +36,15 @@ position = Vector2(242, 13.999939)
 scale = Vector2(0.38, 0.4129213)
 texture = ExtResource("3_o6amw")
 
+[node name="Secret" type="Button" parent="Control" unique_id=1020620504]
+layout_mode = 0
+offset_left = 190.0
+offset_top = -32.0
+offset_right = 198.0
+offset_bottom = -24.0
+scale = Vector2(11.3817425, 16.033382)
+flat = true
+
 [node name="HboxCont1" type="HBoxContainer" parent="Control" unique_id=1554795035]
 layout_mode = 1
 anchors_preset = -1
@@ -100,23 +109,26 @@ texture_normal = ExtResource("6_au6fu")
 texture_hover = ExtResource("7_344dx")
 
 [node name="Voltar" type="Button" parent="Control" unique_id=1666421061]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
 anchor_left = -9.825
-anchor_top = 6.2
+anchor_top = 6.1
 anchor_right = -7.525
-anchor_bottom = 7.3
+anchor_bottom = 7.2
+flat = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Avançar" type="Button" parent="Control" unique_id=145828643]
 layout_mode = 0
 offset_left = 446.0
-offset_top = 282.0
+offset_top = 298.0
 offset_right = 522.0
-offset_bottom = 318.0
+offset_bottom = 334.0
 rotation = 3.1415927
 icon = ExtResource("4_rqkf0")
 flat = true
 
+[connection signal="pressed" from="Control/Secret" to="." method="_on_secret_pressed"]
 [connection signal="pressed" from="Control/HboxCont1/BTNesquerda1" to="." method="_on_bt_nesquerda_1_pressed"]
 [connection signal="pressed" from="Control/HboxCont1/BTNdireita1" to="." method="_on_bt_ndireita_1_pressed"]
 [connection signal="pressed" from="Control/HboxCont2/BTNesquerda1" to="." method="_on_bt_nesquerda_2_pressed"]
