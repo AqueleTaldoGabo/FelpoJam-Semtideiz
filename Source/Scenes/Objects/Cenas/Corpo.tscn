@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bf52ea1mdc5oy"]
+
+[ext_resource type="PackedScene" uid="uid://drbjw2rf004em" path="res://Source/Scenes/Levels/Cenas/mapa.tscn" id="1_rftey"]
+[ext_resource type="PackedScene" uid="uid://bivf6siievku7" path="res://Source/Assets/Modelos/Cafeteria/corpo/Corpo.fbx" id="2_dax32"]
+[ext_resource type="PackedScene" uid="uid://brnglb4tlkujb" path="res://Source/Assets/Modelos/Cafeteria/PocaS/poça.fbx" id="3_dax32"]
+
+[node name="Corpo" type="StaticBody3D" unique_id=721756328]
+
+[node name="Mapa" parent="." unique_id=905479263 instance=ExtResource("1_rftey")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.559, 0, 0)
+
+[node name="Corpo" parent="." unique_id=2064684460 instance=ExtResource("2_dax32")]
+transform = Transform3D(1.9812672e-08, 0.4532611, 0.17256711, 0.48500004, -2.1200025e-08, -4.440892e-16, 7.543147e-09, 0.17256711, -0.45326114, -18.70715, 0.1199193, 8.994979)
+
+[node name="poça" parent="." unique_id=1632173016 instance=ExtResource("3_dax32")]
+transform = Transform3D(-0.31947082, 0, -0.3975404, 0, 0.51, 0, 0.3975404, 0, -0.31947082, -16.611546, 2.3841858e-07, 9.8660345)

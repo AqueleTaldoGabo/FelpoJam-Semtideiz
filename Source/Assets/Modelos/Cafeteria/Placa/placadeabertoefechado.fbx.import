@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bvn7yplt51tek"
-path="res://.godot/imported/PC antigo comtxt2.fbx-7fc449474e634c8a469bcacafef64972.scn"
+uid="uid://bbtafvpf1vktd"
+path="res://.godot/imported/placadeabertoefechado.fbx-89c1c2354404a9af932aea4dcecbc0f7.scn"
 
 [deps]
 
-source_file="res://Source/Assets/Modelos/Cafeteria/PC/PC antigo comtxt2.fbx"
-dest_files=["res://.godot/imported/PC antigo comtxt2.fbx-7fc449474e634c8a469bcacafef64972.scn"]
+source_file="res://Source/Assets/Modelos/Cafeteria/Placa/placadeabertoefechado.fbx"
+dest_files=["res://.godot/imported/placadeabertoefechado.fbx-89c1c2354404a9af932aea4dcecbc0f7.scn"]
 
 [params]
 

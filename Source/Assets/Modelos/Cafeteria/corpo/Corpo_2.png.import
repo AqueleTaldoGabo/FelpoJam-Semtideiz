@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfvx1ltmmsse"
-path.s3tc="res://.godot/imported/PC antigo comtxt2_0.png-ca099ad4b9488f1d1dcbd42236a73dba.s3tc.ctex"
+uid="uid://2yod7cinq4jj"
+path.s3tc="res://.godot/imported/Corpo_2.png-6fe0fbedccc46729d3678427102afb3d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "a6a35cca328ec3a0f05c66dc1d937528"
+"md5": "00c9d2590303c14eee4d4f6f77a5fd2a"
 }
 
 [deps]
 
-source_file="res://Source/Assets/Modelos/Cafeteria/PC/PC antigo comtxt2_0.png"
-dest_files=["res://.godot/imported/PC antigo comtxt2_0.png-ca099ad4b9488f1d1dcbd42236a73dba.s3tc.ctex"]
+source_file="res://Source/Assets/Modelos/Cafeteria/corpo/Corpo_2.png"
+dest_files=["res://.godot/imported/Corpo_2.png-6fe0fbedccc46729d3678427102afb3d.s3tc.ctex"]
 
 [params]
 

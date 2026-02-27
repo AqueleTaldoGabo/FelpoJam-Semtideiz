@@ -1,7 +1,6 @@
 [gd_scene format=4 uid="uid://b5udjkj61nvrw"]
 
 [ext_resource type="Texture2D" uid="uid://db2fey0iagjwn" path="res://Source/Assets/Modelos/Cafeteria/caneca/CANECA_0.png" id="1_ykkyc"]
-[ext_resource type="Texture2D" uid="uid://bnqjwriqidmhl" path="res://Source/Assets/Modelos/Cafeteria/Poster/PROSTER_0.png" id="2_wqqte"]
 [ext_resource type="Texture2D" uid="uid://b4fnhfthckicq" path="res://Source/Assets/Modelos/Cafeteria/Quadro/quadropronto_0.png" id="3_4hyth"]
 [ext_resource type="Texture2D" uid="uid://7esxba8dd27m" path="res://Source/Assets/Modelos/Cafeteria/Quadro/quadropronto_1.png" id="4_rm6f3"]
 [ext_resource type="Texture2D" uid="uid://bnu7qs68xf8nj" path="res://Source/Assets/Modelos/Cafeteria/Cafeteira/faqueteirapronta_0.png" id="5_07bll"]
@@ -51,46 +50,6 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_54jgf")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rh2hy"]
-resource_name = "Material"
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("2_wqqte")
-emission_enabled = true
-emission = Color(1, 1, 1, 1)
-emission_energy_multiplier = 0.0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_5lh80"]
-_surfaces = [{
-"aabb": AABB(-0.0021083725, -0.020428948, -0.00090244296, 0.0021028945, 0.041676298, 0.06178651),
-"format": 34359742465,
-"index_count": 36,
-"index_data": PackedByteArray("AAABAAIAAQAAAAMAAgAEAAAAAwAFAAEAAgABAAUABgADAAAAAAAEAAYABQADAAYABAACAAcABQAHAAIABwAGAAQABgAHAAUA"),
-"name": "Material",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 8,
-"vertex_data": PackedByteArray("nywKu5xap7ySYXk9nywKu+wOrjySYXk9XM+3tuwOrjySYXk9nywKu5xap7zskWy6XM+3tpxap7ySYXk9nywKu+wOrjzskWy6XM+3tpxap7zskWy6XM+3tuwOrjzskWy6")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_0wmx7"]
-resource_name = "Cube"
-_surfaces = [{
-"aabb": AABB(-0.0021083725, -0.020428948, -0.00090244296, 0.0021028945, 0.041676298, 0.06178651),
-"attribute_data": PackedByteArray("kwmqPkTl3D4RJaA+WvjlPvwRlz7IEOA+f/agPrL91j7/2qo+oOrNPn/2oD6y/dY+aeOXPiIW0T7qx6E+DgPIPs4mID7buiI/ziYgPkrRQD9QNB89StFAP1A0Hz3buiI/aeOXPiIW0T7n/o0+OCnaPtPrhD6mQdQ+VNCOPpAuyz4Ajow7AARRO1zgfz8ABFE7XOB/P6D7fj8Ajow7oPt+P/wRlz7IEOA+fS2NPtwj6T5oGoQ+TjzjPuf+jT44Kdo+"),
-"format": 34359742487,
-"index_count": 36,
-"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAAFAAVABYAFgAXABQA"),
-"material": SubResource("StandardMaterial3D_rh2hy"),
-"name": "Material",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 24,
-"vertex_data": PackedByteArray("nywKu5xap7ySYXk9nywKu+wOrjySYXk9XM+3tuwOrjySYXk9XM+3tpxap7ySYXk9nywKu5xap7ySYXk9XM+3tpxap7ySYXk9XM+3tpxap7zskWy6nywKu5xap7zskWy6nywKu+wOrjySYXk9nywKu5xap7ySYXk9nywKu5xap7zskWy6nywKu+wOrjzskWy6XM+3tpxap7zskWy6XM+3tuwOrjzskWy6nywKu+wOrjzskWy6nywKu5xap7zskWy6XM+3tpxap7ySYXk9XM+3tuwOrjySYXk9XM+3tuwOrjzskWy6XM+3tpxap7zskWy6XM+3tuwOrjySYXk9nywKu+wOrjySYXk9nywKu+wOrjzskWy6XM+3tuwOrjzskWy6/3//f8l2moT/f/9/yXaahP9//3/JdpqE/3//f8l2moT/fwAAOX3/v/9/AAA5ff+//38AADl9/7//fwAAOX3/vwAA/3//f/+/AAD/f/9//78AAP9//3//vwAA/3//f/+//////zWJmoT/////NYmahP////81iZqE/////zWJmoT///9//3///////3//f///////f/9///////9//3////9////Fgv+//3///8WC/7//f///xYL/v/9////Fgv+/")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_5lh80")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3cpks"]
 resource_name = "Material"
@@ -966,13 +925,6 @@ transform = Transform3D(0.082978815, 0, 0.05580783, 0, 0.09999998, 0, -0.0558078
 [node name="Cylinder" type="MeshInstance3D" parent="CANECA5" unique_id=1361802197]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 mesh = SubResource("ArrayMesh_7v7xx")
-
-[node name="PROSTER" type="StaticBody3D" parent="." unique_id=771586148]
-transform = Transform3D(-6.7752652e-09, 0, -0.155, 0, 0.155, 0, 0.155, 0, -6.7752652e-09, -10.804028, 1.6239266, -6.445853)
-
-[node name="Cube" type="MeshInstance3D" parent="PROSTER" unique_id=2093746872]
-transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
-mesh = SubResource("ArrayMesh_0wmx7")
 
 [node name="quadropronto" type="StaticBody3D" parent="." unique_id=1997213899]
 transform = Transform3D(0.235, 0, 0, 0, 0.235, 0, 0, 0, 0.235, -18.05112, 1.410471, 2.5228078)

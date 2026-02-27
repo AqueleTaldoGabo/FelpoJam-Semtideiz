@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfvx1ltmmsse"
-path.s3tc="res://.godot/imported/PC antigo comtxt2_0.png-ca099ad4b9488f1d1dcbd42236a73dba.s3tc.ctex"
+uid="uid://cbk4wf56col5u"
+path.s3tc="res://.godot/imported/placadeabertoefechado_1.png-920bacb7ef4f724a5dc6715f9bcb24bd.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "a6a35cca328ec3a0f05c66dc1d937528"
+"md5": "d956f73b0db8eddf2e1bd1687135c640"
 }
 
 [deps]
 
-source_file="res://Source/Assets/Modelos/Cafeteria/PC/PC antigo comtxt2_0.png"
-dest_files=["res://.godot/imported/PC antigo comtxt2_0.png-ca099ad4b9488f1d1dcbd42236a73dba.s3tc.ctex"]
+source_file="res://Source/Assets/Modelos/Cafeteria/Placa/placadeabertoefechado_1.png"
+dest_files=["res://.godot/imported/placadeabertoefechado_1.png-920bacb7ef4f724a5dc6715f9bcb24bd.s3tc.ctex"]
 
 [params]
 

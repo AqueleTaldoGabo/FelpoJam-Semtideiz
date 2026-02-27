@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cqsmj6o2j32v7"]
+
+[ext_resource type="PackedScene" uid="uid://drbjw2rf004em" path="res://Source/Scenes/Levels/Cenas/mapa.tscn" id="1_o4c3q"]
+[ext_resource type="PackedScene" uid="uid://xscmvrnjddyo" path="res://Source/Assets/Modelos/Cafeteria/PostIT/pouistiiti3.fbx" id="2_qg8sp"]
+[ext_resource type="PackedScene" uid="uid://cbwjw5n5paf03" path="res://Source/Assets/Modelos/Cafeteria/PostIT/pouistiiti4.fbx" id="3_pyaex"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bpvnm"]
+size = Vector3(0.7803955, 2.149475, 2.1325684)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yjf7f"]
+size = Vector3(0.80859375, 2.2324219, 2.1462402)
+
+[node name="PostIt2" type="StaticBody3D" unique_id=1675138029]
+
+[node name="Mapa" parent="." unique_id=905479263 instance=ExtResource("1_o4c3q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.559, 0, 0)
+
+[node name="pouistiiti3" parent="." unique_id=1825397384 instance=ExtResource("2_qg8sp")]
+transform = Transform3D(0.135, 0, 0, 0, 0.10126967, 0.089271806, 0, -0.089271806, 0.10126967, -28.756248, 2.3114152, 3.368122)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="pouistiiti3" unique_id=66926636]
+transform = Transform3D(1.0000005, 0, 0, 0, 1, -2.9802322e-08, 0, 2.9802322e-08, 1, -0.109802246, -0.027742386, -0.11193848)
+shape = SubResource("BoxShape3D_bpvnm")
+
+[node name="pouistiiti4" parent="." unique_id=1701514463 instance=ExtResource("3_pyaex")]
+transform = Transform3D(0.1499659, -0.002110955, 0.0024024511, 0.0031509397, 0.11680871, -0.094052084, -0.00054724986, 0.09408118, 0.116826504, -28.773527, 1.722389, 3.1408472)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="pouistiiti4" unique_id=1687052463]
+transform = Transform3D(1, -1.8277206e-07, 1.5762635e-07, 9.313226e-10, 0.9999981, -1.4901161e-06, -3.0267984e-09, -1.3709068e-06, 0.9999888, -0.09577942, -0.023441315, 0.03162098)
+shape = SubResource("BoxShape3D_yjf7f")

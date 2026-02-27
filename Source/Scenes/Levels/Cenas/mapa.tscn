@@ -7,7 +7,6 @@
 [ext_resource type="Script" uid="uid://cjqmbi23ao7l0" path="res://Source/Scenes/Objects/Scripts/vinyl.gd" id="5_t1v0i"]
 [ext_resource type="PackedScene" uid="uid://lasa5232oxy1" path="res://Source/Assets/Modelos/Cafeteria/Jukekebox.fbx" id="6_8gnbo"]
 [ext_resource type="Texture2D" uid="uid://bpyhnlc77dorb" path="res://Source/Assets/Modelos/vinyl_malcon/vynil fodacomtexturasmalco_3.png" id="6_m5bjq"]
-[ext_resource type="PackedScene" uid="uid://dp01qbh786mvq" path="res://Source/Assets/Modelos/Cafeteria/Caçamba/Cacambadelico.fbx" id="7_lvr8l"]
 [ext_resource type="Texture2D" uid="uid://dpthprfwnjuoh" path="res://Source/Assets/Modelos/vinyl_malcon/vynil fodacomtexturasmalco_4.png" id="7_mlspy"]
 [ext_resource type="Texture2D" uid="uid://na813idjig1t" path="res://Source/Assets/Modelos/vinyl_malcon/vynil fodacomtexturasmalco_5.png" id="8_l1cxn"]
 [ext_resource type="PackedScene" uid="uid://wc2lo6jg0v53" path="res://Source/Scenes/Objects/Cenas/MesaSofa.tscn" id="9_jffxy"]
@@ -1621,9 +1620,6 @@ shadow_mesh = SubResource("ArrayMesh_lkqsn")
 [sub_resource type="BoxShape3D" id="BoxShape3D_m0rgq"]
 size = Vector3(2.0012817, 4.8221436, 2.7562866)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_qjg7v"]
-size = Vector3(1.5577393, 2.4915771, 3.0994873)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v3ye1"]
 resource_name = "Material"
 vertex_color_use_as_albedo = true
@@ -2344,26 +2340,6 @@ shape = SubResource("BoxShape3D_m0rgq")
 
 [node name="Jukekebox" parent="Jukebox" unique_id=1266089135 instance=ExtResource("6_8gnbo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.50064754, -1.9208374, 0.022611618)
-
-[node name="Cacambadelico2" type="StaticBody3D" parent="." unique_id=1085617717]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.410614, 2.3841858e-07, -3.3884826)
-
-[node name="Cacambadelico" parent="Cacambadelico2" unique_id=1313452495 instance=ExtResource("7_lvr8l")]
-transform = Transform3D(0.59971076, 0, -0.01862665, 0, 0.59999996, 0, 0.01862665, 0, 0.59971076, -1.8412132, -0.32395095, -0.45693707)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Cacambadelico2" unique_id=143266351]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39590836, 0.9035034, 1.4320941)
-shape = SubResource("BoxShape3D_qjg7v")
-
-[node name="Cacambadelico3" type="StaticBody3D" parent="." unique_id=294497960]
-transform = Transform3D(0.99950653, 0, 0.03141076, 0, 1, 0, -0.03141076, 0, 0.99950653, -32.349, 0, 4.824)
-
-[node name="Cacambadelico" parent="Cacambadelico3" unique_id=208977884 instance=ExtResource("7_lvr8l")]
-transform = Transform3D(0.59971076, 0, -0.01862665, 0, 0.59999996, 0, 0.01862665, 0, 0.59971076, -1.8412132, -0.32395095, -0.45693707)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Cacambadelico3" unique_id=1066868311]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39590836, 0.9035034, 1.4320941)
-shape = SubResource("BoxShape3D_qjg7v")
 
 [node name="predios" type="StaticBody3D" parent="." unique_id=1805491736]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.011034, -2.3841858e-07, 52.56011)

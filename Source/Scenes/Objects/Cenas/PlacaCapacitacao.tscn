@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cgx12c6rrsb2j"]
+
+[ext_resource type="PackedScene" uid="uid://drbjw2rf004em" path="res://Source/Scenes/Levels/Cenas/mapa.tscn" id="1_1cva3"]
+[ext_resource type="PackedScene" uid="uid://bbtafvpf1vktd" path="res://Source/Assets/Modelos/Cafeteria/Placa/placadeabertoefechado.fbx" id="2_pqvxt"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_blmrn"]
+size = Vector3(0.56103516, 17.42926, 15.360718)
+
+[node name="PlacaCapacitacao" type="StaticBody3D" unique_id=222815365]
+
+[node name="Mapa" parent="." unique_id=905479263 instance=ExtResource("1_1cva3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.559, 0, 0)
+
+[node name="placadeabertoefechado" parent="." unique_id=1974413879 instance=ExtResource("2_pqvxt")]
+transform = Transform3D(0.145, 0, 0, 0, 0.145, 0, 0, 0, 0.145, 4.931246, 0.57733935, 0.2807334)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="placadeabertoefechado" unique_id=1756653926]
+transform = Transform3D(1.0000004, 0, 0, 0, 1.0000004, 0, 0, 0, 1.0000004, 0.21948624, 4.943696, -0.008118629)
+shape = SubResource("BoxShape3D_blmrn")
