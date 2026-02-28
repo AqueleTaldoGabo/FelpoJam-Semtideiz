@@ -136,6 +136,10 @@ rotation = 3.1415927
 icon = ExtResource("4_rqkf0")
 flat = true
 
+[node name="Timer" type="Timer" parent="." unique_id=1147679914]
+wait_time = 2.0
+one_shot = true
+
 [connection signal="pressed" from="Control/Secret" to="." method="_on_secret_pressed"]
 [connection signal="pressed" from="Control/HboxCont1/BTNesquerda1" to="." method="_on_bt_nesquerda_1_pressed"]
 [connection signal="pressed" from="Control/HboxCont1/BTNdireita1" to="." method="_on_bt_ndireita_1_pressed"]

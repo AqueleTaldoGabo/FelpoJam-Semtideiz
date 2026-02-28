@@ -12,6 +12,8 @@ var secret = false
 var current_text: String = ""
 var abrido = false
 var vermelho = true
+var ativo1 = false
+var ativo2 = false
 
 var placa
 var cont_vermelho = [false, false, false]
@@ -47,8 +49,7 @@ func animar_texto(textos):
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("abrir_pagina"):
-		if !vermelho:
-			abrido = true
+		abrido = true
 
 func _ready() -> void:
 	await get_tree().create_timer(2).timeout
@@ -168,15 +169,18 @@ func _on_mudar_algo(valor, valor2):
 		if !has_node("/root/Cafeteria/Corpo"):
 			get_tree().current_scene.add_child(corpo.instantiate())
 		
-	if carimbas.count(true) == 6:
-		ControleMusica.trocar_musica(musica2)
-	if carimbas.count(true) == 9:
-		ControleMusica.trocar_musica(musica3)
+	if carimbas.count(true) == 6 and !ativo1:
+		ControleMusica.trocar_com_fade(musica2)
+		ativo1 = true
+	if carimbas.count(true) == 9 and !ativo2:
+		ControleMusica.trocar_com_fade(musica3)
+		ativo2 = true
 	
 	if cont_vermelho.count(true) == 3 and secret == false:
 		await get_node("/root/Folha").tree_exited
 		abrido = false
 		$Player.vermelho = true
+		
 		if vermelho:
 			animar_texto(["Volte as folhas"])
 			vermelho = false

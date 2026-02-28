@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dos0ljnflk0ud"
+path="res://.godot/imported/batida do coraçãoacelerado.ogg-b7a8b8ff949b7b881ec0dfee858d2252.oggvorbisstr"
+
+[deps]
+
+source_file="res://Source/Assets/Sons/batida do coraçãoacelerado.ogg"
+dest_files=["res://.godot/imported/batida do coraçãoacelerado.ogg-b7a8b8ff949b7b881ec0dfee858d2252.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

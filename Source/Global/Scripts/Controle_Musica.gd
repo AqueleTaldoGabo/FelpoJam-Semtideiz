@@ -20,6 +20,10 @@ func trocar_musica(nova_stream: AudioStream):
 	await fade_out()
 	player.stream = nova_stream
 	player.play()
+	
+func trocar_com_fade(nova_stream: AudioStream):
+	player.stream = nova_stream
+	player.play()
 
 func pausa_musica():
 	temp = player.get_playback_position()

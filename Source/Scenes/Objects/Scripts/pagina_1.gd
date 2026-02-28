@@ -6,9 +6,9 @@ signal Porta
 
 const PAGINA1 = preload("res://Source/Assets/Imagens/MOLDE_DA_CARTA_TUTORIAL.png")
 const PAGINA2 = preload("res://Source/Assets/Imagens/mocadesaparecida.png")
-const Carimbo = preload("res://Source/Assets/Sons/carimbagemclassica1.ogg")
+const porta = preload("res://Source/Assets/Sons/portaabrindo.ogg")
 var ladoFolha = false
-var fim
+var fim 
 
 func _ready() -> void:
 	if has_node("/root/Fim"):
@@ -16,10 +16,11 @@ func _ready() -> void:
 		if fim == 2:
 			$MoldeDaCartaTutorial.texture = preload("res://Source/Assets/Imagens/cartadedemissaoending.png")
 		elif fim == 3:
+			$Label.position = Vector2(-60, 0)
 			$MoldeDaCartaTutorial.hide()
 			$Exit.hide()
-			await get_tree().create_timer(1.1).timeout
-			ControleSfx.toca_SFX(Carimbo)
+			await get_tree().create_timer(0.75).timeout
+			ControleSfx.toca_SFX(porta)
 			await get_tree().create_timer(3).timeout
 			MudarScena.mudarMenu()
 
