@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://g8c1wljyrk2j" path="res://Source/Scenes/Objects/Scripts/placadeabertoefechado.gd" id="1_pqvxt"]
 [ext_resource type="Texture2D" uid="uid://ps6p6ra21b8h" path="res://Source/Assets/Modelos/Cafeteria/Placa/placadeabertoefechado_0.png" id="2_blmrn"]
 [ext_resource type="Texture2D" uid="uid://cbk4wf56col5u" path="res://Source/Assets/Modelos/Cafeteria/Placa/placadeabertoefechado_1.png" id="3_xwup7"]
+[ext_resource type="AudioStream" uid="uid://blxsdx80fd6ke" path="res://Source/Assets/Sons/portafodadestrancando.ogg" id="4_blmrn"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_blmrn"]
 size = Vector3(6.3374014, 17.42926, 15.360718)
@@ -147,6 +148,13 @@ mesh = SubResource("ArrayMesh_udrmt")
 [node name="Cylinder" type="MeshInstance3D" parent="placadeabertoefechado" unique_id=606846323]
 transform = Transform3D(6.711083e-07, 4.921611e-07, 11.259329, 2.0000586e-14, 11.259329, -4.921611e-07, -11.259329, 6.0001754e-14, 6.711083e-07, 0, 4.7079844, 0)
 mesh = SubResource("ArrayMesh_ajqjt")
+
+[node name="SomPorta" type="AudioStreamPlayer3D" parent="." unique_id=789695944]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.960437, 0, 0)
+stream = ExtResource("4_blmrn")
+volume_db = 10.0
+unit_size = 20.0
+autoplay = true
 
 [connection signal="interagido" from="." to="." method="_on_interagido"]
 [connection signal="olhado" from="." to="." method="_on_olhado"]

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dlrji6mwjabty" path="res://Source/Scenes/Levels/Scripts/cafeteria.gd" id="1_bn0h7"]
 [ext_resource type="PackedScene" uid="uid://b78keg0ignt8j" path="res://Source/Player/Cenas/player.tscn" id="1_n7cls"]
 [ext_resource type="Texture2D" uid="uid://bw7f8cobp7k6l" path="res://Source/Assets/Sprites/Chao_teste_quase_interrogacao2.png" id="3_t2fxh"]
+[ext_resource type="AudioStream" uid="uid://cdqjoxvyh4thx" path="res://Source/Assets/Música/whitenoise.ogg" id="4_eh46y"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_mpv67"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -21,11 +22,16 @@ ambient_light_energy = 0.0
 tonemap_mode = 2
 tonemap_exposure = 0.6
 fog_enabled = true
+fog_mode = 1
 fog_light_color = Color(0.6078325, 0.20868835, 0.19426334, 1)
-fog_light_energy = 0.0
-fog_sun_scatter = 0.3
-fog_density = 0.005
-volumetric_fog_density = 0.0512
+fog_light_energy = 0.49
+fog_sun_scatter = 0.11
+fog_density = 0.6045
+fog_depth_curve = 0.08780039
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.02
+volumetric_fog_emission_energy = 0.5
+volumetric_fog_anisotropy = 0.5
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2elm2"]
 size = Vector3(47.17493, 2, 19.659576)
@@ -160,3 +166,8 @@ spot_angle = 61.07
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1148752287]
 transform = Transform3D(-4, 0, 6.039832e-07, 0, 0.001, 0, -6.039832e-07, 0, -4, 9.855274, 0, 0.31639484)
 mesh = SubResource("CylinderMesh_s0fqb")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1447726607]
+stream = ExtResource("4_eh46y")
+volume_db = 8.0
+bus = &"Musica"

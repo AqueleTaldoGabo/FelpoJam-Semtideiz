@@ -23,7 +23,7 @@ var descarte = preload("res://Source/Scenes/Objects/Cenas/Descarte.tscn")
 var postit = preload("res://Source/Scenes/Objects/Cenas/Postit.tscn")
 var postit2 = preload("res://Source/Scenes/Objects/Cenas/PostIt2.tscn")
 var terminal = preload("res://Source/Scenes/Objects/Cenas/Terminal.tscn")
-var corpo = preload("res://Source/Assets/Modelos/Cafeteria/corpo/Corpo.fbx")
+var corpo = preload("res://Source/Scenes/Objects/Cenas/Corpo.tscn")
 
 func animar_texto(textos):
 	for frase in textos:
@@ -58,7 +58,7 @@ func _on_mudar_algo(valor, valor2):
 		if !has_node("/root/Cafeteria/Mapa"):
 			carimbada(0)
 			get_tree().current_scene.add_child(mapa.instantiate())
-			ControleMusica.trocar_musica(whitenoise)
+			$AudioStreamPlayer.play()
 	elif valor == 7:
 		carimbada(1)
 		if cont_vermelho[0] == false:
@@ -78,7 +78,10 @@ func _on_mudar_algo(valor, valor2):
 			placa = placaentrada.instantiate()
 			if fim:
 				placa.saida = true
+			await get_tree().create_timer(0.1).timeout
 			get_tree().current_scene.add_child(placa)
+			
+
 	elif valor == -8:
 		carimbada(2)
 		if has_node("/root/Cafeteria/PlacaCapacitacao"):
@@ -96,18 +99,21 @@ func _on_mudar_algo(valor, valor2):
 	elif valor == 10:
 		carimbada(4)
 		if !has_node("/root/Cafeteria/Descarte"):
-			var porta = get_node("/root/Cafeteria/mapa/portaMALCONOVA3")
-			porta.hide()
-			porta.set_collision_layer_value(1, false)
+			if has_node("/root/Cafeteria/Mapa/portaMALCONOVA3"):
+				var porta = get_node("/root/Cafeteria/Mapa/portaMALCONOVA3")
+				porta.hide()
+				porta.set_collision_layer_value(1, false)
+				await get_tree().create_timer(0.1).timeout
 			get_tree().current_scene.add_child(descarte.instantiate())
 			
 	elif valor == -10:
 		carimbada(4)
 		if has_node("/root/Cafeteria/Descarte"):
 			var noode = get_node("/root/Cafeteria/Descarte")
-			var porta = get_node("/root/Cafeteria/mapa/portaMALCONOVA3")
-			porta.show()
-			porta.set_collision_layer_value(1, true)
+			if has_node("/root/Cafeteria/Mapa/portaMALCONOVA3"):
+				var porta = get_node("/root/Cafeteria/Mapa/portaMALCONOVA3")
+				porta.show()
+				porta.set_collision_layer_value(1, true)
 			noode.queue_free()
 	elif valor == 11:
 		carimbada(5)
@@ -133,7 +139,6 @@ func _on_mudar_algo(valor, valor2):
 		carimbada(7)
 		if !has_node("/root/Cafeteria/PostIt2"):
 			get_tree().current_scene.add_child(postit2.instantiate())
-			ControleSfx.toca_SFX(conversa)
 	elif valor == -13:
 		carimbada(7)
 		if has_node("/root/Cafeteria/PostIt2"):

@@ -9,10 +9,11 @@ func _on_interagido(body: Variant) -> void:
 		quant_ver = cena1.cont_vermelho
 		MudarScena.mudarFim(quant_ver)
 	else:
-		Transicao.transicao()
-		await Transicao.fade_acabou
-		var player_pos = get_node("/root/Cafeteria/Player")
-		player_pos.global_position = Vector3(3.891, 0.386, -0.039)
+		if !has_node("/root/Folha"):
+			Transicao.transicao()
+			await Transicao.fade_acabou
+			var player_pos = get_node("/root/Cafeteria/Player")
+			player_pos.global_position = Vector3(3.891, 0.386, -0.039)
 	
 
 func _on_olhado(bolean: Variant) -> void:

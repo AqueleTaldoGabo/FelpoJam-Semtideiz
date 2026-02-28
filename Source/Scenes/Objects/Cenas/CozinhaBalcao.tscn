@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://43f4c7axr7h3" path="res://Source/Assets/Modelos/Cafeteria/Fogao/fogaogeladeirapronto.fbx" id="4_p6mip"]
 [ext_resource type="PackedScene" uid="uid://bktgl41ch21x7" path="res://Source/Assets/Modelos/Cafeteria/ArmarioDeCha/armariodechaoprontotxt.fbx" id="5_g0ec2"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_dwm0c"]
+size = Vector3(1.4458618, 1.496582, 5.5653687)
+
 [node name="CozinhaBalcao" type="StaticBody3D" unique_id=2017204322]
 
 [node name="Armarin de tetoquasepronto" parent="." unique_id=1068016911 instance=ExtResource("1_cc2i2")]
@@ -28,3 +31,7 @@ transform = Transform3D(0.49, 0, 0, 0, 0.49, 0, 0, 0, 0.49, -17.730764, 4.768371
 
 [node name="armariodechaoprontotxt2" parent="." unique_id=201752219 instance=ExtResource("5_g0ec2")]
 transform = Transform3D(0.49, 0, 0, 0, 0.49, 0, 0, 0, 0.49, -17.730764, 4.7683716e-07, 6.067708)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1809251588]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.693268, 0.7591804, 8.132429)
+shape = SubResource("BoxShape3D_dwm0c")

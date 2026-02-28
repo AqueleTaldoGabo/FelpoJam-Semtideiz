@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cqsmj6o2j32v7"]
 
 [ext_resource type="PackedScene" uid="uid://xscmvrnjddyo" path="res://Source/Assets/Modelos/Cafeteria/PostIT/pouistiiti3.fbx" id="2_qg8sp"]
+[ext_resource type="AudioStream" uid="uid://cbbd4wvwcood7" path="res://Source/Assets/Sons/gibberishdequalidade.ogg" id="3_o4c3q"]
 [ext_resource type="PackedScene" uid="uid://cbwjw5n5paf03" path="res://Source/Assets/Modelos/Cafeteria/PostIT/pouistiiti4.fbx" id="3_pyaex"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bpvnm"]
@@ -24,3 +25,9 @@ transform = Transform3D(0.1499659, -0.002110955, 0.0024024511, 0.0031509397, 0.1
 [node name="CollisionShape3D" type="CollisionShape3D" parent="pouistiiti4" unique_id=1687052463]
 transform = Transform3D(1, -1.8277206e-07, 1.5762635e-07, 9.313226e-10, 0.9999981, -1.4901161e-06, -3.0267984e-09, -1.3709068e-06, 0.9999888, -0.09577942, -0.023441315, 0.03162098)
 shape = SubResource("BoxShape3D_yjf7f")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=2080235944]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.566849, 1.960984, 3.1865115)
+stream = ExtResource("3_o4c3q")
+volume_db = 20.0
+autoplay = true

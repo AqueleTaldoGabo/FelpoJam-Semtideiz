@@ -10,5 +10,6 @@ transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=991265559]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2167704, 0)
 light_energy = 1.602
+light_volumetric_fog_energy = 0.7
 shadow_enabled = true
 omni_range = 12.91

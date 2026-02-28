@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://b5udjkj61nvrw"]
+[gd_scene format=4 uid="uid://ch5ukbm0ne0wp"]
 
 [ext_resource type="Texture2D" uid="uid://db2fey0iagjwn" path="res://Source/Assets/Modelos/Cafeteria/caneca/CANECA_0.png" id="1_ykkyc"]
 [ext_resource type="Texture2D" uid="uid://b4fnhfthckicq" path="res://Source/Assets/Modelos/Cafeteria/Quadro/quadropronto_0.png" id="3_4hyth"]
@@ -890,7 +890,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ioaax")
 
 [node name="Canecas" type="Node3D" unique_id=1514194909]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.356, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.4926434, 0, 0)
 
 [node name="CANECA" type="StaticBody3D" parent="." unique_id=1591776888]
 transform = Transform3D(-0.058971807, 0, 0.08076092, 0, 0.1, 0, -0.08076092, 0, -0.058971807, -17.794333, 1.2388076, 6.482808)

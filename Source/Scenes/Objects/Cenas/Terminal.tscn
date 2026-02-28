@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://iehuobbl6r6l"]
 
 [ext_resource type="PackedScene" uid="uid://bvn7yplt51tek" path="res://Source/Assets/Modelos/Cafeteria/PC/PC antigo comtxt2.fbx" id="2_1xtda"]
+[ext_resource type="AudioStream" uid="uid://c6yw0n11k78bw" path="res://Source/Assets/Sons/SONSDECHAVE2.ogg" id="2_xashf"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xashf"]
 size = Vector3(23.372284, 19.56836, 14.721619)
@@ -13,3 +14,9 @@ transform = Transform3D(-0.034075398, 0, 0.007991687, 0, 0.035, 0, -0.007991687,
 [node name="CollisionShape3D" type="CollisionShape3D" parent="PC antigo comtxt3" unique_id=1655159678]
 transform = Transform3D(0.99999964, 0, 8.940697e-08, 0, 1, 0, -8.940697e-08, 0, 0.99999964, -6.4362183, 9.28418, -0.032714844)
 shape = SubResource("BoxShape3D_xashf")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=749384709]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.490584, 0.42093748, 1.4086577)
+stream = ExtResource("2_xashf")
+volume_db = 14.0
+autoplay = true

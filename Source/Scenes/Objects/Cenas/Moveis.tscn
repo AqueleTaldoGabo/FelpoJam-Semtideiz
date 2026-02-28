@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://wc2lo6jg0v53" path="res://Source/Scenes/Objects/Cenas/MesaSofa.tscn" id="1_xfjwa"]
 [ext_resource type="PackedScene" uid="uid://2d8dc7ahya7r" path="res://Source/Scenes/Objects/Cenas/Mesinhas.tscn" id="2_4eodd"]
 [ext_resource type="PackedScene" uid="uid://big88fbxcx054" path="res://Source/Scenes/Objects/Cenas/MesaCadeira.tscn" id="3_0hxma"]
-[ext_resource type="PackedScene" uid="uid://c7k3cb5nx7xjh" path="res://Source/Scenes/Objects/Cenas/Bancos.tscn" id="4_gchdx"]
+[ext_resource type="PackedScene" path="res://Source/Scenes/Objects/Cenas/Bancos.res" id="4_gchdx"]
 [ext_resource type="PackedScene" uid="uid://cryn2etbqk201" path="res://Source/Scenes/Objects/Cenas/CozinhaBalcao.tscn" id="5_rmfha"]
 
 [node name="Moveis" type="Node3D" unique_id=1082863023]

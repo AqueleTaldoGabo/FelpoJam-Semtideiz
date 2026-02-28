@@ -1,6 +1,7 @@
-[gd_scene format=3 uid="uid://dhs8qdxufmmy6"]
+[gd_scene format=3 uid="uid://cyhbhtck0twcj"]
 
 [ext_resource type="PackedScene" uid="uid://dp01qbh786mvq" path="res://Source/Assets/Modelos/Cafeteria/Caçamba/Cacambadelico.fbx" id="2_te5vl"]
+[ext_resource type="AudioStream" uid="uid://blxsdx80fd6ke" path="res://Source/Assets/Sons/portafodadestrancando.ogg" id="3_f1pbj"]
 [ext_resource type="PackedScene" uid="uid://qy2gbwg1fmqw" path="res://Source/Assets/Modelos/Cafeteria/Comanda/comanda.fbx" id="3_te5vl"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_f1pbj"]
@@ -37,3 +38,10 @@ transform = Transform3D(0.12598288, 0, 0.061059922, 0, 0.14, 0, -0.061059922, 0,
 [node name="CollisionShape3D" type="CollisionShape3D" parent="comanda" unique_id=2109362576]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.22599792, -0.1823731, -0.15782166)
 shape = SubResource("BoxShape3D_r3qr4")
+
+[node name="PortaSom" type="AudioStreamPlayer3D" parent="." unique_id=1506804781]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.889185, 0, -2.026096)
+stream = ExtResource("3_f1pbj")
+volume_db = 80.0
+unit_size = 50.0
+autoplay = true
