@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://dolfnli2vtgsa" path="res://Source/Assets/Sprites/Predios.png" id="14_l6wx8"]
 [ext_resource type="Script" uid="uid://birr1w5y7owhp" path="res://Source/Scenes/Levels/Scripts/Telefone.gd" id="16_pc6nv"]
 [ext_resource type="AudioStream" uid="uid://blxsdx80fd6ke" path="res://Source/Assets/Sons/portafodadestrancando.ogg" id="16_vc1b1"]
+[ext_resource type="PackedScene" uid="uid://cvhvj420v1iol" path="res://Source/Assets/Modelos/Cafeteria/Carimbo/CarimboComTexture.fbx" id="17_pc6nv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ovw4t"]
 size = Vector3(60, 2, 60)
@@ -134,6 +135,9 @@ emission_angle_filter_attenuation_db = 0.0
 
 [node name="TelefoneSom" type="AudioStreamPlayer" parent="." unique_id=119877849]
 script = ExtResource("16_pc6nv")
+
+[node name="CarimboComTexture" parent="." unique_id=1465757732 instance=ExtResource("17_pc6nv")]
+transform = Transform3D(-0.040801093, -0.018974062, -0.0005058014, 0, 0.0011991624, -0.04498402, 0.018980801, -0.04078661, -0.0010872697, -5.004552, 1.4289979, 4.496494)
 
 [connection signal="interagido" from="Telefone" to="." method="_on_telefone_interagido"]
 [connection signal="interagido" from="Porta" to="." method="_on_porta_interagido"]

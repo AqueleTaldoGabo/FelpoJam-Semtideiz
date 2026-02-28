@@ -29,6 +29,7 @@ unit_size = 20.0
 autoplay = true
 
 [node name="Postits" type="StaticBody3D" parent="." unique_id=1301338872]
+transform = Transform3D(-1.0000001, 0, -8.7422784e-08, 0, 1, 0, 8.7422784e-08, 0, -1.0000001, -24.09, -0.815, 1.96)
 script = ExtResource("2_yjf7f")
 
 [node name="pouistiiti1" parent="Postits" unique_id=1301518857 instance=ExtResource("3_1m6sl")]
@@ -100,5 +101,9 @@ shape = SubResource("BoxShape3D_bpvnm")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Postits" unique_id=1687052463]
 transform = Transform3D(0.1499659, -0.0021109818, 0.002402451, 0.00315094, 0.116808616, -0.094051205, -0.0005472501, 0.09408084, 0.11682505, -28.787766, 1.716375, 3.1423883)
 shape = SubResource("BoxShape3D_yjf7f")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1859803143]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0923796, 1.4124784, -1.5416421)
+light_energy = 0.89
 
 [connection signal="interagido" from="Postits" to="Postits" method="_on_interagido"]

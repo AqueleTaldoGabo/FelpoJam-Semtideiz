@@ -154,4 +154,20 @@ transform = Transform3D(0.0070036724, -0.07549731, 0.025516745, 0.07965797, 0.00
 [node name="pouistiiti3" parent="Postits" unique_id=37853142 instance=ExtResource("7_bi78n")]
 transform = Transform3D(-0.00022706085, -0.04336531, 0.0901077, 0.09999863, -0.000523593, 0, 0.00047179763, 0.09010647, 0.043365907, -9.063, 1.204, 2.665)
 
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1447586639]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.889824, 1.6847432, 2.5180738)
+light_energy = 0.675
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=142234613]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.390019, 1.6847432, -5.062581)
+light_energy = 0.675
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="." unique_id=951028600]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1517549, 1.6847432, 2.0169353)
+light_energy = 0.675
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="." unique_id=2130083250]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2591516, 1.6847432, 9.013068)
+light_energy = 0.675
+
 [connection signal="interagido" from="Postits" to="Postits" method="_on_interagido"]

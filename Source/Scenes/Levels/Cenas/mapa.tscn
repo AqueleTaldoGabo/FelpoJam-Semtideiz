@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://big88fbxcx054" path="res://Source/Scenes/Objects/Cenas/MesaCadeira.tscn" id="11_122mj"]
 [ext_resource type="PackedScene" uid="uid://cryn2etbqk201" path="res://Source/Scenes/Objects/Cenas/CozinhaBalcao.tscn" id="13_vxpfo"]
 [ext_resource type="Texture2D" uid="uid://2vb6fpohmk2l" path="res://Source/Assets/Modelos/Cafeteria/Projetoprontotemqueestarprontoeunaoguentomais_0.png" id="14_us4hl"]
+[ext_resource type="PackedScene" uid="uid://b7bwsd8kiu6h0" path="res://Source/Scenes/Objects/Cenas/LuzFora.tscn" id="15_dwvy1"]
 [ext_resource type="Texture2D" uid="uid://x0ymn2rhvguw" path="res://Source/Assets/Modelos/Cafeteria/Projetoprontotemqueestarprontoeunaoguentomais_1.png" id="15_iodkp"]
 [ext_resource type="Texture2D" uid="uid://cqto6gg062wei" path="res://Source/Assets/Modelos/Cafeteria/Projetoprontotemqueestarprontoeunaoguentomais_2.png" id="16_bu02u"]
 [ext_resource type="Texture2D" uid="uid://b01e0acv4joc" path="res://Source/Assets/Modelos/Cafeteria/Projetoprontotemqueestarprontoeunaoguentomais_3.png" id="17_pgcfo"]
@@ -24,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://dh070ytw4tgny" path="res://Source/Assets/Modelos/porta_Malcon/portaMALCONOVA2_0.png" id="30_fcpcy"]
 [ext_resource type="Texture2D" uid="uid://cartkqtpm257u" path="res://Source/Assets/Modelos/Cafeteria/Condimentos/Condimentosprontos_3.png" id="30_w1tu3"]
 [ext_resource type="Texture2D" uid="uid://cgp3rfo73qqc4" path="res://Source/Assets/Modelos/Cafeteria/Condimentos/Condimentosprontos_4.png" id="31_1xnkm"]
+[ext_resource type="PackedScene" uid="uid://ba0fud1pftiry" path="res://Source/Scenes/Objects/Cenas/CorpoProfissional.tscn" id="32_3eogv"]
 [ext_resource type="Texture2D" uid="uid://f2ihha0wwjq6" path="res://Source/Assets/Modelos/Cafeteria/Condimentos/Condimentosprontos_5.png" id="32_yxqsl"]
 [ext_resource type="Texture2D" uid="uid://cpva37rwda5d2" path="res://Source/Assets/Modelos/Cafeteria/Condimentos/Condimentosprontos_6.png" id="33_sqma1"]
 [ext_resource type="Texture2D" uid="uid://btyp6iite8v8v" path="res://Source/Assets/Modelos/Cafeteria/Papel/papel derolo_0.png" id="34_8moqn"]
@@ -1578,6 +1580,9 @@ mesh = SubResource("ArrayMesh_5cwk6")
 transform = Transform3D(7.819026, 1.2898707e-13, -8.742278e-07, 6.83561e-07, -1.623033e-06, 9.999999, 0, 9.076657, 1.1920929e-06, 0, 0, 0)
 mesh = SubResource("ArrayMesh_cidwt")
 
+[node name="LuzFora" parent="Projetoprontotemqueestarprontoeunaoguentomais" unique_id=408833533 instance=ExtResource("15_dwvy1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.261974, 2.6481807, 1.1135824)
+
 [node name="Jukebox" type="StaticBody3D" parent="." unique_id=2084941884]
 transform = Transform3D(0.017676521, 0, -0.49968743, 0, 0.5, 0, 0.49968743, 0, 0.017676521, -3.0285885, 0.9604193, -6.0773964)
 script = ExtResource("5_t1v0i")
@@ -1780,8 +1785,11 @@ transform = Transform3D(3.7195534e-06, -3.0308385e-07, -6.9337497, -1.23168145e-
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2114868, 0.10748291)
 shape = SubResource("BoxShape3D_dwvy1")
 
-[node name="OmniLight3D3" type="OmniLight3D" parent="." unique_id=580868041]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5783982, 2.481765, 0.28174675)
+[node name="LuzFora" parent="." unique_id=1177152707 instance=ExtResource("15_dwvy1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15103388, 0, 0)
+
+[node name="CorpoProfissional" parent="." unique_id=1284767652 instance=ExtResource("32_3eogv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6120176, -0.20392394, -0.011631012)
 
 [connection signal="interagido" from="Jukebox" to="Jukebox" method="_on_interagido"]
 [connection signal="interagido" from="portaMALCONOVA2" to="portaMALCONOVA2" method="_on_interagido"]

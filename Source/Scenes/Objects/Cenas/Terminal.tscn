@@ -136,6 +136,10 @@ grow_vertical = 2
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_pek3j")
 
+[node name="OmniLight3D" type="OmniLight3D" parent="PC" unique_id=107726748]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.28193, 2.1990585, 8.780622)
+light_energy = 0.47
+
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=749384709]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.490584, 0.42093748, 1.4086577)
 stream = ExtResource("2_xashf")
