@@ -1,9 +1,9 @@
 [gd_scene format=4 uid="uid://iehuobbl6r6l"]
 
 [ext_resource type="Texture2D" uid="uid://cq8slahodyo5b" path="res://Source/Assets/Modelos/Cafeteria/Chave/chaves_0.png" id="1_hcvl5"]
-[ext_resource type="Script" uid="uid://cwrr8d0rwyl28" path="res://Source/Scenes/Objects/chaves.gd" id="1_r67sy"]
+[ext_resource type="Script" uid="uid://cwrr8d0rwyl28" path="res://Source/Scenes/Objects/Scripts/chaves.gd" id="1_r67sy"]
 [ext_resource type="PackedScene" uid="uid://bvn7yplt51tek" path="res://Source/Assets/Modelos/Cafeteria/PC/PC antigo comtxt2.fbx" id="2_1xtda"]
-[ext_resource type="Script" uid="uid://d0l0wf0ekhtua" path="res://Source/Scenes/Objects/Terminal.gd" id="2_kd4bp"]
+[ext_resource type="Script" uid="uid://d0l0wf0ekhtua" path="res://Source/Scenes/Objects/Scripts/Terminal.gd" id="2_kd4bp"]
 [ext_resource type="AudioStream" uid="uid://c6yw0n11k78bw" path="res://Source/Assets/Sons/SONSDECHAVE2.ogg" id="2_xashf"]
 [ext_resource type="Texture2D" uid="uid://285nquqa4vop" path="res://Source/Assets/Imagens/terminal.png" id="3_pek3j"]
 
