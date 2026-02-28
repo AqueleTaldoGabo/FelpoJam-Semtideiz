@@ -17,6 +17,7 @@ var ease_curve: float = 0.1
 var velocidade_objeto = Vector3.ZERO
 var _adjacency_matrix_player 
 var vermelho = false
+var foi_vermelho = false
 
 func _ready() -> void:
 	materialshader.set_shader_parameter("cor_a", corA)
@@ -31,17 +32,21 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("abrir_pagina") and folha and !get_tree().root.has_node("Folha"):
 		var main = get_tree().current_scene
 		var PAGINA = preload("uid://c1laawrklqnhp").instantiate()
+		if foi_vermelho:
+			PAGINA.comeco = true
+		
 		if vermelho:
 			PAGINA.vermelho = true
+			foi_vermelho= true
 		$"Cabeça/Camera3D/CanvasLayer/Label".text = ""
 		PAGINA.folha = folhas
 		if _adjacency_matrix_player != null:
 			PAGINA._adjacency_matrix = _adjacency_matrix_player
 		PAGINA.mudarPag()
+		$"Cabeça/Camera3D/CanvasLayer/crosshair".hide()
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 		PAGINA.connect("mudar_algo", Callable(main, "_on_mudar_algo"))
 		ControleSfx.toca_Papel()
-		$"Cabeça/Camera3D/CanvasLayer/crosshair".hide()
 		get_tree().root.add_child(PAGINA)
 		
 	
