@@ -8,6 +8,7 @@ const MUSICA2 = preload("res://Source/Assets/Música/musicaquarto.ogg")
 @onready var Cena1 = preload("res://Source/Scenes/Levels/Cenas/Cena1.tscn")
 @onready var Menu = preload("res://Source/Scenes/Levels/Cenas/Menu.tscn")
 @onready var Cena2 = preload("res://Source/Scenes/Levels/Cenas/Cena2.tscn")
+@onready var Final = preload("res://Source/Scenes/Levels/Cenas/Fim.tscn")
 
 func mudarCafeteria():
 	Transicao.transicao()
@@ -50,4 +51,14 @@ func mudarFim(quant_ver):
 	get_tree().root.add_child(Cen2)
 	get_tree().current_scene = Cen2
 
+func mudarFinal(fim):
+	Transicao.transicao()
+	ControleMusica.fade_out()
+	await Transicao.fade_acabou
+	var Finalizacao = Final.instantiate()
+	var tela = Finalizacao.get_node("Pagina1")
+	tela.fim = fim
+	get_tree().current_scene.queue_free()
+	get_tree().root.add_child(Finalizacao)
+	get_tree().current_scene = Finalizacao
 	

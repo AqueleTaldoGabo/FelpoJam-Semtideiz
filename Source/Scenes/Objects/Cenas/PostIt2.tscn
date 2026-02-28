@@ -1,8 +1,17 @@
 [gd_scene format=3 uid="uid://cqsmj6o2j32v7"]
 
-[ext_resource type="PackedScene" uid="uid://xscmvrnjddyo" path="res://Source/Assets/Modelos/Cafeteria/PostIT/pouistiiti3.fbx" id="2_qg8sp"]
+[ext_resource type="Script" uid="uid://clqj5hhjkfaw0" path="res://Source/Scenes/Objects/Scripts/interativos.gd" id="2_yjf7f"]
+[ext_resource type="PackedScene" uid="uid://cja3uw73wfkwl" path="res://Source/Assets/Modelos/Cafeteria/PostIT/pouistiiti1.fbx" id="3_1m6sl"]
 [ext_resource type="AudioStream" uid="uid://cbbd4wvwcood7" path="res://Source/Assets/Sons/gibberishdequalidade.ogg" id="3_o4c3q"]
-[ext_resource type="PackedScene" uid="uid://cbwjw5n5paf03" path="res://Source/Assets/Modelos/Cafeteria/PostIT/pouistiiti4.fbx" id="3_pyaex"]
+[ext_resource type="PackedScene" uid="uid://i8jqfce3weny" path="res://Source/Assets/Modelos/Cafeteria/PostIT/pouistiiti2.fbx" id="4_carfx"]
+[ext_resource type="Texture2D" uid="uid://d3ge04atjq8jx" path="res://Source/Assets/Modelos/Cafeteria/PostIT/pouistiiti1_0.png" id="5_4h638"]
+[ext_resource type="FontFile" uid="uid://c0b1xlphy8isa" path="res://Source/Assets/fonts/OldNewspaperTypes.ttf" id="6_g6mgc"]
+[ext_resource type="Texture2D" uid="uid://lksmx26i68m7" path="res://Source/Assets/Modelos/Cafeteria/PostIT/pouistiiti2_0.png" id="7_iig38"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jf0ln"]
+font = ExtResource("6_g6mgc")
+font_size = 25
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bpvnm"]
 size = Vector3(0.7803955, 2.149475, 2.1325684)
@@ -12,22 +21,84 @@ size = Vector3(0.80859375, 2.2324219, 2.1462402)
 
 [node name="PostIt2" type="StaticBody3D" unique_id=1675138029]
 
-[node name="pouistiiti3" parent="." unique_id=1825397384 instance=ExtResource("2_qg8sp")]
-transform = Transform3D(0.135, 0, 0, 0, 0.10126967, 0.089271806, 0, -0.089271806, 0.10126967, -28.756248, 2.3114152, 3.368122)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="pouistiiti3" unique_id=66926636]
-transform = Transform3D(1.0000005, 0, 0, 0, 1, -2.9802322e-08, 0, 2.9802322e-08, 1, -0.109802246, -0.027742386, -0.11193848)
-shape = SubResource("BoxShape3D_bpvnm")
-
-[node name="pouistiiti4" parent="." unique_id=1701514463 instance=ExtResource("3_pyaex")]
-transform = Transform3D(0.1499659, -0.002110955, 0.0024024511, 0.0031509397, 0.11680871, -0.094052084, -0.00054724986, 0.09408118, 0.116826504, -28.773527, 1.722389, 3.1408472)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="pouistiiti4" unique_id=1687052463]
-transform = Transform3D(1, -1.8277206e-07, 1.5762635e-07, 9.313226e-10, 0.9999981, -1.4901161e-06, -3.0267984e-09, -1.3709068e-06, 0.9999888, -0.09577942, -0.023441315, 0.03162098)
-shape = SubResource("BoxShape3D_yjf7f")
-
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=2080235944]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.566849, 1.960984, 3.1865115)
 stream = ExtResource("3_o4c3q")
-volume_db = 20.0
+volume_db = 10.0
+unit_size = 20.0
 autoplay = true
+
+[node name="Postits" type="StaticBody3D" parent="." unique_id=1301338872]
+script = ExtResource("2_yjf7f")
+
+[node name="pouistiiti1" parent="Postits" unique_id=1301518857 instance=ExtResource("3_1m6sl")]
+transform = Transform3D(0.14996724, -0.0019579658, 0.0024481835, 0.0030601036, 0.11686064, -0.09399057, -0.0006804399, 0.09401998, 0.11687505, -28.774, 1.722, 3.141)
+
+[node name="pouistiiti2" parent="Postits" unique_id=1757880152 instance=ExtResource("4_carfx")]
+transform = Transform3D(0.135, 0, 0, 0, 0.101265, 0.0892771, 0, -0.0892771, 0.101265, -28.756, 2.311, 3.368)
+
+[node name="Control2" type="Control" parent="Postits" unique_id=936909692]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PostIt1" type="Sprite2D" parent="Postits/Control2" unique_id=637481812]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_4h638")
+
+[node name="Label2" type="Label" parent="Postits/Control2" unique_id=1264579235]
+layout_mode = 0
+offset_left = -182.0
+offset_top = 211.0
+offset_right = -122.0
+offset_bottom = 249.0
+text = "[M1]"
+label_settings = SubResource("LabelSettings_jf0ln")
+
+[node name="Control" type="Control" parent="Postits" unique_id=1385963334]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PostIt1" type="Sprite2D" parent="Postits/Control" unique_id=1972847600]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_iig38")
+
+[node name="Label" type="Label" parent="Postits/Control" unique_id=2076667638]
+layout_mode = 0
+offset_left = 131.0
+offset_top = 210.0
+offset_right = 191.0
+offset_bottom = 248.0
+text = "[M1]"
+label_settings = SubResource("LabelSettings_jf0ln")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Postits" unique_id=66926636]
+transform = Transform3D(0.13500006, 0, 0, 0, 0.10126967, 0.089271806, 0, -0.089271806, 0.10126967, -28.771072, 2.2986128, 3.3592627)
+shape = SubResource("BoxShape3D_bpvnm")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Postits" unique_id=1687052463]
+transform = Transform3D(0.1499659, -0.0021109818, 0.002402451, 0.00315094, 0.116808616, -0.094051205, -0.0005472501, 0.09408084, 0.11682505, -28.787766, 1.716375, 3.1423883)
+shape = SubResource("BoxShape3D_yjf7f")
+
+[connection signal="interagido" from="Postits" to="Postits" method="_on_interagido"]

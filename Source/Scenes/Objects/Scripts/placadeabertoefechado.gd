@@ -3,7 +3,7 @@ extends interagivel
 var saida = false
 var quant_ver
 
-func _on_interagido(body: Variant) -> void:
+func _on_interagido(_body: Variant) -> void:
 	if saida:
 		var cena1 = get_tree().current_scene
 		quant_ver = cena1.cont_vermelho
@@ -16,5 +16,5 @@ func _on_interagido(body: Variant) -> void:
 			player_pos.global_position = Vector3(3.891, 0.386, -0.039)
 	
 
-func _on_olhado(bolean: Variant) -> void:
+func _on_olhado(_bolean: Variant) -> void:
 	pass # Replace with function body.

@@ -2,7 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://dp01qbh786mvq" path="res://Source/Assets/Modelos/Cafeteria/Caçamba/Cacambadelico.fbx" id="2_te5vl"]
 [ext_resource type="AudioStream" uid="uid://blxsdx80fd6ke" path="res://Source/Assets/Sons/portafodadestrancando.ogg" id="3_f1pbj"]
+[ext_resource type="Script" uid="uid://clqj5hhjkfaw0" path="res://Source/Scenes/Objects/Scripts/interativos.gd" id="3_r3qr4"]
 [ext_resource type="PackedScene" uid="uid://qy2gbwg1fmqw" path="res://Source/Assets/Modelos/Cafeteria/Comanda/comanda.fbx" id="3_te5vl"]
+[ext_resource type="Texture2D" uid="uid://ddbkadv7r0lxw" path="res://Source/Assets/Sprites/image.png" id="5_0jiu1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_f1pbj"]
 size = Vector3(1.5577393, 2.4915771, 3.0994873)
@@ -32,16 +34,39 @@ transform = Transform3D(0.59971076, 0, -0.01862665, 0, 0.59999996, 0, 0.01862665
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39590836, 0.9035034, 1.4320941)
 shape = SubResource("BoxShape3D_f1pbj")
 
-[node name="comanda" parent="." unique_id=1854022470 instance=ExtResource("3_te5vl")]
-transform = Transform3D(0.12598288, 0, 0.061059922, 0, 0.14, 0, -0.061059922, 0, 0.12598288, -26.853134, 0.0714159, 0.06869507)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="comanda" unique_id=2109362576]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.22599792, -0.1823731, -0.15782166)
-shape = SubResource("BoxShape3D_r3qr4")
-
 [node name="PortaSom" type="AudioStreamPlayer3D" parent="." unique_id=1506804781]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.889185, 0, -2.026096)
 stream = ExtResource("3_f1pbj")
 volume_db = 80.0
 unit_size = 50.0
 autoplay = true
+
+[node name="Comanda" type="StaticBody3D" parent="." unique_id=815208047]
+script = ExtResource("3_r3qr4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Comanda" unique_id=2109362576]
+transform = Transform3D(0.12598288, 0, 0.061059922, 0, 0.14, 0, -0.061059922, 0, 0.12598288, -26.891243, 0.045883667, 0.062611654)
+shape = SubResource("BoxShape3D_r3qr4")
+
+[node name="comanda" parent="Comanda" unique_id=1854022470 instance=ExtResource("3_te5vl")]
+transform = Transform3D(0.12598288, 0, 0.061059922, 0, 0.14, 0, -0.061059922, 0, 0.12598288, -26.853134, 0.0714159, 0.06869507)
+
+[node name="Control" type="Control" parent="Comanda" unique_id=1424907881]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Image" type="Sprite2D" parent="Comanda/Control" unique_id=677076464]
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("5_0jiu1")
+
+[connection signal="interagido" from="Comanda" to="Comanda" method="_on_interagido"]

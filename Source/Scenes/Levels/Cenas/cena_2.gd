@@ -11,7 +11,7 @@ var frases = 	["Alô alôoou, ...",
 				"não é muito diferente do que você já tava acostumado,",
 				"mas protocolo é protocolo, sabe como é né."]
 
-var quant_vermelho
+var quant_vermelho = [true, true, true]
 
 const porta = preload("res://Source/Assets/Sons/portaabrindo.ogg")
 
@@ -71,7 +71,7 @@ func _on_pasta_interagido(_body: Variant) -> void:
 	if quant_vermelho.count(true) == 3:
 		$Pasta/Pagina2.show()
 	else:
-		$Pasta/Pagina1.show()
+		MudarScena.mudarFinal(1)
 	var crosshair = get_node("/root/Cena2/Player/Cabeça/Camera3D/CanvasLayer/crosshair")
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	crosshair.hide()

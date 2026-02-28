@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://c8u2if3b8etbj"]
+
+[ext_resource type="Script" uid="uid://bsnvuv8pvgjke" path="res://Source/Scenes/Objects/Scripts/pagina_1.gd" id="1_0moy4"]
+[ext_resource type="Texture2D" uid="uid://cc23xevj88xib" path="res://Source/Assets/Imagens/TRABALHO_CONCLUIDO_ENDING.png" id="2_w38x6"]
+[ext_resource type="Texture2D" uid="uid://b325afd5hx13p" path="res://Source/Assets/Sprites/Não apagado.png" id="3_b83ct"]
+[ext_resource type="FontFile" uid="uid://c0b1xlphy8isa" path="res://Source/Assets/fonts/OldNewspaperTypes.ttf" id="4_g6w8c"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lg5h2"]
+font = ExtResource("4_g6w8c")
+font_size = 30
+
+[node name="Fim" type="Node" unique_id=2078874221]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=424931874]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Pagina1" type="Control" parent="." unique_id=1476659349]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0moy4")
+
+[node name="MoldeDaCartaTutorial" type="Sprite2D" parent="Pagina1" unique_id=708422838]
+position = Vector2(21, 20)
+scale = Vector2(0.43, 0.43)
+texture = ExtResource("2_w38x6")
+
+[node name="Exit" type="TextureButton" parent="Pagina1" unique_id=186183119]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 5.4
+anchor_top = -6.975
+anchor_right = 7.025
+anchor_bottom = -5.775
+offset_left = 9.0
+offset_top = -1.0
+offset_right = -6.0
+offset_bottom = -1.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("3_b83ct")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Pagina1" unique_id=50775449]
+layout_mode = 0
+offset_left = 427.0
+offset_top = 287.0
+offset_right = 579.0
+offset_bottom = 325.0
+text = "Final (1/3)"
+label_settings = SubResource("LabelSettings_lg5h2")
+
+[connection signal="pressed" from="Pagina1/Exit" to="Pagina1" method="_on_exit_pressed"]

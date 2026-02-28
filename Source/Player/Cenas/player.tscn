@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://ipxelk0c00b8" path="res://Source/Player/Cenas/RaioInteragente.tscn" id="2_v1mne"]
 [ext_resource type="FontFile" uid="uid://c0b1xlphy8isa" path="res://Source/Assets/fonts/OldNewspaperTypes.ttf" id="4_0tdpy"]
 [ext_resource type="FontFile" uid="uid://bhi35hm6q31jv" path="res://Source/Assets/fonts/ELEGANT TYPEWRITER Regular.ttf" id="4_880o0"]
+[ext_resource type="AudioStream" uid="uid://e1bllsjy4mo3" path="res://Source/Assets/Sons/passosnormais.ogg" id="6_g142l"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_4flbx"]
 
@@ -109,3 +110,7 @@ grow_vertical = 0
 label_settings = SubResource("LabelSettings_880o0")
 uppercase = true
 language = "pt_BR"
+
+[node name="Passo" type="AudioStreamPlayer" parent="." unique_id=941758128]
+stream = ExtResource("6_g142l")
+bus = &"SFX"

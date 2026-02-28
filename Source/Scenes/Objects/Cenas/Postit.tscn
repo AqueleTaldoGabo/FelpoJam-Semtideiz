@@ -1,14 +1,12 @@
 [gd_scene format=4 uid="uid://dvt0nduqro6x3"]
 
-[ext_resource type="PackedScene" uid="uid://cja3uw73wfkwl" path="res://Source/Assets/Modelos/Cafeteria/PostIT/pouistiiti1.fbx" id="2_6euia"]
-[ext_resource type="PackedScene" uid="uid://i8jqfce3weny" path="res://Source/Assets/Modelos/Cafeteria/PostIT/pouistiiti2.fbx" id="3_7d1b4"]
+[ext_resource type="Script" uid="uid://clqj5hhjkfaw0" path="res://Source/Scenes/Objects/Scripts/interativos.gd" id="2_7d1b4"]
+[ext_resource type="Texture2D" uid="uid://ck12d78mt7jd2" path="res://Source/Assets/Sprites/post it2.png" id="3_q14if"]
+[ext_resource type="Texture2D" uid="uid://dp2dj7a0k66af" path="res://Source/Assets/Sprites/post it1.png" id="3_xfxu6"]
 [ext_resource type="Texture2D" uid="uid://bnqjwriqidmhl" path="res://Source/Assets/Modelos/Cafeteria/Poster/PROSTER_0.png" id="4_6euia"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_xfxu6"]
-size = Vector3(1, 2.1079102, 1.9827881)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_q14if"]
-size = Vector3(1, 2.4318848, 2.0534668)
+[ext_resource type="FontFile" uid="uid://c0b1xlphy8isa" path="res://Source/Assets/fonts/OldNewspaperTypes.ttf" id="4_q14if"]
+[ext_resource type="PackedScene" uid="uid://cbwjw5n5paf03" path="res://Source/Assets/Modelos/Cafeteria/PostIT/pouistiiti4.fbx" id="6_q14if"]
+[ext_resource type="PackedScene" uid="uid://xscmvrnjddyo" path="res://Source/Assets/Modelos/Cafeteria/PostIT/pouistiiti3.fbx" id="7_bi78n"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rh2hy"]
 resource_name = "Material"
@@ -50,21 +48,18 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_7d1b4")
 
+[sub_resource type="LabelSettings" id="LabelSettings_bi78n"]
+font = ExtResource("4_q14if")
+font_size = 25
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q14if"]
+size = Vector3(1, 2.4318848, 2.0534668)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xfxu6"]
+size = Vector3(1, 2.1079102, 1.9827881)
+
 [node name="Postit" type="StaticBody3D" unique_id=860167678]
-
-[node name="pouistiiti1" parent="." unique_id=1808878107 instance=ExtResource("2_6euia")]
-transform = Transform3D(0.0070121516, -0.07551707, 0.025455862, 0.07965733, 0.007396596, 0, -0.0023535842, 0.025346827, 0.07584193, -8.654384, 1.2952485, 2.620573)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="pouistiiti1" unique_id=1683773041]
-transform = Transform3D(1, -1.13621354e-07, -3.7252903e-08, -3.3527613e-08, 0.9999999, -2.9802322e-08, 1.6763806e-08, -3.0696392e-06, 0.9999914, -4.7683716e-06, -0.027030945, 0.029340744)
-shape = SubResource("BoxShape3D_xfxu6")
-
-[node name="pouistiiti2" parent="." unique_id=1671778841 instance=ExtResource("3_7d1b4")]
-transform = Transform3D(-0.00022660884, -0.04313548, 0.08977437, 0.099598624, -0.00052323984, -3.259629e-09, 0.00047162257, 0.08977313, 0.04313607, -9.063282, 1.2041732, 2.6650624)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="pouistiiti2" unique_id=390513516]
-transform = Transform3D(0.9999998, 0, 2.3283064e-10, -1.071021e-08, 1, 5.9604645e-08, 3.213063e-08, 0, 1, -6.67572e-06, -0.056987762, 0.016738892)
-shape = SubResource("BoxShape3D_q14if")
 
 [node name="PROSTER" type="StaticBody3D" parent="." unique_id=598339696]
 transform = Transform3D(-6.7752652e-09, 0, -0.155, 0, 0.155, 0, 0.155, 0, -6.7752652e-09, -10.804028, 1.6239266, -6.445853)
@@ -86,3 +81,77 @@ transform = Transform3D(-6.7752652e-09, 0, 0.155, 0, 0.155, 0, -0.155, 0, -6.775
 [node name="Cube" type="MeshInstance3D" parent="PROSTER3" unique_id=592775502]
 transform = Transform3D(100, -4.5474735e-13, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, -0.20222473, 0, 0)
 mesh = SubResource("ArrayMesh_xfxu6")
+
+[node name="Postits" type="StaticBody3D" parent="." unique_id=881521992]
+script = ExtResource("2_7d1b4")
+
+[node name="Control2" type="Control" parent="Postits" unique_id=912773467]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PostIt1" type="Sprite2D" parent="Postits/Control2" unique_id=1141639692]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_q14if")
+
+[node name="Label2" type="Label" parent="Postits/Control2" unique_id=814474427]
+layout_mode = 0
+offset_left = -182.0
+offset_top = 211.0
+offset_right = -122.0
+offset_bottom = 249.0
+text = "[M1]"
+label_settings = SubResource("LabelSettings_bi78n")
+
+[node name="Control" type="Control" parent="Postits" unique_id=802515043]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PostIt1" type="Sprite2D" parent="Postits/Control" unique_id=1955609994]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_xfxu6")
+
+[node name="Label" type="Label" parent="Postits/Control" unique_id=162632938]
+layout_mode = 0
+offset_left = 131.0
+offset_top = 210.0
+offset_right = 191.0
+offset_bottom = 248.0
+text = "[M1]"
+label_settings = SubResource("LabelSettings_bi78n")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Postits" unique_id=390513516]
+transform = Transform3D(-0.00022660545, -0.04313548, 0.08977437, 0.09959861, -0.00052323984, -3.2676268e-09, 0.00047162292, 0.08977313, 0.043136075, -9.059321, 1.2042024, 2.6606686)
+shape = SubResource("BoxShape3D_q14if")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Postits" unique_id=1683773041]
+transform = Transform3D(0.0070121544, -0.07551714, 0.025455646, 0.07965733, 0.0073965862, -3.1879024e-09, -0.002353584, 0.02534659, 0.075841285, -8.651595, 1.234008, 2.6221132)
+shape = SubResource("BoxShape3D_xfxu6")
+
+[node name="pouistiiti4" parent="Postits" unique_id=556273450 instance=ExtResource("6_q14if")]
+transform = Transform3D(0.0070036724, -0.07549731, 0.025516745, 0.07965797, 0.0073896456, 0, -0.0023569963, 0.025407651, 0.07582147, -8.654, 1.22, 2.621)
+
+[node name="pouistiiti3" parent="Postits" unique_id=37853142 instance=ExtResource("7_bi78n")]
+transform = Transform3D(-0.00022706085, -0.04336531, 0.0901077, 0.09999863, -0.000523593, 0, 0.00047179763, 0.09010647, 0.043365907, -9.063, 1.204, 2.665)
+
+[connection signal="interagido" from="Postits" to="Postits" method="_on_interagido"]

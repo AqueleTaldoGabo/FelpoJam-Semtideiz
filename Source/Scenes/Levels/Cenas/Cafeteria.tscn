@@ -169,5 +169,5 @@ mesh = SubResource("CylinderMesh_s0fqb")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1447726607]
 stream = ExtResource("4_eh46y")
-volume_db = 8.0
+volume_db = 4.0
 bus = &"Musica"

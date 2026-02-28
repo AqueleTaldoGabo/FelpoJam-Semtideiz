@@ -9,6 +9,7 @@ const conversa = preload("res://Source/Assets/Sons/gibberishdequalidade.ogg")
 var secret = false
 var current_text: String = ""
 var abrido = false
+var vermelho = true
 var fim = false
 
 var placa
@@ -51,6 +52,7 @@ func _input(event: InputEvent) -> void:
 func _ready() -> void:
 	await get_tree().create_timer(2).timeout
 	await animar_texto(["Aperte espaço para abrir a pasta"])
+	
 
 func _on_mudar_algo(valor, valor2):
 	$Player._adjacency_matrix_player = valor2
@@ -137,25 +139,27 @@ func _on_mudar_algo(valor, valor2):
 		
 	elif valor == 13:
 		carimbada(7)
+		if cont_vermelho[2] == false:
+				cont_vermelho[2] = true
 		if !has_node("/root/Cafeteria/PostIt2"):
 			get_tree().current_scene.add_child(postit2.instantiate())
 	elif valor == -13:
 		carimbada(7)
+		if cont_vermelho[2] == true:
+				cont_vermelho[2] = false
 		if has_node("/root/Cafeteria/PostIt2"):
 			var noode = get_node("/root/Cafeteria/PostIt2")
 			noode.queue_free()
 	
 	elif valor == 14:
 		carimbada(8)
-		if cont_vermelho[2] == false:
-				cont_vermelho[2] = true
+		
 		if !has_node("/root/Cafeteria/Terminal"):
 			get_tree().current_scene.add_child(terminal.instantiate())
 
 	elif valor == -14:
 		carimbada(8)
-		if cont_vermelho[2] == true:
-				cont_vermelho[2] = false
+		
 		if has_node("/root/Cafeteria/Terminal"):
 			var noode = get_node("/root/Cafeteria/Terminal")
 			noode.queue_free()
@@ -164,13 +168,22 @@ func _on_mudar_algo(valor, valor2):
 		secret = true
 		if !has_node("/root/Cafeteria/Corpo"):
 			get_tree().current_scene.add_child(corpo.instantiate())
-				
-	if checker() == true and fim == false:
-		fim = true
+	
+	if cont_vermelho.count(true) == 3 and secret == false:
+		await get_node("/root/Folha").tree_exited
+		abrido = false
+		$Player.vermelho = true
+		if vermelho:
+			animar_texto(["Volte as folhas"])
+			vermelho = false
+	
+	elif checker() == true:
+		await get_node("/root/Folha").tree_exited
 		abrido = false
 		placa.saida = true
-		print(cont_vermelho)
-		animar_texto(["Saia da cafeteria"])
+		if !fim:
+			animar_texto(["Saia da cafeteria"])
+			fim = true
 
 	if valor < 5 and valor >= 0:
 		$Player.folhas = valor

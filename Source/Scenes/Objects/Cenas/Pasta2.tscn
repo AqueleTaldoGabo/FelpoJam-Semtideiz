@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bsnvuv8pvgjke" path="res://Source/Scenes/Objects/Scripts/pagina_1.gd" id="2_tw3t2"]
 [ext_resource type="Texture2D" uid="uid://cc23xevj88xib" path="res://Source/Assets/Imagens/TRABALHO_CONCLUIDO_ENDING.png" id="3_eq0vb"]
 [ext_resource type="Texture2D" uid="uid://b325afd5hx13p" path="res://Source/Assets/Sprites/Não apagado.png" id="5_jvutb"]
-[ext_resource type="Script" uid="uid://c61g0tyv640n4" path="res://Source/Scenes/Objects/Cenas/pagina_2.gd" id="5_nnxvj"]
+[ext_resource type="Script" uid="uid://c61g0tyv640n4" path="res://Source/Scenes/Objects/pagina_2.gd" id="5_nnxvj"]
 [ext_resource type="Texture2D" uid="uid://7gq2kopco60l" path="res://Source/Assets/Imagens/image.png" id="5_tam1c"]
 [ext_resource type="Texture2D" uid="uid://dikpfq4wg4ckr" path="res://Source/Assets/Sprites/Arvore de condenados.png" id="6_jvutb"]
 [ext_resource type="Texture2D" uid="uid://didoc2cettwj7" path="res://Source/Assets/Sprites/Carimbo condenado on.png" id="7_nnxvj"]

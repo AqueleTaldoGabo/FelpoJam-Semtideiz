@@ -2,6 +2,7 @@ extends Node
 
 signal mudar_algo(valor, valor2)
 
+@export var vermelho = false
 @export var folha = 2
 const FUNDO1 = preload("res://Source/Assets/Sprites/Documentos sem seta.png")
 const FUNDO2 = preload("res://Source/Assets/Sprites/Documaneo_com_ouitro_papel.png")
@@ -11,6 +12,7 @@ var folhas = [preload("res://Source/Assets/Imagens/MOLDE_DA_CARTA_TUTORIAL.png")
 			preload("res://Source/Assets/Imagens/DOCUMENTOSCARIMBO1.png"),
 			preload("res://Source/Assets/Imagens/DOCUMENTOSCARIMBO2dither.png"),
 			preload("res://Source/Assets/Imagens/DOCUMENTOSCARIMBO3dithe.png")]
+
 
 var botaodesligado = [preload("res://Source/Assets/Sprites/Não apagado.png"), preload("res://Source/Assets/Sprites/Sim apagado.png")]
 var botaoligado = [preload("res://Source/Assets/Sprites/Nãoligado.png"), preload("res://Source/Assets/Sprites/Sim ligado.png")]
@@ -26,6 +28,7 @@ var btn2 = [null, null, null]
 var btn3 = [null, null, null]
 
 var marcado = false
+		
 
 func fecha():
 	var crosshair = get_node("/root/Cafeteria/Player/Cabeça/Camera3D/CanvasLayer/crosshair")
@@ -42,9 +45,13 @@ func fecha():
 	$".".queue_free()
 
 func _ready() -> void:
+	
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	
 func mudarPag():
+	if vermelho:
+			folhas[1] = preload("res://Source/Assets/Imagens/progressao3.png")
+			folhas[4] = preload("res://Source/Assets/Imagens/DOCUMENTO3REVELADODITHER.png")
 	$Control/Documentoscarimbo1.texture = folhas[folha]
 	if folha == 0:
 		$Control/DossierInteiro.texture = FUNDO1
@@ -152,5 +159,5 @@ func _on_bt_ndireita_3_pressed() -> void:
 func _on_secret_pressed() -> void:
 	if folha == 1:
 		emit_signal("mudar_algo", 88, _adjacency_matrix)
-		print("foi")
+
 		

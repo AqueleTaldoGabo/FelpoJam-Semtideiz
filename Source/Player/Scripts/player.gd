@@ -16,6 +16,7 @@ var menu_aberto = false
 var ease_curve: float = 0.1
 var velocidade_objeto = Vector3.ZERO
 var _adjacency_matrix_player 
+var vermelho = false
 
 func _ready() -> void:
 	materialshader.set_shader_parameter("cor_a", corA)
@@ -30,8 +31,9 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("abrir_pagina") and folha and !get_tree().root.has_node("Folha"):
 		var main = get_tree().current_scene
 		var PAGINA = preload("uid://c1laawrklqnhp").instantiate()
+		if vermelho:
+			PAGINA.vermelho = true
 		$"Cabeça/Camera3D/CanvasLayer/Label".text = ""
-		print(folhas)
 		PAGINA.folha = folhas
 		if _adjacency_matrix_player != null:
 			PAGINA._adjacency_matrix = _adjacency_matrix_player
@@ -48,16 +50,24 @@ func _process(delta: float) -> void:
 	rotation.y = lerp_angle(rotation.y, target_rotation.x, easeusado)
 	camera.rotation.x = lerp_angle(camera.rotation.x, target_rotation.y, easeusado)
 		
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	var input = Input.get_vector("anda_esquerda", "anda_direita", "anda_frente", "anda_tras")
 	var direcao = transform.basis * Vector3(input.x, 0, input.y)
 	if direcao != Vector3.ZERO:
 		direcao = direcao.normalized()
+		if !$Passo.playing:
+			$Passo.play()
+		
 	if se_move:
 		velocidade_objeto.x = direcao.x * velocidade
 		velocidade_objeto.z = direcao.z * velocidade
 	else:
 		velocidade_objeto.x = 0
 		velocidade_objeto.y = 0
+		
+	if $Passo.get_playback_position() > 0.55:
+			$Passo.stop()
 	velocity = velocidade_objeto 
 	move_and_slide()
+	
+	

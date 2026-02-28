@@ -27,7 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://cpva37rwda5d2" path="res://Source/Assets/Modelos/Cafeteria/Condimentos/Condimentosprontos_6.png" id="33_sqma1"]
 [ext_resource type="Texture2D" uid="uid://btyp6iite8v8v" path="res://Source/Assets/Modelos/Cafeteria/Papel/papel derolo_0.png" id="34_8moqn"]
 [ext_resource type="Texture2D" uid="uid://de8ke4krntuvc" path="res://Source/Assets/Modelos/Cafeteria/Papel/papel derolo_1.png" id="35_7a0j5"]
-[ext_resource type="PackedScene" uid="uid://beur7b0vtyx4l" path="res://Source/Scenes/Objects/LuzTeto.tscn" id="36_hlcfg"]
+[ext_resource type="PackedScene" uid="uid://beur7b0vtyx4l" path="res://Source/Scenes/Objects/Cenas/LuzTeto.tscn" id="36_hlcfg"]
 [ext_resource type="PackedScene" uid="uid://b1jwur8oohb0s" path="res://Source/Assets/Modelos/Cafeteria/CaixaDeMadeira/Caixa de maderapronta.fbx" id="37_jg1rs"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xhccq"]
