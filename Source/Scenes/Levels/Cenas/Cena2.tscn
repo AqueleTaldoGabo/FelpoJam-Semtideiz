@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b8isks1vh63o0"]
 
-[ext_resource type="Script" uid="uid://ce1fxak7cxwk1" path="res://Source/Scenes/Levels/Cenas/cena_2.gd" id="1_ep1jq"]
+[ext_resource type="Script" uid="uid://ce1fxak7cxwk1" path="res://Source/Scenes/Levels/Scripts/cena_2.gd" id="1_ep1jq"]
 [ext_resource type="PackedScene" uid="uid://bcnocjplm0u6g" path="res://Source/Assets/Modelos/Lamparina/Lamparina modelofinal.fbx" id="2_d3asw"]
 [ext_resource type="Texture2D" uid="uid://bw7f8cobp7k6l" path="res://Source/Assets/Sprites/Chao_teste_quase_interrogacao2.png" id="3_b5ocu"]
 [ext_resource type="PackedScene" uid="uid://vqcc34o860lb" path="res://Source/Assets/Modelos/Mesa/Mesafodaepequenacomcor.fbx" id="4_4mujf"]
@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://kj2ynqcom45k" path="res://Source/Scenes/Objects/Cenas/Pasta2.tscn" id="13_d3asw"]
 [ext_resource type="PackedScene" uid="uid://cgfko6kr2mhuc" path="res://Source/Scenes/Objects/Cenas/Vinyl.tscn" id="13_ho533"]
 [ext_resource type="AudioStream" uid="uid://blxsdx80fd6ke" path="res://Source/Assets/Sons/portafodadestrancando.ogg" id="15_3kr70"]
-[ext_resource type="Script" uid="uid://birr1w5y7owhp" path="res://Source/Scenes/Levels/Cenas/Telefone.gd" id="16_5leyg"]
+[ext_resource type="Script" uid="uid://birr1w5y7owhp" path="res://Source/Scenes/Levels/Scripts/Telefone.gd" id="16_5leyg"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ovw4t"]
 size = Vector3(60, 2, 60)

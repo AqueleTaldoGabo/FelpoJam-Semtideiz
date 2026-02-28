@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://cvkb8qkmuqjx5" path="res://Source/Assets/Sprites/Sun.png" id="13_l6wx8"]
 [ext_resource type="PackedScene" uid="uid://dg651rlufkkpu" path="res://Source/Assets/Modelos/Livro_malcon/Livro malco2.fbx" id="13_m1wbi"]
 [ext_resource type="Texture2D" uid="uid://dolfnli2vtgsa" path="res://Source/Assets/Sprites/Predios.png" id="14_l6wx8"]
-[ext_resource type="Script" uid="uid://birr1w5y7owhp" path="res://Source/Scenes/Levels/Cenas/Telefone.gd" id="16_pc6nv"]
+[ext_resource type="Script" uid="uid://birr1w5y7owhp" path="res://Source/Scenes/Levels/Scripts/Telefone.gd" id="16_pc6nv"]
 [ext_resource type="AudioStream" uid="uid://blxsdx80fd6ke" path="res://Source/Assets/Sons/portafodadestrancando.ogg" id="16_vc1b1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ovw4t"]

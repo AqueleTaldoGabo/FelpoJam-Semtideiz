@@ -5,12 +5,13 @@ extends Node
 const whitenoise = preload("res://Source/Assets/Música/whitenoise.ogg")
 const classico = preload("res://Source/Assets/Sons/carimbagemclassica1.ogg")
 const conversa = preload("res://Source/Assets/Sons/gibberishdequalidade.ogg")
+const musica2 = preload("res://Source/Assets/Música/loopgameplay2.ogg")
+const musica3 = preload("res://Source/Assets/Música/loopfinal.ogg")
 
 var secret = false
 var current_text: String = ""
 var abrido = false
 var vermelho = true
-var fim = false
 
 var placa
 var cont_vermelho = [false, false, false]
@@ -46,7 +47,7 @@ func animar_texto(textos):
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("abrir_pagina"):
-		if !fim:
+		if !vermelho:
 			abrido = true
 
 func _ready() -> void:
@@ -78,8 +79,6 @@ func _on_mudar_algo(valor, valor2):
 		carimbada(2)
 		if !has_node("/root/Cafeteria/PlacaCapacitacao"):
 			placa = placaentrada.instantiate()
-			if fim:
-				placa.saida = true
 			await get_tree().create_timer(0.1).timeout
 			get_tree().current_scene.add_child(placa)
 			
@@ -168,6 +167,11 @@ func _on_mudar_algo(valor, valor2):
 		secret = true
 		if !has_node("/root/Cafeteria/Corpo"):
 			get_tree().current_scene.add_child(corpo.instantiate())
+		
+	if carimbas.count(true) == 6:
+		ControleMusica.trocar_musica(musica2)
+	if carimbas.count(true) == 9:
+		ControleMusica.trocar_musica(musica3)
 	
 	if cont_vermelho.count(true) == 3 and secret == false:
 		await get_node("/root/Folha").tree_exited
@@ -176,14 +180,6 @@ func _on_mudar_algo(valor, valor2):
 		if vermelho:
 			animar_texto(["Volte as folhas"])
 			vermelho = false
-	
-	elif checker() == true:
-		await get_node("/root/Folha").tree_exited
-		abrido = false
-		placa.saida = true
-		if !fim:
-			animar_texto(["Saia da cafeteria"])
-			fim = true
 
 	if valor < 5 and valor >= 0:
 		$Player.folhas = valor

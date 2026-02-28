@@ -1,84 +1,32 @@
 [gd_scene format=3 uid="uid://br113uhgmm0v3"]
 
-[ext_resource type="Shader" uid="uid://bcfuj16arhi4e" path="res://shaders/dithering.gdshader" id="1_2o3uc"]
-[ext_resource type="Texture2D" uid="uid://dd1b8xgsal8rq" path="res://Source/Assets/Sprites/Menu_paper_sem_botoes_ligados.png" id="2_4qgqy"]
+[ext_resource type="Texture2D" uid="uid://c55ggm3covhj4" path="res://Source/Assets/Sprites/Menu Principal final.png" id="1_vpgfo"]
 [ext_resource type="Script" uid="uid://dvlm5tx45km2i" path="res://Source/Scenes/Levels/Scripts/menu.gd" id="3_i10ex"]
-
-[sub_resource type="SphereMesh" id="SphereMesh_nbjkt"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_uglvk"]
-resource_local_to_scene = true
-render_priority = 0
-shader = ExtResource("1_2o3uc")
-shader_parameter/depth_threshold = 0.05
-shader_parameter/reverse_depth_threshold = 0.25
-shader_parameter/normal_threshold = 0.6
-shader_parameter/darken_amount = 0.3
-shader_parameter/lighten_amount = 1.5
-shader_parameter/normal_edge_bias = Vector3(1, 1, 1)
-shader_parameter/light_direction = Vector3(-0.96, -0.18, 0.2)
-shader_parameter/dither_repeat = 2.0
-shader_parameter/dither_strength = 1.0
-shader_parameter/min_dither_brightness = 0.2
-shader_parameter/cor_a = Vector4(0.09, 0, 0, 1)
-shader_parameter/cor_b = Vector4(0.5, 0.15, 0.1, 1)
-shader_parameter/bayer_mode = 8
-
-[sub_resource type="QuadMesh" id="QuadMesh_k6hg3"]
-material = SubResource("ShaderMaterial_uglvk")
-flip_faces = true
-size = Vector2(2, 2)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_76tml"]
-size = Vector3(60, 2, 60)
-
-[sub_resource type="BoxMesh" id="BoxMesh_gruuh"]
-size = Vector3(60, 2, 60)
 
 [node name="Menu" type="Node" unique_id=1948867365]
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=832145318]
-transform = Transform3D(0.99935937, -0.035789058, -4.977924e-10, 0.022797398, 0.6365854, 0.7708692, -0.02758868, -0.7703753, 0.6369935, 0.4566462, 5.9785156, 4.0120487)
-shadow_enabled = true
-
-[node name="CorpoPersonagem" type="MeshInstance3D" parent="." unique_id=621083899]
-transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, -0.56470275, 1.0213968, -1.1410606)
-mesh = SubResource("SphereMesh_nbjkt")
-
-[node name="Camera3D" type="Camera3D" parent="." unique_id=677488766]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.348099, 0)
-
-[node name="PosProcessamento" type="MeshInstance3D" parent="Camera3D" unique_id=946632878]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23723257, 0.23640442, 0)
-extra_cull_margin = 455.11
-mesh = SubResource("QuadMesh_k6hg3")
-
-[node name="Chão" type="StaticBody3D" parent="." unique_id=1331340386]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9999995, 0)
-
-[node name="Bloco" type="CollisionShape3D" parent="Chão" unique_id=818096414]
-shape = SubResource("BoxShape3D_76tml")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Chão" unique_id=1271188307]
-mesh = SubResource("BoxMesh_gruuh")
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1596800838]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
 [node name="Control" type="Control" parent="." unique_id=31715905]
 layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 4
 anchor_top = 0.5
-anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
 offset_top = -20.0
-offset_right = 20.0
+offset_right = 40.0
 offset_bottom = 20.0
-grow_horizontal = 2
 grow_vertical = 2
 
 [node name="MenuPaperSemBotoesLigados" type="Sprite2D" parent="Control" unique_id=988867]
-position = Vector2(76, 17)
-texture = ExtResource("2_4qgqy")
+position = Vector2(350, 17)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_vpgfo")
 
 [node name="VboxBotoes" type="VBoxContainer" parent="Control/MenuPaperSemBotoesLigados" unique_id=201056274]
 custom_minimum_size = Vector2(10, 0)
@@ -87,30 +35,35 @@ anchor_left = 0.0421875
 anchor_top = 0.39531252
 anchor_right = 0.28906253
 anchor_bottom = 0.71718746
-offset_left = -320.0
-offset_top = -320.0
-offset_right = -26.571396
-offset_bottom = 62.57132
-scale = Vector2(0.35, 0.35)
-theme_override_constants/separation = 24
+offset_left = -1605.0
+offset_top = -1590.0
+offset_right = -1311.5714
+offset_bottom = -1207.4287
+scale = Vector2(0.73, 0.98)
+theme_override_constants/separation = 65
 script = ExtResource("3_i10ex")
 metadata/_edit_use_anchors_ = true
 
 [node name="BotaoStart" type="Button" parent="Control/MenuPaperSemBotoesLigados/VboxBotoes" unique_id=1190088582]
-custom_minimum_size = Vector2(157, 180)
+custom_minimum_size = Vector2(0, 300)
 layout_mode = 2
 theme_override_constants/outline_size = 40
 theme_override_font_sizes/font_size = 10
 flat = true
 
 [node name="BotaoOptions" type="Button" parent="Control/MenuPaperSemBotoesLigados/VboxBotoes" unique_id=1618177612]
-custom_minimum_size = Vector2(157, 180)
+custom_minimum_size = Vector2(0, 300)
 layout_mode = 2
 theme_override_font_sizes/font_size = 10
 flat = true
 
+[node name="BotaoCreditos" type="Button" parent="Control/MenuPaperSemBotoesLigados/VboxBotoes" unique_id=1629222426]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+flat = true
+
 [node name="BotaoSair" type="Button" parent="Control/MenuPaperSemBotoesLigados/VboxBotoes" unique_id=1768535427]
-custom_minimum_size = Vector2(157, 180)
+custom_minimum_size = Vector2(157, 300)
 layout_mode = 2
 theme_override_font_sizes/font_size = 10
 flat = true
@@ -122,6 +75,8 @@ flat = true
 [connection signal="mouse_entered" from="Control/MenuPaperSemBotoesLigados/VboxBotoes/BotaoOptions" to="Control/MenuPaperSemBotoesLigados/VboxBotoes" method="_on_botao_options_mouse_entered"]
 [connection signal="mouse_exited" from="Control/MenuPaperSemBotoesLigados/VboxBotoes/BotaoOptions" to="Control/MenuPaperSemBotoesLigados/VboxBotoes" method="_fora"]
 [connection signal="pressed" from="Control/MenuPaperSemBotoesLigados/VboxBotoes/BotaoOptions" to="Control/MenuPaperSemBotoesLigados/VboxBotoes" method="_on_botao_options_pressed"]
+[connection signal="mouse_entered" from="Control/MenuPaperSemBotoesLigados/VboxBotoes/BotaoCreditos" to="Control/MenuPaperSemBotoesLigados/VboxBotoes" method="_on_botao_creditos_mouse_entered"]
+[connection signal="pressed" from="Control/MenuPaperSemBotoesLigados/VboxBotoes/BotaoCreditos" to="Control/MenuPaperSemBotoesLigados/VboxBotoes" method="_on_botao_creditos_pressed"]
 [connection signal="mouse_entered" from="Control/MenuPaperSemBotoesLigados/VboxBotoes/BotaoSair" to="Control/MenuPaperSemBotoesLigados/VboxBotoes" method="_on_botao_sair_mouse_entered"]
 [connection signal="mouse_exited" from="Control/MenuPaperSemBotoesLigados/VboxBotoes/BotaoSair" to="Control/MenuPaperSemBotoesLigados/VboxBotoes" method="_fora"]
 [connection signal="pressed" from="Control/MenuPaperSemBotoesLigados/VboxBotoes/BotaoSair" to="Control/MenuPaperSemBotoesLigados/VboxBotoes" method="_on_botao_sair_pressed"]

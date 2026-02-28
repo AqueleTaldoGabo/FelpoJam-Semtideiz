@@ -3,11 +3,10 @@
 [ext_resource type="Script" uid="uid://bxf2qv8h7ubqs" path="res://Source/Player/Scripts/folha.gd" id="1_cpge7"]
 [ext_resource type="Texture2D" uid="uid://jw1vtjwsl4vi" path="res://Source/Assets/Sprites/Documentos sem seta.png" id="2_uhn5o"]
 [ext_resource type="Texture2D" uid="uid://d0l6kd3d6dm25" path="res://Source/Assets/Imagens/DOCUMENTOSCARIMBO1.png" id="3_o6amw"]
-[ext_resource type="Texture2D" uid="uid://b325afd5hx13p" path="res://Source/Assets/Sprites/Não apagado.png" id="4_eisks"]
+[ext_resource type="Texture2D" uid="uid://epkkskvyeo1n" path="res://Source/Assets/Sprites/Selo confirmado transparente.png" id="4_oip4l"]
 [ext_resource type="Texture2D" uid="uid://gjqa848lcxot" path="res://Source/Assets/Sprites/seta.png" id="4_rqkf0"]
-[ext_resource type="Texture2D" uid="uid://dp23k0x72038w" path="res://Source/Assets/Sprites/Nãoligado.png" id="5_qrvcg"]
-[ext_resource type="Texture2D" uid="uid://by0dgsq0ek52t" path="res://Source/Assets/Sprites/Sim apagado.png" id="6_au6fu"]
-[ext_resource type="Texture2D" uid="uid://bs18vm451ioo1" path="res://Source/Assets/Sprites/Sim ligado.png" id="7_344dx"]
+[ext_resource type="Texture2D" uid="uid://duglm73ob3f6d" path="res://Source/Assets/Sprites/Selo confirmado vermelh on.png" id="5_eisks"]
+[ext_resource type="Texture2D" uid="uid://lx12x75gnd8n" path="res://Source/Assets/Sprites/Selo confirmado verde onn.png" id="6_qrvcg"]
 
 [node name="Folha" type="Node" unique_id=1976519266]
 script = ExtResource("1_cpge7")
@@ -48,65 +47,74 @@ flat = true
 [node name="HboxCont1" type="HBoxContainer" parent="Control" unique_id=1554795035]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 5.575
-anchor_top = -1.35
-anchor_right = 11.325
-anchor_bottom = 0.9
-theme_override_constants/separation = 45
+anchor_left = 5.5
+anchor_top = -1.425
+anchor_right = 11.25
+anchor_bottom = 0.825
+offset_right = -50.0
+offset_bottom = -20.0
+scale = Vector2(0.8, 0.8)
+theme_override_constants/separation = 55
 metadata/_edit_use_anchors_ = true
 
 [node name="BTNesquerda1" type="TextureButton" parent="Control/HboxCont1" unique_id=768695431]
 layout_mode = 2
-texture_normal = ExtResource("4_eisks")
-texture_hover = ExtResource("5_qrvcg")
+texture_normal = ExtResource("4_oip4l")
+texture_hover = ExtResource("5_eisks")
 metadata/_edit_use_anchors_ = true
 
 [node name="BTNdireita1" type="TextureButton" parent="Control/HboxCont1" unique_id=1631393959]
 layout_mode = 2
-texture_normal = ExtResource("6_au6fu")
-texture_hover = ExtResource("7_344dx")
+texture_normal = ExtResource("4_oip4l")
+texture_hover = ExtResource("6_qrvcg")
 
 [node name="HboxCont2" type="HBoxContainer" parent="Control" unique_id=88746328]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 5.575
-anchor_top = 1.45
-anchor_right = 11.325
-anchor_bottom = 3.7
-theme_override_constants/separation = 45
+anchor_left = 5.475
+anchor_top = 1.4
+anchor_right = 11.225
+anchor_bottom = 3.65
+offset_right = -47.0
+offset_bottom = -20.0
+scale = Vector2(0.8, 0.8)
+theme_override_constants/separation = 55
 metadata/_edit_use_anchors_ = true
 
 [node name="BTNesquerda1" type="TextureButton" parent="Control/HboxCont2" unique_id=2117010143]
 layout_mode = 2
-texture_normal = ExtResource("4_eisks")
-texture_hover = ExtResource("5_qrvcg")
+texture_normal = ExtResource("4_oip4l")
+texture_hover = ExtResource("5_eisks")
 metadata/_edit_use_anchors_ = true
 
 [node name="BTNdireita1" type="TextureButton" parent="Control/HboxCont2" unique_id=494982881]
 layout_mode = 2
-texture_normal = ExtResource("6_au6fu")
-texture_hover = ExtResource("7_344dx")
+texture_normal = ExtResource("4_oip4l")
+texture_hover = ExtResource("6_qrvcg")
 
 [node name="HboxCont3" type="HBoxContainer" parent="Control" unique_id=483316576]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 5.575
-anchor_top = 4.225
-anchor_right = 11.325
-anchor_bottom = 6.475
-theme_override_constants/separation = 45
+anchor_left = 5.475
+anchor_top = 4.2
+anchor_right = 11.225
+anchor_bottom = 6.45
+offset_right = -47.0
+offset_bottom = -20.0
+scale = Vector2(0.8, 0.8)
+theme_override_constants/separation = 55
 metadata/_edit_use_anchors_ = true
 
 [node name="BTNesquerda1" type="TextureButton" parent="Control/HboxCont3" unique_id=1768835948]
 layout_mode = 2
-texture_normal = ExtResource("4_eisks")
-texture_hover = ExtResource("5_qrvcg")
+texture_normal = ExtResource("4_oip4l")
+texture_hover = ExtResource("5_eisks")
 metadata/_edit_use_anchors_ = true
 
 [node name="BTNdireita1" type="TextureButton" parent="Control/HboxCont3" unique_id=1777314268]
 layout_mode = 2
-texture_normal = ExtResource("6_au6fu")
-texture_hover = ExtResource("7_344dx")
+texture_normal = ExtResource("4_oip4l")
+texture_hover = ExtResource("6_qrvcg")
 
 [node name="Voltar" type="Button" parent="Control" unique_id=1666421061]
 layout_mode = 1

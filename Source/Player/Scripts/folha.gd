@@ -14,13 +14,13 @@ var folhas = [preload("res://Source/Assets/Imagens/MOLDE_DA_CARTA_TUTORIAL.png")
 			preload("res://Source/Assets/Imagens/DOCUMENTOSCARIMBO3dithe.png")]
 
 
-var botaodesligado = [preload("res://Source/Assets/Sprites/Não apagado.png"), preload("res://Source/Assets/Sprites/Sim apagado.png")]
-var botaoligado = [preload("res://Source/Assets/Sprites/Nãoligado.png"), preload("res://Source/Assets/Sprites/Sim ligado.png")]
+var botaodesligado = preload("res://Source/Assets/Sprites/Selo confirmado transparente.png")
+var botaoligado = [preload("res://Source/Assets/Sprites/Selo confirmado vermelh on.png"), preload("res://Source/Assets/Sprites/Selo confirmado verde onn.png")]
 
 var _adjacency_matrix = [
-	{ "esq1": botaodesligado[0], "dir1": botaodesligado[1], "esq2": botaodesligado[0], "dir2": botaodesligado[1], "esq3": botaodesligado[0], "dir3": botaodesligado[1]},
-	{ "esq1": botaodesligado[0], "dir1": botaodesligado[1], "esq2": botaodesligado[0], "dir2": botaodesligado[1], "esq3": botaodesligado[0], "dir3": botaodesligado[1]},
-	{ "esq1": botaodesligado[0], "dir1": botaodesligado[1], "esq2": botaodesligado[0], "dir2": botaodesligado[1], "esq3": botaodesligado[0], "dir3": botaodesligado[1]}
+	{ "esq1": botaodesligado, "dir1": botaodesligado, "esq2": botaodesligado, "dir2": botaodesligado, "esq3": botaodesligado, "dir3": botaodesligado},
+	{ "esq1": botaodesligado, "dir1": botaodesligado, "esq2": botaodesligado, "dir2": botaodesligado, "esq3": botaodesligado, "dir3": botaodesligado},
+	{ "esq1": botaodesligado, "dir1": botaodesligado, "esq2": botaodesligado, "dir2": botaodesligado, "esq3": botaodesligado, "dir3": botaodesligado}
 ]
 
 var btn1 = [null, null, null]
@@ -90,7 +90,7 @@ func _on_button_pressed() -> void:
 				var btn_dir = get_node("Control/HboxCont" + str(i+1) + "/BTNdireita1" )
 				_adjacency_matrix[folha-2]["esq" + str(i+1)] = btn_esq.texture_normal
 				_adjacency_matrix[folha-2]["dir" + str(i+1)] = btn_dir.texture_normal
-
+		
 		folha = folha-1
 		if folha == 0:
 			$"Control/Voltar".hide()
@@ -100,14 +100,19 @@ func _on_button_pressed() -> void:
 func _on_avançar_pressed() -> void:
 	$"Control/Voltar".show()
 	if folha < 4:
+		var deu_certo = true
 		if folha > 1:
 			for i in range(3):
 				var btn_esq = get_node("Control/HboxCont" + str(i+1) + "/BTNesquerda1")
 				var btn_dir = get_node("Control/HboxCont" + str(i+1) + "/BTNdireita1" )
 				_adjacency_matrix[folha-2]["esq" + str(i+1)] = btn_esq.texture_normal
 				_adjacency_matrix[folha-2]["dir" + str(i+1)] = btn_dir.texture_normal
-
-		folha = folha+1
+				if btn_esq.texture_normal == botaodesligado and btn_dir.texture_normal == botaodesligado:
+					print("puts")
+					deu_certo = false
+	
+		if deu_certo:
+			folha = folha+1
 		if folha == 4:
 			$"Control/Avançar".hide()
 	mudarPag()
@@ -116,14 +121,14 @@ func _on_avançar_pressed() -> void:
 func _on_bt_nesquerda_1_pressed() -> void:
 	if !marcado or folha != 2:
 		$Control/HboxCont1/BTNesquerda1.texture_normal = botaoligado[0]
-		$Control/HboxCont1/BTNdireita1.texture_normal = botaodesligado[1]
+		$Control/HboxCont1/BTNdireita1.texture_normal = botaodesligado
 		btn1[folha-2] = ((folha)*3)*(-1)
 		emit_signal("mudar_algo", btn1[folha-2], _adjacency_matrix)
 
 
 
 func _on_bt_ndireita_1_pressed() -> void:
-	$Control/HboxCont1/BTNesquerda1.texture_normal = botaodesligado[0]
+	$Control/HboxCont1/BTNesquerda1.texture_normal = botaodesligado
 	$Control/HboxCont1/BTNdireita1.texture_normal = botaoligado[1]
 	if folha == 2:
 		marcado = true
@@ -132,25 +137,25 @@ func _on_bt_ndireita_1_pressed() -> void:
 
 func _on_bt_nesquerda_2_pressed() -> void:
 	$Control/HboxCont2/BTNesquerda1.texture_normal = botaoligado[0]
-	$Control/HboxCont2/BTNdireita1.texture_normal = botaodesligado[1]
+	$Control/HboxCont2/BTNdireita1.texture_normal = botaodesligado
 	btn2[folha-2] = (folha*3 + 1)*(-1)
 	emit_signal("mudar_algo", btn2[folha-2], _adjacency_matrix)
 
 
 func _on_bt_ndireita_2_pressed() -> void:
-	$Control/HboxCont2/BTNesquerda1.texture_normal = botaodesligado[0]
+	$Control/HboxCont2/BTNesquerda1.texture_normal = botaodesligado
 	$Control/HboxCont2/BTNdireita1.texture_normal = botaoligado[1]
 	btn2[folha-2] = (folha*3 + 1)
 	emit_signal("mudar_algo", btn2[folha-2], _adjacency_matrix)
 
 func _on_bt_nesquerda_3_pressed() -> void:
 	$Control/HboxCont3/BTNesquerda1.texture_normal = botaoligado[0]
-	$Control/HboxCont3/BTNdireita1.texture_normal = botaodesligado[1]
+	$Control/HboxCont3/BTNdireita1.texture_normal = botaodesligado
 	btn3[folha-2] = (folha*3 + 2)*(-1)
 	emit_signal("mudar_algo", btn3[folha-2], _adjacency_matrix)
 
 func _on_bt_ndireita_3_pressed() -> void:
-	$Control/HboxCont3/BTNesquerda1.texture_normal = botaodesligado[0]
+	$Control/HboxCont3/BTNesquerda1.texture_normal = botaodesligado
 	$Control/HboxCont3/BTNdireita1.texture_normal = botaoligado[1]
 	btn3[folha-2] = (folha*3 + 2)
 	emit_signal("mudar_algo", btn3[folha-2], _adjacency_matrix)

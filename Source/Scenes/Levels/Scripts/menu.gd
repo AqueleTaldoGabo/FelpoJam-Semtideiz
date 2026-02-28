@@ -3,10 +3,11 @@ extends VBoxContainer
 @onready var fundo:Sprite2D = $".."
 
 
-const TEXTURAJOGAR = preload("res://Source/Assets/Sprites/Menu_paper_jogar_ligados.png")
-const TEXTURACONFI = preload("res://Source/Assets/Sprites/Menu_paper_opcoes_ligado.png")
-const TEXTURASAIR  = preload("res://Source/Assets/Sprites/Menu_paper_sair_ligado.png")
-const TEXTURAVAZIO = preload("res://Source/Assets/Sprites/Menu_paper_sem_botoes_ligados.png")
+const TEXTURAJOGAR = preload("res://Source/Assets/Sprites/(Jogar) Menu Principal final.png")
+const TEXTURACONFI = preload("res://Source/Assets/Sprites/(Opções) Menu Principal final.png")
+const TEXTURACREDITO = preload("res://Source/Assets/Sprites/(Creditos) Menu Principal final.png")
+const TEXTURASAIR  = preload("res://Source/Assets/Sprites/(Sair) Menu Principal final.png")
+const TEXTURAVAZIO = preload("res://Source/Assets/Sprites/Menu Principal final.png")
 
 
 func _input(event: InputEvent) -> void:
@@ -34,3 +35,12 @@ func _on_botao_sair_mouse_entered() -> void:
 
 func _fora() -> void:
 	fundo.set_texture(TEXTURAVAZIO)
+
+
+func _on_botao_creditos_pressed() -> void:
+	MudarScena.mudarCredito()
+
+
+func _on_botao_creditos_mouse_entered() -> void:
+	fundo.set_texture(TEXTURACREDITO)
+	

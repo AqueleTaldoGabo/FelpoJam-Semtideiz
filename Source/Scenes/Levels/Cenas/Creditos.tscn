@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://be6fnkt0ojw1c"]
+
+[ext_resource type="Script" uid="uid://bvvnqn1jn41a8" path="res://Source/Scenes/Levels/Scripts/creditos.gd" id="1_annkc"]
+[ext_resource type="Texture2D" uid="uid://cpyui6irhlbgt" path="res://Source/Assets/Sprites/Cresitos.png" id="2_mn8u6"]
+
+[node name="Creditos" type="Node" unique_id=1329395040]
+script = ExtResource("1_annkc")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1961039431]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control" parent="." unique_id=421196469]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Cresitos" type="Sprite2D" parent="Control" unique_id=1751474617]
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_mn8u6")
+
+[node name="Button" type="Button" parent="Control" unique_id=1746993344]
+layout_mode = 0
+offset_left = -229.0
+offset_top = 195.0
+offset_right = -221.0
+offset_bottom = 203.0
+scale = Vector2(10.761255, 3.7672348)
+flat = true
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]

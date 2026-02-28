@@ -4,7 +4,6 @@ extends Node
 @onready var fundo:Sprite2D = $Control/MenuPaperSemBotoesLigados
 
 
-var MUSICA1 = preload("res://Source/Assets/Música/temadocari.ogg")
 const TEXTURAVAZIO = preload("res://Source/Assets/Sprites/Menu_pausado1.png")
 const TEXTURACONTI = preload("res://Source/Assets/Sprites/Menu_pausado4.png")
 const TEXTURAOPCOE = preload("res://Source/Assets/Sprites/Menu_pausado3.png")

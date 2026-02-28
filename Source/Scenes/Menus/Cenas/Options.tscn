@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b4afxc10lvo3d"]
 
-[ext_resource type="Texture2D" uid="uid://togklxdldx30" path="res://Source/Assets/Sprites/Menu_Opcoes.png" id="2_tvg80"]
+[ext_resource type="Texture2D" uid="uid://bo7krcpeygvg0" path="res://Source/Assets/Sprites/Menu Opções sair desigado2.png" id="2_auf0w"]
 [ext_resource type="Script" uid="uid://b4srk8c4cxaji" path="res://Source/Scenes/Menus/Scripts/options.gd" id="3_tvg80"]
 [ext_resource type="Texture2D" uid="uid://cfqpk3kvf2rqt" path="res://Source/Assets/Sprites/botcaozinho.png" id="3_ylxf0"]
 
@@ -12,28 +12,25 @@ script = ExtResource("3_tvg80")
 
 [node name="Control" type="Control" parent="." unique_id=1217028969]
 layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 4
 anchor_top = 0.5
-anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
 offset_top = -20.0
-offset_right = 20.0
+offset_right = 40.0
 offset_bottom = 20.0
-grow_horizontal = 2
 grow_vertical = 2
 
 [node name="MenuOpcoes" type="Sprite2D" parent="Control" unique_id=1242423021]
-position = Vector2(76, 17)
-texture = ExtResource("2_tvg80")
+position = Vector2(350, 17)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_auf0w")
 
 [node name="Button" type="Button" parent="Control/MenuOpcoes" unique_id=1249156095]
-offset_left = -294.0
-offset_top = 207.0
-offset_right = -286.0
-offset_bottom = 215.0
-scale = Vector2(19.88, 7.68)
+offset_left = -1475.0
+offset_top = 1040.0
+offset_right = -1467.0
+offset_bottom = 1048.0
+scale = Vector2(100.88, 38.480015)
 flat = true
 
 [node name="Vol_Principal" type="HSlider" parent="Control/MenuOpcoes" unique_id=1396065929]
@@ -42,10 +39,10 @@ anchor_left = 0.5078125
 anchor_top = 0.3296875
 anchor_right = 0.7421875
 anchor_bottom = 0.359375
-offset_left = -320.0
-offset_top = -320.0
-offset_right = -320.0
-offset_bottom = -320.0
+offset_left = -1605.0
+offset_top = -1594.9999
+offset_right = -1605.0
+offset_bottom = -1594.9999
 theme_override_icons/grabber = ExtResource("3_ylxf0")
 theme_override_icons/grabber_highlight = ExtResource("3_ylxf0")
 theme_override_styles/slider = SubResource("StyleBoxEmpty_vaenm")
@@ -60,10 +57,10 @@ anchor_left = 0.5078125
 anchor_top = 0.48125
 anchor_right = 0.7421875
 anchor_bottom = 0.5109375
-offset_left = -320.0
-offset_top = -320.0
-offset_right = -320.0
-offset_bottom = -320.0
+offset_left = -1605.0
+offset_top = -1594.9999
+offset_right = -1605.0
+offset_bottom = -1594.9999
 theme_override_icons/grabber = ExtResource("3_ylxf0")
 theme_override_icons/grabber_highlight = ExtResource("3_ylxf0")
 theme_override_styles/slider = SubResource("StyleBoxEmpty_vaenm")
@@ -78,10 +75,10 @@ anchor_left = 0.5078125
 anchor_top = 0.6234375
 anchor_right = 0.7421875
 anchor_bottom = 0.653125
-offset_left = -320.0
-offset_top = -320.0
-offset_right = -320.0
-offset_bottom = -320.0
+offset_left = -1605.0
+offset_top = -1594.9999
+offset_right = -1605.0
+offset_bottom = -1594.9999
 theme_override_icons/grabber = ExtResource("3_ylxf0")
 theme_override_icons/grabber_highlight = ExtResource("3_ylxf0")
 theme_override_styles/slider = SubResource("StyleBoxEmpty_vaenm")
