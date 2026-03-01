@@ -27,11 +27,22 @@
 [ext_resource type="Texture2D" uid="uid://cgp3rfo73qqc4" path="res://Source/Assets/Modelos/Cafeteria/Condimentos/Condimentosprontos_4.png" id="31_1xnkm"]
 [ext_resource type="AudioStream" uid="uid://c57wsfvlrha86" path="res://Source/Assets/Sons/PORTATRANCADA.ogg" id="32_3eogv"]
 [ext_resource type="Texture2D" uid="uid://f2ihha0wwjq6" path="res://Source/Assets/Modelos/Cafeteria/Condimentos/Condimentosprontos_5.png" id="32_yxqsl"]
+[ext_resource type="PackedScene" uid="uid://cwncxh42q1tbx" path="res://Source/Assets/Modelos/Cafeteria/numMesa/mesa1.fbx" id="33_l1cxn"]
 [ext_resource type="Texture2D" uid="uid://cpva37rwda5d2" path="res://Source/Assets/Modelos/Cafeteria/Condimentos/Condimentosprontos_6.png" id="33_sqma1"]
 [ext_resource type="Texture2D" uid="uid://btyp6iite8v8v" path="res://Source/Assets/Modelos/Cafeteria/Papel/papel derolo_0.png" id="34_8moqn"]
+[ext_resource type="PackedScene" uid="uid://ckx2nq2ytxeh0" path="res://Source/Assets/Modelos/Cafeteria/numMesa/mesa2.fbx" id="34_jffxy"]
 [ext_resource type="Texture2D" uid="uid://de8ke4krntuvc" path="res://Source/Assets/Modelos/Cafeteria/Papel/papel derolo_1.png" id="35_7a0j5"]
+[ext_resource type="PackedScene" uid="uid://bypoqn0u2tgl7" path="res://Source/Assets/Modelos/Cafeteria/numMesa/mesa3.fbx" id="35_l37yc"]
+[ext_resource type="PackedScene" uid="uid://bbbqm0is7ferv" path="res://Source/Assets/Modelos/Cafeteria/numMesa/mesa4.fbx" id="36_122mj"]
 [ext_resource type="PackedScene" uid="uid://beur7b0vtyx4l" path="res://Source/Scenes/Objects/Cenas/LuzTeto.tscn" id="36_hlcfg"]
+[ext_resource type="PackedScene" uid="uid://bnv3cqs7sow5w" path="res://Source/Assets/Modelos/Cafeteria/numMesa/mesa5.fbx" id="37_4xxe8"]
 [ext_resource type="PackedScene" uid="uid://b1jwur8oohb0s" path="res://Source/Assets/Modelos/Cafeteria/CaixaDeMadeira/Caixa de maderapronta.fbx" id="37_jg1rs"]
+[ext_resource type="PackedScene" uid="uid://b213kf8iewcun" path="res://Source/Assets/Modelos/Cafeteria/numMesa/mesa6.fbx" id="38_vxpfo"]
+[ext_resource type="PackedScene" uid="uid://ecaq4wjsx5q5" path="res://Source/Assets/Modelos/Cafeteria/numMesa/mesa7.fbx" id="39_us4hl"]
+[ext_resource type="PackedScene" uid="uid://cudawr6bco3lo" path="res://Source/Assets/Modelos/Cafeteria/numMesa/mesa8.fbx" id="40_iodkp"]
+[ext_resource type="PackedScene" uid="uid://be54wqepcbcsi" path="res://Source/Assets/Modelos/Cafeteria/numMesa/mesa9.fbx" id="41_bu02u"]
+[ext_resource type="PackedScene" uid="uid://csbbjv6oweboa" path="res://Source/Assets/Modelos/Cafeteria/numMesa/mesa10.fbx" id="42_pgcfo"]
+[ext_resource type="PackedScene" uid="uid://b705pbiy20r5u" path="res://Source/Assets/Modelos/Cafeteria/numMesa/mesa11.fbx" id="43_h888w"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xhccq"]
 resource_name = "Material2"
@@ -1793,6 +1804,39 @@ transform = Transform3D(3.7195534e-06, -3.0308385e-07, -6.9337497, -1.23168145e-
 
 [node name="LuzFora" parent="." unique_id=1177152707 instance=ExtResource("15_dwvy1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15103388, 0, 0)
+
+[node name="mesa1" parent="." unique_id=1542733380 instance=ExtResource("33_l1cxn")]
+transform = Transform3D(-0.027849967, 0, -0.08030803, 0, 0.085, 0, 0.08030803, 0, -0.027849967, -9.544739, 1.341, 9.01775)
+
+[node name="mesa2" parent="." unique_id=673662670 instance=ExtResource("34_jffxy")]
+transform = Transform3D(0.011393174, 0.0004091824, -0.08423198, 4.4008313e-05, 0.08499895, 0.00041886096, 0.08423297, -9.9755e-05, 0.011392822, -5.772332, 1.341, 9.235134)
+
+[node name="mesa3" parent="." unique_id=2054778945 instance=ExtResource("35_l37yc")]
+transform = Transform3D(0.024695488, 0, -0.081333466, 0, 0.085, 0, 0.081333466, 0, 0.024695488, -2.385853, 1.341134, 9.047953)
+
+[node name="mesa4" parent="." unique_id=813154794 instance=ExtResource("36_122mj")]
+transform = Transform3D(0.08460597, 0, 0.008174948, 0, 0.085, 0, -0.008174948, 0, 0.08460597, -1.55078, 1.1090022, -2.3490868)
+
+[node name="mesa5" parent="." unique_id=1540282318 instance=ExtResource("37_4xxe8")]
+transform = Transform3D(0.06785902, 0, 0.051187444, 0, 0.085, 0, -0.051187444, 0, 0.06785902, -1.3971012, 1.109, -5.084)
+
+[node name="mesa6" parent="." unique_id=1387497594 instance=ExtResource("38_vxpfo")]
+transform = Transform3D(-0.0026550821, 0, -0.08495852, 0, 0.085, 0, 0.08495852, 0, -0.0026550821, -5.61, 1.109, 1.346043)
+
+[node name="mesa7" parent="." unique_id=1754068052 instance=ExtResource("39_us4hl")]
+transform = Transform3D(-0.029152554, 0, -0.0798444, 0, 0.085, 0, 0.0798444, 0, -0.029152554, -8.66, 1.109, 1.3021157)
+
+[node name="mesa8" parent="." unique_id=1030137588 instance=ExtResource("40_iodkp")]
+transform = Transform3D(-0.042709254, 0, 0.073490955, 0, 0.08500001, 0, -0.073490955, 0, -0.042709254, -5.462892, 1.109, 4.9453464)
+
+[node name="mesa9" parent="." unique_id=2069113687 instance=ExtResource("41_bu02u")]
+transform = Transform3D(-0.045967855, 0, 0.071497954, 0, 0.085000016, 0, -0.071497954, 0, -0.045967855, -8.40766, 1.109, 5.167763)
+
+[node name="mesa10" parent="." unique_id=671319779 instance=ExtResource("42_pgcfo")]
+transform = Transform3D(-0.044605754, 0, 0.072355546, 0, 0.08499999, 0, -0.072355546, 0, -0.044605754, -17.681635, 1.0469018, -5.4000206)
+
+[node name="mesa11" parent="." unique_id=2052382636 instance=ExtResource("43_h888w")]
+transform = Transform3D(-0.047834743, 0, 0.07026263, 0, 0.085, 0, -0.07026263, 0, -0.047834743, -20.098932, 1.047, -5.433031)
 
 [connection signal="interagido" from="Jukebox" to="Jukebox" method="_on_interagido"]
 [connection signal="interagido" from="portaMALCONOVA2" to="portaMALCONOVA2" method="_on_interagido"]
