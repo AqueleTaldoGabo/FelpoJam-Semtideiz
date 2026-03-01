@@ -4,6 +4,7 @@ signal mudar_algo(valor, valor2)
 
 @export var vermelho = false
 @export var folha = 2
+@export var secredo = false
 
 
 
@@ -59,8 +60,17 @@ func _ready() -> void:
 func mudarPag():
 	if folha == 4:
 		$"Control/Avançar".hide()
-	if vermelho:
-			folhas[1] = preload("res://Source/Assets/Imagens/progressao3.png")
+		
+	if secredo:
+		folhas[1] = preload("res://Source/Assets/Imagens/finaldomal.png")
+		if folha == 1:
+			$Control/Documentoscarimbo1.texture = folhas[1]
+			$Control/Secret.texture_normal = botaoligado[1]
+		else:
+			$Control/Secret.texture_normal = botaodesligado
+			
+	
+	if vermelho or secredo:
 			folhas[4] = preload("res://Source/Assets/Imagens/DOCUMENTO3REVELADODITHER.png")
 	$Control/Documentoscarimbo1.texture = folhas[folha]
 	if folha == 0:
@@ -103,6 +113,8 @@ func _on_button_pressed() -> void:
 					_adjacency_matrix[folha-2]["dir" + str(i+1)] = btn_dir.texture_normal
 			
 			folha = folha-1
+			if folha == 1 and vermelho:
+				pare = true
 			if folha == 0:
 				$"Control/Voltar".hide()
 		mudarPag()
@@ -175,20 +187,22 @@ func _on_bt_ndireita_3_pressed() -> void:
 
 
 func _on_secret_pressed() -> void:
-	if folha == 1:
-		pare = true
+	if folha == 1 and !secredo:
 		if contador == 0 and $Timer.is_stopped():
+			$Control/Documentoscarimbo1.texture = preload("res://Source/Assets/Imagens/progressao_1.png")
 			$Timer.start()
 			ControleSfx.toca_SFX(coracao1)
 			ControleMusica.stop()
 			contador = contador + 1
 			
 		if contador == 1 and $Timer.is_stopped():
+			$Control/Documentoscarimbo1.texture = preload("res://Source/Assets/Imagens/progressao2.png")
 			$Timer.start()
 			ControleSfx.toca_SFX(coracao2)
 			contador = contador + 1
 			
 		if contador == 2 and $Timer.is_stopped():
+			$Control/Documentoscarimbo1.texture = preload("res://Source/Assets/Imagens/progressao3.png")
 			$Timer.start()
 			ControleSfx.toca_SFX(coracao3)
 			contador = contador + 1
@@ -197,11 +211,18 @@ func _on_secret_pressed() -> void:
 			emit_signal("mudar_algo", 88, _adjacency_matrix)
 			var porta = get_node("/root/Cafeteria/Mapa/portaMALCONOVA2")
 			var som = get_node("/root/Cafeteria/Mapa/portaMALCONOVA2/Som")
+			folhas[1] = preload("res://Source/Assets/Imagens/finaldomal.png")
+			$Control/Documentoscarimbo1.texture = folhas[1]
+			$Control/Secret.texture_normal = botaoligado[1]
 			porta.show()
 			som.play()
 			porta.vermelho = true
 			pare = false
+			vermelho = false
 			porta.set_collision_layer_value(1, true)
+			ControleSfx.toca_Carimbo1()
+			secredo = true
+			
 		await $Timer.timeout
 		
 

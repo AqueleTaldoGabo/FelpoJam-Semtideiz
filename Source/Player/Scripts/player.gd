@@ -18,6 +18,7 @@ var ease_curve: float = 0.1
 var velocidade_objeto = Vector3.ZERO
 var _adjacency_matrix_player 
 var vermelho = false
+var segredo = false
 
 func _ready() -> void:
 	materialshader.set_shader_parameter("cor_a", corA)
@@ -35,6 +36,8 @@ func _input(event: InputEvent) -> void:
 		
 		if vermelho:
 			PAGINA.vermelho = true
+		if segredo:
+			PAGINA.secredo = true
 		$"Cabeça/Camera3D/CanvasLayer/Label".text = ""
 		PAGINA.folha = folhas
 		if _adjacency_matrix_player != null:

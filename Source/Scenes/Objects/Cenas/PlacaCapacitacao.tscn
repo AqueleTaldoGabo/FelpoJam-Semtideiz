@@ -152,9 +152,10 @@ mesh = SubResource("ArrayMesh_ajqjt")
 [node name="SomPorta" type="AudioStreamPlayer3D" parent="." unique_id=789695944]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.960437, 0, 0)
 stream = ExtResource("4_blmrn")
-volume_db = 10.0
+volume_db = 60.0
 unit_size = 20.0
 autoplay = true
+bus = &"SFX"
 
 [connection signal="interagido" from="." to="." method="_on_interagido"]
 [connection signal="olhado" from="." to="." method="_on_olhado"]

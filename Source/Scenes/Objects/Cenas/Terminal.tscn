@@ -143,9 +143,10 @@ light_energy = 0.47
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=749384709]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.490584, 0.42093748, 1.4086577)
 stream = ExtResource("2_xashf")
-volume_db = 14.0
-unit_size = 20.0
+volume_db = 18.0
+unit_size = 30.0
 autoplay = true
+bus = &"SFX"
 
 [connection signal="interagido" from="chaves" to="chaves" method="_on_interagido"]
 [connection signal="interagido" from="PC" to="PC" method="_on_interagido"]

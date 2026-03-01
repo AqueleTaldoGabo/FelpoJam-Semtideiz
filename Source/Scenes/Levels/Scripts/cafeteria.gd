@@ -13,9 +13,10 @@ const musica3 = preload("res://Source/Assets/Música/loopfinal.ogg")
 var secret = false
 var current_text: String = ""
 var abrido = false
-var vermelho = true
 var ativo1 = false
 var ativo2 = false
+var vermelho = false
+var texto = false
 
 var placa
 var cont_vermelho = [false, false, false]
@@ -33,12 +34,11 @@ var corpoprofi = preload("res://Source/Scenes/Objects/Cenas/CorpoProfissional.ts
 var corpo = preload("res://Source/Scenes/Objects/Cenas/Corpo.tscn")
 
 func animar_texto(textos):
+	current_text = ""
 	for frase in textos:
-		if abrido == true:
-			break
 		for letra in frase:
 			if abrido == true:
-				break
+				return
 			while get_tree().paused:
 				await get_tree().process_frame
 			if get_tree().paused == false:
@@ -172,6 +172,8 @@ func _on_mudar_algo(valor, valor2):
 		
 	if valor == 88:
 		secret = true
+		$Player.vermelho = false
+		$Player.segredo = true
 		if !has_node("/root/Cafeteria/Corpo"):
 			get_tree().current_scene.add_child(corpo.instantiate())
 		
@@ -182,14 +184,14 @@ func _on_mudar_algo(valor, valor2):
 		ControleMusica.trocar_com_fade(musica3)
 		ativo2 = true
 	
-	if cont_vermelho.count(true) == 3 and secret == false and checker():
+	if checker2() and secret == false and checker():
 		await get_node("/root/Folha").tree_exited
 		abrido = false
 		$Player.vermelho = true
-		
 		if vermelho:
 			animar_texto(["Volte as folhas"])
 			vermelho = false
+
 	else:
 		saida()
 	if valor < 5 and valor >= 0:
@@ -198,14 +200,28 @@ func _on_mudar_algo(valor, valor2):
 func carimbada(algo):
 	carimbas[algo] = true
 	
+func checker2():
+	if !vermelho and cont_vermelho.count(true):
+		vermelho = true
+	return cont_vermelho.count(true) == 3
+	
+
 func checker():
+	if carimbas.count(true) == 9 and !texto:
+		texto = true
 	return carimbas.count(true) == 9
 	
 func saida():
-	if checker() and (corporum or cont_vermelho.count(true) != 3):
+
+	if checker() and (corporum or cont_vermelho.count(true) != 3) :
+		await get_node("/root/Folha").tree_exited
+		
 		if has_node("/root/Cafeteria/PlacaCapacitacao"):
 			var porta = get_node("/root/Cafeteria/PlacaCapacitacao")
 			porta.saida = true
 			porta.quant_ver = cont_vermelho
 		abrido = false
-		animar_texto(["Saia da cafeteria"])
+
+		if texto:
+			animar_texto(["Saia da cafeteria"])
+			texto = false

@@ -35,14 +35,13 @@ position = Vector2(242, 13.999939)
 scale = Vector2(0.38, 0.4129213)
 texture = ExtResource("3_o6amw")
 
-[node name="Secret" type="Button" parent="Control" unique_id=1020620504]
+[node name="Secret" type="TextureButton" parent="Control" unique_id=231136538]
 layout_mode = 0
 offset_left = 190.0
 offset_top = -32.0
-offset_right = 198.0
-offset_bottom = -24.0
-scale = Vector2(11.3817425, 16.033382)
-flat = true
+offset_right = 254.0
+offset_bottom = 53.0
+scale = Vector2(1.5, 1.5)
 
 [node name="HboxCont1" type="HBoxContainer" parent="Control" unique_id=1554795035]
 layout_mode = 1
@@ -120,9 +119,9 @@ texture_hover = ExtResource("6_qrvcg")
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -9.825
-anchor_top = 6.1
-anchor_right = -7.525
-anchor_bottom = 7.2
+anchor_top = 6.65
+anchor_right = -7.175
+anchor_bottom = 7.7
 flat = true
 metadata/_edit_use_anchors_ = true
 
