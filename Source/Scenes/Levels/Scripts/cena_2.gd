@@ -14,7 +14,7 @@ var frases2 = ["Era só seguir o protocolo... ",
 				"Te encaminhamos uma mensagem, mas ",
 				"Antes disso responda essa pergunta..."]
 
-var quant_vermelho = [true, true, true]
+var quant_vermelho = [true, true, false]
 var fase = true
 
 const porta = preload("res://Source/Assets/Sons/portaabrindo.ogg")

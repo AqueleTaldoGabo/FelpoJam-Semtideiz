@@ -360,7 +360,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6719313, 2.0727386, 2.17924
 shape = SubResource("BoxShape3D_witrb")
 
 [node name="quadropronto" type="StaticBody3D" parent="." unique_id=959838589]
-transform = Transform3D(0.235, 0, 0, 0, 0.235, 0, 0, 0, 0.235, -18.05112, 1.410471, 2.5228078)
+transform = Transform3D(0.235, 0, 0, 0, 0.235, 0, 0, 0, 0.235, -13.562173, 1.410471, 2.5228078)
 
 [node name="Moldura" type="MeshInstance3D" parent="quadropronto" unique_id=836621607]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)

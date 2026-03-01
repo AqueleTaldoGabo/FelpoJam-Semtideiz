@@ -56,6 +56,13 @@ func _on_exit_pressed() -> void:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 		
 	elif has_node("/root/Fim"):
+		if fim == 1:
+			Transicao.transicao()
+			await Transicao.fade_acabou
+			$MoldeDaCartaTutorial.hide()
+			$Label.position = Vector2(-60,0)
+			$Label.text ="A máquina segue"
+			await get_tree().create_timer(3).timeout
 		MudarScena.mudarMenu()
 	else:
 		var crosshair = get_node("/root/Cena1/Player/Cabeça/Camera3D/CanvasLayer/crosshair")
