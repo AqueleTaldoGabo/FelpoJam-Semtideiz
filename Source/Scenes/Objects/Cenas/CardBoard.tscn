@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bvc4jr4d4b0ny" path="res://Source/Assets/Modelos/Cafeteria/CardBoard/Papelão_0.png" id="1_l8vxo"]
 [ext_resource type="Texture2D" uid="uid://bcvgymdqg6nvs" path="res://Source/Assets/Modelos/Cafeteria/CardBoard/Papelão_1.png" id="2_u2lw2"]
+[ext_resource type="AudioStream" uid="uid://diu6oy0bi1v0w" path="res://Source/Assets/Sons/colocando logo.ogg" id="3_u2lw2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r2w7m"]
 resource_name = "Material.001"
@@ -115,3 +116,10 @@ transform = Transform3D(-2.1855698e-07, -4.095761, 2.8678823, 0, 2.8678825, 4.09
 light_energy = 1.634
 light_volumetric_fog_energy = 0.0
 spot_range = 2.601
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1722415592]
+transform = Transform3D(5.0000005, 0, 0, 0, 5, 0, 0, 0, 5.0000005, 0, 2.7697012, 0)
+stream = ExtResource("3_u2lw2")
+volume_db = 60.0
+unit_size = 30.0
+bus = &"SFX"

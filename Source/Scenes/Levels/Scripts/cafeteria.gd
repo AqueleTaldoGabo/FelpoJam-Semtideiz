@@ -10,6 +10,7 @@ const conversa = preload("res://Source/Assets/Sons/gibberishdequalidade.ogg")
 const musica2 = preload("res://Source/Assets/Música/loop2gameplay.ogg")
 const musica3 = preload("res://Source/Assets/Música/loopfinal.ogg")
 
+
 var secret = false
 var current_text: String = ""
 var abrido = false

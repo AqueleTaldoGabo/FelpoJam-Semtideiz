@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://diu6oy0bi1v0w"
+path="res://.godot/imported/colocando logo.ogg-e6d78e81f146f2ad3a9ed5e6dfa05748.oggvorbisstr"
+
+[deps]
+
+source_file="res://Source/Assets/Sons/colocando logo.ogg"
+dest_files=["res://.godot/imported/colocando logo.ogg-e6d78e81f146f2ad3a9ed5e6dfa05748.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
