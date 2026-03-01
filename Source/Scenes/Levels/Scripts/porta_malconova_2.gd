@@ -3,6 +3,7 @@ extends interagivel
 
 
 const portasom = preload("res://Source/Assets/Sons/portafodadestrancando.ogg")
+const portaTrancada = preload("res://Source/Assets/Sons/PORTATRANCADA.ogg")
 const malgino = preload("res://Source/Assets/Sons/REVELACAODOMAL2.ogg")
 
 @export var trancado = true
@@ -16,7 +17,7 @@ func _on_interagido(_body: Variant) -> void:
 			mapa.corporum = true
 			mapa.saida()
 			ControleSfx.toca_SFX(malgino)
-			
-			
 		$'.'.hide()
 		$'.'.set_collision_layer_value(1, false)
+	else:
+		ControleSfx.toca_SFX(portaTrancada)

@@ -1,12 +1,13 @@
 extends interagivel
 
-const musica = preload("res://Source/Assets/Música/loop1gameplay.ogg")
+const musica = preload("res://Source/Assets/Música/loop1gameplaycerto.ogg")
 
 var saida = false
 var quant_ver
 
 func _on_interagido(_body: Variant) -> void:
 	if saida == true:
+		
 		MudarScena.mudarFim(quant_ver)
 	if !has_node("/root/Folha"):
 		Transicao.transicao()

@@ -10,6 +10,8 @@ func _on_interagido(_body: Variant) -> void:
 		ControleSfx.toca_SFX(pc)
 		var crosshair = get_node("/root/" + get_tree().current_scene.name + "/Player/Cabeça/Camera3D/CanvasLayer/crosshair")
 		crosshair.hide()
+		var label = get_node("/root/" + get_tree().current_scene.name + "/Player/Cabeça/Camera3D/CanvasLayer/Label")
+		label.hide()
 		
 	
 func _input(event: InputEvent) -> void:
@@ -18,3 +20,5 @@ func _input(event: InputEvent) -> void:
 		interagindo = false
 		var crosshair = get_node("/root/" + get_tree().current_scene.name + "/Player/Cabeça/Camera3D/CanvasLayer/crosshair")
 		crosshair.show()
+		var label = get_node("/root/" + get_tree().current_scene.name + "/Player/Cabeça/Camera3D/CanvasLayer/Label")
+		label.show()

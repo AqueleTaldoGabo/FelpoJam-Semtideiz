@@ -1,9 +1,9 @@
 [gd_scene format=4 uid="uid://dvt0nduqro6x3"]
 
 [ext_resource type="Script" uid="uid://clqj5hhjkfaw0" path="res://Source/Scenes/Objects/Scripts/interativos.gd" id="2_7d1b4"]
-[ext_resource type="Texture2D" uid="uid://ck12d78mt7jd2" path="res://Source/Assets/Sprites/post it2.png" id="3_q14if"]
-[ext_resource type="Texture2D" uid="uid://dp2dj7a0k66af" path="res://Source/Assets/Sprites/post it1.png" id="3_xfxu6"]
+[ext_resource type="Texture2D" uid="uid://6m470diqjgf4" path="res://Source/Assets/Sprites/post it22.png" id="2_i32at"]
 [ext_resource type="Texture2D" uid="uid://bnqjwriqidmhl" path="res://Source/Assets/Modelos/Cafeteria/Poster/PROSTER_0.png" id="4_6euia"]
+[ext_resource type="Texture2D" uid="uid://cq06xsg88ym5c" path="res://Source/Assets/Sprites/post it11.png" id="4_lrl6e"]
 [ext_resource type="FontFile" uid="uid://c0b1xlphy8isa" path="res://Source/Assets/fonts/OldNewspaperTypes.ttf" id="4_q14if"]
 [ext_resource type="PackedScene" uid="uid://cbwjw5n5paf03" path="res://Source/Assets/Modelos/Cafeteria/PostIT/pouistiiti4.fbx" id="6_q14if"]
 [ext_resource type="PackedScene" uid="uid://xscmvrnjddyo" path="res://Source/Assets/Modelos/Cafeteria/PostIT/pouistiiti3.fbx" id="7_bi78n"]
@@ -213,7 +213,7 @@ grow_vertical = 2
 
 [node name="PostIt1" type="Sprite2D" parent="Postits/Control2" unique_id=1141639692]
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_q14if")
+texture = ExtResource("2_i32at")
 
 [node name="Label2" type="Label" parent="Postits/Control2" unique_id=814474427]
 layout_mode = 0
@@ -241,7 +241,7 @@ grow_vertical = 2
 
 [node name="PostIt1" type="Sprite2D" parent="Postits/Control" unique_id=1955609994]
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_xfxu6")
+texture = ExtResource("4_lrl6e")
 
 [node name="Label" type="Label" parent="Postits/Control" unique_id=162632938]
 layout_mode = 0

@@ -25,6 +25,11 @@ var texto = true
 var texto2 = true
 
 func _ready() -> void:
+	if has_node("/root/Folha"):
+		var noode = get_node("/root/Folha")
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+		noode.queue_free()
+	
 	
 	$Porta.set_collision_layer_value(1, false)
 	$Telefone.set_collision_layer_value(1, false)

@@ -22,7 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://itc36l8tx4kd" path="res://Source/Assets/Modelos/Cafeteria/Condimentos/Condimentosprontos_1.png" id="28_yyvm2"]
 [ext_resource type="Texture2D" uid="uid://dq4qa84ceou7w" path="res://Source/Assets/Modelos/Cafeteria/Condimentos/Condimentosprontos_2.png" id="29_5ibyj"]
 [ext_resource type="Script" uid="uid://dn4xvobrpbkcy" path="res://Source/Scenes/Levels/Scripts/porta_malconova_2.gd" id="29_fcpcy"]
-[ext_resource type="Texture2D" uid="uid://dh070ytw4tgny" path="res://Source/Assets/Modelos/porta_Malcon/portaMALCONOVA2_0.png" id="30_fcpcy"]
+[ext_resource type="Texture2D" uid="uid://b35kio4gt1xu4" path="res://Source/Assets/Modelos/porta_Malcon/portaMALCONOVA2_0.png" id="30_fcpcy"]
 [ext_resource type="Texture2D" uid="uid://cartkqtpm257u" path="res://Source/Assets/Modelos/Cafeteria/Condimentos/Condimentosprontos_3.png" id="30_w1tu3"]
 [ext_resource type="Texture2D" uid="uid://cgp3rfo73qqc4" path="res://Source/Assets/Modelos/Cafeteria/Condimentos/Condimentosprontos_4.png" id="31_1xnkm"]
 [ext_resource type="AudioStream" uid="uid://c57wsfvlrha86" path="res://Source/Assets/Sons/PORTATRANCADA.ogg" id="32_3eogv"]
@@ -1734,61 +1734,62 @@ light_energy = 13.84
 shadow_enabled = true
 omni_range = 16.226
 
-[node name="portaMALCONOVA2" type="StaticBody3D" parent="." unique_id=334358327]
+[node name="portaMALCONOVA2" type="StaticBody3D" parent="." unique_id=604610333]
 transform = Transform3D(0.32, 0, 0, 0, 0.32, 0, 0, 0, 0.32, -18.22138, 0, 4.200429)
 script = ExtResource("29_fcpcy")
 
-[node name="Cube" type="MeshInstance3D" parent="portaMALCONOVA2" unique_id=32590493]
+[node name="Cube" type="MeshInstance3D" parent="portaMALCONOVA2" unique_id=1007980419]
 transform = Transform3D(44.571175, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 mesh = SubResource("ArrayMesh_usokb")
 
-[node name="Cube_001" type="MeshInstance3D" parent="portaMALCONOVA2" unique_id=1728892998]
+[node name="Cube_001" type="MeshInstance3D" parent="portaMALCONOVA2" unique_id=1080467159]
 transform = Transform3D(44.571175, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 mesh = SubResource("ArrayMesh_igmnp")
 
-[node name="Cube_002" type="MeshInstance3D" parent="portaMALCONOVA2" unique_id=1262210303]
+[node name="Cube_002" type="MeshInstance3D" parent="portaMALCONOVA2" unique_id=1280483137]
 transform = Transform3D(44.571175, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 mesh = SubResource("ArrayMesh_i2d5k")
 
-[node name="Cylinder" type="MeshInstance3D" parent="portaMALCONOVA2" unique_id=1293954186]
+[node name="Cylinder" type="MeshInstance3D" parent="portaMALCONOVA2" unique_id=1940041187]
 transform = Transform3D(4.1328371e-07, 3.030839e-07, 6.93375, 1.23168145e-14, 6.93375, -3.030839e-07, -6.93375, 3.6950444e-14, 4.1328371e-07, 0.104867004, 3.419446, 1.5228739)
 
-[node name="Cylinder_001" type="MeshInstance3D" parent="portaMALCONOVA2" unique_id=158736978]
+[node name="Cylinder_001" type="MeshInstance3D" parent="portaMALCONOVA2" unique_id=40119998]
 transform = Transform3D(3.7195534e-06, -3.0308385e-07, -6.9337497, -1.23168145e-14, 6.93375, -3.0308385e-07, 6.9337497, 1.6011858e-13, 3.7195534e-06, -0.16859722, 3.2683837, 1.494176)
+
+[node name="Som" type="AudioStreamPlayer3D" parent="portaMALCONOVA2" unique_id=1770631944]
+transform = Transform3D(3.125, 0, 0, 0, 3.125, 0, 0, 0, 3.125, 0, 0, 0)
+stream = ExtResource("32_3eogv")
+volume_db = 20.0
+unit_size = 20.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="portaMALCONOVA2" unique_id=1657272658]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2114868, 0.10748291)
 shape = SubResource("BoxShape3D_dwvy1")
 
-[node name="Som" type="AudioStreamPlayer3D" parent="portaMALCONOVA2" unique_id=1770631944]
-stream = ExtResource("32_3eogv")
-volume_db = 20.0
-unit_size = 20.0
-
 [node name="portaMALCONOVA3" type="StaticBody3D" parent="." unique_id=211929842]
 transform = Transform3D(0.32, 0, 0, 0, 0.32, 0, 0, 0, 0.32, -21.758192, 0, -2.6711211)
-
-[node name="Cube" type="MeshInstance3D" parent="portaMALCONOVA3" unique_id=1408256219]
-transform = Transform3D(44.571175, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
-mesh = SubResource("ArrayMesh_usokb")
-
-[node name="Cube_001" type="MeshInstance3D" parent="portaMALCONOVA3" unique_id=1322725888]
-transform = Transform3D(44.571175, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
-mesh = SubResource("ArrayMesh_igmnp")
-
-[node name="Cube_002" type="MeshInstance3D" parent="portaMALCONOVA3" unique_id=886231633]
-transform = Transform3D(44.571175, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
-mesh = SubResource("ArrayMesh_i2d5k")
-
-[node name="Cylinder" type="MeshInstance3D" parent="portaMALCONOVA3" unique_id=1813961131]
-transform = Transform3D(4.1328371e-07, 3.030839e-07, 6.93375, 1.23168145e-14, 6.93375, -3.030839e-07, -6.93375, 3.6950444e-14, 4.1328371e-07, 0.104867004, 3.419446, 1.5228739)
-
-[node name="Cylinder_001" type="MeshInstance3D" parent="portaMALCONOVA3" unique_id=1825153212]
-transform = Transform3D(3.7195534e-06, -3.0308385e-07, -6.9337497, -1.23168145e-14, 6.93375, -3.0308385e-07, 6.9337497, 1.6011858e-13, 3.7195534e-06, -0.16859722, 3.2683837, 1.494176)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="portaMALCONOVA3" unique_id=85467005]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2114868, 0.10748291)
 shape = SubResource("BoxShape3D_dwvy1")
+
+[node name="Cube" type="MeshInstance3D" parent="portaMALCONOVA3" unique_id=395259532]
+transform = Transform3D(44.571175, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+mesh = SubResource("ArrayMesh_usokb")
+
+[node name="Cube_001" type="MeshInstance3D" parent="portaMALCONOVA3" unique_id=1197479084]
+transform = Transform3D(44.571175, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+mesh = SubResource("ArrayMesh_igmnp")
+
+[node name="Cube_002" type="MeshInstance3D" parent="portaMALCONOVA3" unique_id=944950654]
+transform = Transform3D(44.571175, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+mesh = SubResource("ArrayMesh_i2d5k")
+
+[node name="Cylinder" type="MeshInstance3D" parent="portaMALCONOVA3" unique_id=703540485]
+transform = Transform3D(4.1328371e-07, 3.030839e-07, 6.93375, 1.23168145e-14, 6.93375, -3.030839e-07, -6.93375, 3.6950444e-14, 4.1328371e-07, 0.104867004, 3.419446, 1.5228739)
+
+[node name="Cylinder_001" type="MeshInstance3D" parent="portaMALCONOVA3" unique_id=2079321683]
+transform = Transform3D(3.7195534e-06, -3.0308385e-07, -6.9337497, -1.23168145e-14, 6.93375, -3.0308385e-07, 6.9337497, 1.6011858e-13, 3.7195534e-06, -0.16859722, 3.2683837, 1.494176)
 
 [node name="LuzFora" parent="." unique_id=1177152707 instance=ExtResource("15_dwvy1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15103388, 0, 0)

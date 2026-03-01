@@ -4,7 +4,7 @@ class_name ControleScena
 
 const MUSICA1 = preload("res://Source/Assets/Música/menucarimbooficial.ogg")
 const MUSICA2 = preload("res://Source/Assets/Música/musicaquarto.ogg")
-const musicaCredito = preload("res://Source/Assets/Música/ENDING.ogg")
+const musicaCredito = preload("res://Source/Assets/Música/endingcarimbo2.ogg")
 @onready var Cafeteria = preload("res://Source/Scenes/Levels/Cenas/Cafeteria.tscn")
 @onready var Cena1 = preload("res://Source/Scenes/Levels/Cenas/Cena1.tscn")
 @onready var Menu = preload("res://Source/Scenes/Levels/Cenas/Menu.tscn")
@@ -46,14 +46,14 @@ func mudarCredito():
 	Transicao.transicao()
 	ControleMusica.fade_out()
 	await Transicao.fade_acabou
-
+	ControleMusica.trocar_musica(musicaCredito)
 	get_tree().change_scene_to_packed(Credito)
 	
 func mudarFim(quant_ver):
 	Transicao.transicao()
 	ControleMusica.fade_out()
 	await Transicao.fade_acabou
-	ControleMusica.trocar_musica(musicaCredito)
+	ControleMusica.stop()
 	var Cen2 = Cena2.instantiate()
 	Cen2.quant_vermelho = quant_ver
 	get_tree().current_scene.queue_free()
@@ -70,4 +70,3 @@ func mudarFinal(fim):
 	get_tree().current_scene.queue_free()
 	get_tree().root.add_child(Finalizacao)
 	get_tree().current_scene = Finalizacao
-	

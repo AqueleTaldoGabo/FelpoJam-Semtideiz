@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://d0l0wf0ekhtua" path="res://Source/Scenes/Objects/Scripts/Terminal.gd" id="2_kd4bp"]
 [ext_resource type="AudioStream" uid="uid://c6yw0n11k78bw" path="res://Source/Assets/Sons/SONSDECHAVE2.ogg" id="2_xashf"]
 [ext_resource type="Texture2D" uid="uid://285nquqa4vop" path="res://Source/Assets/Imagens/terminal.png" id="3_pek3j"]
+[ext_resource type="AudioStream" uid="uid://dfsuekwfe10kj" path="res://Source/Assets/Sons/computadorligando.ogg" id="7_r67sy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t67kv"]
 resource_name = "Material.001"
@@ -147,6 +148,13 @@ volume_db = 18.0
 unit_size = 30.0
 autoplay = true
 bus = &"SFX"
+
+[node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="." unique_id=148545959]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.093222, 1.7120771, 8.762204)
+stream = ExtResource("7_r67sy")
+volume_db = 30.0
+unit_size = 20.0
+autoplay = true
 
 [connection signal="interagido" from="chaves" to="chaves" method="_on_interagido"]
 [connection signal="interagido" from="PC" to="PC" method="_on_interagido"]

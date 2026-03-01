@@ -1,9 +1,100 @@
 [gd_scene format=3 uid="uid://br113uhgmm0v3"]
 
 [ext_resource type="Texture2D" uid="uid://c55ggm3covhj4" path="res://Source/Assets/Sprites/Menu Principal final.png" id="1_vpgfo"]
+[ext_resource type="Texture2D" uid="uid://cpy6c7wcs2l1s" path="res://Source/Assets/Sprites/fundo2-Sheet.png" id="3_4bqv4"]
 [ext_resource type="Script" uid="uid://dvlm5tx45km2i" path="res://Source/Scenes/Levels/Scripts/menu.gd" id="3_i10ex"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_palgp"]
+atlas = ExtResource("3_4bqv4")
+region = Rect2(0, 0, 740, 740)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hjokx"]
+atlas = ExtResource("3_4bqv4")
+region = Rect2(740, 0, 740, 740)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hms28"]
+atlas = ExtResource("3_4bqv4")
+region = Rect2(1480, 0, 740, 740)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t2heo"]
+atlas = ExtResource("3_4bqv4")
+region = Rect2(2220, 0, 740, 740)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_peknw"]
+atlas = ExtResource("3_4bqv4")
+region = Rect2(2960, 0, 740, 740)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5xd5u"]
+atlas = ExtResource("3_4bqv4")
+region = Rect2(3700, 0, 740, 740)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kw4mu"]
+atlas = ExtResource("3_4bqv4")
+region = Rect2(4440, 0, 740, 740)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qianp"]
+atlas = ExtResource("3_4bqv4")
+region = Rect2(5180, 0, 740, 740)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gvj4a"]
+atlas = ExtResource("3_4bqv4")
+region = Rect2(5920, 0, 740, 740)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nactg"]
+atlas = ExtResource("3_4bqv4")
+region = Rect2(6660, 0, 740, 740)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dkpal"]
+atlas = ExtResource("3_4bqv4")
+region = Rect2(7400, 0, 740, 740)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wkxx4"]
+atlas = ExtResource("3_4bqv4")
+region = Rect2(8140, 0, 740, 740)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_vpgfo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_palgp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hjokx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hms28")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2heo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_peknw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5xd5u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kw4mu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qianp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gvj4a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nactg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dkpal")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wkxx4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Menu" type="Node" unique_id=1948867365]
 
@@ -71,8 +162,12 @@ theme_override_font_sizes/font_size = 10
 flat = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control" unique_id=1202535676]
-position = Vector2(837, 4)
+position = Vector2(874, 17)
+scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_vpgfo")
+autoplay = "default"
+frame = 3
+frame_progress = 0.8019053
 
 [connection signal="mouse_exited" from="Control/MenuPaperSemBotoesLigados/VboxBotoes" to="Control/MenuPaperSemBotoesLigados/VboxBotoes" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="Control/MenuPaperSemBotoesLigados/VboxBotoes/BotaoStart" to="Control/MenuPaperSemBotoesLigados/VboxBotoes" method="_on_botao_start_mouse_entered"]

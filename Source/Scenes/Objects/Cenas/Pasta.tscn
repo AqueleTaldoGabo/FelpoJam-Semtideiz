@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bsnvuv8pvgjke" path="res://Source/Scenes/Objects/Scripts/pagina_1.gd" id="2_io8j2"]
 [ext_resource type="Texture2D" uid="uid://cxsfnkaygtrvo" path="res://Source/Assets/Imagens/MOLDE_DA_CARTA_TUTORIAL.png" id="3_d4yv5"]
 [ext_resource type="Texture2D" uid="uid://gjqa848lcxot" path="res://Source/Assets/Sprites/seta.png" id="4_pp4c2"]
-[ext_resource type="Texture2D" uid="uid://b325afd5hx13p" path="res://Source/Assets/Sprites/Não apagado.png" id="5_ta1xh"]
+[ext_resource type="Texture2D" uid="uid://3hmbqltkuljg" path="res://Source/Assets/Sprites/Não apagado.png" id="5_ta1xh"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_urx0x"]
 size = Vector3(0.6097412, 0.02028656, 0.3694458)

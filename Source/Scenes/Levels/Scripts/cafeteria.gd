@@ -7,7 +7,7 @@ extends Node
 const whitenoise = preload("res://Source/Assets/Música/whitenoise.ogg")
 const classico = preload("res://Source/Assets/Sons/carimbagemclassica1.ogg")
 const conversa = preload("res://Source/Assets/Sons/gibberishdequalidade.ogg")
-const musica2 = preload("res://Source/Assets/Música/loopgameplay2.ogg")
+const musica2 = preload("res://Source/Assets/Música/loop2gameplay.ogg")
 const musica3 = preload("res://Source/Assets/Música/loopfinal.ogg")
 
 var secret = false
@@ -64,6 +64,7 @@ func _on_mudar_algo(valor, valor2):
 	if valor == 6:
 		if !has_node("/root/Cafeteria/Mapa"):
 			carimbada(0)
+			$Player.target_rotation = Vector2(1.57, 0)
 			get_tree().current_scene.add_child(mapa.instantiate())
 			$AudioStreamPlayer.play()
 	elif valor == 7:
