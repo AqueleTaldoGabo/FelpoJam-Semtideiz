@@ -97,18 +97,18 @@ light_energy = 1.315
 omni_range = 1.585
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1112958604]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -3.062861, 2.4073012, 0.843724)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -3.062861, 2.4073012, 0.3341539)
 mesh = SubResource("PlaneMesh_l6wx8")
 
 [node name="Sprite3D" type="Sprite3D" parent="MeshInstance3D" unique_id=397683452]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0.07616353, 0.2962314, 0.31154454)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0.07616353, 0.33480334, 0.31154466)
 cast_shadow = 0
 gi_mode = 2
 alpha_cut = 3
 texture = ExtResource("14_l6wx8")
 
 [node name="SpotLight3D2" type="SpotLight3D" parent="MeshInstance3D" unique_id=1304021077]
-transform = Transform3D(0.99553233, 0, -0.094421074, 0.094421074, -4.371139e-08, 0.99553233, -4.1272763e-09, -1, -4.35161e-08, 0.11444807, 3.4161167, 0.4316063)
+transform = Transform3D(0.99553233, 0, -0.094421074, 0.094421074, -4.371139e-08, 0.99553233, -4.1272763e-09, -1, -4.35161e-08, 0.11444807, 4.1107726, 0.43160617)
 spot_range = 6.274
 spot_attenuation = -0.69
 spot_angle = 26.5

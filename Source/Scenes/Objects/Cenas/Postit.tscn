@@ -7,6 +7,9 @@
 [ext_resource type="FontFile" uid="uid://c0b1xlphy8isa" path="res://Source/Assets/fonts/OldNewspaperTypes.ttf" id="4_q14if"]
 [ext_resource type="PackedScene" uid="uid://cbwjw5n5paf03" path="res://Source/Assets/Modelos/Cafeteria/PostIT/pouistiiti4.fbx" id="6_q14if"]
 [ext_resource type="PackedScene" uid="uid://xscmvrnjddyo" path="res://Source/Assets/Modelos/Cafeteria/PostIT/pouistiiti3.fbx" id="7_bi78n"]
+[ext_resource type="PackedScene" uid="uid://bdru6px4ltfnq" path="res://Source/Assets/Modelos/Cafeteria/Poster/poster pronto2.fbx" id="8_bi78n"]
+[ext_resource type="Texture2D" uid="uid://b4fnhfthckicq" path="res://Source/Assets/Modelos/Cafeteria/Quadro/quadropronto_0.png" id="9_i32at"]
+[ext_resource type="Texture2D" uid="uid://7esxba8dd27m" path="res://Source/Assets/Modelos/Cafeteria/Quadro/quadropronto_1.png" id="10_lrl6e"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rh2hy"]
 resource_name = "Material"
@@ -53,20 +56,96 @@ font = ExtResource("4_q14if")
 font_size = 25
 font_color = Color(0, 0, 0, 1)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_q14if"]
-size = Vector3(1, 2.4318848, 2.0534668)
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_xfxu6"]
 size = Vector3(1, 2.1079102, 1.9827881)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_q14if"]
+size = Vector3(1, 2.4318848, 2.0534668)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3cpks"]
+resource_name = "Material"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("9_i32at")
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 0.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_samxy"]
+_surfaces = [{
+"aabb": AABB(-0.0018211061, -0.023367131, -0.00038871766, 0.0036422121, 0.046734262, 0.060777437),
+"format": 34359742465,
+"index_count": 78,
+"index_data": PackedByteArray("AAABAAIAAQAAAAMAAwAEAAEAAgABAAQABQADAAAABAADAAUAAgAGAAAAAAAGAAUABAAHAAIABQAHAAQACAAGAAIABQAGAAgACQACAAcAAgAJAAgACgAHAAUABwAKAAkABQALAAoACAALAAUADAAJAAoACQAMAA0ADQAIAAkACgAOAAwADgAKAAsACAANAA8ACwAPAA4ADwALAAgA"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("LrLuum1sv7wpWnc9LrLuum1svzwpWnc9LrLuOm1svzwpWnc9LrLuum1sv7zNzMu5LrLuum1svzzNzMu5LrLuOm1sv7zNzMu5LrLuOm1sv7wpWnc9LrLuOm1svzzNzMu5LrLuOmljq7ymVW09LrLuOmljqzymVW09LrLuOmljqzyGzgY7LrLuOmljq7yGzgY7rv0HuWljqzymVW09rv0HuWljq7ymVW09rv0HuWljqzyGzgY7rv0HuWljq7yGzgY7")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_witrb"]
+resource_name = "Cube"
+_surfaces = [{
+"aabb": AABB(-0.0018211061, -0.023367131, -0.00038871766, 0.0036422121, 0.046734262, 0.060777437),
+"attribute_data": PackedByteArray("ZqLMPqIR+D7Nrhk/oBH4Ps2uGT/2p/8+ZqLMPvan/z4qLCI/LgiAPiosIj9Yrm8+rae7Plyubz6tp7s+LgiAPvotTj+wyGQ+yDrZPbDIZD7IOtk9knyAP/otTj+SfIA/ZqLMPvan/z7Nrhk/9qf/Ps2uGT+gEfg+ZqLMPqIR+D5E24Y9AJmCPUTbhj0AmYI9nCRvPwCZgj2cJG8/AJmCPSosIj9Yrm8+KiwiPy4IgD6sp7s+LgiAPqynuz5crm8+ryJ8P2tSej+cJG8/1IJwP5wkbz8AmYI9ryJ8P4Bx0DzgU3c8a1J6P0Tbhj0AmYI9RNuGPdSCcD/gU3c8gHHQPJwkbz8AmYI9nCRvPwCZgj2cJG8/1IJwP5wkbz/UgnA/nCRvP9SCcD+cJG8/1IJwP0Tbhj3UgnA/RNuGPdSCcD9E24Y91IJwP0Tbhj3UgnA/RNuGPQCZgj1E24Y9AJmCPQ=="),
+"format": 34359742487,
+"index_count": 78,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAAFAAVABYAFgAXABQAGAAZABoAGgAbABgAGQAYABwAGwAaAB0AHAAeABkAHQAeABwAHQAfABsAHAAfAB0AIAAhACIAIgAjACAAJAAlACYAJgAnACQAKAApACoAKgArACgA"),
+"material": SubResource("StandardMaterial3D_3cpks"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 44,
+"vertex_data": PackedByteArray("LrLuum1sv7wpWnc9LrLuum1svzwpWnc9LrLuOm1svzwpWnc9LrLuOm1sv7wpWnc9LrLuum1sv7wpWnc9LrLuOm1sv7wpWnc9LrLuOm1sv7zNzMu5LrLuum1sv7zNzMu5LrLuum1svzwpWnc9LrLuum1sv7wpWnc9LrLuum1sv7zNzMu5LrLuum1svzzNzMu5LrLuOm1sv7zNzMu5LrLuOm1svzzNzMu5LrLuum1svzzNzMu5LrLuum1sv7zNzMu5rv0HuWljq7ymVW09LrLuOmljq7ymVW09LrLuOmljqzymVW09rv0HuWljqzymVW09LrLuOm1svzwpWnc9LrLuum1svzwpWnc9LrLuum1svzzNzMu5LrLuOm1svzzNzMu5LrLuOm1svzzNzMu5LrLuOmljqzyGzgY7LrLuOmljqzymVW09LrLuOm1svzwpWnc9LrLuOm1sv7zNzMu5LrLuOmljq7ymVW09LrLuOmljq7yGzgY7LrLuOm1sv7wpWnc9rv0HuWljqzymVW09LrLuOmljqzymVW09LrLuOmljqzyGzgY7rv0HuWljqzyGzgY7rv0HuWljqzyGzgY7LrLuOmljqzyGzgY7LrLuOmljq7yGzgY7rv0HuWljq7yGzgY7rv0HuWljq7yGzgY7LrLuOmljq7yGzgY7LrLuOmljq7ymVW09rv0HuWljq7ymVW09/3//f/9/////f/9//3/+//9//3//f/7//3//f/9/////fwAA/3//P/9/AAD/f/8//38AAP9//z//fwAA/3//PwAA/3//fwAAAAD/f/9/AAAAAP9//38AAAAA/3//fwAA//////9/AAD//////38AAP//////fwAA//////9/AAD/////////v/////////+//////////7//////////v/9/////f/+//3////9//7//f////3//v/9/////f/+/////f/9///////9//3///////3//f/7/////f/9//v////9//3/+/////3//f///////f/9//v////9//3////9/AAD///+//38AAP///7//fwAA////v/9/AAD///+//3//f////z//f/9/////P/9//3////8//3//f////z//f///////v/9///////+//3///////7//f///////vw==")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_samxy")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vnm2l"]
+resource_name = "Material.001"
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("10_lrl6e")
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 0.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_schx0"]
+_surfaces = [{
+"aabb": AABB(-0.00012969106, -0.020921426, 0.0020569875, 1e-05, 0.04184285, 0.055886023),
+"format": 34359742465,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgADAAAA"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("rv0HuWljq7ymVW09rv0HuWljqzymVW09rv0HuWljqzyGzgY7rv0HuWljq7yGzgY7")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_t7uds"]
+resource_name = "Cube_001"
+_surfaces = [{
+"aabb": AABB(-0.00012969106, -0.020921426, 0.0020569875, 1e-05, 0.04184285, 0.055886023),
+"attribute_data": PackedByteArray("+TZSPujwyj24p1I/uBDLPXalUj8V1WE/8S1SPh3RYT8="),
+"format": 34359742487,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgADAAAA"),
+"material": SubResource("StandardMaterial3D_vnm2l"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("rv0HuWljq7ymVW09rv0HuWljqzymVW09rv0HuWljqzyGzgY7rv0HuWljq7yGzgY7////f/9//f////9//3/9/////3//f/3/////f/9//f8=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_schx0")
+
 [node name="Postit" type="StaticBody3D" unique_id=860167678]
-
-[node name="PROSTER" type="StaticBody3D" parent="." unique_id=598339696]
-transform = Transform3D(-6.7752652e-09, 0, -0.155, 0, 0.155, 0, 0.155, 0, -6.7752652e-09, -10.804028, 1.6239266, -6.445853)
-
-[node name="Cube" type="MeshInstance3D" parent="PROSTER" unique_id=471016559]
-transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
-mesh = SubResource("ArrayMesh_xfxu6")
 
 [node name="PROSTER2" type="StaticBody3D" parent="." unique_id=987539857]
 transform = Transform3D(-0.155, 0, -1.35505305e-08, 0, 0.155, 0, 1.35505305e-08, 0, -0.155, 4.6618366, 1.6239266, 2.1503215)
@@ -140,34 +219,48 @@ offset_bottom = 248.0
 text = "[M1]"
 label_settings = SubResource("LabelSettings_bi78n")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Postits" unique_id=390513516]
-transform = Transform3D(-0.00022660545, -0.04313548, 0.08977437, 0.09959861, -0.00052323984, -3.2676268e-09, 0.00047162292, 0.08977313, 0.043136075, -9.059321, 1.2042024, 2.6606686)
-shape = SubResource("BoxShape3D_q14if")
+[node name="pouistiiti4" parent="Postits" unique_id=556273450 instance=ExtResource("6_q14if")]
+transform = Transform3D(0.0070036724, -0.07549731, 0.025516745, 0.07965797, 0.0073896456, 0, -0.0023569963, 0.025407651, 0.07582147, -9.1307745, 1.22, 2.3771152)
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Postits" unique_id=1683773041]
-transform = Transform3D(0.0070121544, -0.07551714, 0.025455646, 0.07965733, 0.0073965862, -3.1879024e-09, -0.002353584, 0.02534659, 0.075841285, -8.651595, 1.234008, 2.6221132)
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Postits/pouistiiti4" unique_id=1683773041]
+transform = Transform3D(1.0000001, 8.716341e-05, -7.419847e-05, -8.724723e-05, 0.9999996, 0.0007994473, 7.4245036e-05, -0.00080251694, 0.9999912, 0.1765728, -0.007774353, 0.022773743)
 shape = SubResource("BoxShape3D_xfxu6")
 
-[node name="pouistiiti4" parent="Postits" unique_id=556273450 instance=ExtResource("6_q14if")]
-transform = Transform3D(0.0070036724, -0.07549731, 0.025516745, 0.07965797, 0.0073896456, 0, -0.0023569963, 0.025407651, 0.07582147, -8.654, 1.22, 2.621)
-
 [node name="pouistiiti3" parent="Postits" unique_id=37853142 instance=ExtResource("7_bi78n")]
-transform = Transform3D(-0.00022706085, -0.04336531, 0.0901077, 0.09999863, -0.000523593, 0, 0.00047179763, 0.09010647, 0.043365907, -9.063, 1.204, 2.665)
+transform = Transform3D(-0.00022706085, -0.04336531, 0.0901077, 0.09999863, -0.000523593, 0, 0.00047179763, 0.09010647, 0.043365907, -9.427265, 1.204, 2.470112)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Postits/pouistiiti3" unique_id=390513516]
+transform = Transform3D(0.99599975, -1.741387e-05, -3.3073593e-06, 1.7396174e-05, 0.99599963, -0.00062546134, 3.3460092e-06, 0.00062540174, 0.9959997, 0.0017356873, -0.054985046, 0.0143585205)
+shape = SubResource("BoxShape3D_q14if")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1447586639]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.889824, 1.6847432, 2.5180738)
-light_energy = 0.675
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.285526, 1.6847432, 2.2809687)
+light_energy = 0.83
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=142234613]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.390019, 1.6847432, -5.062581)
-light_energy = 0.675
+light_energy = 0.97
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="." unique_id=951028600]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1517549, 1.6847432, 2.0169353)
-light_energy = 0.675
+light_energy = 0.97
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="." unique_id=2130083250]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2591516, 1.6847432, 9.013068)
-light_energy = 0.675
+light_energy = 0.97
+
+[node name="poster pronto2" parent="." unique_id=1644079614 instance=ExtResource("8_bi78n")]
+transform = Transform3D(-6.993822e-09, 0, -0.16, 0, 0.16, 0, 0.16, 0, -6.993822e-09, -10.804, 1.624, -6.446)
+
+[node name="quadropronto" type="StaticBody3D" parent="." unique_id=959838589]
+transform = Transform3D(0.235, 0, 0, 0, 0.235, 0, 0, 0, 0.235, -18.05112, 1.410471, 2.5228078)
+
+[node name="Moldura" type="MeshInstance3D" parent="quadropronto" unique_id=836621607]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+mesh = SubResource("ArrayMesh_witrb")
+
+[node name="Quadro" type="MeshInstance3D" parent="quadropronto" unique_id=395007059]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+mesh = SubResource("ArrayMesh_t7uds")
 
 [connection signal="interagido" from="Postits" to="Postits" method="_on_interagido"]
