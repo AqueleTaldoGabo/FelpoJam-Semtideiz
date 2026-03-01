@@ -8,7 +8,7 @@
 transform = Transform3D(-5.4639235e-09, 0, -0.125, 0, 0.125, 0, 0.125, 0, -5.4639235e-09, -1.4708747, 1.9854429, -6.3720484)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="funcionarios" unique_id=2020765039]
-transform = Transform3D(-1.2878143, -5.4432864, 5.7194552, 0.11052863, 5.782037, 5.5277333, -7.8948917, 0.96885717, -0.8555688, 11.754658, 9.868784, 1.5420332)
-
-[node name="SpotLight3D2" type="SpotLight3D" parent="funcionarios" unique_id=2100463078]
-transform = Transform3D(-1.2878143, -5.4432864, 5.7194552, 0.11052863, 5.782037, 5.5277333, -7.8948917, 0.96885717, -0.85556877, 11.754658, 9.868784, -8.610877)
+transform = Transform3D(-1.2878143, -5.4432864, 5.7194552, 0.11052863, 5.782037, 5.5277333, -7.8948917, 0.96885717, -0.85556877, 11.754658, 9.868784, -4.7721124)
+light_volumetric_fog_energy = 0.0
+spot_attenuation = -0.59
+spot_angle_attenuation = 0.30778632

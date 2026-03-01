@@ -3,6 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://dun2dg14jfc7x" path="res://Source/Assets/Modelos/Cafeteria/MesaTumi/Mesa Tumi.fbx" id="2_dfqo1"]
 [ext_resource type="PackedScene" uid="uid://bf2i7te54ym5o" path="res://Source/Assets/Modelos/Cafeteria/CadeiraEscritorio/Cadeira de Escritório.fbx" id="3_qxat6"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_4vwa6"]
+size = Vector3(4.0322266, 2.0688477, 1.3638153)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ntqir"]
+size = Vector3(1, 2.5342407, 1.2216797)
+
 [node name="Escritorio" type="StaticBody3D" unique_id=1306138337]
 
 [node name="Mesa Tumi" parent="." unique_id=251610326 instance=ExtResource("2_dfqo1")]
@@ -10,3 +16,11 @@ transform = Transform3D(0.225, 0, 0, 0, 0.16, 0, 0, 0, 0.115, -14.327393, 0.0565
 
 [node name="Cadeira de Escritório" parent="." unique_id=358837493 instance=ExtResource("3_qxat6")]
 transform = Transform3D(-0.18906434, 0, -0.2065301, 0, 0.28, 0, 0.2065301, 0, -0.18906434, -14.128184, 0.835742, 10.738967)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=224241525]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.817823, 0.5344238, 7.902669)
+shape = SubResource("BoxShape3D_4vwa6")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1750893875]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.053524, 0.5560938, 9.797149)
+shape = SubResource("BoxShape3D_ntqir")

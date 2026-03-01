@@ -113,7 +113,7 @@ shape = SubResource("BoxShape3D_ryax7")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=855194500]
 transform = Transform3D(-2.1855698e-07, -4.095761, 2.8678823, 0, 2.8678825, 4.0957603, -5.000001, 1.7903139e-07, -1.2535912e-07, 5.9605103, 8.677363, 0.32177353)
-light_energy = 1.634
+light_energy = 2.584
 light_volumetric_fog_energy = 0.0
 spot_range = 2.601
 

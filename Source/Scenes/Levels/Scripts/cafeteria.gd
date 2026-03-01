@@ -14,7 +14,9 @@ const musica3 = preload("res://Source/Assets/Música/loopfinal.ogg")
 var secret = false
 var current_text: String = ""
 var abrido = false
+var ativo0 = false
 var ativo1 = false
+var texto2 = true
 var ativo2 = false
 var vermelho = false
 var texto = false
@@ -22,6 +24,8 @@ var texto = false
 var placa
 var cont_vermelho = [false, false, false]
 var carimbas = [false, false, false, false, false, false, false, false, false]
+
+
 
 var mapa = preload("res://Source/Scenes/Levels/Cenas/mapa.tscn")
 var cafe = preload("res://Source/Scenes/Objects/Cenas/Canecas.tscn")
@@ -52,12 +56,15 @@ func animar_texto(textos):
 		current_text = ""
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("abrir_pagina"):
+	if event.is_action_pressed("abrir_pagina") and $Player.lockado == false:
 		abrido = true
 
 func _ready() -> void:
 	await get_tree().create_timer(2).timeout
-	await animar_texto(["Aperte espaço para abrir a pasta"])
+	$Player.lockado = true
+	await animar_texto(["Aperte a barra de esbaço para checar as informações"])
+
+	$Player.lockado = false
 	
 
 func _on_mudar_algo(valor, valor2):
@@ -178,6 +185,21 @@ func _on_mudar_algo(valor, valor2):
 		$Player.segredo = true
 		if !has_node("/root/Cafeteria/Corpo"):
 			get_tree().current_scene.add_child(corpo.instantiate())
+	
+	if carimbas.count(true) == 3 and !ativo0:
+		await get_node("/root/Folha").tree_exited
+		var frases = ["Aqui é seu espaço mental, você pode montar ", "a cena do crime que será enviada ao departamento de polícia."
+					, "Voce pode carimbar como positivo ou negativo as informações",  "que achar relevante para o caso",  "Todas elas serão materializadas aqui."]
+		abrido = false
+		$Player.lockado = false
+		if texto2:
+			
+			texto2 = false
+			$Player.lockado = true
+			$Player.se_move = true
+			await animar_texto(frases)
+			ANIMATED_LABEL.text = ""
+			ativo0 = true
 		
 	if carimbas.count(true) == 6 and !ativo1:
 		ControleMusica.trocar_com_fade(musica2)
@@ -193,9 +215,12 @@ func _on_mudar_algo(valor, valor2):
 		if vermelho:
 			animar_texto(["Volte as folhas e me carimbe"])
 			vermelho = false
-
 	else:
+		$Player.vermelho = false
+		vermelho = false
+		
 		saida()
+		
 	if valor < 5 and valor >= 0:
 		$Player.folhas = valor
 

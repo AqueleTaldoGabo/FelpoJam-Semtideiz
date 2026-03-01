@@ -105,6 +105,7 @@ shape = SubResource("BoxShape3D_yjf7f")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1859803143]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0923796, 1.4124784, -1.5416421)
-light_energy = 0.89
+light_energy = 1.5
+light_volumetric_fog_energy = 0.0
 
 [connection signal="interagido" from="Postits" to="Postits" method="_on_interagido"]
