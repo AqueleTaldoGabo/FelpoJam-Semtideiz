@@ -5,6 +5,7 @@ signal mudar_algo(valor, valor2)
 @export var vermelho = false
 @export var folha = 2
 @export var secredo = false
+@export var primeira_vez : bool = false
 
 
 
@@ -42,17 +43,34 @@ var marcado = false
 
 func fecha():
 	var crosshair = get_node("/root/Cafeteria/Player/Cabeça/Camera3D/CanvasLayer/crosshair")
-	if folha > 1:
+	if primeira_vez:
+		var deu_certo = true
 		for i in range(3):
 			var btn_esq = get_node("Control/HboxCont" + str(i+1) + "/BTNesquerda1")
 			var btn_dir = get_node("Control/HboxCont" + str(i+1) + "/BTNdireita1" )
 			_adjacency_matrix[folha-2]["esq" + str(i+1)] = btn_esq.texture_normal
 			_adjacency_matrix[folha-2]["dir" + str(i+1)] = btn_dir.texture_normal
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	ControleSfx.toca_Papel()
-	crosshair.show()
-	emit_signal("mudar_algo", folha, _adjacency_matrix)
-	$".".queue_free()
+			if btn_esq.texture_normal == botaodesligado and btn_dir.texture_normal == botaodesligado:
+				print("puts")
+				deu_certo = false
+		if deu_certo:
+			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+			ControleSfx.toca_Papel()
+			crosshair.show()
+			emit_signal("mudar_algo", folha, _adjacency_matrix)
+			$".".queue_free()
+	else:
+		if folha > 1:
+			for i in range(3):
+				var btn_esq = get_node("Control/HboxCont" + str(i+1) + "/BTNesquerda1")
+				var btn_dir = get_node("Control/HboxCont" + str(i+1) + "/BTNdireita1" )
+				_adjacency_matrix[folha-2]["esq" + str(i+1)] = btn_esq.texture_normal
+				_adjacency_matrix[folha-2]["dir" + str(i+1)] = btn_dir.texture_normal
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+		ControleSfx.toca_Papel()
+		crosshair.show()
+		emit_signal("mudar_algo", folha, _adjacency_matrix)
+		$".".queue_free()
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
@@ -126,7 +144,7 @@ func _on_button_pressed() -> void:
 
 func _on_avançar_pressed() -> void:
 	$"Control/Voltar".show()
-	if !pare:
+	if !pare :
 		if folha < 4:
 			var deu_certo = true
 			if folha > 1:
@@ -139,7 +157,7 @@ func _on_avançar_pressed() -> void:
 						print("puts")
 						deu_certo = false
 			
-			if deu_certo:
+			if deu_certo and !primeira_vez:
 				folha = folha+1
 			if folha == 4:
 				$"Control/Avançar".hide()

@@ -28,6 +28,7 @@
 [ext_resource type="AudioStream" uid="uid://c57wsfvlrha86" path="res://Source/Assets/Sons/PORTATRANCADA.ogg" id="32_3eogv"]
 [ext_resource type="Texture2D" uid="uid://f2ihha0wwjq6" path="res://Source/Assets/Modelos/Cafeteria/Condimentos/Condimentosprontos_5.png" id="32_yxqsl"]
 [ext_resource type="Texture2D" uid="uid://cpva37rwda5d2" path="res://Source/Assets/Modelos/Cafeteria/Condimentos/Condimentosprontos_6.png" id="33_sqma1"]
+[ext_resource type="PackedScene" uid="uid://bnm36godmhfqo" path="res://Source/Assets/Modelos/Cafeteria/Limpeza/limpeza.fbx" id="33_tguxb"]
 [ext_resource type="Texture2D" uid="uid://btyp6iite8v8v" path="res://Source/Assets/Modelos/Cafeteria/Papel/papel derolo_0.png" id="34_8moqn"]
 [ext_resource type="Texture2D" uid="uid://de8ke4krntuvc" path="res://Source/Assets/Modelos/Cafeteria/Papel/papel derolo_1.png" id="35_7a0j5"]
 [ext_resource type="PackedScene" uid="uid://beur7b0vtyx4l" path="res://Source/Scenes/Objects/Cenas/LuzTeto.tscn" id="36_hlcfg"]
@@ -1731,7 +1732,9 @@ omni_range = 10.045
 [node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=368793755]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.892736, 7.3905096, -0.051657677)
 light_energy = 13.84
+light_volumetric_fog_energy = 0.0
 shadow_enabled = true
+distance_fade_enabled = true
 omni_range = 16.226
 
 [node name="portaMALCONOVA2" type="StaticBody3D" parent="." unique_id=604610333]
@@ -1792,7 +1795,40 @@ transform = Transform3D(4.1328371e-07, 3.030839e-07, 6.93375, 1.23168145e-14, 6.
 transform = Transform3D(3.7195534e-06, -3.0308385e-07, -6.9337497, -1.23168145e-14, 6.93375, -3.0308385e-07, 6.9337497, 1.6011858e-13, 3.7195534e-06, -0.16859722, 3.2683837, 1.494176)
 
 [node name="LuzFora" parent="." unique_id=1177152707 instance=ExtResource("15_dwvy1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15103388, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15103388, -0.10208058, 0)
+
+[node name="portaMALCONOVA4" type="StaticBody3D" parent="." unique_id=266908589]
+transform = Transform3D(-1.3987644e-08, 0, 0.32, 0, 0.32, 0, -0.32, 0, -1.3987644e-08, -12.90402, 0, -6.4384856)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="portaMALCONOVA4" unique_id=1058121890]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2114868, 0.10748291)
+shape = SubResource("BoxShape3D_dwvy1")
+
+[node name="Cube" type="MeshInstance3D" parent="portaMALCONOVA4" unique_id=576014712]
+transform = Transform3D(44.571175, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+mesh = SubResource("ArrayMesh_usokb")
+
+[node name="Cube_001" type="MeshInstance3D" parent="portaMALCONOVA4" unique_id=2068717651]
+transform = Transform3D(44.571175, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+mesh = SubResource("ArrayMesh_igmnp")
+
+[node name="Cube_002" type="MeshInstance3D" parent="portaMALCONOVA4" unique_id=1150139385]
+transform = Transform3D(44.571175, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+mesh = SubResource("ArrayMesh_i2d5k")
+
+[node name="Cylinder" type="MeshInstance3D" parent="portaMALCONOVA4" unique_id=1210540875]
+transform = Transform3D(4.1328371e-07, 3.030839e-07, 6.93375, 1.23168145e-14, 6.93375, -3.030839e-07, -6.93375, 3.6950444e-14, 4.1328371e-07, 0.104867004, 3.419446, 1.5228739)
+
+[node name="Cylinder_001" type="MeshInstance3D" parent="portaMALCONOVA4" unique_id=880740995]
+transform = Transform3D(3.7195534e-06, -3.0308385e-07, -6.9337497, -1.23168145e-14, 6.93375, -3.0308385e-07, 6.9337497, 1.6011858e-13, 3.7195534e-06, -0.16859722, 3.2683837, 1.494176)
+
+[node name="limpeza" parent="." unique_id=704199430 instance=ExtResource("33_tguxb")]
+transform = Transform3D(0.041164376, 0, -0.19232146, 0, 0.5, 0, 0.14424111, 0, 0.054885834, -13.9457035, 1.1920929e-07, -6.2227798)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1880884848]
+transform = Transform3D(0.8248373, 0.006305273, 0.565335, -0.56537014, 0.009198973, 0.82478607, 0, -0.99993783, 0.011152469, 8.688576, 7.4232454, 0)
+spot_range = 46.661
+spot_attenuation = -0.3
 
 [connection signal="interagido" from="Jukebox" to="Jukebox" method="_on_interagido"]
 [connection signal="interagido" from="portaMALCONOVA2" to="portaMALCONOVA2" method="_on_interagido"]

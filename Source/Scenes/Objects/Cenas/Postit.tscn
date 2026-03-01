@@ -268,19 +268,23 @@ shape = SubResource("BoxShape3D_q14if")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1447586639]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.285526, 1.6847432, 2.2809687)
-light_energy = 0.83
+light_energy = 1.25
+light_volumetric_fog_energy = 0.0
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=142234613]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.390019, 1.6847432, -5.062581)
-light_energy = 0.97
+light_energy = 1.5
+light_volumetric_fog_energy = 0.0
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="." unique_id=951028600]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1517549, 1.6847432, 2.0169353)
-light_energy = 0.97
+light_energy = 1.5
+light_volumetric_fog_energy = 0.0
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="." unique_id=2130083250]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2591516, 1.6847432, 9.013068)
-light_energy = 0.97
+light_energy = 1.5
+light_volumetric_fog_energy = 0.0
 
 [node name="Poster" type="StaticBody3D" parent="." unique_id=2117049402]
 script = ExtResource("2_7d1b4")
