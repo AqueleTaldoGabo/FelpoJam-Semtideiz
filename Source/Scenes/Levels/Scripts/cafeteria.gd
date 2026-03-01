@@ -27,6 +27,7 @@ var descarte = preload("res://Source/Scenes/Objects/Cenas/Descarte.tscn")
 var postit = preload("res://Source/Scenes/Objects/Cenas/Postit.tscn")
 var postit2 = preload("res://Source/Scenes/Objects/Cenas/PostIt2.tscn")
 var terminal = preload("res://Source/Scenes/Objects/Cenas/Terminal.tscn")
+var corpoprofi = preload("res://Source/Scenes/Objects/Cenas/CorpoProfissional.tscn")
 var corpo = preload("res://Source/Scenes/Objects/Cenas/Corpo.tscn")
 
 func animar_texto(textos):
@@ -133,10 +134,13 @@ func _on_mudar_algo(valor, valor2):
 			noode.queue_free()
 	elif valor == 12:
 		carimbada(6)
-		
+		if !has_node("/root/Cafeteria/CorpoProfissional"):
+			get_tree().current_scene.add_child(corpoprofi.instantiate())
 	elif valor == -12:
 		carimbada(6)
-		
+		if has_node("/root/Cafeteria/CorpoProfissional"):
+			var noode = get_node("/root/Cafeteria/CorpoProfissional")
+			noode.queue_free()
 	elif valor == 13:
 		carimbada(7)
 		if cont_vermelho[2] == false:
@@ -176,7 +180,7 @@ func _on_mudar_algo(valor, valor2):
 		ControleMusica.trocar_com_fade(musica3)
 		ativo2 = true
 	
-	if cont_vermelho.count(true) == 3 and secret == false:
+	if cont_vermelho.count(true) == 3 and secret == false and checker():
 		await get_node("/root/Folha").tree_exited
 		abrido = false
 		$Player.vermelho = true

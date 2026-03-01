@@ -194,8 +194,10 @@ func _on_secret_pressed() -> void:
 		emit_signal("mudar_algo", 88, _adjacency_matrix)
 		comeco = true
 		var porta = get_node("/root/Cafeteria/Mapa/portaMALCONOVA2")
+		var som = get_node("/root/Cafeteria/Mapa/portaMALCONOVA2/Som")
 		porta.show()
-		porta
+		som.play()
+		porta.vermelho = true
 		porta.set_collision_layer_value(1, true)
 
 		
