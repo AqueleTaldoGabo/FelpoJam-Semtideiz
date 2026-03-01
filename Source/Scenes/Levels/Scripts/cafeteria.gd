@@ -189,7 +189,7 @@ func _on_mudar_algo(valor, valor2):
 		abrido = false
 		$Player.vermelho = true
 		if vermelho:
-			animar_texto(["Volte as folhas"])
+			animar_texto(["Volte as folhas e me carimbe"])
 			vermelho = false
 
 	else:
@@ -214,7 +214,9 @@ func checker():
 func saida():
 
 	if checker() and (corporum or cont_vermelho.count(true) != 3) :
-		await get_node("/root/Folha").tree_exited
+		if has_node("/root/Folha"):
+			await get_node("/root/Folha").tree_exited
+		
 		
 		if has_node("/root/Cafeteria/PlacaCapacitacao"):
 			var porta = get_node("/root/Cafeteria/PlacaCapacitacao")

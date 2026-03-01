@@ -6,18 +6,23 @@ var interagido = false
 
 var frases = 	["Alô alôoou, ...", 
 				"então funcionário…", 
-				"O  pessoal do departamento mandou uma mensagem",
- 				"de como foi o resultado do relatorio, ...",
-				"não é muito diferente do que você já tava acostumado,",
-				"mas protocolo é protocolo, sabe como é né."]
+				"você deve estar se questionando o que deve fazer agora...",
+ 				"Siga o protocolo, esta adereçado em sua mesa",
+				"Encaminharemos o resultado logo após, a máquina segue..."]
+				
+var frases2 = ["Era só seguir o protocolo... ",
+				"Te encaminhamos uma mensagem, mas ",
+				"Antes disso responda essa pergunta..."]
 
 var quant_vermelho = [true, true, true]
+var fase = true
 
 const porta = preload("res://Source/Assets/Sons/portaabrindo.ogg")
 
 
 var current_text: String = ""
 var texto = true
+var texto2 = true
 
 func _ready() -> void:
 	
@@ -57,26 +62,60 @@ func _on_telefone_interagido(_body: Variant) -> void:
 		ANIMATED_LABEL.text = ""
 		await get_tree().create_timer(0.4).timeout
 		await animar_texto(["Abra a pasta"])
+	elif texto2:
+		interagido = false
+		fase = false
+		$Pasta.set_collision_layer_value(1, true)
+		$Pasta/Folha.show()
+		$TelefoneSom.pare()
+		$Telefone.set_collision_layer_value(1, false)
+		texto2 = !texto2
+		await animar_texto(frases2)
+		ANIMATED_LABEL.text = ""
+		await get_tree().create_timer(0.4).timeout
+		await animar_texto(["Abra a folha"])
 
-func _on_porta_interagido(_body: Variant) -> void:
-	ControleSfx.toca_SFX(porta)
-	MudarScena.mudarCafeteria()
 
 func _on_pasta_interagido(_body: Variant) -> void:
-	var main = get_tree().current_scene
-	interagido = true
-	ControleSfx.toca_Papel()
-	ANIMATED_LABEL.text = ""
-	$Pasta/Pasta.hide()
-	if quant_vermelho.count(true) == 3:
-		$Pasta/Pagina2.show()
+	if fase:
+		interagido = true
+		ControleSfx.toca_Papel()
+		ANIMATED_LABEL.text = ""
+		$Pasta/Pasta.hide()
+		$Pasta/Pagina1.show()
+		var crosshair = get_node("/root/Cena2/Player/Cabeça/Camera3D/CanvasLayer/crosshair")
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		crosshair.hide()
+		$Pasta.set_collision_layer_value(1, false)
+		await get_tree().create_timer(0.5).timeout
+		await $Pasta/Pagina1.visibility_changed
+		if quant_vermelho.count(true) == 3:
+			crosshair.show()
+			await get_tree().create_timer(2).timeout
+			$TelefoneSom.toca_telefone()
+			$Telefone.set_collision_layer_value(1, true)
+		else:
+			crosshair.show()
+			await get_tree().create_timer(0.6).timeout
+			MudarScena.mudarFinal(1)
 	else:
-		MudarScena.mudarFinal(1)
-	var crosshair = get_node("/root/Cena2/Player/Cabeça/Camera3D/CanvasLayer/crosshair")
-	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-	crosshair.hide()
-	$Pasta.set_collision_layer_value(1, false)
-	await get_tree().create_timer(0.5).timeout
-	$Pasta/Pagina1.connect("Porta", Callable(main, "_on_porta"))
-	$Porta.set_collision_layer_value(1, true)
-	
+		interagido = true
+		ControleSfx.toca_Papel()
+		ANIMATED_LABEL.text = ""
+		$Pasta/Folha.hide()
+		$Pasta/Pagina2.show()
+		var crosshair = get_node("/root/Cena2/Player/Cabeça/Camera3D/CanvasLayer/crosshair")
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		crosshair.hide()
+		$Pasta.set_collision_layer_value(1, false)
+		await get_tree().create_timer(0.5).timeout
+		await $Pasta/Pagina2.visibility_changed
+		crosshair.show()
+		$Player.target_rotation = Vector2(-1.57,0)
+		await get_tree().create_timer(0.6).timeout
+		$Porta/portarafaelanimações/AnimationPlayer.play("Cube_001|Cube_001Action")
+		await get_tree().create_timer(0.1).timeout	
+		ControleSfx.toca_SFX(porta)
+		await $Porta/portarafaelanimações/AnimationPlayer.animation_finished
+		await get_tree().create_timer(0.2).timeout
+		MudarScena.mudarFinal(3)

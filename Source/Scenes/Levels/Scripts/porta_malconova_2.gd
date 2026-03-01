@@ -8,7 +8,7 @@ const malgino = preload("res://Source/Assets/Sons/REVELACAODOMAL2.ogg")
 @export var trancado = true
 @export var vermelho = false
 
-func _on_interagido(body: Variant) -> void:
+func _on_interagido(_body: Variant) -> void:
 	if !trancado:
 		ControleSfx.toca_SFX(portasom)
 		if vermelho:

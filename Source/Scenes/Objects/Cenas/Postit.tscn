@@ -7,9 +7,63 @@
 [ext_resource type="FontFile" uid="uid://c0b1xlphy8isa" path="res://Source/Assets/fonts/OldNewspaperTypes.ttf" id="4_q14if"]
 [ext_resource type="PackedScene" uid="uid://cbwjw5n5paf03" path="res://Source/Assets/Modelos/Cafeteria/PostIT/pouistiiti4.fbx" id="6_q14if"]
 [ext_resource type="PackedScene" uid="uid://xscmvrnjddyo" path="res://Source/Assets/Modelos/Cafeteria/PostIT/pouistiiti3.fbx" id="7_bi78n"]
-[ext_resource type="PackedScene" uid="uid://bdru6px4ltfnq" path="res://Source/Assets/Modelos/Cafeteria/Poster/poster pronto2.fbx" id="8_bi78n"]
+[ext_resource type="Texture2D" uid="uid://bjvxfwlu42260" path="res://Source/Assets/Modelos/Cafeteria/Poster/poster pronto2_0.png" id="7_i32at"]
 [ext_resource type="Texture2D" uid="uid://b4fnhfthckicq" path="res://Source/Assets/Modelos/Cafeteria/Quadro/quadropronto_0.png" id="9_i32at"]
 [ext_resource type="Texture2D" uid="uid://7esxba8dd27m" path="res://Source/Assets/Modelos/Cafeteria/Quadro/quadropronto_1.png" id="10_lrl6e"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bi78n"]
+font = ExtResource("4_q14if")
+font_size = 25
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xfxu6"]
+size = Vector3(1, 2.1079102, 1.9827881)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q14if"]
+size = Vector3(1, 2.4318848, 2.0534668)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xd30a"]
+resource_name = "Material"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("7_i32at")
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 0.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_na4pn"]
+_surfaces = [{
+"aabb": AABB(-0.0021083725, -0.020428948, -0.00090244296, 0.0021028945, 0.041676298, 0.06178651),
+"format": 34359742465,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAQAAAAMAAgAEAAAAAwAFAAEAAgABAAUABgADAAAAAAAEAAYABQADAAYABAACAAcABQAHAAIABwAGAAQABgAHAAUA"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("nywKu5xap7ySYXk9nywKu+wOrjySYXk9XM+3tuwOrjySYXk9nywKu5xap7zskWy6XM+3tpxap7ySYXk9nywKu+wOrjzskWy6XM+3tpxap7zskWy6XM+3tuwOrjzskWy6")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_nf0dx"]
+resource_name = "Cube"
+_surfaces = [{
+"aabb": AABB(-0.0021083725, -0.020428948, -0.00090244296, 0.0021028945, 0.041676298, 0.06178651),
+"attribute_data": PackedByteArray("kwmqPkTl3D4RJaA+WvjlPvwRlz7IEOA+f/agPrL91j7/2qo+oOrNPn/2oD6y/dY+aeOXPiIW0T7qx6E+DgPIPs4mID7buiI/ziYgPkrRQD9QNB89StFAP1A0Hz3buiI/aeOXPiIW0T7n/o0+OCnaPtPrhD6mQdQ+VNCOPpAuyz4Ajow7AARRO1zgfz8ABFE7XOB/P6D7fj8Ajow7oPt+P/wRlz7IEOA+fS2NPtwj6T5oGoQ+TjzjPuf+jT44Kdo+"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAAFAAVABYAFgAXABQA"),
+"material": SubResource("StandardMaterial3D_xd30a"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("nywKu5xap7ySYXk9nywKu+wOrjySYXk9XM+3tuwOrjySYXk9XM+3tpxap7ySYXk9nywKu5xap7ySYXk9XM+3tpxap7ySYXk9XM+3tpxap7zskWy6nywKu5xap7zskWy6nywKu+wOrjySYXk9nywKu5xap7ySYXk9nywKu5xap7zskWy6nywKu+wOrjzskWy6XM+3tpxap7zskWy6XM+3tuwOrjzskWy6nywKu+wOrjzskWy6nywKu5xap7zskWy6XM+3tpxap7ySYXk9XM+3tuwOrjySYXk9XM+3tuwOrjzskWy6XM+3tpxap7zskWy6XM+3tuwOrjySYXk9nywKu+wOrjySYXk9nywKu+wOrjzskWy6XM+3tuwOrjzskWy6/3//f8l2moT/f/9/yXaahP9//3/JdpqE/3//f8l2moT/fwAAOX3/v/9/AAA5ff+//38AADl9/7//fwAAOX3/vwAA/3//f/+/AAD/f/9//78AAP9//3//vwAA/3//f/+//////zWJmoT/////NYmahP////81iZqE/////zWJmoT///9//3///////3//f///////f/9///////9//3////9////Fgv+//3///8WC/7//f///xYL/v/9////Fgv+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_na4pn")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lrl6e"]
+size = Vector3(0.72650146, 1.0707092, 0.13867188)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rh2hy"]
 resource_name = "Material"
@@ -51,16 +105,8 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_7d1b4")
 
-[sub_resource type="LabelSettings" id="LabelSettings_bi78n"]
-font = ExtResource("4_q14if")
-font_size = 25
-font_color = Color(0, 0, 0, 1)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_xfxu6"]
-size = Vector3(1, 2.1079102, 1.9827881)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_q14if"]
-size = Vector3(1, 2.4318848, 2.0534668)
+[sub_resource type="BoxShape3D" id="BoxShape3D_witrb"]
+size = Vector3(0.2277832, 0.96414185, 0.6425781)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3cpks"]
 resource_name = "Material"
@@ -147,20 +193,6 @@ shadow_mesh = SubResource("ArrayMesh_schx0")
 
 [node name="Postit" type="StaticBody3D" unique_id=860167678]
 
-[node name="PROSTER2" type="StaticBody3D" parent="." unique_id=987539857]
-transform = Transform3D(-0.155, 0, -1.35505305e-08, 0, 0.155, 0, 1.35505305e-08, 0, -0.155, 4.6618366, 1.6239266, 2.1503215)
-
-[node name="Cube" type="MeshInstance3D" parent="PROSTER2" unique_id=1727627427]
-transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
-mesh = SubResource("ArrayMesh_xfxu6")
-
-[node name="PROSTER3" type="StaticBody3D" parent="." unique_id=1296492577]
-transform = Transform3D(-6.7752652e-09, 0, 0.155, 0, 0.155, 0, -0.155, 0, -6.7752652e-09, -0.28830767, 1.5226375, 11.164261)
-
-[node name="Cube" type="MeshInstance3D" parent="PROSTER3" unique_id=592775502]
-transform = Transform3D(100, -4.5474735e-13, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, -0.20222473, 0, 0)
-mesh = SubResource("ArrayMesh_xfxu6")
-
 [node name="Postits" type="StaticBody3D" parent="." unique_id=881521992]
 script = ExtResource("2_7d1b4")
 
@@ -193,6 +225,7 @@ text = "[M1]"
 label_settings = SubResource("LabelSettings_bi78n")
 
 [node name="Control" type="Control" parent="Postits" unique_id=802515043]
+visible = false
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -222,15 +255,15 @@ label_settings = SubResource("LabelSettings_bi78n")
 [node name="pouistiiti4" parent="Postits" unique_id=556273450 instance=ExtResource("6_q14if")]
 transform = Transform3D(0.0070036724, -0.07549731, 0.025516745, 0.07965797, 0.0073896456, 0, -0.0023569963, 0.025407651, 0.07582147, -9.1307745, 1.22, 2.3771152)
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Postits/pouistiiti4" unique_id=1683773041]
-transform = Transform3D(1.0000001, 8.716341e-05, -7.419847e-05, -8.724723e-05, 0.9999996, 0.0007994473, 7.4245036e-05, -0.00080251694, 0.9999912, 0.1765728, -0.007774353, 0.022773743)
-shape = SubResource("BoxShape3D_xfxu6")
-
 [node name="pouistiiti3" parent="Postits" unique_id=37853142 instance=ExtResource("7_bi78n")]
 transform = Transform3D(-0.00022706085, -0.04336531, 0.0901077, 0.09999863, -0.000523593, 0, 0.00047179763, 0.09010647, 0.043365907, -9.427265, 1.204, 2.470112)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Postits/pouistiiti3" unique_id=390513516]
-transform = Transform3D(0.99599975, -1.741387e-05, -3.3073593e-06, 1.7396174e-05, 0.99599963, -0.00062546134, 3.3460092e-06, 0.00062540174, 0.9959997, 0.0017356873, -0.054985046, 0.0143585205)
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Postits" unique_id=1683773041]
+transform = Transform3D(0.0070121544, -0.07551714, 0.025455644, 0.07965733, 0.007396586, -2.867182e-09, -0.002353584, 0.025346586, 0.075841285, -9.128369, 1.234008, 2.3782282)
+shape = SubResource("BoxShape3D_xfxu6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Postits" unique_id=390513516]
+transform = Transform3D(-0.00022660544, -0.04313548, 0.08977437, 0.0995986, -0.0005232398, -3.2442529e-09, 0.00047162295, 0.089773126, 0.04313607, -9.423587, 1.2042023, 2.465781)
 shape = SubResource("BoxShape3D_q14if")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1447586639]
@@ -249,8 +282,82 @@ light_energy = 0.97
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2591516, 1.6847432, 9.013068)
 light_energy = 0.97
 
-[node name="poster pronto2" parent="." unique_id=1644079614 instance=ExtResource("8_bi78n")]
+[node name="Poster" type="StaticBody3D" parent="." unique_id=2117049402]
+script = ExtResource("2_7d1b4")
+
+[node name="poster pronto2" type="Node3D" parent="Poster" unique_id=1644079614]
 transform = Transform3D(-6.993822e-09, 0, -0.16, 0, 0.16, 0, 0.16, 0, -6.993822e-09, -10.804, 1.624, -6.446)
+
+[node name="Cube" type="MeshInstance3D" parent="Poster/poster pronto2" unique_id=67550707]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+mesh = SubResource("ArrayMesh_nf0dx")
+
+[node name="Control" type="Control" parent="Poster" unique_id=1403139694]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PosterPronto20" type="Sprite2D" parent="Poster/Control" unique_id=1388428506]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("7_i32at")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Poster" unique_id=29641467]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.799863, 2.1063733, -6.443698)
+shape = SubResource("BoxShape3D_lrl6e")
+
+[node name="Poster2" type="StaticBody3D" parent="." unique_id=1331529210]
+script = ExtResource("2_7d1b4")
+
+[node name="Control" type="Control" parent="Poster2" unique_id=1491063319]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PosterPronto20" type="Sprite2D" parent="Poster2/Control" unique_id=1291190711]
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("4_6euia")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Poster2" unique_id=1134268105]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.30285436, 2.0030417, 11.2278185)
+shape = SubResource("BoxShape3D_lrl6e")
+
+[node name="PROSTER2" type="StaticBody3D" parent="Poster2" unique_id=20738512]
+transform = Transform3D(-0.155, 0, -1.35505305e-08, 0, 0.155, 0, 1.35505305e-08, 0, -0.155, 4.6618366, 1.6239266, 2.1503215)
+
+[node name="Cube" type="MeshInstance3D" parent="Poster2/PROSTER2" unique_id=1718674001]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+mesh = SubResource("ArrayMesh_xfxu6")
+
+[node name="PROSTER3" type="StaticBody3D" parent="Poster2" unique_id=555650452]
+transform = Transform3D(-6.7752652e-09, 0, 0.155, 0, 0.155, 0, -0.155, 0, -6.7752652e-09, -0.28830767, 1.5226375, 11.164261)
+
+[node name="Cube" type="MeshInstance3D" parent="Poster2/PROSTER3" unique_id=2138666106]
+transform = Transform3D(100, -4.5474735e-13, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, -0.20222473, 0, 0)
+mesh = SubResource("ArrayMesh_xfxu6")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Poster2" unique_id=1244313223]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6719313, 2.0727386, 2.1792452)
+shape = SubResource("BoxShape3D_witrb")
 
 [node name="quadropronto" type="StaticBody3D" parent="." unique_id=959838589]
 transform = Transform3D(0.235, 0, 0, 0, 0.235, 0, 0, 0, 0.235, -18.05112, 1.410471, 2.5228078)
@@ -264,3 +371,5 @@ transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1
 mesh = SubResource("ArrayMesh_t7uds")
 
 [connection signal="interagido" from="Postits" to="Postits" method="_on_interagido"]
+[connection signal="interagido" from="Poster" to="Poster" method="_on_interagido"]
+[connection signal="interagido" from="Poster2" to="Poster2" method="_on_interagido"]

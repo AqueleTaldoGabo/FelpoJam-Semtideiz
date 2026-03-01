@@ -21,7 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://bu5mhs740y5ab" path="res://Source/Assets/Modelos/Cafeteria/Condimentos/Condimentosprontos_0.png" id="27_rv4k4"]
 [ext_resource type="Texture2D" uid="uid://itc36l8tx4kd" path="res://Source/Assets/Modelos/Cafeteria/Condimentos/Condimentosprontos_1.png" id="28_yyvm2"]
 [ext_resource type="Texture2D" uid="uid://dq4qa84ceou7w" path="res://Source/Assets/Modelos/Cafeteria/Condimentos/Condimentosprontos_2.png" id="29_5ibyj"]
-[ext_resource type="Script" uid="uid://dn4xvobrpbkcy" path="res://Source/Scenes/Levels/Cenas/porta_malconova_2.gd" id="29_fcpcy"]
+[ext_resource type="Script" uid="uid://dn4xvobrpbkcy" path="res://Source/Scenes/Levels/Scripts/porta_malconova_2.gd" id="29_fcpcy"]
 [ext_resource type="Texture2D" uid="uid://dh070ytw4tgny" path="res://Source/Assets/Modelos/porta_Malcon/portaMALCONOVA2_0.png" id="30_fcpcy"]
 [ext_resource type="Texture2D" uid="uid://cartkqtpm257u" path="res://Source/Assets/Modelos/Cafeteria/Condimentos/Condimentosprontos_3.png" id="30_w1tu3"]
 [ext_resource type="Texture2D" uid="uid://cgp3rfo73qqc4" path="res://Source/Assets/Modelos/Cafeteria/Condimentos/Condimentosprontos_4.png" id="31_1xnkm"]
@@ -1762,7 +1762,7 @@ shape = SubResource("BoxShape3D_dwvy1")
 
 [node name="Som" type="AudioStreamPlayer3D" parent="portaMALCONOVA2" unique_id=1770631944]
 stream = ExtResource("32_3eogv")
-volume_db = 10.0
+volume_db = 20.0
 unit_size = 20.0
 
 [node name="portaMALCONOVA3" type="StaticBody3D" parent="." unique_id=211929842]

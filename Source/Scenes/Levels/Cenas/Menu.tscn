@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://c55ggm3covhj4" path="res://Source/Assets/Sprites/Menu Principal final.png" id="1_vpgfo"]
 [ext_resource type="Script" uid="uid://dvlm5tx45km2i" path="res://Source/Scenes/Levels/Scripts/menu.gd" id="3_i10ex"]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_vpgfo"]
+
 [node name="Menu" type="Node" unique_id=1948867365]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1596800838]
@@ -67,6 +69,10 @@ custom_minimum_size = Vector2(157, 300)
 layout_mode = 2
 theme_override_font_sizes/font_size = 10
 flat = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control" unique_id=1202535676]
+position = Vector2(837, 4)
+sprite_frames = SubResource("SpriteFrames_vpgfo")
 
 [connection signal="mouse_exited" from="Control/MenuPaperSemBotoesLigados/VboxBotoes" to="Control/MenuPaperSemBotoesLigados/VboxBotoes" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="Control/MenuPaperSemBotoesLigados/VboxBotoes/BotaoStart" to="Control/MenuPaperSemBotoesLigados/VboxBotoes" method="_on_botao_start_mouse_entered"]

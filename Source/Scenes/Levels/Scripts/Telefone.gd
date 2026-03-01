@@ -8,6 +8,10 @@ func _ready() -> void:
 	$".".stream = telefone
 	$".".play()
 	
+func toca_telefone():
+	$".".stream = telefone
+	$".".play()
+
 func pare():
 	$".".stream = telefone2
 	$".".play()

@@ -97,6 +97,7 @@ omni_range = 1.585
 
 [node name="Porta" parent="." unique_id=704416160 instance=ExtResource("12_n5to5")]
 transform = Transform3D(-0.26999992, 0, 0.00013662875, 0, 0.27, 0, -0.00013662875, 0, -0.26999992, 0.9, 0, 4.384)
+script = null
 
 [node name="Pasta" parent="." unique_id=1623291131 instance=ExtResource("13_d3asw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.464, 1.151, 4.406)
@@ -136,5 +137,4 @@ spot_angle = 26.5
 spot_angle_attenuation = 0.1806876
 
 [connection signal="interagido" from="Telefone" to="." method="_on_telefone_interagido"]
-[connection signal="interagido" from="Porta" to="." method="_on_porta_interagido"]
 [connection signal="interagido" from="Pasta" to="." method="_on_pasta_interagido"]

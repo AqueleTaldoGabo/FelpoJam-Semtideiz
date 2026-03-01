@@ -5,9 +5,13 @@ const demitido = preload("res://Source/Assets/Imagens/cartadedemissaoending.png"
 
 
 func _on_texture_button_pressed() -> void:
+	ControleSfx.toca_Carimbo1()
 	MudarScena.mudarFinal(2)
 
 
 func _on_texture_button_4_pressed() -> void:
-	MudarScena.mudarFinal(3)
+	ControleSfx.toca_Carimbo1()
+	await get_tree().create_timer(0.3).timeout
+	$".".hide()
+	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	

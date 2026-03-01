@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" uid="uid://enq1xecijthj" path="res://Source/Global/Scripts/interagivel.gd" id="1_x24wp"]
 [ext_resource type="Script" uid="uid://bsnvuv8pvgjke" path="res://Source/Scenes/Objects/Scripts/pagina_1.gd" id="2_tw3t2"]
-[ext_resource type="Texture2D" uid="uid://cc23xevj88xib" path="res://Source/Assets/Imagens/TRABALHO_CONCLUIDO_ENDING.png" id="3_eq0vb"]
-[ext_resource type="Texture2D" uid="uid://b325afd5hx13p" path="res://Source/Assets/Sprites/Não apagado.png" id="5_jvutb"]
+[ext_resource type="Texture2D" uid="uid://de2iwfe3tn5b5" path="res://Source/Assets/Imagens/Desejaenviarorelatorio.png" id="3_x24wp"]
+[ext_resource type="Texture2D" uid="uid://epkkskvyeo1n" path="res://Source/Assets/Sprites/Selo confirmado transparente.png" id="4_tw3t2"]
+[ext_resource type="Texture2D" uid="uid://lx12x75gnd8n" path="res://Source/Assets/Sprites/Selo confirmado verde onn.png" id="5_3k1vu"]
 [ext_resource type="Script" uid="uid://c61g0tyv640n4" path="res://Source/Scenes/Objects/Scripts/pagina_2.gd" id="5_nnxvj"]
 [ext_resource type="Texture2D" uid="uid://7gq2kopco60l" path="res://Source/Assets/Imagens/image.png" id="5_tam1c"]
 [ext_resource type="Texture2D" uid="uid://dikpfq4wg4ckr" path="res://Source/Assets/Sprites/Arvore de condenados.png" id="6_jvutb"]
-[ext_resource type="Texture2D" uid="uid://didoc2cettwj7" path="res://Source/Assets/Sprites/Carimbo condenado on.png" id="7_nnxvj"]
 [ext_resource type="Texture2D" uid="uid://dxn6s0hgdcsj8" path="res://Source/Assets/Sprites/Carimbo condenado off.png" id="8_f252w"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_urx0x"]
@@ -92,6 +92,8 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_h3a3t")
 
+[sub_resource type="PlaneMesh" id="PlaneMesh_x24wp"]
+
 [node name="Pasta" type="StaticBody3D" unique_id=1623291131]
 script = ExtResource("1_x24wp")
 
@@ -129,24 +131,25 @@ script = ExtResource("2_tw3t2")
 [node name="MoldeDaCartaTutorial" type="Sprite2D" parent="Pagina1" unique_id=1350413524]
 position = Vector2(21, 20)
 scale = Vector2(0.43, 0.43)
-texture = ExtResource("3_eq0vb")
+texture = ExtResource("3_x24wp")
 
-[node name="Exit" type="TextureButton" parent="Pagina1" unique_id=2031799464]
+[node name="Exit" type="TextureButton" parent="Pagina1" unique_id=430169259]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 5.4
-anchor_top = -6.975
-anchor_right = 7.025
-anchor_bottom = -5.775
+anchor_left = -1.0
+anchor_top = -1.0
+anchor_right = 0.975
+anchor_bottom = 0.6
 offset_left = 9.0
 offset_top = -1.0
 offset_right = -6.0
 offset_bottom = -1.0
-scale = Vector2(0.5, 0.5)
-texture_normal = ExtResource("5_jvutb")
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("4_tw3t2")
+texture_hover = ExtResource("5_3k1vu")
 metadata/_edit_use_anchors_ = true
 
-[node name="Pagina2" type="Control" parent="." unique_id=615891064]
+[node name="Pagina2" type="Control" parent="." unique_id=644987010]
 visible = false
 layout_mode = 3
 anchors_preset = 8
@@ -162,68 +165,69 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("5_nnxvj")
 
-[node name="MoldeDaCartaTutorial" type="Sprite2D" parent="Pagina2" unique_id=1082686932]
-position = Vector2(21, 20)
-scale = Vector2(0.43, 0.43)
+[node name="Image" type="Sprite2D" parent="Pagina2" unique_id=1207430396]
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("5_tam1c")
 
-[node name="ArvoreDeCondenados" type="Sprite2D" parent="Pagina2" unique_id=1885502903]
-position = Vector2(30, 73)
+[node name="ArvoreDeCondenados" type="Sprite2D" parent="Pagina2" unique_id=1953744187]
+position = Vector2(0, 31)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("6_jvutb")
 
-[node name="TextureButton5" type="TextureButton" parent="Pagina2" unique_id=1163564082]
+[node name="TextureButton5" type="TextureButton" parent="Pagina2" unique_id=2084545475]
 layout_mode = 0
-offset_left = 56.0
-offset_top = 134.0
-offset_right = 189.0
-offset_bottom = 195.0
-scale = Vector2(1.2, 1.2)
+offset_left = 18.0
+offset_top = 84.0
+offset_right = 151.0
+offset_bottom = 145.0
+scale = Vector2(1.3, 1.3)
 toggle_mode = true
-texture_pressed = ExtResource("7_nnxvj")
 texture_hover = ExtResource("8_f252w")
 
-[node name="TextureButton4" type="TextureButton" parent="Pagina2" unique_id=815081270]
+[node name="TextureButton4" type="TextureButton" parent="Pagina2" unique_id=559737908]
 layout_mode = 0
-offset_left = 67.0
-offset_top = 19.0
-offset_right = 200.0
-offset_bottom = 80.0
-scale = Vector2(1.1, 1.1)
+offset_left = 20.0
+offset_top = -31.0
+offset_right = 153.0
+offset_bottom = 30.0
+scale = Vector2(1.3, 1.3)
 toggle_mode = true
-texture_pressed = ExtResource("7_nnxvj")
 texture_hover = ExtResource("8_f252w")
 
-[node name="TextureButton3" type="TextureButton" parent="Pagina2" unique_id=1000584502]
+[node name="TextureButton3" type="TextureButton" parent="Pagina2" unique_id=1056370191]
 layout_mode = 0
-offset_left = -154.0
-offset_top = 116.0
-offset_right = -21.0
-offset_bottom = 177.0
+offset_left = -206.0
+offset_top = 65.0
+offset_right = -73.0
+offset_bottom = 126.0
+scale = Vector2(1.3, 1.3)
 toggle_mode = true
-texture_pressed = ExtResource("7_nnxvj")
 texture_hover = ExtResource("8_f252w")
 
-[node name="TextureButton2" type="TextureButton" parent="Pagina2" unique_id=2135144241]
+[node name="TextureButton2" type="TextureButton" parent="Pagina2" unique_id=1023209960]
 layout_mode = 0
-offset_left = -156.0
-offset_top = -6.0
-offset_right = -116.0
-offset_bottom = 34.0
+offset_left = -214.0
+offset_top = -60.0
+offset_right = -81.0
+offset_bottom = 1.0
+scale = Vector2(1.3, 1.3)
 toggle_mode = true
-texture_pressed = ExtResource("7_nnxvj")
 texture_hover = ExtResource("8_f252w")
 
-[node name="TextureButton" type="TextureButton" parent="Pagina2" unique_id=886555058]
+[node name="TextureButton" type="TextureButton" parent="Pagina2" unique_id=1339685403]
 layout_mode = 0
-offset_left = -61.0
-offset_top = -86.0
-offset_right = 72.0
-offset_bottom = -25.0
-scale = Vector2(1.2, 1.2)
+offset_left = -111.0
+offset_top = -140.0
+offset_right = 22.0
+offset_bottom = -79.0
+scale = Vector2(1.5, 1.5)
 toggle_mode = true
-texture_pressed = ExtResource("7_nnxvj")
 texture_hover = ExtResource("8_f252w")
+
+[node name="Folha" type="MeshInstance3D" parent="." unique_id=847836361]
+transform = Transform3D(0.3, 0, 0, 0, 0.2, 0, 0, 0, 0.17, 0, 0.01897943, 0)
+visible = false
+mesh = SubResource("PlaneMesh_x24wp")
 
 [connection signal="pressed" from="Pagina1/Exit" to="Pagina1" method="_on_exit_pressed"]
 [connection signal="pressed" from="Pagina2/TextureButton5" to="Pagina2" method="_on_texture_button_pressed"]
