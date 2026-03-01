@@ -9,9 +9,13 @@ const TEXTURACONTI = preload("res://Source/Assets/Sprites/Menu_pausado4.png")
 const TEXTURAOPCOE = preload("res://Source/Assets/Sprites/Menu_pausado3.png")
 const TEXTURASAIR = preload("res://Source/Assets/Sprites/Menu_pausado2.png")
 var menu_aberto = false
+var doc = false
+
 
 func fecha(mouse):
 	var crosshair = get_node("/root/" + get_tree().current_scene.name + "/Player/Cabeça/Camera3D/CanvasLayer/crosshair")
+	var label = get_node("/root/" + get_tree().current_scene.name + "/Player/Cabeça/Camera3D/CanvasLayer/Label")
+	label.show()
 	crosshair.show()
 	get_tree().paused = false
 	menu_aberto = false
@@ -20,11 +24,13 @@ func fecha(mouse):
 
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_cancel"):
+	if event.is_action_pressed("ui_cancel") and !doc:
 		if !has_node("/root/Main") and !$".".has_node("Options") and !get_tree().root.has_node("Folha"):
 			if menu_aberto == false :
 				menu_aberto = true
 				var crosshair = get_node("/root/" + get_tree().current_scene.name + "/Player/Cabeça/Camera3D/CanvasLayer/crosshair")
+				var label = get_node("/root/" + get_tree().current_scene.name + "/Player/Cabeça/Camera3D/CanvasLayer/Label")
+				label.hide()
 				crosshair.hide()
 				Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 				$Control.show()

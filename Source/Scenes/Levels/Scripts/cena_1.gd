@@ -76,6 +76,7 @@ func _on_pasta_interagido(_body: Variant) -> void:
 	ANIMATED_LABEL.text = ""
 	$Pasta/Pasta.hide()
 	$Pasta/Pagina1.show()
+	Pause.doc = true
 	var crosshair = get_node("/root/Cena1/Player/Cabeça/Camera3D/CanvasLayer/crosshair")
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	crosshair.hide()

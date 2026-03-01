@@ -1,6 +1,8 @@
 extends Node
 
 @onready var ANIMATED_LABEL = $"Player/Cabeça/Camera3D/CanvasLayer/Label"
+@export var corporum = false
+
 
 const whitenoise = preload("res://Source/Assets/Música/whitenoise.ogg")
 const classico = preload("res://Source/Assets/Sons/carimbagemclassica1.ogg")
@@ -188,7 +190,8 @@ func _on_mudar_algo(valor, valor2):
 		if vermelho:
 			animar_texto(["Volte as folhas"])
 			vermelho = false
-
+	else:
+		saida()
 	if valor < 5 and valor >= 0:
 		$Player.folhas = valor
 
@@ -198,3 +201,11 @@ func carimbada(algo):
 func checker():
 	return carimbas.count(true) == 9
 	
+func saida():
+	if checker() and (corporum or cont_vermelho.count(true) != 3):
+		if has_node("/root/Cafeteria/PlacaCapacitacao"):
+			var porta = get_node("/root/Cafeteria/PlacaCapacitacao")
+			porta.saida = true
+			porta.quant_ver = cont_vermelho
+		abrido = false
+		animar_texto(["Saia da cafeteria"])

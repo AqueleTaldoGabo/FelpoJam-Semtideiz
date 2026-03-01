@@ -44,6 +44,7 @@ func _on_exit_pressed() -> void:
 		MudarScena.mudarMenu()
 	else:
 		var crosshair = get_node("/root/Cena1/Player/Cabeça/Camera3D/CanvasLayer/crosshair")
+		Pause.doc = false
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 		crosshair.show()
 		ControleSfx.toca_Papel()

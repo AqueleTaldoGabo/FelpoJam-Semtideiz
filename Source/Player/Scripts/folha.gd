@@ -4,7 +4,8 @@ signal mudar_algo(valor, valor2)
 
 @export var vermelho = false
 @export var folha = 2
-@export var comeco = false
+
+
 
 const FUNDO1 = preload("res://Source/Assets/Sprites/Documentos sem seta.png")
 const FUNDO2 = preload("res://Source/Assets/Sprites/Documaneo_com_ouitro_papel.png")
@@ -19,6 +20,8 @@ var folhas = [preload("res://Source/Assets/Imagens/MOLDE_DA_CARTA_TUTORIAL.png")
 			preload("res://Source/Assets/Imagens/DOCUMENTOSCARIMBO3dithe.png")]
 
 var ligado = false
+var pare = false
+var contador = 0
 
 var botaodesligado = preload("res://Source/Assets/Sprites/Selo confirmado transparente.png")
 var botaoligado = [preload("res://Source/Assets/Sprites/Selo confirmado vermelh on.png"), preload("res://Source/Assets/Sprites/Selo confirmado verde onn.png")]
@@ -37,23 +40,20 @@ var marcado = false
 		
 
 func fecha():
-	if !vermelho or comeco:
-		var crosshair = get_node("/root/Cafeteria/Player/Cabeça/Camera3D/CanvasLayer/crosshair")
-		if folha > 1:
-			for i in range(3):
-				var btn_esq = get_node("Control/HboxCont" + str(i+1) + "/BTNesquerda1")
-				var btn_dir = get_node("Control/HboxCont" + str(i+1) + "/BTNdireita1" )
-				_adjacency_matrix[folha-2]["esq" + str(i+1)] = btn_esq.texture_normal
-				_adjacency_matrix[folha-2]["dir" + str(i+1)] = btn_dir.texture_normal
-		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-		ControleSfx.toca_Papel()
-		crosshair.show()
-		emit_signal("mudar_algo", folha, _adjacency_matrix)
-		$".".queue_free()
+	var crosshair = get_node("/root/Cafeteria/Player/Cabeça/Camera3D/CanvasLayer/crosshair")
+	if folha > 1:
+		for i in range(3):
+			var btn_esq = get_node("Control/HboxCont" + str(i+1) + "/BTNesquerda1")
+			var btn_dir = get_node("Control/HboxCont" + str(i+1) + "/BTNdireita1" )
+			_adjacency_matrix[folha-2]["esq" + str(i+1)] = btn_esq.texture_normal
+			_adjacency_matrix[folha-2]["dir" + str(i+1)] = btn_dir.texture_normal
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	ControleSfx.toca_Papel()
+	crosshair.show()
+	emit_signal("mudar_algo", folha, _adjacency_matrix)
+	$".".queue_free()
 
 func _ready() -> void:
-	if vermelho and !comeco:
-		ControleSfx.toca_SFX(coracao1)
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	
 func mudarPag():
@@ -84,17 +84,16 @@ func mudarPag():
 	
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_cancel"):
+	if event.is_action_pressed("ui_cancel") and !pare:
 		fecha()
-	if event.is_action_pressed("abrir_pagina"):
+	if event.is_action_pressed("abrir_pagina") and !pare:
 		fecha() 
-	if event.is_action_pressed("interagir"):
-		if !vermelho or comeco:
-			ControleSfx.toca_Carimbo1()
+	if event.is_action_pressed("interagir") and !pare:
+		ControleSfx.toca_Carimbo1()
 
 func _on_button_pressed() -> void:
-	if !vermelho or comeco:
-		$"Control/Avançar".show()
+	$"Control/Avançar".show()
+	if !pare:
 		if folha > 0:
 			if folha > 1:
 				for i in range(3):
@@ -107,28 +106,14 @@ func _on_button_pressed() -> void:
 			if folha == 0:
 				$"Control/Voltar".hide()
 		mudarPag()
-	else:
-		if !ligado:
-			$Timer.start()
-			ligado = true
-		if $Timer.time_left <= 0:
-			if ControleSfx.stream == coracao1:
-				ControleSfx.toca_SFX(coracao2)
-			else:
-				ControleSfx.toca_SFX(coracao3)
-			folha = folha-1
-			$Timer.start()
-		if folha == 1:
-			
-			$Control/Voltar.hide()
-		mudarPag()
+
 
 
 func _on_avançar_pressed() -> void:
 	$"Control/Voltar".show()
-	if folha < 4:
-		var deu_certo = true
-		if !vermelho or comeco:
+	if !pare:
+		if folha < 4:
+			var deu_certo = true
 			if folha > 1:
 				for i in range(3):
 					var btn_esq = get_node("Control/HboxCont" + str(i+1) + "/BTNesquerda1")
@@ -138,12 +123,12 @@ func _on_avançar_pressed() -> void:
 					if btn_esq.texture_normal == botaodesligado and btn_dir.texture_normal == botaodesligado:
 						print("puts")
 						deu_certo = false
-		
+			
 			if deu_certo:
 				folha = folha+1
 			if folha == 4:
 				$"Control/Avançar".hide()
-	mudarPag()
+		mudarPag()
 
 
 func _on_bt_nesquerda_1_pressed() -> void:
@@ -191,13 +176,33 @@ func _on_bt_ndireita_3_pressed() -> void:
 
 func _on_secret_pressed() -> void:
 	if folha == 1:
-		emit_signal("mudar_algo", 88, _adjacency_matrix)
-		comeco = true
-		var porta = get_node("/root/Cafeteria/Mapa/portaMALCONOVA2")
-		var som = get_node("/root/Cafeteria/Mapa/portaMALCONOVA2/Som")
-		porta.show()
-		som.play()
-		porta.vermelho = true
-		porta.set_collision_layer_value(1, true)
+		pare = true
+		if contador == 0 and $Timer.is_stopped():
+			$Timer.start()
+			ControleSfx.toca_SFX(coracao1)
+			ControleMusica.stop()
+			contador = contador + 1
+			
+		if contador == 1 and $Timer.is_stopped():
+			$Timer.start()
+			ControleSfx.toca_SFX(coracao2)
+			contador = contador + 1
+			
+		if contador == 2 and $Timer.is_stopped():
+			$Timer.start()
+			ControleSfx.toca_SFX(coracao3)
+			contador = contador + 1
+			
+		if contador == 3 and $Timer.is_stopped():
+			emit_signal("mudar_algo", 88, _adjacency_matrix)
+			var porta = get_node("/root/Cafeteria/Mapa/portaMALCONOVA2")
+			var som = get_node("/root/Cafeteria/Mapa/portaMALCONOVA2/Som")
+			porta.show()
+			som.play()
+			porta.vermelho = true
+			pare = false
+			porta.set_collision_layer_value(1, true)
+		await $Timer.timeout
+		
 
 		

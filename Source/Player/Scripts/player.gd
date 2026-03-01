@@ -11,13 +11,13 @@ extends CharacterBody3D
 @onready var camera = $"Cabeça/Camera3D"
 @onready var shader = $"Cabeça/Camera3D/PosProcessamento"
 @onready var materialshader = shader.get_active_material(0)
+
 var folhas = 2
 var menu_aberto = false
 var ease_curve: float = 0.1
 var velocidade_objeto = Vector3.ZERO
 var _adjacency_matrix_player 
 var vermelho = false
-var foi_vermelho = false
 
 func _ready() -> void:
 	materialshader.set_shader_parameter("cor_a", corA)
@@ -32,12 +32,9 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("abrir_pagina") and folha and !get_tree().root.has_node("Folha"):
 		var main = get_tree().current_scene
 		var PAGINA = preload("uid://c1laawrklqnhp").instantiate()
-		if foi_vermelho:
-			PAGINA.comeco = true
 		
 		if vermelho:
 			PAGINA.vermelho = true
-			foi_vermelho= true
 		$"Cabeça/Camera3D/CanvasLayer/Label".text = ""
 		PAGINA.folha = folhas
 		if _adjacency_matrix_player != null:
