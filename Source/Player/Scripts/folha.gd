@@ -61,6 +61,10 @@ func mudarPag():
 	if folha == 4:
 		$"Control/Avançar".hide()
 		
+	if vermelho or secredo:
+			folhas[1] = preload("res://Source/Assets/Imagens/progressao0.png")
+			folhas[4] = preload("res://Source/Assets/Imagens/DOCUMENTO3REVELADODITHER.png")
+	
 	if secredo:
 		folhas[1] = preload("res://Source/Assets/Imagens/finaldomal.png")
 		if folha == 1:
@@ -70,8 +74,7 @@ func mudarPag():
 			$Control/Secret.texture_normal = botaodesligado
 			
 	
-	if vermelho or secredo:
-			folhas[4] = preload("res://Source/Assets/Imagens/DOCUMENTO3REVELADODITHER.png")
+	
 	$Control/Documentoscarimbo1.texture = folhas[folha]
 	if folha == 0:
 		$Control/DossierInteiro.texture = FUNDO1
